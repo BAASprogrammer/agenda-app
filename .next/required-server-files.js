@@ -100,7 +100,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/home/barbara/Escritorio/REACT-JS/landingpage",
+    "outputFileTracingRoot": "/home/barbara/Escritorio/REACT-JS/agenda-app",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -293,11 +293,11 @@ self.__SERVER_FILES_MANIFEST={
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "/home/barbara/Escritorio/REACT-JS/landingpage"
+      "root": "/home/barbara/Escritorio/REACT-JS/agenda-app"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "/home/barbara/Escritorio/REACT-JS/landingpage",
+  "appDir": "/home/barbara/Escritorio/REACT-JS/agenda-app",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",
