@@ -63,3 +63,2803 @@
 [00:30:36.133] Server  LOG     ✓ Compiled in 89ms
 [00:30:42.087] Server  LOG     ✓ Compiled in 82ms
 [00:31:09.151] Server  LOG     ✓ Compiled in 70ms
+[00:35:56.988] Server  LOG     ✓ Compiled in 315ms
+[00:36:56.227] Server  LOG     ✓ Compiled in 229ms
+[00:37:04.085] Server  LOG     ✓ Compiled in 132ms
+[00:37:35.515] Server  LOG     ✓ Compiled in 56ms
+[00:37:51.652] Server  LOG     ✓ Compiled in 181ms
+[00:37:59.103] Server  LOG     ✓ Compiled in 113ms
+[00:38:58.802] Server  LOG     ✓ Compiled in 276ms
+[00:39:07.543] Server  LOG     ✓ Compiled in 137ms
+[00:39:18.575] Server  LOG     ✓ Compiled in 94ms
+[00:41:42.741] Server  LOG     ✓ Compiled in 244ms
+[00:41:42.945] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:42:20.216] Server  LOG     ✓ Compiled in 93ms
+[00:42:20.222] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:43:46.366] Server  LOG     ✓ Compiled in 1313ms
+[00:45:12.533] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.537] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.573] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.574] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.593] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.594] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.626] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.630] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.669] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.671] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.699] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.700] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.795] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:12.799] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:13.060] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:13.065] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:13.080] Browser ERROR   ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:19.176] Browser ERROR   ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:20.540] Browser ERROR   ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:41.077] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.079] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.114] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.115] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.148] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.149] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.194] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.198] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.225] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.226] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.249] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.253] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.281] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.282] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:41.395] Browser ERROR   ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:04.057] Server  LOG     ✓ Compiled in 227ms
+[00:46:04.539] Browser ERROR   ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:05.357] Server  WARN    Error: Route "/" used `cookies().getAll`. `cookies()` returns a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:46:05.379] Server  ERROR   ⨯ TypeError: cookieStore.getAll is not a function
+[00:46:05.590] Browser ERROR   uncaughtError: TypeError: cookieStore.getAll is not a function
+[00:46:11.078] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.080] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.101] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.107] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.143] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.147] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.182] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.187] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.218] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.224] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.271] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.276] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.316] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.318] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:11.560] Browser ERROR   ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:35.809] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.811] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.844] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.845] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.875] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.877] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.892] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.895] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.916] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.919] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.940] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.941] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.971] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:35.972] Server  ERROR   ⨯ ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:46:36.081] Browser ERROR   ./src/app/layout.tsx:14:3
+Parsing ecmascript source code failed
+  12 |   // Obtener el userId usando el helper
+  13 |   const userId =
+> 14 |   return (
+     |   ^^^^^^
+  15 |     <html lang="es">
+  16 |       <body>
+  17 |         <Header isLoggedIn={isLoggedIn} firstName={firstName} userId={userId} />
+
+Expression expected
+[00:46:36.081] Browser ERROR   ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:37.523] Server  LOG     ✓ Compiled in 109ms
+[00:46:37.561] Browser ERROR   ./src/app/layout.tsx:14:3
+Parsing ecmascript source code failed
+  12 |   // Obtener el userId usando el helper
+  13 |   const userId =
+> 14 |   return (
+     |   ^^^^^^
+  15 |     <html lang="es">
+  16 |       <body>
+  17 |         <Header isLoggedIn={isLoggedIn} firstName={firstName} userId={userId} />
+
+Expression expected
+[00:46:37.561] Browser ERROR   ./src/app/getUserId.ts:5:1
+Module not found: Can't resolve 'jsonwebtoken'
+  3 |
+  4 | // Extrae el userId del JWT de la cookie de sesión de Supabase
+> 5 | import jwt from "jsonwebtoken";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function getUserIdFromCookie() {
+  8 |   const cookieStore = cookies();
+
+Import trace:
+  Server Component:
+    ./src/app/getUserId.ts
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:38.330] Server  ERROR   ⨯ ReferenceError: getUserIdFromCookie is not defined
+[00:46:38.889] Browser ERROR   uncaughtError: ReferenceError: getUserIdFromCookie is not defined
+[00:46:40.854] Server  LOG     ✓ Compiled in 88ms
+[00:47:32.010] Server  LOG     ✓ Compiled in 3ms
+[00:48:08.344] Server  LOG     ✓ Compiled in 88ms
+[00:48:15.117] Server  LOG     ✓ Compiled in 78ms
+[00:48:25.792] Server  LOG     ✓ Compiled in 56ms
+[00:49:19.398] Server  LOG     ✓ Compiled in 89ms
+[00:49:52.233] Server  LOG     ✓ Compiled in 128ms
+[00:51:27.936] Server  LOG     ✓ Compiled in 175ms
+[00:51:33.342] Server  LOG     ✓ Compiled in 82ms
+[00:51:57.297] Server  LOG     ✓ Compiled in 79ms
+[00:53:17.361] Server  LOG     ✓ Compiled in 271ms
+[00:54:00.017] Server  LOG     ✓ Compiled in 387ms
+[00:54:00.424] Browser ERROR   ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header>
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-lg p-0">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     <a href="/" className="text-white text-2xl font-extrabold tracking-tight drop-shadow-lg bg-gradient-to-r from-white/30 to-white/0 px-4 py-1 rounded-2xl">AgendaApp</a>
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:54:11.319] Browser ERROR   ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header>
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-lg p-0">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     <a href="/" className="text-white text-2xl font-extrabold tracking-tight drop-shadow-lg bg-gradient-to-r from-white/30 to-white/0 px-4 py-1 rounded-2xl">AgendaApp</a>
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:54:40.395] Browser ERROR   ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header className="sticky top-0 z-50">
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-2xl p-0 transition-all duration-300">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     {/* Logo con icono */}
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:55:50.809] Server  ERROR   ⨯ ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header className="sticky top-0 z-50">
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-2xl p-0 transition-all duration-300">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     {/* Logo con icono */}
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+
+
+[00:55:50.849] Server  LOG     ✓ Compiled in 12ms
+[00:55:52.848] Browser ERROR   uncaughtError: Error: ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header className="sticky top-0 z-50">
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-2xl p-0 transition-all duration-300">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     {/* Logo con icono */}
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+
+
+[00:55:53.009] Browser ERROR   ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header className="sticky top-0 z-50">
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-2xl p-0 transition-all duration-300">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     {/* Logo con icono */}
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:55:53.009] Browser ERROR   ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header className="sticky top-0 z-50">
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-2xl p-0 transition-all duration-300">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     {/* Logo con icono */}
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:55:53.010] Browser ERROR   ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header className="sticky top-0 z-50">
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-2xl p-0 transition-all duration-300">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     {/* Logo con icono */}
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:55:53.010] Browser ERROR   ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header className="sticky top-0 z-50">
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-2xl p-0 transition-all duration-300">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     {/* Logo con icono */}
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:55:53.262] Browser ERROR   ./src/components/Header.tsx:12:9
+Parsing ecmascript source code failed
+  10 |     firstName: string;
+  11 |     return (
+> 12 |         <header className="sticky top-0 z-50">
+     |         ^
+  13 |             <nav className="bg-gradient-to-r from-indigo-500 via-pink-400 to-blue-400 shadow-2xl p-0 transition-all duration-300">
+  14 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+  15 |                     {/* Logo con icono */}
+
+Unexpected token `<`. Expected yield, an identifier, [ or {
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:55:54.190] Browser ERROR   ./src/components/Header.tsx:39:6
+Parsing ecmascript source code failed
+  37 |             fetchUserRole();
+  38 |         }, [isLoggedIn, userId]);
+> 39 |     }, [isLoggedIn, userId]);
+     |      ^
+  40 |
+  41 |     // Open the login modal
+  42 |     const handleLogin = () => {
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:56:08.883] Browser ERROR   ./src/components/Header.tsx:39:6
+Parsing ecmascript source code failed
+  37 |             fetchUserRole();
+  38 |         }, [isLoggedIn, userId]);
+> 39 |     }, [isLoggedIn, userId]);
+     |      ^
+  40 |
+  41 |     // Open the login modal
+  42 |     const handleLogin = () => {
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[00:56:11.821] Server  LOG     ✓ Compiled in 123ms
+[00:56:46.680] Server  LOG     ✓ Compiled in 179ms
+[00:59:28.866] Server  LOG     ✓ Compiled in 285ms
+[01:00:05.350] Server  LOG     ✓ Compiled in 241ms
+[01:00:28.964] Server  LOG     ✓ Compiled in 72ms
+[01:04:44.078] Server  LOG     ✓ Compiled in 435ms
+[01:05:48.705] Server  LOG     ✓ Compiled in 92ms
+[01:05:48.811] Browser ERROR   ./src/components/Header.tsx:76:25
+Parsing ecmascript source code failed
+  74 |                                 <a href="/contact" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Contacto</a>
+  75 |                             </>
+> 76 |                         {isLoggedIn && isProfessional} : (
+     |                         ^
+  77 |                             <>
+  78 |                                 <a href="/" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Inicio</a>
+  79 |                                 <a href="/about" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Acerca de</a>
+
+Expected '</', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[01:05:56.772] Browser ERROR   ./src/components/Header.tsx:76:25
+Parsing ecmascript source code failed
+  74 |                                 <a href="/contact" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Contacto</a>
+  75 |                             </>
+> 76 |                         {isLoggedIn && !isProfessional} : (
+     |                         ^
+  77 |                             <>
+  78 |                                 <a href="/" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Inicio</a>
+  79 |                                 <a href="/about" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Acerca de</a>
+
+Expected '</', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[01:06:07.903] Browser ERROR   ./src/components/Header.tsx:76:25
+Parsing ecmascript source code failed
+  74 |                                 <a href="/contact" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Contacto</a>
+  75 |                             </>
+> 76 |                         {isLoggedIn && isProfessional === null} : (
+     |                         ^
+  77 |                             <>
+  78 |                                 <a href="/" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Inicio</a>
+  79 |                                 <a href="/about" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Acerca de</a>
+
+Expected '</', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[01:06:22.858] Browser ERROR   ./src/components/Header.tsx:76:25
+Parsing ecmascript source code failed
+  74 |                                 <a href="/contact" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Contacto</a>
+  75 |                             </>
+> 76 |                         {isLoggedIn && !isProfessional} : (
+     |                         ^
+  77 |                             <>
+  78 |                                 <a href="/" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Inicio</a>
+  79 |                                 <a href="/about" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Acerca de</a>
+
+Expected '</', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[01:07:01.515] Server  LOG     ✓ Compiled in 581ms
+[01:07:01.846] Browser ERROR   ./src/components/Header.tsx:76:25
+Parsing ecmascript source code failed
+  74 |                                 <a href="/contact" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Contacto</a>
+  75 |                             </>
+> 76 |                         {isLoggedIn && !isProfessional} : (
+     |                         ^
+  77 |                             <>
+  78 |                                 <a href="/" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Inicio</a>
+  79 |                                 <a href="/about" className="px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-200 font-semibold text-sm md:text-base">Acerca de</a>
+
+Expected '</', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[01:07:15.319] Server  LOG     ✓ Compiled in 326ms
+[01:07:27.531] Server  LOG     ✓ Compiled in 116ms
+[01:07:36.838] Server  LOG     ✓ Compiled in 127ms
+[01:08:58.517] Server  LOG     ✓ Compiled in 115ms
+[01:09:24.541] Server  LOG     ✓ Compiled in 101ms
+[01:09:43.572] Server  LOG     ✓ Compiled in 4ms
+[01:09:50.130] Server  LOG     ✓ Compiled in 82ms
+[01:10:01.801] Server  LOG     ✓ Compiled in 104ms
+[01:10:41.679] Server  LOG     ✓ Compiled in 240ms
+[01:11:21.702] Server  LOG     ✓ Compiled in 298ms
+[01:11:52.562] Server  LOG     ✓ Compiled in 237ms
+[01:12:24.868] Server  LOG     ✓ Compiled in 271ms
+[01:12:50.451] Server  LOG     ✓ Compiled in 334ms
+[01:13:36.314] Server  LOG     ✓ Compiled in 82ms
+[01:14:21.503] Server  LOG     ✓ Compiled in 541ms
+[01:14:59.759] Server  LOG     ✓ Compiled in 230ms
+[01:15:30.984] Server  LOG     ✓ Compiled in 199ms
+[01:16:14.867] Server  LOG     ✓ Compiled in 127ms
+[01:26:15.691] Server  LOG     ✓ Compiled in 83ms
+[01:26:39.157] Server  LOG     ✓ Compiled in 104ms
+[01:26:58.931] Server  LOG     ✓ Compiled in 85ms
+[01:27:32.608] Server  LOG     ✓ Compiled in 143ms
+[01:27:39.586] Server  LOG     ✓ Compiled in 140ms
+[01:27:45.189] Server  LOG     ✓ Compiled in 99ms
+[01:28:05.654] Server  LOG     ✓ Compiled in 134ms
+[01:28:43.372] Server  LOG     ✓ Compiled in 223ms
+[01:29:44.536] Server  LOG     ✓ Compiled in 98ms
+[01:40:37.108] Server  LOG     ✓ Compiled in 156ms
+[01:46:36.884] Server  LOG     ✓ Compiled in 168ms
+[01:46:39.602] Server  LOG     ✓ Compiled in 210ms
+[01:47:49.250] Server  LOG     ✓ Compiled in 216ms
+[01:48:06.253] Server  LOG     ✓ Compiled in 88ms
+[01:48:22.144] Server  LOG     ✓ Compiled in 80ms
+[01:48:24.136] Server  LOG     ✓ Compiled in 85ms
+[01:48:37.898] Server  LOG     ✓ Compiled in 250ms
+[01:49:00.466] Server  LOG     ✓ Compiled in 126ms
+[01:49:04.969] Server  LOG     ✓ Compiled in 266ms
+[01:49:16.566] Server  LOG     ✓ Compiled in 156ms
+[01:49:20.306] Server  LOG     ✓ Compiled in 165ms
+[01:52:54.842] Browser ERROR   ./src/components/Header.tsx:59:5
+Parsing ecmascript source code failed
+   57 |     };
+   58 |
+>  59 |     return (
+      |     ^^^^^^^^
+>  60 |         <header className="sticky top-0 z-50">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  61 |             <nav className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600 shadow-2xl p-0 transition-all duration-300">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  62 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  63 |                     {/* Logo con icono */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  64 |                     <a href="/" className="flex items-center gap-2 text-white text-2xl font-extrabold tracking-tight drop-shadow-lg bg-gradient-to-r from-blue-800/60 to-blue-900/10 px-4 py-1 rounded-2xl hover:scale-105 transition-transform duration-200">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  65 |                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-tr from-blue-900 via-blue-700 to-blue-500 shadow">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  66 |                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  67 |                         </span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  68 |                         AgendaApp
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  69 |                     </a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  70 |                     <div className="flex gap-1 md:gap-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  71 |                         {/* Mostrar navegación según el rol */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  72 |                         {isLoggedIn && isProfessional === true ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  73 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  74 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  75 |                                     href="/homeprofessional"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  76 |                                     className={`px-4 py-2 rounded-full transition-all duration-200 font-semibold text-sm md:text-base font-bold shadow-lg ${pathname === "/homeprofessional" ? "bg-blue-200 text-blue-900 scale-105" : "bg-white/90 text-blue-700"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  77 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  78 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  79 |                         ) : isLoggedIn && isProfessional === false ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  80 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  81 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  82 |                                     href="/homepatiente"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  83 |                                     className={`px-4 py-2 rounded-full font-bold transition-all duration-200 text-sm md:text-base ${pathname === "/homepatiente" ? "bg-blue-200 text-blue-900 scale-105" : "text-white bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  84 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  85 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  86 |                         ) : (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  87 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  88 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  89 |                                     href="/"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  90 |                                     className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  91 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  92 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  93 |                         )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  94 |                         <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  95 |                             href="/about"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  96 |                             className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/about" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  97 |                         >Acerca de</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  98 |                         <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  99 |                             href="/contact"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 100 |                             className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/contact" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 101 |                         >Contacto</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 102 |                     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 103 |                     <div className="flex items-center gap-2 ml-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 104 |                         {isLoggedIn && firstName ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |                             <div className="flex items-center gap-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |                                 <span className="bg-white/90 text-blue-700 px-4 py-2 rounded-full font-bold shadow-lg border border-blue-100 animate-fade-in">Hola, {firstName}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |                                 <a href="#" className="bg-gradient-to-r from-blue-400 to-blue-700 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:from-blue-500 hover:to-blue-800 transition-all duration-200 animate-fade-in" onClick={handleLogout}>Cerrar Sesión</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |                             </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |                         ) : (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 110 |                             <a href="#" className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:from-blue-400 hover:to-blue-800 hover:brightness-110 transition-all duration-200 animate-fade-in" onClick={handleLogin}>Iniciar Sesión</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 111 |                         )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 112 |                     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 113 |                 </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 114 |             </nav>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 115 |             {/* Aquí se renderiza el modal de login si es necesario. */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 116 |             {showLoginModal && <LoginModal setIsLoggedIn={() => { window.location.reload(); }} open={showLoginModal} onClose={() => setShowLoginModal(false)} />}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 117 |         </header>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 118 |     );
+      | ^^^^^^^
+  119 | }
+
+Return statement is not allowed here
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[01:53:17.436] Server  LOG     ✓ Compiled in 11ms
+[01:53:17.548] Browser ERROR   ./src/components/Header.tsx:59:5
+Parsing ecmascript source code failed
+   57 |     };
+   58 |
+>  59 |     return (
+      |     ^^^^^^^^
+>  60 |         <header className="sticky top-0 z-50">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  61 |             <nav className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600 shadow-2xl p-0 transition-all duration-300">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  62 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  63 |                     {/* Logo con icono */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  64 |                     <a href="/" className="flex items-center gap-2 text-white text-2xl font-extrabold tracking-tight drop-shadow-lg bg-gradient-to-r from-blue-800/60 to-blue-900/10 px-4 py-1 rounded-2xl hover:scale-105 transition-transform duration-200">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  65 |                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-tr from-blue-900 via-blue-700 to-blue-500 shadow">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  66 |                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  67 |                         </span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  68 |                         AgendaApp
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  69 |                     </a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  70 |                     <div className="flex gap-1 md:gap-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  71 |                         {/* Mostrar navegación según el rol */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  72 |                         {isLoggedIn && isProfessional === true ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  73 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  74 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  75 |                                     href="/homeprofessional"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  76 |                                     className={`px-4 py-2 rounded-full transition-all duration-200 font-semibold text-sm md:text-base font-bold shadow-lg ${pathname === "/homeprofessional" ? "bg-blue-200 text-blue-900 scale-105" : "bg-white/90 text-blue-700"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  77 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  78 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  79 |                         ) : isLoggedIn && isProfessional === false ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  80 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  81 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  82 |                                     href="/homepatiente"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  83 |                                     className={`px-4 py-2 rounded-full font-bold transition-all duration-200 text-sm md:text-base ${pathname === "/homepatiente" ? "bg-blue-200 text-blue-900 scale-105" : "text-white bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  84 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  85 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  86 |                         ) : (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  87 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  88 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  89 |                                     href="/"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  90 |                                     className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  91 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  92 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  93 |                         )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  94 |                         <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  95 |                             href="/about"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  96 |                             className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/about" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  97 |                         >Acerca de</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  98 |                         <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  99 |                             href="/contact"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 100 |                             className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/contact" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 101 |                         >Contacto</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 102 |                     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 103 |                     <div className="flex items-center gap-2 ml-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 104 |                         {isLoggedIn && firstName ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |                             <div className="flex items-center gap-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |                                 <span className="bg-white/90 text-blue-700 px-4 py-2 rounded-full font-bold shadow-lg border border-blue-100 animate-fade-in">Hola, {firstName}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |                                 <a href="#" className="bg-gradient-to-r from-blue-400 to-blue-700 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:from-blue-500 hover:to-blue-800 transition-all duration-200 animate-fade-in" onClick={handleLogout}>Cerrar Sesión</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |                             </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |                         ) : (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 110 |                             <a href="#" className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:from-blue-400 hover:to-blue-800 hover:brightness-110 transition-all duration-200 animate-fade-in" onClick={handleLogin}>Iniciar Sesión</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 111 |                         )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 112 |                     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 113 |                 </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 114 |             </nav>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 115 |             {/* Aquí se renderiza el modal de login si es necesario. */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 116 |             {showLoginModal && <LoginModal setIsLoggedIn={() => { window.location.reload(); }} open={showLoginModal} onClose={() => setShowLoginModal(false)} />}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 117 |         </header>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 118 |     );
+      | ^^^^^^^
+  119 | }
+
+Return statement is not allowed here
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[01:53:31.934] Server  LOG     ✓ Compiled in 489ms
+[01:53:32.234] Browser ERROR   ./src/components/Header.tsx:59:5
+Parsing ecmascript source code failed
+   57 |     };
+   58 |
+>  59 |     return (
+      |     ^^^^^^^^
+>  60 |         <header className="sticky top-0 z-50">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  61 |             <nav className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600 shadow-2xl p-0 transition-all duration-300">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  62 |                 <div className="container mx-auto flex items-center justify-between py-3 px-4">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  63 |                     {/* Logo con icono */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  64 |                     <a href="/" className="flex items-center gap-2 text-white text-2xl font-extrabold tracking-tight drop-shadow-lg bg-gradient-to-r from-blue-800/60 to-blue-900/10 px-4 py-1 rounded-2xl hover:scale-105 transition-transform duration-200">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  65 |                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-tr from-blue-900 via-blue-700 to-blue-500 shadow">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  66 |                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  67 |                         </span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  68 |                         AgendaApp
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  69 |                     </a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  70 |                     <div className="flex gap-1 md:gap-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  71 |                         {/* Mostrar navegación según el rol */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  72 |                         {isLoggedIn && isProfessional === true ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  73 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  74 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  75 |                                     href="/homeprofessional"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  76 |                                     className={`px-4 py-2 rounded-full transition-all duration-200 font-semibold text-sm md:text-base font-bold shadow-lg ${pathname === "/homeprofessional" ? "bg-blue-200 text-blue-900 scale-105" : "bg-white/90 text-blue-700"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  77 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  78 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  79 |                         ) : isLoggedIn && isProfessional === false ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  80 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  81 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  82 |                                     href="/homepatiente"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  83 |                                     className={`px-4 py-2 rounded-full font-bold transition-all duration-200 text-sm md:text-base ${pathname === "/homepatiente" ? "bg-blue-200 text-blue-900 scale-105" : "text-white bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  84 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  85 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  86 |                         ) : (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  87 |                             <>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  88 |                                 <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  89 |                                     href="/"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  90 |                                     className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  91 |                                 >Inicio</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  92 |                             </>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  93 |                         )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  94 |                         <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  95 |                             href="/about"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  96 |                             className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/about" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  97 |                         >Acerca de</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  98 |                         <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  99 |                             href="/contact"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 100 |                             className={`px-4 py-2 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${pathname === "/contact" ? "bg-blue-200 text-blue-900 scale-105" : "text-white hover:bg-white/20"}`}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 101 |                         >Contacto</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 102 |                     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 103 |                     <div className="flex items-center gap-2 ml-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 104 |                         {isLoggedIn && firstName ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |                             <div className="flex items-center gap-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |                                 <span className="bg-white/90 text-blue-700 px-4 py-2 rounded-full font-bold shadow-lg border border-blue-100 animate-fade-in">Hola, {firstName}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |                                 <a href="#" className="bg-gradient-to-r from-blue-400 to-blue-700 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:from-blue-500 hover:to-blue-800 transition-all duration-200 animate-fade-in" onClick={handleLogout}>Cerrar Sesión</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |                             </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |                         ) : (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 110 |                             <a href="#" className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:from-blue-400 hover:to-blue-800 hover:brightness-110 transition-all duration-200 animate-fade-in" onClick={handleLogin}>Iniciar Sesión</a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 111 |                         )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 112 |                     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 113 |                 </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 114 |             </nav>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 115 |             {/* Aquí se renderiza el modal de login si es necesario. */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 116 |             {showLoginModal && <LoginModal setIsLoggedIn={() => { window.location.reload(); }} open={showLoginModal} onClose={() => setShowLoginModal(false)} />}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 117 |         </header>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 118 |     );
+      | ^^^^^^^
+  119 | }
+
+Return statement is not allowed here
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[01:54:41.523] Server  LOG     ✓ Compiled in 117ms
+[01:56:22.758] Server  LOG     ✓ Compiled in 261ms
+[01:56:50.401] Server  LOG     ✓ Compiled in 189ms
+[01:58:27.857] Browser ERROR   ./src/app/contact/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900 drop-shadow-lg">Contacto</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |             <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                 ¿Tienes dudas, sugerencias o necesitas ayuda? ¡Estamos aquí para ayudarte!<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 Puedes enviarnos un correo a <a href="mailto:contacto@agendaapp.com" className="text-blue-600 underline font-semibold">contacto@agendaapp.com</a> o escribirnos por redes sociales.
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |             </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Teléfono</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                     <span className="text-blue-900 font-semibold">+34 912 345 678</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Horario</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                     <span className="text-blue-900 font-semibold">Lunes a Viernes: 9:00 - 18:00</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |             <div className="flex gap-6 mt-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                 <a href="https://twitter.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337 3.1a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.64c-2.73 0-4.942 2.21-4.942 4.942 0 .387.044.765.127 1.127C7.728 6.575 4.1 4.885 1.671 2.149c-.427.734-.666 1.584-.666 2.491 0 1.72.875 3.234 2.209 4.122a4.904 4.904 0 0 1-2.237-.618v.062c0 2.404 1.713 4.415 4.004 4.872a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.868 9.868 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.514 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     Twitter
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |                 <a href="https://facebook.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                     Facebook
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |                 <a href="https://instagram.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.974.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.975-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.974 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.402 3.678 1.383c-.981.981-1.252 2.093-1.311 3.374C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.33 2.393 1.311 3.374.981.981 2.093 1.252 3.374 1.311C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.33 3.374-1.311.981-.981 1.252-2.093 1.311-3.374.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.33-2.393-1.311-3.374-.981-.981-2.093-1.252-3.374-1.311C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |                     Instagram
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |                 <span>AgendaApp © 2026 | Todos los derechos reservados</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |     );
+     | ^^^^^^^
+  37 | }
+
+Return statement is not allowed here
+[02:02:43.014] Server  LOG     ✓ Compiled in 7ms
+[02:02:43.142] Browser ERROR   ./src/app/contact/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900 drop-shadow-lg">Contacto</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |             <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                 ¿Tienes dudas, sugerencias o necesitas ayuda? ¡Estamos aquí para ayudarte!<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 Puedes enviarnos un correo a <a href="mailto:contacto@agendaapp.com" className="text-blue-600 underline font-semibold">contacto@agendaapp.com</a> o escribirnos por redes sociales.
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |             </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Teléfono</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                     <span className="text-blue-900 font-semibold">+34 912 345 678</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Horario</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                     <span className="text-blue-900 font-semibold">Lunes a Viernes: 9:00 - 18:00</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |             <div className="flex gap-6 mt-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                 <a href="https://twitter.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337 3.1a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.64c-2.73 0-4.942 2.21-4.942 4.942 0 .387.044.765.127 1.127C7.728 6.575 4.1 4.885 1.671 2.149c-.427.734-.666 1.584-.666 2.491 0 1.72.875 3.234 2.209 4.122a4.904 4.904 0 0 1-2.237-.618v.062c0 2.404 1.713 4.415 4.004 4.872a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.868 9.868 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.514 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     Twitter
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |                 <a href="https://facebook.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                     Facebook
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |                 <a href="https://instagram.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.974.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.975-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.974 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.402 3.678 1.383c-.981.981-1.252 2.093-1.311 3.374C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.33 2.393 1.311 3.374.981.981 2.093 1.252 3.374 1.311C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.33 3.374-1.311.981-.981 1.252-2.093 1.311-3.374.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.33-2.393-1.311-3.374-.981-.981-2.093-1.252-3.374-1.311C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |                     Instagram
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |                 <span>AgendaApp © 2026 | Todos los derechos reservados</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |     );
+     | ^^^^^^^
+  37 | }
+
+Return statement is not allowed here
+[02:02:47.416] Server  ERROR   ⨯ ./src/app/contact/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900 drop-shadow-lg">Contacto</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |             <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                 ¿Tienes dudas, sugerencias o necesitas ayuda? ¡Estamos aquí para ayudarte!<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 Puedes enviarnos un correo a <a href="mailto:contacto@agendaapp.com" className="text-blue-600 underline font-semibold">contacto@agendaapp.com</a> o escribirnos por redes sociales.
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |             </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Teléfono</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                     <span className="text-blue-900 font-semibold">+34 912 345 678</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Horario</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                     <span className="text-blue-900 font-semibold">Lunes a Viernes: 9:00 - 18:00</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |             <div className="flex gap-6 mt-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                 <a href="https://twitter.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337 3.1a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.64c-2.73 0-4.942 2.21-4.942 4.942 0 .387.044.765.127 1.127C7.728 6.575 4.1 4.885 1.671 2.149c-.427.734-.666 1.584-.666 2.491 0 1.72.875 3.234 2.209 4.122a4.904 4.904 0 0 1-2.237-.618v.062c0 2.404 1.713 4.415 4.004 4.872a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.868 9.868 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.514 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     Twitter
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |                 <a href="https://facebook.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                     Facebook
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |                 <a href="https://instagram.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.974.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.975-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.974 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.402 3.678 1.383c-.981.981-1.252 2.093-1.311 3.374C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.33 2.393 1.311 3.374.981.981 2.093 1.252 3.374 1.311C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.33 3.374-1.311.981-.981 1.252-2.093 1.311-3.374.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.33-2.393-1.311-3.374-.981-.981-2.093-1.252-3.374-1.311C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |                     Instagram
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |                 <span>AgendaApp © 2026 | Todos los derechos reservados</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |     );
+     | ^^^^^^^
+  37 | }
+
+Return statement is not allowed here
+
+
+[02:02:47.544] Server  WARN    Warning: data for page "/_error" (path "/contact") is 218 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+[02:02:48.298] Browser ERROR   uncaughtError: Error: ./src/app/contact/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900 drop-shadow-lg">Contacto</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |             <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                 ¿Tienes dudas, sugerencias o necesitas ayuda? ¡Estamos aquí para ayudarte!<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 Puedes enviarnos un correo a <a href="mailto:contacto@agendaapp.com" className="text-blue-600 underline font-semibold">contacto@agendaapp.com</a> o escribirnos por redes sociales.
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |             </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Teléfono</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                     <span className="text-blue-900 font-semibold">+34 912 345 678</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Horario</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                     <span className="text-blue-900 font-semibold">Lunes a Viernes: 9:00 - 18:00</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |             <div className="flex gap-6 mt-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                 <a href="https://twitter.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337 3.1a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.64c-2.73 0-4.942 2.21-4.942 4.942 0 .387.044.765.127 1.127C7.728 6.575 4.1 4.885 1.671 2.149c-.427.734-.666 1.584-.666 2.491 0 1.72.875 3.234 2.209 4.122a4.904 4.904 0 0 1-2.237-.618v.062c0 2.404 1.713 4.415 4.004 4.872a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.868 9.868 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.514 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     Twitter
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |                 <a href="https://facebook.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                     Facebook
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |                 <a href="https://instagram.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.974.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.975-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.974 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.402 3.678 1.383c-.981.981-1.252 2.093-1.311 3.374C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.33 2.393 1.311 3.374.981.981 2.093 1.252 3.374 1.311C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.33 3.374-1.311.981-.981 1.252-2.093 1.311-3.374.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.33-2.393-1.311-3.374-.981-.981-2.093-1.252-3.374-1.311C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |                     Instagram
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |                 <span>AgendaApp © 2026 | Todos los derechos reservados</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |     );
+     | ^^^^^^^
+  37 | }
+
+Return statement is not allowed here
+
+
+[02:02:49.241] Browser ERROR   ./src/app/contact/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900 drop-shadow-lg">Contacto</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |             <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                 ¿Tienes dudas, sugerencias o necesitas ayuda? ¡Estamos aquí para ayudarte!<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 Puedes enviarnos un correo a <a href="mailto:contacto@agendaapp.com" className="text-blue-600 underline font-semibold">contacto@agendaapp.com</a> o escribirnos por redes sociales.
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |             </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Teléfono</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                     <span className="text-blue-900 font-semibold">+34 912 345 678</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Horario</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                     <span className="text-blue-900 font-semibold">Lunes a Viernes: 9:00 - 18:00</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |             <div className="flex gap-6 mt-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                 <a href="https://twitter.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337 3.1a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.64c-2.73 0-4.942 2.21-4.942 4.942 0 .387.044.765.127 1.127C7.728 6.575 4.1 4.885 1.671 2.149c-.427.734-.666 1.584-.666 2.491 0 1.72.875 3.234 2.209 4.122a4.904 4.904 0 0 1-2.237-.618v.062c0 2.404 1.713 4.415 4.004 4.872a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.868 9.868 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.514 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     Twitter
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |                 <a href="https://facebook.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                     Facebook
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |                 <a href="https://instagram.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.974.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.975-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.974 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.402 3.678 1.383c-.981.981-1.252 2.093-1.311 3.374C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.33 2.393 1.311 3.374.981.981 2.093 1.252 3.374 1.311C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.33 3.374-1.311.981-.981 1.252-2.093 1.311-3.374.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.33-2.393-1.311-3.374-.981-.981-2.093-1.252-3.374-1.311C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |                     Instagram
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |                 <span>AgendaApp © 2026 | Todos los derechos reservados</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |     );
+     | ^^^^^^^
+  37 | }
+
+Return statement is not allowed here
+[02:02:49.241] Browser ERROR   ./src/app/contact/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900 drop-shadow-lg">Contacto</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |             <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                 ¿Tienes dudas, sugerencias o necesitas ayuda? ¡Estamos aquí para ayudarte!<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 Puedes enviarnos un correo a <a href="mailto:contacto@agendaapp.com" className="text-blue-600 underline font-semibold">contacto@agendaapp.com</a> o escribirnos por redes sociales.
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |             </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Teléfono</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                     <span className="text-blue-900 font-semibold">+34 912 345 678</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                 <div className="flex flex-col items-center bg-white/80 rounded-xl shadow-lg p-6 w-72">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                     <span className="text-blue-700 text-2xl font-bold mb-2">Horario</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                     <span className="text-blue-900 font-semibold">Lunes a Viernes: 9:00 - 18:00</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |             <div className="flex gap-6 mt-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                 <a href="https://twitter.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337 3.1a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.64c-2.73 0-4.942 2.21-4.942 4.942 0 .387.044.765.127 1.127C7.728 6.575 4.1 4.885 1.671 2.149c-.427.734-.666 1.584-.666 2.491 0 1.72.875 3.234 2.209 4.122a4.904 4.904 0 0 1-2.237-.618v.062c0 2.404 1.713 4.415 4.004 4.872a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.868 9.868 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.514 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     Twitter
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |                 <a href="https://facebook.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                     Facebook
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |                 <a href="https://instagram.com/agendaapp" target="_blank" rel="noopener" className="flex items-center gap-2 text-blue-500 hover:text-blue-700 font-semibold text-lg transition-all">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.974.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.975-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.974 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.402 3.678 1.383c-.981.981-1.252 2.093-1.311 3.374C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.33 2.393 1.311 3.374.981.981 2.093 1.252 3.374 1.311C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.33 3.374-1.311.981-.981 1.252-2.093 1.311-3.374.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.33-2.393-1.311-3.374-.981-.981-2.093-1.252-3.374-1.311C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |                     Instagram
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |                 </a>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |                 <span>AgendaApp © 2026 | Todos los derechos reservados</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |     );
+     | ^^^^^^^
+  37 | }
+
+Return statement is not allowed here
+[02:03:08.335] Server  LOG     ✓ Compiled in 266ms
+[02:04:31.187] Browser ERROR   ./src/app/about/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900 drop-shadow-lg">Acerca de AgendaApp</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |             <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                 AgendaApp es una plataforma moderna para gestionar tareas, eventos y citas, diseñada para pacientes y profesionales.<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 Con una interfaz intuitiva y fácil de usar, puedes crear, editar y eliminar tareas, así como establecer recordatorios para no olvidar tus compromisos importantes.
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |             </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex flex-col md:flex-row gap-6 mt-4">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                 <div className="bg-white/80 rounded-xl shadow-lg p-6 w-72 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     <span className="mb-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-blue-700"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2zm-6 8c0-2.21 3.582-4 8-4s8 1.79 8 4v1H6v-1z" /></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                     </span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                     <h2 className="text-xl font-bold mb-2 text-blue-700">Para pacientes</h2>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                     <p className="text-blue-900 text-center">Reserva, consulta y gestiona tus citas de manera rápida y segura.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                 <div className="bg-white/80 rounded-xl shadow-lg p-6 w-72 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |                     <span className="mb-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-blue-700"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7 20h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v11a2 2 0 002 2z" /></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                     </span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     <h2 className="text-xl font-bold mb-2 text-blue-700">Para profesionales</h2>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     <p className="text-blue-900 text-center">Organiza tu agenda, recibe notificaciones y mejora la atención a tus pacientes.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                 <span>AgendaApp © 2026 | Innovando la gestión de tareas y citas</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^^
+  29 | }
+
+Return statement is not allowed here
+[02:06:01.737] Browser ERROR   ./src/app/about/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900 drop-shadow-lg">Acerca de AgendaApp</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |             <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                 AgendaApp es una plataforma moderna para gestionar tareas, eventos y citas, diseñada para pacientes y profesionales.<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 Con una interfaz intuitiva y fácil de usar, puedes crear, editar y eliminar tareas, así como establecer recordatorios para no olvidar tus compromisos importantes.
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |             </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex flex-col md:flex-row gap-6 mt-4">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                 <div className="bg-white/80 rounded-xl shadow-lg p-6 w-72 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     <span className="mb-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-blue-700"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2zm-6 8c0-2.21 3.582-4 8-4s8 1.79 8 4v1H6v-1z" /></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                     </span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                     <h2 className="text-xl font-bold mb-2 text-blue-700">Para pacientes</h2>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                     <p className="text-blue-900 text-center">Reserva, consulta y gestiona tus citas de manera rápida y segura.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                 <div className="bg-white/80 rounded-xl shadow-lg p-6 w-72 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |                     <span className="mb-2">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-blue-700"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7 20h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v11a2 2 0 002 2z" /></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                     </span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     <h2 className="text-xl font-bold mb-2 text-blue-700">Para profesionales</h2>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     <p className="text-blue-900 text-center">Organiza tu agenda, recibe notificaciones y mejora la atención a tus pacientes.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                 <span>AgendaApp © 2026 | Innovando la gestión de tareas y citas</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^^
+  29 | }
+
+Return statement is not allowed here
+[02:06:10.662] Server  LOG     ✓ Compiled in 152ms
+[02:15:11.438] Server  LOG     ✓ Compiled in 376ms
+[02:15:12.390] Browser ERROR   ./src/app/homepatiente/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <div className="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center max-w-xl w-full animate-fade-in">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |                 <span className="mb-4">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-14 h-14 text-blue-700"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2zm-6 8c0-2.21 3.582-4 8-4s8 1.79 8 4v1H6v-1z" /></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 </span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |                 <h1 className="text-4xl md:text-5xl font-extrabold mb-2 text-blue-900 drop-shadow-lg text-center">Bienvenido a tu Panel de Paciente</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |                 <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                     Aquí podrás gestionar tus citas, ver tu historial médico y actualizar tu información personal.<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     ¡Gracias por confiar en nosotros para cuidar de tu salud!
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                 </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                 <div className="flex flex-col md:flex-row gap-6 w-full mt-4">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                     <div className="flex-1 bg-blue-50 rounded-xl shadow p-6 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                         <span className="text-blue-700 text-2xl font-bold mb-2">Citas</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                         <p className="text-blue-900 text-center">Reserva y consulta tus próximas citas médicas fácilmente.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |                     <div className="flex-1 bg-blue-50 rounded-xl shadow p-6 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |                         <span className="text-blue-700 text-2xl font-bold mb-2">Historial</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                         <p className="text-blue-900 text-center">Accede a tu historial médico y revisa tus consultas anteriores.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     <div className="flex-1 bg-blue-50 rounded-xl shadow p-6 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                         <span className="text-blue-700 text-2xl font-bold mb-2">Perfil</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |                         <p className="text-blue-900 text-center">Actualiza tu información personal y preferencias de contacto.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |                 <span>AgendaApp © 2026 | Tu salud, nuestra prioridad</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |     );
+     | ^^^^^^^
+  32 | }
+
+Return statement is not allowed here
+[02:15:16.384] Browser ERROR   ./src/app/homepatiente/page.tsx:1:5
+Parsing ecmascript source code failed
+>  1 |     return (
+     |     ^^^^^^^^
+>  2 |         <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  3 |             <div className="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center max-w-xl w-full animate-fade-in">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |                 <span className="mb-4">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-14 h-14 text-blue-700"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2zm-6 8c0-2.21 3.582-4 8-4s8 1.79 8 4v1H6v-1z" /></svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |                 </span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |                 <h1 className="text-4xl md:text-5xl font-extrabold mb-2 text-blue-900 drop-shadow-lg text-center">Bienvenido a tu Panel de Paciente</h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |                 <p className="text-lg text-blue-800 mb-6 text-center max-w-2xl">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |                     Aquí podrás gestionar tus citas, ver tu historial médico y actualizar tu información personal.<br />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |                     ¡Gracias por confiar en nosotros para cuidar de tu salud!
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |                 </p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |                 <div className="flex flex-col md:flex-row gap-6 w-full mt-4">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |                     <div className="flex-1 bg-blue-50 rounded-xl shadow p-6 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |                         <span className="text-blue-700 text-2xl font-bold mb-2">Citas</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |                         <p className="text-blue-900 text-center">Reserva y consulta tus próximas citas médicas fácilmente.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |                     <div className="flex-1 bg-blue-50 rounded-xl shadow p-6 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |                         <span className="text-blue-700 text-2xl font-bold mb-2">Historial</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |                         <p className="text-blue-900 text-center">Accede a tu historial médico y revisa tus consultas anteriores.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |                     <div className="flex-1 bg-blue-50 rounded-xl shadow p-6 flex flex-col items-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |                         <span className="text-blue-700 text-2xl font-bold mb-2">Perfil</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |                         <p className="text-blue-900 text-center">Actualiza tu información personal y preferencias de contacto.</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |                 </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |             <div className="mt-10 text-center text-blue-700 text-sm">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |                 <span>AgendaApp © 2026 | Tu salud, nuestra prioridad</span>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |     );
+     | ^^^^^^^
+  32 | }
+
+Return statement is not allowed here
+[02:15:26.670] Server  LOG     ✓ Compiled in 124ms
+[02:16:02.230] Server  LOG     ✓ Compiled in 284ms
+[02:17:01.973] Server  LOG     ✓ Compiled in 209ms
+[02:17:20.548] Server  LOG     ✓ Compiled in 557ms

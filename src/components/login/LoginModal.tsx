@@ -47,8 +47,9 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
                 setError('No se pudo obtener el usuario autenticado.');
                 return false;
             }
-            // Set the first_name cookie for the server layout to read
-            document.cookie = `first_name=${firstName}; path=/;`;
+            // Set the first_name and user_id cookies for the server layout to read (codificando tildes y caracteres especiales)
+            document.cookie = `first_name=${encodeURIComponent(firstName)}; path=/;`;
+            document.cookie = `user_id=${user.id}; path=/;`;
             // Call setIsLoggedIn and close the modal
             setIsLoggedIn(true);
             setError(null);
@@ -59,10 +60,10 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
     }
 
     return (
-        <div>
-            <div className="fixed inset-0 backdrop-blur-sm bg-gradient-to-br from-blue-200 via-white to-blue-100 z-40"></div>
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-br from-blue-200 via-white to-blue-100 z-40"></div>
             {/* Modal */}
-            <div className="bg-white shadow-2xl z-50 rounded-3xl p-6 w-96 h-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-blue-200">
+            <div className="relative bg-white shadow-2xl rounded-3xl p-6 w-96 h-96 border border-blue-200 flex flex-col justify-center z-50">
                 <div className="text-blue-500 absolute right-6 top-2 cursor-pointer text-xl font-bold hover:text-blue-700 transition-colors duration-200" onClick={handleClose} title="Cerrar">×</div>
                 <div className="text-center text-3xl font-extrabold text-blue-700 mb-4 mt-2 tracking-tight">Iniciar Sesión</div>
                 <div className="p-2">
