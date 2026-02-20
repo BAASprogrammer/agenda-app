@@ -1,5 +1,4 @@
 'use client';
-import { LoginModal } from "@/components/login/LoginModal";
 
 export default function Home() {
   return (

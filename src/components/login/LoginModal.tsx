@@ -1,4 +1,5 @@
 // LoginModal component: Handles user authentication and sets the first_name cookie for session display.
+import { useState } from 'react';
 import { supabase } from '../../lib/supabaseClient';
 
 interface LoginModalProps {
@@ -7,6 +8,7 @@ interface LoginModalProps {
     setIsLoggedIn: (loggedIn: boolean) => void;
 }
 export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
+    const [error, setError] = useState<string | null>(null);
     // If modal is not open, render nothing
     if (!open) return null;
 
@@ -17,11 +19,12 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
 
     // Handle login logic: authenticate with Supabase, fetch user's first name from 'users' table, set cookie, reload UI
     const handleLogin = async () => {
-        const email = (document.getElementById('username') as HTMLInputElement)?.value;
+        const email = (document.getElementById('email') as HTMLInputElement)?.value;
         const password = (document.getElementById('password') as HTMLInputElement)?.value;
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) {
-            alert('Authentication error: ' + error.message);
+            setError('Ingrese email y contraseña válidos.');
+            return false;
         } else {
             // Get the authenticated user from Supabase session
             const user = (await supabase.auth.getSession()).data.session?.user;
@@ -36,15 +39,19 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
                 if (!userError && userData?.first_name) {
                     firstName = userData.first_name;
                 } else {
-                    alert('first_name not found in users table.');
+                    setError('first_name no encontrado en la tabla de usuarios.');
+                    return false;
                 }
+            
             } else {
-                alert('Could not get authenticated user.');
+                setError('No se pudo obtener el usuario autenticado.');
+                return false;
             }
             // Set the first_name cookie for the server layout to read
             document.cookie = `first_name=${firstName}; path=/;`;
             // Call setIsLoggedIn and close the modal
             setIsLoggedIn(true);
+            setError(null);
             onClose();
             // Reload the page so the server layout picks up the new cookie
             window.location.reload();
@@ -52,19 +59,24 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
     }
 
     return (
-        <div className="bg-yellow-50 rounded-2xl p-4 w-96 h-80 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="text-gray-900 absolute right-6 top-2 cursor-pointer" onClick={handleClose} title="Cerrar">x</div>
-            <div className="text-center text-2xl font-bold text-gray-800 mb-4 mt-2">Iniciar Sesión</div>
-            <div className="p-2">
-                <label htmlFor="username" className="text-gray-600 block">Nombre de Usuario o Email</label>
-                <input type="text" id="username" name="username" className="border-2 border-gray-400 rounded w-full text-black" />
-            </div>
-            <div className="p-2">
-                <label htmlFor="password" className="text-gray-600 block">Contraseña</label>
-                <input type="password" id="password" name="password" className="border-2 border-gray-400 rounded w-full text-black" />
-            </div>
-            <div className="p-2 text-center mt-4">
-                <button className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 cursor-pointer" onClick={handleLogin}>Iniciar Sesión</button>
+        <div>
+            <div className="fixed inset-0 backdrop-blur-sm bg-gradient-to-br from-blue-200 via-white to-blue-100 z-40"></div>
+            {/* Modal */}
+            <div className="bg-white shadow-2xl z-50 rounded-3xl p-6 w-96 h-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-blue-200">
+                <div className="text-blue-500 absolute right-6 top-2 cursor-pointer text-xl font-bold hover:text-blue-700 transition-colors duration-200" onClick={handleClose} title="Cerrar">×</div>
+                <div className="text-center text-3xl font-extrabold text-blue-700 mb-4 mt-2 tracking-tight">Iniciar Sesión</div>
+                <div className="p-2">
+                    <label htmlFor="email" className="text-blue-700 block font-semibold">Email</label>
+                    <input type="text" id="email" name="email" placeholder='email@dominio.com' className="border-2 border-blue-300 focus:border-blue-500 rounded-lg w-full text-gray-800 px-3 py-1 mt-1 transition-colors duration-200 outline-none" />
+                </div>
+                <div className="p-2">
+                    <label htmlFor="password" className="text-blue-700 block font-semibold">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder='******' className="border-2 border-blue-300 focus:border-blue-500 rounded-lg w-full text-gray-800 px-3 py-1 mt-1 transition-colors duration-200 outline-none" />
+                </div>
+                {error && <div className="text-red-500 text-center m-0 font-bold text-sm absolute left-1/5">{error}</div>}
+                <div className="p-2 text-center mt-8">  
+                    <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-lg font-bold shadow-md hover:from-blue-600 hover:to-blue-800 transition-all duration-200 cursor-pointer" onClick={handleLogin} title='Iniciar Sesión'>Iniciar Sesión</button>
+                </div>
             </div>
         </div>
     );
