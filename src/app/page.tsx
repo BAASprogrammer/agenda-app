@@ -21,7 +21,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-tight mb-8">
             Tu tiempo es valioso.<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-cyan-500 to-blue-600">
-              Nosotros lo organizamos.
+              Nosotros lo organizamos.h
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 mb-12 font-medium max-w-3xl mx-auto leading-relaxed">
