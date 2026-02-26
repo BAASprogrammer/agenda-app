@@ -1,13 +1,16 @@
+"use client";
 // LoginModal component: Handles user authentication and sets the first_name cookie for session display.
 import { useState } from 'react';
 import { supabase } from '../../lib/supabaseClient';
+import { useRouter } from 'next/navigation';
 
 interface LoginModalProps {
     open: boolean;
     onClose: () => void;
     setIsLoggedIn: (loggedIn: boolean) => void;
 }
-export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
+export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
+    const router = useRouter();
     const [error, setError] = useState<string | null>(null);
     // If modal is not open, render nothing
     if (!open) return null;
@@ -29,11 +32,12 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
             // Get the authenticated user from Supabase session
             const user = (await supabase.auth.getSession()).data.session?.user;
             let firstName = "";
+            let isProfessional = "false";
             if (user) {
                 // Query the 'users' table to get the real first name
                 const { data: userData, error: userError } = await supabase
                     .from('users')
-                    .select('first_name')
+                    .select('first_name, is_professional')
                     .eq('id', user.id)
                     .single();
                 if (!userError && userData?.first_name) {
@@ -42,7 +46,11 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
                     setError('first_name no encontrado en la tabla de usuarios.');
                     return false;
                 }
-            
+                if (!userError && userData?.is_professional) {
+                    isProfessional = String(userData.is_professional);
+                    console.log("isProfessional login modal:", isProfessional);
+                }
+
             } else {
                 setError('No se pudo obtener el usuario autenticado.');
                 return false;
@@ -50,12 +58,23 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
             // Set the first_name and user_id cookies for the server layout to read (codificando tildes y caracteres especiales)
             document.cookie = `first_name=${encodeURIComponent(firstName)}; path=/;`;
             document.cookie = `user_id=${user.id}; path=/;`;
+            document.cookie = `is_professional=${isProfessional}; path=/;`;
+
             // Call setIsLoggedIn and close the modal
             setIsLoggedIn(true);
             setError(null);
             onClose();
-            // Reload the page so the server layout picks up the new cookie
-            window.location.reload();
+
+            // Redirigir basado en el rol del usuario recién autenticado
+            if (isProfessional === "true") {
+                router.replace("/homeprofessional");
+            } else if (isProfessional === "false") {
+                router.replace("/homepatiente");
+            } else {
+                router.replace("/");
+            }
+
+            router.refresh();
         }
     }
 
@@ -75,7 +94,7 @@ export function LoginModal({open, onClose, setIsLoggedIn}: LoginModalProps) {
                     <input type="password" id="password" name="password" placeholder='******' className="border-2 border-blue-300 focus:border-blue-500 rounded-lg w-full text-gray-800 px-3 py-1 mt-1 transition-colors duration-200 outline-none" />
                 </div>
                 {error && <div className="text-red-500 text-center m-0 font-bold text-sm absolute left-1/5">{error}</div>}
-                <div className="p-2 text-center mt-8">  
+                <div className="p-2 text-center mt-8">
                     <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-lg font-bold shadow-md hover:from-blue-600 hover:to-blue-800 transition-all duration-200 cursor-pointer" onClick={handleLogin} title='Iniciar Sesión'>Iniciar Sesión</button>
                 </div>
             </div>

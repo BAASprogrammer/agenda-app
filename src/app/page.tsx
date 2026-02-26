@@ -1,5 +1,6 @@
 'use client';
 import { ArrowRight, Calendar, Clock, ShieldCheck, Star } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
               Comenzar Gratis <ArrowRight className="w-5 h-5" />
             </button>
             <button className="flex items-center gap-2 bg-white/80 backdrop-blur-md text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-indigo-300 hover:text-indigo-600 hover:bg-white hover:-translate-y-1 transition-all duration-300">
-              Saber más
+              <Link href="/about" className="no-underline text-slate-700">Saber más</Link>
             </button>
           </div>
         </div>

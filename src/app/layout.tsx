@@ -1,21 +1,28 @@
-
+import React from "react";
 import Header from "@/components/Header";
 import "./globals.css";
 import { cookies } from "next/headers";
+import { UserProvider } from "@/context/UserContext";
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  // Leer el nombre desde cookies (ajusta el nombre de la cookie según tu app)
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  // Leer el nombre desde cookies
   const cookieStore = await cookies();
-  // Obtener el firstName
   const firstName = cookieStore.get("first_name")?.value || "";
-  // Obtener el userId
+  const isProfessional = cookieStore.get("is_professional")?.value || "";
   const userId = cookieStore.get("user_id")?.value || "";
   const isLoggedIn = !!firstName;
+  console.log("isProfessional layout", isProfessional);
   return (
     <html lang="es">
-      <body>
-        <Header isLoggedIn={isLoggedIn} firstName={firstName} userId={userId} />
-        {children}
+      <body className="antialiased">
+        <UserProvider isLoggedIn={isLoggedIn} firstName={firstName} userId={userId} isProfessional={isProfessional}>
+          <Header isLoggedIn={isLoggedIn} firstName={firstName} isProfessional={isProfessional} />
+          <main>{children}</main>
+        </UserProvider>
       </body>
     </html>
   );

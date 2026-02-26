@@ -29,7 +29,7 @@ export default function Contact() {
                             <Mail className="w-6 h-6" />
                         </div>
                         <h3 className="text-lg font-bold text-slate-800 mb-1">Correo</h3>
-                        <a href="mailto:contacto@agendaapp.com" className="text-blue-600 font-medium hover:underline">contacto@agendaapp.com</a>
+                        <a href="mailto:contacto@agendaapp.com" className="text-blue-600 font-medium hover:underline">contacto@agendaapp.cl</a>
                     </div>
 
                     <div className="bg-white/80 backdrop-blur-xl border border-white rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col items-center">

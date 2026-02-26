@@ -1,1 +1,821 @@
-[00:00:01.274] Server  LOG     ✓ Ready in 1200ms
+[00:00:01.070] Server  LOG     ✓ Ready in 936ms
+[00:05:21.826] Server  LOG     ✓ Compiled in 22ms
+[00:05:55.593] Server  LOG     ✓ Compiled in 25ms
+[00:06:23.886] Server  LOG     ✓ Compiled in 23ms
+[00:06:57.991] Server  LOG     ✓ Compiled in 14ms
+[00:09:04.821] Server  LOG     ✓ Compiled in 21ms
+[00:10:23.702] Server  LOG     ✓ Compiled in 38ms
+[00:12:14.373] Server  LOG     ✓ Compiled in 21ms
+[00:12:48.706] Server  LOG     ✓ Compiled in 24ms
+[00:13:01.865] Server  LOG     ✓ Compiled in 13ms
+[02:13:05.157] Server  LOG     ✓ Compiled in 29ms
+[02:14:27.252] Server  LOG     ✓ Compiled in 20ms
+[02:15:04.566] Server  LOG     ✓ Compiled in 20ms
+[02:16:02.495] Server  LOG     ✓ Compiled in 25ms
+[02:16:23.587] Server  LOG     ✓ Compiled in 20ms
+[02:17:19.105] Server  LOG     ✓ Compiled in 25ms
+[02:28:06.326] Server  LOG     ✓ Compiled in 77ms
+[02:28:06.665] Browser ERROR   ./src/app/layout.tsx:18:19
+Parsing ecmascript source code failed
+  16 |       <body>
+  17 |         <Header isLoggedIn={isLoggedIn} firstName={firstName} userId={userId} />
+> 18 |         {children firstName={firstName} userId={userId}}
+     |                   ^^^^^^^^^
+  19 |       </body>
+  20 |     </html>
+  21 |   );
+
+Expected '</', got 'ident'
+[02:32:54.448] Server  LOG     ✓ Compiled in 65ms
+[02:47:23.924] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/context/UserContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[02:47:23.982] Server  LOG     ✓ Compiled in 15ms
+[02:54:04.090] Server  LOG     ✓ Compiled in 15ms
+[03:01:40.051] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/context/UserContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:01:40.117] Server  LOG     ✓ Compiled in 21ms
+[03:01:40.159] Server  ERROR   ⨯ TypeError: Cannot destructure property 'children' of 'undefined' as it is undefined.
+[03:01:41.188] Browser ERROR   uncaughtError: TypeError: (destructured parameter) is undefined
+[03:05:08.783] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:05:08.783] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/context/UserContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:05:08.783] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:05:08.881] Server  ERROR   ⨯ TypeError: Cannot destructure property 'children' of 'undefined' as it is undefined.
+[03:05:09.910] Browser ERROR   uncaughtError: TypeError: (destructured parameter) is undefined
+[03:06:54.776] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:06:54.776] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/context/UserContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:06:54.776] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:06:54.788] Server  LOG     ✓ Compiled in 22ms
+[03:07:42.409] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/context/UserContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:07:42.421] Server  LOG     ✓ Compiled in 27ms
+[03:10:09.569] Server  LOG     ✓ Compiled in 16ms
+[03:33:06.979] Server  LOG     ✓ Compiled in 23ms
+[03:34:03.672] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/context/UserContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:34:03.750] Server  LOG     ✓ Compiled in 22ms
+[03:37:30.466] Server  LOG     ✓ Compiled in 24ms
+[03:37:32.510] Browser ERROR   ./src/components/Header.tsx:20:12
+Ecmascript file had an error
+  18 |     // State to control the visibility of the login modal
+  19 |     const [showLoginModal, setShowLoginModal] = useState(false);
+> 20 |     const [isProfessional, setIsProfessional] = useState<boolean | null>(null);
+     |            ^^^^^^^^^^^^^^
+  21 |     const pathname = usePathname();
+  22 |
+  23 |     // Fetch is_professional from users table if logged in and userId is provided
+
+the name `isProfessional` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+[03:39:02.066] Server  LOG     ✓ Compiled in 29ms
+[03:43:02.969] Server  LOG     ✓ Compiled in 26ms
+[03:43:38.357] Server  LOG     ✓ Compiled in 20ms
+[03:44:00.220] Server  LOG     ✓ Compiled in 19ms
+[03:44:05.096] Server  LOG     ✓ Compiled in 20ms
+[03:46:51.200] Server  LOG     ✓ Compiled in 20ms
+[03:47:14.105] Server  LOG     ✓ Compiled in 18ms
+[03:47:14.316] Browser LOG     
+[03:47:14.316] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) 
+[03:47:21.350] Server  LOG     
+[03:47:26.991] Server  LOG     
+[03:47:27.375] Server  LOG     
+[03:47:31.675] Server  LOG     
+[03:47:31.747] Server  LOG     
+[03:47:31.942] Browser LOG     
+[03:47:31.942] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) 
+[03:47:36.736] Browser LOG     
+[03:47:36.736] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) 
+[03:47:40.444] Server  LOG     false
+[03:47:40.503] Server  LOG     false
+[03:47:40.597] Browser LOG     false
+[03:47:40.597] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) false
+[03:47:49.612] Server  LOG     false
+[03:47:49.682] Server  LOG     false
+[03:47:49.762] Browser LOG     false
+[03:47:49.762] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) false
+[03:47:59.689] Server  LOG     
+[03:47:59.763] Server  LOG     
+[03:47:59.949] Browser LOG     
+[03:47:59.949] Browser LOG     
+[03:48:01.601] Browser LOG     
+[03:48:01.601] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) 
+[03:48:08.346] Server  LOG     false
+[03:48:08.415] Server  LOG     false
+[03:48:08.484] Browser LOG     false
+[03:48:08.484] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) false
+[03:48:16.105] Server  LOG     
+[03:48:16.179] Server  LOG     
+[03:48:16.256] Browser LOG     
+[03:48:16.256] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) 
+[03:50:01.448] Browser LOG     
+[03:50:01.448] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) 
+[03:50:06.153] Server  LOG     false
+[03:50:06.213] Server  LOG     false
+[03:50:06.299] Browser LOG     false
+[03:50:06.299] Browser LOG     %c%s color: rgba(124, 124, 124, 0.75) false
+[03:50:20.718] Server  LOG     ✓ Compiled in 22ms
+[03:50:21.722] Browser LOG     isProfessional false
+[03:50:21.722] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[03:51:00.762] Server  LOG     ✓ Compiled in 17ms
+[03:51:00.831] Server  LOG     isProfessional layout "false"
+[03:51:00.857] Server  LOG     isProfessional layout "false"
+[03:51:00.876] Server  LOG     isProfessional layout "false"
+[03:51:00.894] Server  LOG     isProfessional layout "false"
+[03:51:00.913] Server  LOG     isProfessional layout "false"
+[03:51:00.933] Server  LOG     isProfessional layout "false"
+[03:51:02.203] Browser LOG     isProfessional false
+[03:51:02.203] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[03:51:56.646] Server  LOG     ✓ Compiled in 17ms
+[03:52:03.460] Server  LOG     isProfessional layout "false"
+[03:52:03.483] Server  LOG     isProfessional "false"
+[03:52:03.612] Server  LOG     isProfessional layout "false"
+[03:52:03.630] Server  LOG     isProfessional "false"
+[03:52:03.713] Browser LOG     isProfessional false
+[03:52:03.713] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[03:52:23.184] Server  LOG     ✓ Compiled in 21ms
+[03:52:55.270] Server  LOG     ✓ Compiled in 18ms
+[03:53:04.633] Server  LOG     isProfessional layout "false"
+[03:53:04.653] Server  LOG     isProfessional "false"
+[03:53:04.761] Server  LOG     isProfessional layout "false"
+[03:53:04.791] Server  LOG     isProfessional "false"
+[03:53:04.893] Browser LOG     isProfessional false
+[03:53:04.893] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[03:53:13.180] Server  LOG     isProfessional layout ""
+[03:53:13.181] Server  LOG     isProfessional ""
+[03:53:13.263] Server  LOG     isProfessional layout ""
+[03:53:13.267] Server  LOG     isProfessional ""
+[03:53:13.348] Browser LOG     isProfessional 
+[03:53:13.348] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:53:15.223] Browser LOG     isProfessional 
+[03:53:15.224] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:53:21.080] Browser LOG     isProfessional login true
+[03:53:21.133] Server  LOG     isProfessional layout "true"
+[03:53:21.135] Server  LOG     isProfessional "true"
+[03:53:21.193] Server  LOG     isProfessional layout "true"
+[03:53:21.195] Server  LOG     isProfessional "true"
+[03:53:21.277] Browser LOG     isProfessional true
+[03:53:21.277] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[03:54:01.858] Server  LOG     isProfessional layout "true"
+[03:54:01.879] Server  LOG     isProfessional "true"
+[03:54:01.934] Server  LOG     isProfessional layout "true"
+[03:54:01.937] Server  LOG     isProfessional "true"
+[03:54:02.022] Browser LOG     isProfessional true
+[03:54:02.022] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[03:54:03.767] Server  LOG     isProfessional layout "true"
+[03:54:03.792] Server  LOG     isProfessional "true"
+[03:54:03.842] Server  LOG     isProfessional layout "true"
+[03:54:03.843] Server  LOG     isProfessional "true"
+[03:54:03.929] Browser LOG     isProfessional true
+[03:54:03.929] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[03:54:04.942] Server  LOG     isProfessional layout "true"
+[03:54:04.959] Server  LOG     isProfessional "true"
+[03:54:05.018] Server  LOG     isProfessional layout "true"
+[03:54:05.020] Server  LOG     isProfessional "true"
+[03:54:05.103] Browser LOG     isProfessional true
+[03:54:05.103] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[03:54:05.893] Server  LOG     isProfessional layout "true"
+[03:54:05.901] Server  LOG     isProfessional "true"
+[03:54:05.963] Server  LOG     isProfessional layout "true"
+[03:54:05.964] Server  LOG     isProfessional "true"
+[03:54:06.168] Browser LOG     isProfessional true
+[03:54:06.168] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[03:54:10.174] Server  LOG     isProfessional layout ""
+[03:54:10.181] Server  LOG     isProfessional ""
+[03:54:10.285] Server  LOG     isProfessional layout ""
+[03:54:10.287] Server  LOG     isProfessional ""
+[03:54:10.435] Browser LOG     isProfessional 
+[03:54:10.435] Browser LOG     isProfessional 
+[03:54:11.506] Browser LOG     isProfessional 
+[03:54:11.506] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:55:08.730] Server  LOG     ✓ Compiled in 19ms
+[03:55:12.018] Server  LOG     isProfessional layout ""
+[03:55:12.042] Server  LOG     isProfessional ""
+[03:55:12.184] Server  LOG     isProfessional layout ""
+[03:55:12.203] Server  LOG     isProfessional ""
+[03:55:12.288] Browser LOG     isProfessional 
+[03:55:12.288] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:55:14.916] Server  LOG     isProfessional layout ""
+[03:55:14.919] Server  LOG     isProfessional ""
+[03:55:14.988] Server  LOG     isProfessional layout ""
+[03:55:14.991] Server  LOG     isProfessional ""
+[03:55:15.083] Browser LOG     isProfessional 
+[03:55:15.083] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:55:17.536] Server  LOG     isProfessional layout ""
+[03:55:17.537] Server  LOG     isProfessional ""
+[03:55:17.596] Server  LOG     isProfessional layout ""
+[03:55:17.598] Server  LOG     isProfessional ""
+[03:55:17.699] Browser LOG     isProfessional 
+[03:55:17.699] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:55:18.920] Browser LOG     isProfessional 
+[03:55:18.920] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:55:22.888] Server  LOG     isProfessional layout "false"
+[03:55:22.889] Server  LOG     isProfessional "false"
+[03:55:22.943] Server  LOG     isProfessional layout "false"
+[03:55:22.947] Server  LOG     isProfessional "false"
+[03:55:23.045] Browser LOG     isProfessional false
+[03:55:23.045] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[03:55:26.687] Server  LOG     isProfessional layout "false"
+[03:55:26.706] Server  LOG     isProfessional "false"
+[03:55:26.767] Server  LOG     isProfessional layout "false"
+[03:55:26.769] Server  LOG     isProfessional "false"
+[03:55:26.852] Browser LOG     isProfessional false
+[03:55:26.852] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[03:55:27.675] Server  LOG     isProfessional layout "false"
+[03:55:27.692] Server  LOG     isProfessional "false"
+[03:55:27.749] Server  LOG     isProfessional layout "false"
+[03:55:27.750] Server  LOG     isProfessional "false"
+[03:55:27.828] Browser LOG     isProfessional false
+[03:55:27.828] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[03:56:10.511] Server  LOG     isProfessional layout ""
+[03:56:10.514] Server  LOG     isProfessional ""
+[03:56:10.573] Server  LOG     isProfessional layout ""
+[03:56:10.575] Server  LOG     isProfessional ""
+[03:56:10.660] Browser LOG     isProfessional 
+[03:56:10.660] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:56:13.751] Server  LOG     isProfessional layout ""
+[03:56:13.752] Server  LOG     isProfessional ""
+[03:56:13.812] Server  LOG     isProfessional layout ""
+[03:56:13.814] Server  LOG     isProfessional ""
+[03:56:13.894] Browser LOG     isProfessional 
+[03:56:13.894] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[03:59:48.577] Server  LOG     ✓ Compiled in 22ms
+[03:59:49.581] Browser LOG     isProfessional 
+[03:59:49.581] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:00:27.238] Server  LOG     ✓ Compiled in 18ms
+[04:00:28.230] Browser LOG     isProfessional 
+[04:00:28.230] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:00:37.476] Server  LOG     ✓ Compiled in 135ms
+[04:00:37.513] Server  LOG     isProfessional layout ""
+[04:00:37.516] Server  LOG     isProfessional ""
+[04:00:37.687] Server  LOG     isProfessional layout ""
+[04:00:37.704] Server  LOG     isProfessional ""
+[04:00:37.711] Browser LOG     isProfessional 
+[04:00:37.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:00:43.093] Server  LOG     ✓ Compiled in 11ms
+[04:00:55.284] Server  LOG     ✓ Compiled in 28ms
+[04:01:24.535] Server  LOG     isProfessional layout ""
+[04:01:24.552] Server  LOG     isProfessional ""
+[04:01:24.657] Server  LOG     isProfessional layout ""
+[04:01:24.673] Server  LOG     isProfessional ""
+[04:01:24.758] Browser LOG     isProfessional 
+[04:01:24.758] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:01:26.312] Browser LOG     isProfessional 
+[04:01:26.312] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:01:30.452] Browser LOG     isProfessional login true
+[04:01:30.500] Server  LOG     isProfessional layout "true"
+[04:01:30.503] Server  LOG     isProfessional "true"
+[04:01:30.572] Server  LOG     isProfessional layout "true"
+[04:01:30.575] Server  LOG     isProfessional "true"
+[04:01:30.650] Browser LOG     isProfessional true
+[04:01:30.650] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:01:52.237] Server  LOG     ✓ Compiled in 15ms
+[04:01:55.341] Server  LOG     isProfessional layout "true"
+[04:01:55.344] Server  LOG     isProfessional "true"
+[04:01:55.473] Server  LOG     isProfessional layout "true"
+[04:01:55.488] Server  LOG     isProfessional "true"
+[04:01:55.557] Browser LOG     isProfessional true
+[04:01:55.557] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:01:59.069] Server  LOG     isProfessional layout ""
+[04:01:59.071] Server  LOG     isProfessional ""
+[04:01:59.134] Server  LOG     isProfessional layout ""
+[04:01:59.136] Server  LOG     isProfessional ""
+[04:01:59.328] Browser LOG     isProfessional 
+[04:01:59.328] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:02:01.707] Browser LOG     isProfessional 
+[04:02:01.707] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:02:04.654] Browser LOG     isProfessional login true
+[04:02:04.710] Server  LOG     isProfessional layout "true"
+[04:02:04.714] Server  LOG     isProfessional "true"
+[04:02:04.800] Server  LOG     isProfessional layout "true"
+[04:02:04.802] Server  LOG     isProfessional "true"
+[04:02:04.871] Browser LOG     isProfessional true
+[04:02:04.871] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:02:47.872] Server  LOG     ✓ Compiled in 21ms
+[04:03:13.689] Server  LOG     isProfessional layout "true"
+[04:03:13.689] Server  LOG     isProfessional layout "true"
+[04:03:13.704] Server  LOG     isProfessional "true"
+[04:03:13.835] Server  LOG     isProfessional layout "true"
+[04:03:13.853] Server  LOG     isProfessional "true"
+[04:03:13.912] Browser LOG     isProfessional true
+[04:03:13.912] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:05:44.448] Server  LOG     ✓ Compiled in 19ms
+[04:05:48.254] Server  LOG     isProfessional layout "true"
+[04:05:48.257] Server  LOG     isProfessional "true"
+[04:05:48.387] Server  LOG     isProfessional layout "true"
+[04:05:48.406] Server  LOG     isProfessional "true"
+[04:05:48.476] Browser LOG     isProfessional true
+[04:05:48.476] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:05:53.451] Server  LOG     isProfessional layout ""
+[04:05:53.453] Server  LOG     isProfessional ""
+[04:05:53.511] Server  LOG     isProfessional layout ""
+[04:05:53.514] Server  LOG     isProfessional ""
+[04:05:53.602] Browser LOG     isProfessional 
+[04:05:53.602] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:05:54.936] Browser LOG     isProfessional 
+[04:05:54.936] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:05:58.189] Browser LOG     isProfessional login true
+[04:05:58.255] Server  LOG     isProfessional layout "true"
+[04:05:58.257] Server  LOG     isProfessional "true"
+[04:05:58.316] Server  LOG     isProfessional layout "true"
+[04:05:58.319] Server  LOG     isProfessional "true"
+[04:05:58.397] Browser LOG     isProfessional true
+[04:05:58.397] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:06:21.129] Server  LOG     isProfessional layout "true"
+[04:06:21.159] Server  LOG     isProfessional "true"
+[04:06:21.247] Server  LOG     isProfessional layout "true"
+[04:06:21.250] Server  LOG     isProfessional "true"
+[04:06:21.319] Browser LOG     isProfessional true
+[04:06:21.319] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:06:23.320] Server  LOG     isProfessional layout ""
+[04:06:23.328] Server  LOG     isProfessional ""
+[04:06:23.393] Server  LOG     isProfessional layout ""
+[04:06:23.396] Server  LOG     isProfessional ""
+[04:06:23.482] Browser LOG     isProfessional 
+[04:06:23.482] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:19.563] Server  LOG     ✓ Compiled in 19ms
+[04:07:32.607] Browser LOG     isProfessional 
+[04:07:32.607] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:33.822] Server  LOG     isProfessional layout ""
+[04:07:33.862] Server  LOG     isProfessional ""
+[04:07:33.987] Server  LOG     isProfessional layout ""
+[04:07:34.009] Server  LOG     isProfessional ""
+[04:07:34.113] Browser LOG     isProfessional 
+[04:07:34.113] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:36.798] Server  LOG     isProfessional layout ""
+[04:07:36.809] Server  LOG     isProfessional ""
+[04:07:36.871] Server  LOG     isProfessional layout ""
+[04:07:36.874] Server  LOG     isProfessional ""
+[04:07:36.960] Browser LOG     isProfessional 
+[04:07:36.960] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:37.788] Server  LOG     isProfessional layout ""
+[04:07:37.794] Server  LOG     isProfessional ""
+[04:07:37.851] Server  LOG     isProfessional layout ""
+[04:07:37.853] Server  LOG     isProfessional ""
+[04:07:37.939] Browser LOG     isProfessional 
+[04:07:37.940] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:44.290] Server  LOG     isProfessional layout ""
+[04:07:44.313] Server  LOG     isProfessional ""
+[04:07:44.386] Server  LOG     isProfessional layout ""
+[04:07:44.389] Server  LOG     isProfessional ""
+[04:07:44.461] Browser LOG     isProfessional 
+[04:07:44.461] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:45.143] Server  LOG     isProfessional layout ""
+[04:07:45.163] Server  LOG     isProfessional ""
+[04:07:45.199] Server  LOG     isProfessional layout ""
+[04:07:45.201] Server  LOG     isProfessional ""
+[04:07:45.291] Browser LOG     isProfessional 
+[04:07:45.291] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:46.023] Server  LOG     isProfessional layout ""
+[04:07:46.032] Server  LOG     isProfessional layout ""
+[04:07:46.032] Server  LOG     isProfessional ""
+[04:07:46.037] Server  LOG     isProfessional ""
+[04:07:46.138] Browser LOG     isProfessional 
+[04:07:46.138] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:47.106] Server  LOG     isProfessional layout ""
+[04:07:47.107] Server  LOG     isProfessional ""
+[04:07:47.170] Server  LOG     isProfessional layout ""
+[04:07:47.172] Server  LOG     isProfessional ""
+[04:07:47.262] Browser LOG     isProfessional 
+[04:07:47.262] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:48.253] Server  LOG     isProfessional layout ""
+[04:07:48.255] Server  LOG     isProfessional ""
+[04:07:48.311] Server  LOG     isProfessional layout ""
+[04:07:48.313] Server  LOG     isProfessional ""
+[04:07:48.397] Browser LOG     isProfessional 
+[04:07:48.397] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:50.155] Server  LOG     isProfessional layout ""
+[04:07:50.157] Server  LOG     isProfessional ""
+[04:07:50.216] Server  LOG     isProfessional layout ""
+[04:07:50.218] Server  LOG     isProfessional ""
+[04:07:50.306] Browser LOG     isProfessional 
+[04:07:50.306] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:51.859] Browser LOG     isProfessional 
+[04:07:51.859] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:07:55.685] Browser LOG     isProfessional login true
+[04:07:55.752] Server  LOG     isProfessional layout "true"
+[04:07:55.753] Server  LOG     isProfessional "true"
+[04:07:55.811] Server  LOG     isProfessional layout "true"
+[04:07:55.813] Server  LOG     isProfessional "true"
+[04:07:55.886] Browser LOG     isProfessional true
+[04:07:55.886] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:08:44.920] Server  LOG     isProfessional layout ""
+[04:08:44.921] Server  LOG     isProfessional ""
+[04:08:44.985] Server  LOG     isProfessional layout ""
+[04:08:44.987] Server  LOG     isProfessional ""
+[04:08:45.075] Browser LOG     isProfessional 
+[04:08:45.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:08:48.740] Browser LOG     isProfessional 
+[04:08:48.740] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:08:52.446] Server  LOG     isProfessional layout "false"
+[04:08:52.447] Server  LOG     isProfessional "false"
+[04:08:52.505] Server  LOG     isProfessional layout "false"
+[04:08:52.509] Server  LOG     isProfessional "false"
+[04:08:52.593] Browser LOG     isProfessional false
+[04:08:52.593] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:09:06.555] Server  LOG     isProfessional layout "false"
+[04:09:06.577] Server  LOG     isProfessional "false"
+[04:09:06.645] Server  LOG     isProfessional layout "false"
+[04:09:06.648] Server  LOG     isProfessional "false"
+[04:09:06.759] Browser LOG     isProfessional false
+[04:09:06.759] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:09:09.213] Server  LOG     isProfessional layout "false"
+[04:09:09.215] Server  LOG     isProfessional "false"
+[04:09:09.277] Server  LOG     isProfessional layout "false"
+[04:09:09.279] Server  LOG     isProfessional "false"
+[04:09:09.360] Browser LOG     isProfessional false
+[04:09:09.360] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:09:10.160] Server  LOG     isProfessional layout "false"
+[04:09:10.162] Server  LOG     isProfessional "false"
+[04:09:10.224] Server  LOG     isProfessional layout "false"
+[04:09:10.227] Server  LOG     isProfessional "false"
+[04:09:10.311] Browser LOG     isProfessional false
+[04:09:10.311] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:09:12.115] Server  LOG     isProfessional layout "false"
+[04:09:12.116] Server  LOG     isProfessional "false"
+[04:09:12.182] Server  LOG     isProfessional layout "false"
+[04:09:12.187] Server  LOG     isProfessional "false"
+[04:09:12.280] Browser LOG     isProfessional false
+[04:09:12.280] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:15:01.277] Server  LOG     ✓ Compiled in 13ms
+[04:15:15.794] Server  LOG     ✓ Compiled in 20ms
+[04:15:21.120] Server  LOG     isProfessional layout "false"
+[04:15:21.141] Server  LOG     isProfessional "false"
+[04:15:21.274] Server  LOG     isProfessional layout "false"
+[04:15:21.293] Server  LOG     isProfessional "false"
+[04:15:21.476] Browser LOG     isProfessional false
+[04:15:21.476] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:15:24.923] Server  LOG     isProfessional layout ""
+[04:15:24.925] Server  LOG     isProfessional ""
+[04:15:24.981] Server  LOG     isProfessional layout ""
+[04:15:24.983] Server  LOG     isProfessional ""
+[04:15:25.076] Browser LOG     isProfessional 
+[04:15:25.076] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:15:30.400] Browser LOG     isProfessional 
+[04:15:30.400] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:15:33.772] Browser LOG     isProfessional login true
+[04:15:33.772] Browser LOG     isProfessional login modal true
+[04:15:33.772] Browser LOG     isLoggedIn login modal false
+[04:15:33.910] Server  LOG     isProfessional layout "true"
+[04:15:33.913] Server  LOG     isProfessional "true"
+[04:15:33.971] Server  LOG     isProfessional layout "true"
+[04:15:33.975] Server  LOG     isProfessional "true"
+[04:15:34.082] Browser LOG     isProfessional true
+[04:15:34.082] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:15:54.271] Server  LOG     isProfessional layout ""
+[04:15:54.272] Server  LOG     isProfessional ""
+[04:15:54.336] Server  LOG     isProfessional layout ""
+[04:15:54.338] Server  LOG     isProfessional ""
+[04:15:54.427] Browser LOG     isProfessional 
+[04:15:54.427] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:16:02.694] Server  LOG     ✓ Compiled in 20ms
+[04:16:13.986] Server  LOG     ✓ Compiled in 21ms
+[04:16:24.449] Browser LOG     isProfessional 
+[04:16:24.449] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:16:25.914] Server  LOG     isProfessional layout ""
+[04:16:25.920] Server  LOG     isProfessional ""
+[04:16:26.042] Server  LOG     isProfessional layout ""
+[04:16:26.062] Server  LOG     isProfessional ""
+[04:16:26.148] Browser LOG     isProfessional 
+[04:16:26.148] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:16:29.905] Browser LOG     isProfessional 
+[04:16:29.905] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:16:32.977] Server  LOG     isProfessional layout "false"
+[04:16:32.978] Server  LOG     isProfessional "false"
+[04:16:33.039] Server  LOG     isProfessional layout "false"
+[04:16:33.045] Server  LOG     isProfessional "false"
+[04:16:33.133] Browser LOG     isProfessional false
+[04:16:33.133] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:17:00.096] Server  LOG     ✓ Compiled in 25ms
+[04:17:13.769] Server  LOG     isProfessional layout "false"
+[04:17:13.774] Server  LOG     isProfessional "false"
+[04:17:13.927] Server  LOG     isProfessional layout "false"
+[04:17:13.945] Server  LOG     isProfessional "false"
+[04:17:14.018] Browser LOG     isProfessional false
+[04:17:14.018] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:17:16.525] Server  LOG     isProfessional layout ""
+[04:17:16.526] Server  LOG     isProfessional ""
+[04:17:16.582] Server  LOG     isProfessional layout ""
+[04:17:16.584] Server  LOG     isProfessional ""
+[04:17:16.679] Browser LOG     isProfessional 
+[04:17:16.679] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:17:20.114] Browser LOG     isProfessional 
+[04:17:20.114] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:17:22.952] Server  LOG     isProfessional layout "false"
+[04:17:22.954] Server  LOG     isProfessional "false"
+[04:17:23.014] Server  LOG     isProfessional layout "false"
+[04:17:23.018] Server  LOG     isProfessional "false"
+[04:17:23.127] Browser LOG     isProfessional false
+[04:17:23.127] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:18:16.885] Server  LOG     ✓ Compiled in 30ms
+[04:19:44.374] Server  LOG     isProfessional layout "false"
+[04:19:44.381] Server  LOG     isProfessional "false"
+[04:19:44.497] Server  LOG     isProfessional layout "false"
+[04:19:44.528] Server  LOG     isProfessional "false"
+[04:19:44.621] Browser LOG     isProfessional false
+[04:19:44.621] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:19:47.213] Server  LOG     isProfessional layout ""
+[04:19:47.215] Server  LOG     isProfessional ""
+[04:19:47.273] Server  LOG     isProfessional layout ""
+[04:19:47.275] Server  LOG     isProfessional ""
+[04:19:47.366] Browser LOG     isProfessional 
+[04:19:47.366] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:19:54.527] Browser LOG     isProfessional 
+[04:19:54.527] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:19:57.763] Server  LOG     isProfessional layout "false"
+[04:19:57.781] Server  LOG     isProfessional "false"
+[04:19:57.845] Server  LOG     isProfessional layout "false"
+[04:19:57.847] Server  LOG     isProfessional "false"
+[04:19:57.935] Browser LOG     isProfessional false
+[04:19:57.936] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:20:02.996] Server  LOG     isProfessional layout ""
+[04:20:02.997] Server  LOG     isProfessional ""
+[04:20:03.095] Server  LOG     isProfessional layout ""
+[04:20:03.098] Server  LOG     isProfessional ""
+[04:20:03.194] Browser LOG     isProfessional 
+[04:20:03.194] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:20:12.917] Server  LOG     isProfessional layout ""
+[04:20:12.919] Server  LOG     isProfessional ""
+[04:20:12.990] Server  LOG     isProfessional layout ""
+[04:20:12.992] Server  LOG     isProfessional ""
+[04:20:13.084] Browser LOG     isProfessional 
+[04:20:13.084] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:20:14.242] Browser LOG     isProfessional 
+[04:20:14.242] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:20:17.159] Browser LOG     isProfessional login modal: true
+[04:20:17.290] Server  LOG     isProfessional layout "true"
+[04:20:17.312] Server  LOG     isProfessional "true"
+[04:20:17.364] Server  LOG     isProfessional layout "true"
+[04:20:17.366] Server  LOG     isProfessional "true"
+[04:20:17.462] Browser LOG     isProfessional true
+[04:20:17.462] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:20:36.504] Server  LOG     isProfessional layout ""
+[04:20:36.511] Server  LOG     isProfessional ""
+[04:20:36.573] Server  LOG     isProfessional layout ""
+[04:20:36.576] Server  LOG     isProfessional ""
+[04:20:36.660] Browser LOG     isProfessional 
+[04:20:36.660] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:20:41.192] Server  LOG     isProfessional layout ""
+[04:20:41.199] Server  LOG     isProfessional ""
+[04:20:41.257] Server  LOG     isProfessional layout ""
+[04:20:41.260] Server  LOG     isProfessional ""
+[04:20:41.355] Browser LOG     isProfessional 
+[04:20:41.356] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:21:48.525] Server  LOG     ✓ Compiled in 27ms
+[04:21:49.535] Browser LOG     isProfessional 
+[04:21:49.535] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:21:55.332] Server  LOG     isProfessional layout ""
+[04:21:55.360] Server  LOG     isProfessional ""
+[04:21:55.537] Server  LOG     isProfessional layout ""
+[04:21:55.559] Server  LOG     isProfessional ""
+[04:21:55.644] Browser LOG     isProfessional 
+[04:21:55.644] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:21:56.612] Browser LOG     isProfessional 
+[04:21:56.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:22:00.411] Server  LOG     isProfessional layout "false"
+[04:22:00.433] Server  LOG     isProfessional "false"
+[04:22:00.495] Server  LOG     isProfessional layout "false"
+[04:22:00.497] Server  LOG     isProfessional "false"
+[04:22:00.587] Browser LOG     isProfessional false
+[04:22:00.587] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:22:03.124] Server  LOG     isProfessional layout ""
+[04:22:03.237] Browser LOG     isProfessional 
+[04:22:03.237] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:22:06.968] Browser LOG     isProfessional 
+[04:22:06.968] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:22:10.058] Browser LOG     isProfessional login modal: true
+[04:22:10.140] Server  LOG     isProfessional layout "true"
+[04:22:10.149] Server  LOG     isProfessional "true"
+[04:22:10.221] Server  LOG     isProfessional layout "true"
+[04:22:10.224] Server  LOG     isProfessional "true"
+[04:22:10.311] Browser LOG     isProfessional true
+[04:22:10.311] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:22:20.155] Server  LOG     isProfessional layout ""
+[04:22:20.292] Browser LOG     isProfessional 
+[04:22:20.292] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:22:23.448] Server  LOG     isProfessional layout ""
+[04:22:23.468] Server  LOG     isProfessional ""
+[04:22:23.529] Server  LOG     isProfessional layout ""
+[04:22:23.532] Server  LOG     isProfessional ""
+[04:22:23.621] Browser LOG     isProfessional 
+[04:22:23.621] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:22:24.400] Server  LOG     isProfessional layout ""
+[04:22:24.404] Server  LOG     isProfessional ""
+[04:22:24.514] Server  LOG     isProfessional layout ""
+[04:22:24.516] Server  LOG     isProfessional ""
+[04:22:24.602] Browser LOG     isProfessional 
+[04:22:24.602] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:22:25.801] Server  LOG     isProfessional layout ""
+[04:22:25.802] Server  LOG     isProfessional ""
+[04:22:25.866] Server  LOG     isProfessional layout ""
+[04:22:25.870] Server  LOG     isProfessional ""
+[04:22:25.963] Browser LOG     isProfessional 
+[04:22:25.964] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:22:27.101] Browser LOG     isProfessional 
+[04:22:27.101] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:22:30.297] Server  LOG     isProfessional layout "false"
+[04:22:30.298] Server  LOG     isProfessional "false"
+[04:22:30.358] Server  LOG     isProfessional layout "false"
+[04:22:30.360] Server  LOG     isProfessional "false"
+[04:22:30.460] Browser LOG     isProfessional false
+[04:22:30.460] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:22:32.908] Server  LOG     isProfessional layout "false"
+[04:22:32.910] Server  LOG     isProfessional "false"
+[04:22:33.022] Server  LOG     isProfessional layout "false"
+[04:22:33.024] Server  LOG     isProfessional "false"
+[04:22:33.221] Browser LOG     isProfessional false
+[04:22:33.221] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:22:34.137] Server  LOG     isProfessional layout "false"
+[04:22:34.139] Server  LOG     isProfessional "false"
+[04:22:34.203] Server  LOG     isProfessional layout "false"
+[04:22:34.206] Server  LOG     isProfessional "false"
+[04:22:34.298] Browser LOG     isProfessional false
+[04:22:34.298] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:22:35.106] Server  LOG     isProfessional layout "false"
+[04:22:35.124] Server  LOG     isProfessional "false"
+[04:22:35.188] Server  LOG     isProfessional layout "false"
+[04:22:35.190] Server  LOG     isProfessional "false"
+[04:22:35.274] Browser LOG     isProfessional false
+[04:22:35.274] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:22:36.182] Server  LOG     isProfessional layout "false"
+[04:22:36.184] Server  LOG     isProfessional "false"
+[04:22:36.247] Server  LOG     isProfessional layout "false"
+[04:22:36.250] Server  LOG     isProfessional "false"
+[04:22:36.345] Browser LOG     isProfessional false
+[04:22:36.345] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:22:40.645] Server  LOG     isProfessional layout "false"
+[04:22:40.646] Server  LOG     isProfessional "false"
+[04:22:40.762] Server  LOG     isProfessional layout "false"
+[04:22:40.764] Server  LOG     isProfessional "false"
+[04:22:40.853] Browser LOG     isProfessional false
+[04:22:40.853] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:22:45.023] Server  LOG     isProfessional layout "false"
+[04:22:45.025] Server  LOG     isProfessional "false"
+[04:22:45.092] Server  LOG     isProfessional layout "false"
+[04:22:45.095] Server  LOG     isProfessional "false"
+[04:22:45.188] Browser LOG     isProfessional false
+[04:22:45.188] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:23:43.510] Server  LOG     ✓ Compiled in 60ms
+[04:23:44.525] Browser LOG     isProfessional false
+[04:23:44.525] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:25:55.111] Server  LOG     ✓ Compiled in 19ms
+[04:25:56.209] Browser LOG     isProfessional false
+[04:25:56.209] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:26:11.857] Server  LOG     isProfessional layout "false"
+[04:26:11.882] Server  LOG     isProfessional "false"
+[04:26:12.060] Server  LOG     isProfessional layout "false"
+[04:26:12.077] Server  LOG     isProfessional "false"
+[04:26:12.141] Browser LOG     isProfessional false
+[04:26:12.141] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:26:13.756] Browser LOG     isProfessional false
+[04:26:13.756] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:26:15.302] Browser LOG     isProfessional false
+[04:26:15.302] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:26:16.376] Browser LOG     isProfessional false
+[04:26:16.376] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:26:18.762] Server  LOG     isProfessional layout ""
+[04:26:18.869] Browser LOG     isProfessional 
+[04:26:18.869] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:26:20.631] Browser LOG     isProfessional 
+[04:26:20.632] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:26:21.691] Browser LOG     isProfessional 
+[04:26:21.691] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:26:23.670] Browser LOG     isProfessional 
+[04:26:23.670] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:26:24.572] Browser LOG     isProfessional 
+[04:26:24.572] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:26:26.161] Browser LOG     isProfessional 
+[04:26:26.162] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:26:26.162] Browser LOG     isProfessional 
+[04:26:26.162] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:26:29.708] Browser LOG     isProfessional login modal: true
+[04:26:29.852] Server  LOG     isProfessional layout "true"
+[04:26:29.873] Server  LOG     isProfessional "true"
+[04:26:29.940] Server  LOG     isProfessional layout "true"
+[04:26:29.942] Server  LOG     isProfessional "true"
+[04:26:30.036] Browser LOG     isProfessional true
+[04:26:30.036] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:33.409] Browser LOG     isProfessional true
+[04:26:33.409] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:34.975] Browser LOG     isProfessional true
+[04:26:34.975] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:34.975] Browser LOG     isProfessional true
+[04:26:34.975] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:34.975] Browser LOG     isProfessional true
+[04:26:34.975] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:34.975] Browser LOG     isProfessional true
+[04:26:34.975] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:34.975] Browser LOG     isProfessional true
+[04:26:34.975] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:34.975] Browser LOG     isProfessional true
+[04:26:34.975] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:34.975] Browser LOG     isProfessional true
+[04:26:34.975] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:26:37.955] Server  LOG     isProfessional layout ""
+[04:26:38.061] Browser LOG     isProfessional 
+[04:26:38.062] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:27:14.619] Server  LOG     isProfessional layout ""
+[04:27:14.621] Server  LOG     isProfessional ""
+[04:27:14.686] Server  LOG     isProfessional layout ""
+[04:27:14.690] Server  LOG     isProfessional ""
+[04:27:14.798] Browser LOG     isProfessional 
+[04:27:14.798] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:31:05.104] Server  LOG     ✓ Compiled in 23ms
+[04:31:06.107] Browser LOG     isProfessional 
+[04:31:06.107] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:31:24.079] Server  LOG     ✓ Compiled in 20ms
+[04:31:25.077] Browser LOG     isProfessional 
+[04:31:25.077] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:31:48.158] Server  LOG     isProfessional layout ""
+[04:31:48.162] Server  LOG     isProfessional ""
+[04:31:48.329] Server  LOG     isProfessional layout ""
+[04:31:48.346] Server  LOG     isProfessional ""
+[04:31:48.422] Browser LOG     isProfessional 
+[04:31:48.422] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:31:49.876] Browser LOG     isProfessional 
+[04:31:49.876] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:31:49.876] Browser LOG     isProfessional 
+[04:31:49.876] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:31:52.846] Server  LOG     isProfessional layout "false"
+[04:31:52.862] Server  LOG     isProfessional "false"
+[04:31:52.921] Server  LOG     isProfessional layout "false"
+[04:31:52.922] Server  LOG     isProfessional "false"
+[04:31:53.022] Browser LOG     isProfessional false
+[04:31:53.022] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:31:55.524] Browser LOG     isProfessional false
+[04:31:55.524] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:31:56.871] Browser LOG     isProfessional false
+[04:31:56.871] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:32:00.353] Browser LOG     isProfessional false
+[04:32:00.353] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[04:32:04.653] Server  LOG     isProfessional layout ""
+[04:32:04.786] Browser LOG     isProfessional 
+[04:32:04.786] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:32:07.250] Browser LOG     isProfessional 
+[04:32:07.250] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:32:07.250] Browser LOG     isProfessional 
+[04:32:07.250] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:32:13.717] Browser LOG     isProfessional login modal: true
+[04:32:13.842] Server  LOG     isProfessional layout "true"
+[04:32:13.864] Server  LOG     isProfessional "true"
+[04:32:13.922] Server  LOG     isProfessional layout "true"
+[04:32:13.924] Server  LOG     isProfessional "true"
+[04:32:14.034] Browser LOG     isProfessional true
+[04:32:14.034] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:17.798] Browser LOG     isProfessional true
+[04:32:17.798] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:19.464] Browser LOG     isProfessional true
+[04:32:19.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:19.464] Browser LOG     isProfessional true
+[04:32:19.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:19.464] Browser LOG     isProfessional true
+[04:32:19.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:19.464] Browser LOG     isProfessional true
+[04:32:19.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:19.464] Browser LOG     isProfessional true
+[04:32:19.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:19.464] Browser LOG     isProfessional true
+[04:32:19.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:19.464] Browser LOG     isProfessional true
+[04:32:19.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:24.041] Browser LOG     isProfessional true
+[04:32:24.041] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:24.041] Browser LOG     isProfessional true
+[04:32:24.041] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:24.041] Browser LOG     isProfessional true
+[04:32:24.041] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:24.041] Browser LOG     isProfessional true
+[04:32:24.041] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:25.560] Browser LOG     isProfessional true
+[04:32:25.560] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:26.526] Browser LOG     isProfessional true
+[04:32:26.527] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:26.527] Browser LOG     isProfessional true
+[04:32:26.527] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:26.527] Browser LOG     isProfessional true
+[04:32:26.527] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:26.527] Browser LOG     isProfessional true
+[04:32:26.527] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:26.527] Browser LOG     isProfessional true
+[04:32:26.527] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:26.527] Browser LOG     isProfessional true
+[04:32:26.527] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[04:32:28.374] Server  LOG     isProfessional layout ""
+[04:32:28.485] Browser LOG     isProfessional 
+[04:32:28.485] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:32:31.542] Browser LOG     isProfessional 
+[04:32:31.542] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:32:32.468] Browser LOG     isProfessional 
+[04:32:32.468] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:32:33.361] Browser LOG     isProfessional 
+[04:32:33.361] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:32:34.105] Browser LOG     isProfessional 
+[04:32:34.105] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:33:04.496] Browser LOG     isProfessional 
+[04:33:04.497] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:33:07.269] Browser LOG     isProfessional 
+[04:33:07.269] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:33:10.366] Browser LOG     isProfessional 
+[04:33:10.366] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:33:18.060] Browser LOG     isProfessional 
+[04:33:18.060] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[04:33:19.121] Browser LOG     isProfessional 
+[04:33:19.121] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
