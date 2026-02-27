@@ -83,15 +83,7 @@ export default function HomePatiente() {
                         <p className="text-slate-500 mt-1 font-medium">¡Hola, {user.firstName}! ¿Cómo te sientes hoy?</p>
 
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 transition-colors relative">
-                            <Bell className="w-5 h-5" />
-                            <span className="absolute top-2 right-2.5 w-2 h-2 bg-red-500 rounded-full border border-white"></span>
-                        </button>
-                        <div className="w-12 h-12 rounded-full border-2 border-cyan-100 overflow-hidden shadow-sm hover:ring-2 hover:ring-cyan-300 transition-all cursor-pointer">
-                            <img src="https://i.pravatar.cc/150?img=47" alt="Profile" className="w-full h-full object-cover" />
-                        </div>
-                    </div>
+
                 </header>
 
                 {/* Dashboard Content */}

@@ -1344,3 +1344,4 @@ This will cause a hydration error.%s <div> p
 [08:48:57.132] Server  LOG     isProfessional "false"
 [08:48:57.229] Browser LOG     isProfessional false
 [08:48:57.229] Browser LOG     isProfessional false
+[08:52:36.412] Server  LOG     ✓ Compiled in 24ms
