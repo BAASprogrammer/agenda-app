@@ -1,0 +1,127 @@
+// ===================================================================
+// Custom Hook: useAppointments
+// ===================================================================
+// Rule: all hooks MUST start with "use" (React convention).
+//
+// What this file does:
+//   → Contains ALL data logic for the professional's appointments.
+//   → The page component calls it and only receives what it needs.
+//   → If the data source changes (e.g. Supabase → REST API),
+//     only THIS file needs to change, not the page.
+// ===================================================================
+
+import { useUser } from "@/context/UserContext";
+import { supabase } from "@/lib/supabaseClient";
+import { useEffect, useState, useCallback } from "react";
+
+// ✅ Interfaces live here because they are part of the data layer.
+// Exported so the page component can use the types too.
+export interface AppointmentPatient {
+    first_name: string;
+    last_name: string;
+}
+
+export interface Appointment {
+    id: string;
+    appointment_date: string;
+    status: "agendada" | "completada" | "cancelada";
+    reason: string | null;
+    patient: AppointmentPatient | null;
+    displayDate: string;
+    displayTime: string;
+}
+
+// STEP 1: The hook receives parameters just like any regular function.
+// 'filter' comes from the component because it's controlled by the user via the UI.
+export function useAppointments(filter: string) {
+    // STEP 2: State lives in the hook, not in the component.
+    // When state changes, React automatically re-renders the component.
+    const [appointments, setAppointments] = useState<Appointment[]>([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    // useUser() also works inside hooks (because it's a hook itself).
+    const user = useUser();
+
+    // STEP 3: useCallback prevents fetchAppointments from being re-created on every render.
+    // Think of it as "memoizing" the function. It only re-creates if its dependencies change.
+    // Without useCallback, it could cause infinite loops in the useEffect below.
+    const fetchAppointments = useCallback(async () => {
+        if (!user.userId) return;
+        setLoading(true);
+        setError(null);
+
+        let query = supabase
+            .from("medical_appointments")
+            .select(
+                `id, appointment_date, status, reason,
+                 patient:users!medical_appointments_patient_id_fkey (first_name, last_name)`
+            )
+            .eq("professional_id", user.userId)
+            .order("appointment_date", { ascending: false });
+
+        if (filter !== "todas") query = query.eq("status", filter);
+
+        const { data, error: fetchError } = await query;
+
+        if (fetchError) {
+            setError("Could not load appointments. Please try again.");
+            setLoading(false);
+            return;
+        }
+
+        const formatted: Appointment[] = (data ?? []).map((a) => {
+            const parts = a.appointment_date.replace(" ", "T").split("T");
+            const datePart = parts[0];
+            const timePart = parts[1] ? parts[1].split(":") : ["00", "00"];
+            const [yr, mo, dy] = datePart.split("-").map(Number);
+            const d = new Date(yr, mo - 1, dy);
+            return {
+                ...a,
+                // Supabase types the join as an array, but !fkey always returns an object.
+                // Double cast (unknown → Patient) is the safe way to force it in TypeScript.
+                patient: a.patient as unknown as AppointmentPatient | null,
+                displayDate: isNaN(d.getTime())
+                    ? datePart
+                    : d.toLocaleDateString("cl-CL", { day: "2-digit", month: "short", year: "numeric" }),
+                displayTime: `${timePart[0]}:${timePart[1]}`,
+            };
+        });
+
+        setAppointments(formatted);
+        setLoading(false);
+    }, [user.userId, filter]); // ← Only re-created when userId or filter change
+
+    // STEP 4: The hook calls fetchAppointments automatically when dependencies change.
+    // The component doesn't need to know HOW the data is fetched.
+    useEffect(() => {
+        fetchAppointments();
+    }, [fetchAppointments]);
+
+    // STEP 5: This function mutates data and then refreshes the list.
+    // It lives in the hook because it's data logic, not render logic.
+    const updateStatus = async (id: string, newStatus: "completada" | "cancelada") => {
+        const { error: updateError } = await supabase
+            .from("medical_appointments")
+            .update({ status: newStatus })
+            .eq("id", id);
+
+        if (updateError) {
+            setError("Could not update status. Please try again.");
+            return;
+        }
+        // Refresh the list so the UI reflects the change immediately
+        fetchAppointments();
+    };
+
+    // STEP 6: The hook RETURNS only what the component needs.
+    // The component never sees the fetch logic, supabase calls, or internal useState.
+    // It only sees: the data, the loading/error states, and the available actions.
+    return {
+        appointments,  // ← Formatted data ready to render
+        loading,       // ← Use to show a spinner or skeleton
+        error,         // ← Use to show an error banner
+        updateStatus,  // ← Mark appointment as completed or cancelled
+        refresh: fetchAppointments, // ← In case the user wants to manually reload
+    };
+}

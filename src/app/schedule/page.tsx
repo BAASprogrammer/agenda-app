@@ -1,10 +1,11 @@
 "use client";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
+// ✅ MEJORA 1: componente compartido, ya no repetimos código
+import ProSidebar from "@/components/ProSidebar";
 import {
-    Calendar, Users, Settings, LogOut, Activity,
-    Clock, ChevronLeft, ChevronRight, ClipboardList,
-    CheckCircle2, XCircle, User
+    Calendar, Clock, ChevronLeft, ChevronRight, ClipboardList,
+    CheckCircle2, XCircle
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -12,42 +13,25 @@ import { useEffect, useState } from "react";
 const DAYS = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 const MONTHS = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
-function ProSidebar({ active }: { active: string }) {
-    return (
-        <aside className="w-full md:w-64 bg-white border-r border-slate-200 flex flex-col z-20">
-            <div className="p-6 border-b border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-linear-to-br from-indigo-500 to-cyan-400 flex items-center justify-center shadow-md">
-                    <Activity className="text-white w-6 h-6" />
-                </div>
-                <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-indigo-600 to-cyan-500">AgendaApp</span>
-            </div>
-            <nav className="flex-1 p-4 space-y-2">
-                {[
-                    { href: "/homeprofessional", icon: <Activity className="w-5 h-5" />, label: "Dashboard" },
-                    { href: "/schedule", icon: <Calendar className="w-5 h-5" />, label: "Ver Agenda" },
-                    { href: "/manageappointments", icon: <ClipboardList className="w-5 h-5" />, label: "Gestionar Citas" },
-                    { href: "/mypatients", icon: <Users className="w-5 h-5" />, label: "Mis Pacientes" },
-                    { href: "/settings", icon: <Settings className="w-5 h-5" />, label: "Configuración" },
-                ].map(item => (
-                    <Link key={item.href} href={item.href} className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all hover:scale-[1.02] ${active === item.href ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50 hover:text-indigo-600'}`}>
-                        {item.icon}{item.label}
-                    </Link>
-                ))}
-            </nav>
-            <div className="p-4 border-t border-slate-100">
-                <button onClick={() => supabase.auth.signOut().then(() => window.location.href = '/')}
-                    className="w-full flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-red-50 hover:text-red-500 rounded-xl font-medium transition-all">
-                    <LogOut className="w-5 h-5" />Cerrar Sesión
-                </button>
-            </div>
-        </aside>
-    );
+// ✅ MEJORA 2: Interfaces en lugar de any[]
+interface SchedulePatient {
+    first_name: string;
+    last_name: string;
+}
+
+interface ScheduleAppointment {
+    id: string;
+    appointment_date: string;
+    status: 'agendada' | 'completada' | 'cancelada';
+    reason: string | null;
+    patient: SchedulePatient | null;
+    displayTime: string;
 }
 
 export default function Schedule() {
     const user = useUser();
     const [selectedDate, setSelectedDate] = useState(new Date());
-    const [appointments, setAppointments] = useState<any[]>([]);
+    const [appointments, setAppointments] = useState<ScheduleAppointment[]>([]);
     const [weekOffset, setWeekOffset] = useState(0);
 
     const getWeekDays = () => {
@@ -76,10 +60,14 @@ export default function Schedule() {
                 .lte('appointment_date', dateStr + ' 23:59')
                 .order('appointment_date', { ascending: true });
 
-            setAppointments((data ?? []).map((a: any) => {
+            setAppointments((data ?? []).map((a): ScheduleAppointment => {
                 const parts = a.appointment_date.replace(' ', 'T').split('T');
                 const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
-                return { ...a, displayTime: `${timePart[0]}:${timePart[1]}` };
+                return {
+                    ...a,
+                    patient: a.patient as unknown as SchedulePatient | null,
+                    displayTime: `${timePart[0]}:${timePart[1]}`
+                };
             }));
         };
         fetchDay();
@@ -162,11 +150,16 @@ export default function Schedule() {
                                         <p className="text-sm text-slate-500 font-medium">{appt.reason || 'Consulta general'}</p>
                                     </div>
                                     <div className="flex gap-2">
-                                        <button className="p-3 rounded-2xl bg-emerald-50 text-emerald-600 hover:bg-emerald-100 transition-all" title="Marcar completada">
-                                            <CheckCircle2 className="w-5 h-5" />
+                                        {/* ✅ MEJORA 5: aria-label con contexto del paciente */}
+                                        <button
+                                            className="p-3 rounded-2xl bg-emerald-50 text-emerald-600 hover:bg-emerald-100 transition-all"
+                                            aria-label={`Marcar cita de ${appt.patient?.first_name} como completada`}>
+                                            <CheckCircle2 className="w-5 h-5" aria-hidden="true" />
                                         </button>
-                                        <button className="p-3 rounded-2xl bg-rose-50 text-rose-500 hover:bg-rose-100 transition-all" title="Cancelar">
-                                            <XCircle className="w-5 h-5" />
+                                        <button
+                                            className="p-3 rounded-2xl bg-rose-50 text-rose-500 hover:bg-rose-100 transition-all"
+                                            aria-label={`Cancelar cita de ${appt.patient?.first_name}`}>
+                                            <XCircle className="w-5 h-5" aria-hidden="true" />
                                         </button>
                                     </div>
                                 </div>

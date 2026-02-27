@@ -2308,3 +2308,40 @@ Import trace:
 [01:50:46.666] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
 [01:50:46.666] Browser LOG     isProfessional true
 [01:50:46.666] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[01:52:49.945] Browser LOG     isProfessional 
+[01:52:49.945] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[01:52:52.567] Browser LOG     isProfessional 
+[01:52:52.567] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[01:52:52.567] Browser LOG     isProfessional 
+[01:52:52.567] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[01:53:01.438] Server  LOG     isProfessional "false"
+[01:53:01.552] Browser LOG     isProfessional false
+[01:53:01.552] Browser LOG     isProfessional false
+[01:53:06.362] Browser LOG     isProfessional false
+[01:53:06.362] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[01:53:06.362] Browser LOG     isProfessional false
+[01:53:06.362] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[01:53:06.362] Browser LOG     isProfessional false
+[01:53:06.362] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[01:57:28.667] Server  LOG     ✓ Compiled in 29ms
+[02:02:47.605] Server  LOG     ✓ Compiled in 36ms
+[02:06:07.676] Browser LOG     isProfessional false
+[02:06:07.676] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:06:07.676] Browser LOG     isProfessional false
+[02:06:07.676] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:06:09.556] Browser LOG     isProfessional false
+[02:06:09.556] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:06:11.567] Browser LOG     isProfessional false
+[02:06:11.567] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:06:13.119] Browser LOG     isProfessional false
+[02:06:13.119] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:06:13.119] Browser LOG     isProfessional false
+[02:06:13.119] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:06:13.119] Browser LOG     isProfessional false
+[02:06:13.119] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:06:14.286] Browser LOG     isProfessional false
+[02:06:14.286] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:06:15.577] Browser LOG     isProfessional false
+[02:06:15.578] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[02:09:46.295] Browser LOG     isProfessional false
+[02:09:46.295] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false

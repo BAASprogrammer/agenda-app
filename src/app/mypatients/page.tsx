@@ -1,44 +1,11 @@
 "use client";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
-import {
-    Calendar, Users, Settings, LogOut, Activity,
-    ClipboardList, Search, UserCircle, Clock, ChevronLeft, CalendarDays
-} from "lucide-react";
+// ✅ MEJORA 1: componente compartido
+import ProSidebar from "@/components/ProSidebar";
+import { Users, Search, UserCircle, Clock, ChevronLeft, CalendarDays } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-function ProSidebar({ active }: { active: string }) {
-    return (
-        <aside className="w-full md:w-64 bg-white border-r border-slate-200 flex flex-col z-20">
-            <div className="p-6 border-b border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-linear-to-br from-indigo-500 to-cyan-400 flex items-center justify-center shadow-md">
-                    <Activity className="text-white w-6 h-6" />
-                </div>
-                <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-indigo-600 to-cyan-500">AgendaApp</span>
-            </div>
-            <nav className="flex-1 p-4 space-y-2">
-                {[
-                    { href: "/homeprofessional", icon: <Activity className="w-5 h-5" />, label: "Dashboard" },
-                    { href: "/schedule", icon: <Calendar className="w-5 h-5" />, label: "Ver Agenda" },
-                    { href: "/manageappointments", icon: <ClipboardList className="w-5 h-5" />, label: "Gestionar Citas" },
-                    { href: "/my-patients", icon: <Users className="w-5 h-5" />, label: "Mis Pacientes" },
-                    { href: "/settings", icon: <Settings className="w-5 h-5" />, label: "Configuración" },
-                ].map(item => (
-                    <Link key={item.href} href={item.href} className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all hover:scale-[1.02] ${active === item.href ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50 hover:text-indigo-600'}`}>
-                        {item.icon}{item.label}
-                    </Link>
-                ))}
-            </nav>
-            <div className="p-4 border-t border-slate-100">
-                <button onClick={() => supabase.auth.signOut().then(() => window.location.href = '/')}
-                    className="w-full flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-red-50 hover:text-red-500 rounded-xl font-medium transition-all">
-                    <LogOut className="w-5 h-5" />Cerrar Sesión
-                </button>
-            </div>
-        </aside>
-    );
-}
 
 interface Patient {
     id: string;
@@ -107,7 +74,7 @@ export default function MyPatients() {
 
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
-            <ProSidebar active="/my-patients" />
+            <ProSidebar active="/mypatients" />
             <main className="flex-1 flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-indigo-50/80 to-transparent -z-10"></div>
                 <header className="px-8 py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in">
