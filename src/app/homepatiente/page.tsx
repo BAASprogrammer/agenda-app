@@ -1,7 +1,7 @@
 "use client";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
-import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock, Bell } from "lucide-react";
+import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -21,10 +21,30 @@ export default function HomePatiente() {
                 console.error("Error obteniendo citas:", error);
                 return;
             }
-            setAppointments(data ?? []);
+
+            // Pre-procesar fechas para evitar lógica repetitiva en el render
+            const formattedData = (data ?? []).map(appt => {
+                const isoStr = appt.appointment_date.replace(' ', 'T');
+                const parts = isoStr.split('T');
+                const datePart = parts[0];
+                const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
+
+                const [year, month, day] = datePart.split('-').map(Number);
+                const d = new Date(year, month - 1, day);
+
+                return {
+                    ...appt,
+                    displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('cl-CL', { month: 'short' }).replace('.', ''),
+                    displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
+                    displayTime: `${timePart[0]}:${timePart[1]}`
+                };
+            });
+
+            setAppointments(formattedData);
         }
         fetchAppointments();
     }, [user.userId])
+
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
             {/* Sidebar */}
@@ -66,12 +86,10 @@ export default function HomePatiente() {
                         Cerrar Sesión
                     </button>
                 </div>
-
             </aside>
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col relative overflow-hidden">
-                {/* Decorative background blobs (glassmorphism feel) */}
                 <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-cyan-50/80 to-transparent -z-10"></div>
                 <div className="absolute top-10 right-10 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float pointer-events-none"></div>
                 <div className="absolute bottom-20 left-20 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float pointer-events-none" style={{ animationDelay: '2s' }}></div>
@@ -81,19 +99,15 @@ export default function HomePatiente() {
                     <div>
                         <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight">Panel de Paciente</h1>
                         <p className="text-slate-500 mt-1 font-medium">¡Hola, {user.firstName}! ¿Cómo te sientes hoy?</p>
-
                     </div>
-
                 </header>
 
                 {/* Dashboard Content */}
                 <div className="px-8 py-6 flex-1 overflow-y-auto">
-
                     {/* Welcome Card */}
                     <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-8 text-white mb-8 shadow-lg shadow-cyan-200 relative overflow-hidden animate-fade-in-up">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
                         <h2 className="text-2xl font-bold mb-2">¡Bienvenido de nuevo, {user.firstName}!</h2>
-
                         <p className="text-cyan-50 max-w-lg mb-6 leading-relaxed">
                             Aquí podrás gestionar tus citas, revisar tu historial médico y actualizar tu información personal de forma rápida y segura.
                         </p>
@@ -159,14 +173,13 @@ export default function HomePatiente() {
                                     className="bg-white/80 backdrop-blur-md rounded-3xl p-5 border border-white shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-6 group animate-fade-in-up"
                                     style={{ animationDelay: `${0.4 + index * 0.1}s` }}
                                 >
-
                                     {/* Date Badge */}
                                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl flex flex-col items-center justify-center shrink-0 border border-white shadow-sm group-hover:from-cyan-100 group-hover:to-blue-100 transition-colors">
                                         <span className="text-[10px] font-black text-cyan-600 uppercase tracking-tighter">
-                                            {new Date(appointment.appointment_date).toLocaleString('cl-CL', { month: 'short' })}
+                                            {appointment.displayMonth}
                                         </span>
                                         <span className="text-2xl font-black text-slate-800 leading-none">
-                                            {new Date(appointment.appointment_date).getDate()}
+                                            {appointment.displayDay}
                                         </span>
                                     </div>
 
@@ -174,8 +187,7 @@ export default function HomePatiente() {
                                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                             <div>
                                                 <div className="flex items-center gap-2 mb-1">
-                                                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${index === 0 ? "bg-amber-100 text-amber-700" : "bg-slate-100 text-slate-600"
-                                                        }`}>
+                                                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${index === 0 ? "bg-amber-100 text-amber-700" : "bg-slate-100 text-slate-600"}`}>
                                                         {index === 0 ? "Próxima" : "Programada"}
                                                     </span>
                                                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Id: #{appointment.id?.toString().slice(-4) || '---'}</span>
@@ -184,7 +196,7 @@ export default function HomePatiente() {
                                                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
                                                     <p className="text-slate-500 text-sm flex items-center gap-1.5 font-medium">
                                                         <Clock className="w-4 h-4 text-cyan-500" />
-                                                        {new Date(appointment.appointment_date).toLocaleTimeString('cl-CL', { hour: '2-digit', minute: '2-digit' })} hrs
+                                                        {appointment.displayTime} hrs
                                                     </p>
                                                     <p className="text-slate-500 text-sm flex items-center gap-1.5 font-medium">
                                                         <UserCircle className="w-4 h-4 text-cyan-500" />
@@ -212,8 +224,6 @@ export default function HomePatiente() {
                             </div>
                         )}
                     </div>
-
-
                 </div>
             </main>
         </div>

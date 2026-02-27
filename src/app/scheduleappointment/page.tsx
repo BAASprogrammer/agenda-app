@@ -91,11 +91,14 @@ export default function ScheduleAppointment() {
             console.error('Debes completar todos los campos');
             return;
         }
+        const [year, month, day] = appointment.date.split('-').map(Number);
+        const [hours, minutes] = appointment.time.split(':').map(Number);
+        const appointmentDate = new Date(year, month - 1, day, hours, minutes);
         const appointmentData = {
             patient_id: user.id,
             subspecialty_id: selectedSubSpecialty,
             professional_id: appointment.professional,
-            appointment_date: appointment.date + ' ' + appointment.time,
+            appointment_date: appointmentDate.toISOString(),
             reason: appointment.reason,
             status: 'agendada'
         };
