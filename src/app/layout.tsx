@@ -15,7 +15,6 @@ export default async function RootLayout({
   const isProfessional = cookieStore.get("is_professional")?.value || "";
   const userId = cookieStore.get("user_id")?.value || "";
   const isLoggedIn = !!firstName;
-  console.log("isProfessional layout", isProfessional);
   return (
     <html lang="es">
       <body className="antialiased">

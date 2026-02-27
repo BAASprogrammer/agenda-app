@@ -1,6 +1,30 @@
+"use client";
+import { useUser } from "@/context/UserContext";
+import { supabase } from "@/lib/supabaseClient";
 import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock, Bell } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function HomePatiente() {
+    const user = useUser();
+    const [appointments, setAppointments] = useState<any[]>([]);
+
+    useEffect(() => {
+        const fetchAppointments = async () => {
+            const { data, error } = await supabase
+                .from('medical_appointments')
+                .select(`id, appointment_date, status, professional_id, professional:users!medical_appointments_professional_id_fkey (first_name, last_name)`)
+                .eq('patient_id', user.userId)
+                .order('appointment_date', { ascending: true });
+
+            if (error) {
+                console.error("Error obteniendo citas:", error);
+                return;
+            }
+            setAppointments(data ?? []);
+        }
+        fetchAppointments();
+    }, [user.userId])
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
             {/* Sidebar */}
@@ -34,11 +58,15 @@ export default function HomePatiente() {
                 </nav>
 
                 <div className="p-4 border-t border-slate-100">
-                    <a href="#" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-red-50 hover:text-red-500 rounded-xl font-medium transition-all hover:scale-[1.02]">
+                    <button
+                        onClick={() => supabase.auth.signOut().then(() => window.location.href = '/')}
+                        className="w-full flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-red-50 hover:text-red-500 rounded-xl font-medium transition-all hover:scale-[1.02]"
+                    >
                         <LogOut className="w-5 h-5" />
                         Cerrar Sesión
-                    </a>
+                    </button>
                 </div>
+
             </aside>
 
             {/* Main Content */}
@@ -52,7 +80,8 @@ export default function HomePatiente() {
                 <header className="px-8 py-6 flex justify-between items-center animate-fade-in border-b border-transparent">
                     <div>
                         <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight">Panel de Paciente</h1>
-                        <p className="text-slate-500 mt-1 font-medium">¡Hola! ¿Cómo te sientes hoy?</p>
+                        <p className="text-slate-500 mt-1 font-medium">¡Hola, {user.firstName}! ¿Cómo te sientes hoy?</p>
+
                     </div>
                     <div className="flex items-center gap-4">
                         <button className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 transition-colors relative">
@@ -71,13 +100,14 @@ export default function HomePatiente() {
                     {/* Welcome Card */}
                     <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-8 text-white mb-8 shadow-lg shadow-cyan-200 relative overflow-hidden animate-fade-in-up">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-                        <h2 className="text-2xl font-bold mb-2">¡Bienvenido a AgendaApp!</h2>
+                        <h2 className="text-2xl font-bold mb-2">¡Bienvenido de nuevo, {user.firstName}!</h2>
+
                         <p className="text-cyan-50 max-w-lg mb-6 leading-relaxed">
                             Aquí podrás gestionar tus citas, revisar tu historial médico y actualizar tu información personal de forma rápida y segura.
                         </p>
-                        <button className="bg-white text-cyan-700 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        <Link href="/scheduleappointment" className="bg-white text-cyan-700 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
                             Agendar Nueva Cita
-                        </button>
+                        </Link>
                     </div>
 
                     <h3 className="text-xl font-extrabold text-slate-800 mb-4 tracking-tight">Accesos Rápidos</h3>
@@ -121,27 +151,76 @@ export default function HomePatiente() {
                         </div>
                     </div>
 
-                    {/* Upcoming Appointment */}
-                    <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-6 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                        <div className="w-16 h-16 bg-cyan-50 rounded-2xl flex flex-col items-center justify-center shrink-0 border border-cyan-100">
-                            <span className="text-xs font-bold text-cyan-600 uppercase">Oct</span>
-                            <span className="text-xl font-black text-slate-800">24</span>
-                        </div>
-                        <div className="flex-1">
-                            <div className="flex justify-between items-start">
-                                <div>
-                                    <span className="inline-block px-2.5 py-1 bg-amber-100 text-amber-700 text-[10px] font-black uppercase tracking-wider rounded-lg mb-2">Próxima</span>
-                                    <h4 className="font-bold text-slate-800 text-lg">Revisión General</h4>
-                                    <p className="text-slate-500 text-sm flex items-center gap-1 mt-1 font-medium">
-                                        <Clock className="w-4 h-4" /> 10:30 AM con Dr. Especialista
-                                    </p>
-                                </div>
-                                <button className="text-cyan-600 bg-cyan-50 px-4 py-2 rounded-xl text-sm font-bold hover:bg-cyan-100 transition-colors">
-                                    Detalles
-                                </button>
-                            </div>
-                        </div>
+                    {/* Appointments Section */}
+                    <div className="flex justify-between items-end mb-6">
+                        <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Mis Próximas Citas</h3>
+                        <Link href="/scheduleappointment" className="text-cyan-600 text-sm font-bold hover:underline">
+                            Ver todas
+                        </Link>
                     </div>
+
+                    <div className="space-y-4 mb-12">
+                        {appointments.length > 0 ? (
+                            appointments.map((appointment, index) => (
+                                <div
+                                    key={appointment.id}
+                                    className="bg-white/80 backdrop-blur-md rounded-3xl p-5 border border-white shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-6 group animate-fade-in-up"
+                                    style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                                >
+
+                                    {/* Date Badge */}
+                                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl flex flex-col items-center justify-center shrink-0 border border-white shadow-sm group-hover:from-cyan-100 group-hover:to-blue-100 transition-colors">
+                                        <span className="text-[10px] font-black text-cyan-600 uppercase tracking-tighter">
+                                            {new Date(appointment.appointment_date).toLocaleString('cl-CL', { month: 'short' })}
+                                        </span>
+                                        <span className="text-2xl font-black text-slate-800 leading-none">
+                                            {new Date(appointment.appointment_date).getDate()}
+                                        </span>
+                                    </div>
+
+                                    <div className="flex-1">
+                                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                            <div>
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${index === 0 ? "bg-amber-100 text-amber-700" : "bg-slate-100 text-slate-600"
+                                                        }`}>
+                                                        {index === 0 ? "Próxima" : "Programada"}
+                                                    </span>
+                                                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Id: #{appointment.id?.toString().slice(-4) || '---'}</span>
+                                                </div>
+                                                <h4 className="font-bold text-slate-800 text-lg group-hover:text-cyan-700 transition-colors">Cita de Especialidad</h4>
+                                                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
+                                                    <p className="text-slate-500 text-sm flex items-center gap-1.5 font-medium">
+                                                        <Clock className="w-4 h-4 text-cyan-500" />
+                                                        {new Date(appointment.appointment_date).toLocaleTimeString('cl-CL', { hour: '2-digit', minute: '2-digit' })} hrs
+                                                    </p>
+                                                    <p className="text-slate-500 text-sm flex items-center gap-1.5 font-medium">
+                                                        <UserCircle className="w-4 h-4 text-cyan-500" />
+                                                        Dr. {appointment.professional?.first_name} {appointment.professional?.last_name}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button className="self-start md:self-center bg-white border border-slate-100 text-slate-700 px-5 py-2.5 rounded-2xl text-sm font-bold shadow-sm hover:bg-slate-50 hover:border-slate-200 transition-all active:scale-95">
+                                                Detalles
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 border border-dashed border-slate-200 text-center animate-fade-in">
+                                <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-300">
+                                    <CalendarDays className="w-8 h-8" />
+                                </div>
+                                <h4 className="text-slate-800 font-bold text-lg mb-1">Sin citas próximas</h4>
+                                <p className="text-slate-500 text-sm mb-6 max-w-xs mx-auto">Cuando agendes una nueva cita médica, aparecerá aquí detallada.</p>
+                                <Link href="/scheduleappointment" className="inline-flex items-center gap-2 bg-cyan-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-cyan-700 transition-all shadow-md shadow-cyan-100">
+                                    Agendar ahora
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
 
                 </div>
             </main>
