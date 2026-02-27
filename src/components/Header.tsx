@@ -19,7 +19,7 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
     const [showLoginModal, setShowLoginModal] = useState(false);
     const pathname = usePathname();
     const router = useRouter();
-    const redirection = isProfessional === "true" ? "/homeprofessional" : isProfessional === "false" ? "/homepatiente" : "/";
+    const redirection = isProfessional === "true" ? "/homeprofessional" : isProfessional === "false" ? "/homepatient" : "/";
 
 
     // Open the login modal
@@ -63,8 +63,8 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
                             >Inicio</Link>
                         ) : isLoggedIn && isProfessional === "false" ? (
                             <Link
-                                href="/homepatiente"
-                                className={`px-4 py-2 rounded-xl transition-all font-semibold text-sm ${pathname === "/homepatiente" ? "bg-cyan-50 text-cyan-600" : "text-slate-600 hover:bg-slate-50 hover:text-cyan-600"}`}
+                                href="/homepatient"
+                                className={`px-4 py-2 rounded-xl transition-all font-semibold text-sm ${pathname === "/homepatient" ? "bg-cyan-50 text-cyan-600" : "text-slate-600 hover:bg-slate-50 hover:text-cyan-600"}`}
                             >Inicio</Link>
                         ) : (
                             <Link

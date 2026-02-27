@@ -1,4 +1,5 @@
 "use client";
+import ProSidebarPatient from "@/components/ProSidebarPatient";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
@@ -47,46 +48,7 @@ export default function HomePatient() {
 
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
-            {/* Sidebar */}
-            <aside className="w-full md:w-64 bg-white border-r border-slate-200 flex flex-col z-20">
-                <div className="p-6 border-b border-slate-100 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center shadow-md">
-                        <HeartPulse className="text-white w-6 h-6 animate-pulse-slow" />
-                    </div>
-                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-blue-600">
-                        AgendaApp
-                    </span>
-                </div>
-
-                <nav className="flex-1 p-4 space-y-2">
-                    <Link href="/homepatient" className="flex items-center gap-3 px-4 py-3 bg-cyan-50 text-cyan-700 rounded-xl font-medium transition-all hover:scale-[1.02]">
-                        <HeartPulse className="w-5 h-5" />
-                        Mi Resumen
-                    </Link>
-                    <Link href="/myappointments" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
-                        <CalendarDays className="w-5 h-5" />
-                        Mis Citas
-                    </Link>
-                    <Link href="/medicalhistory" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
-                        <FileText className="w-5 h-5" />
-                        Historial Médico
-                    </Link>
-                    <Link href="/profile" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
-                        <UserCircle className="w-5 h-5" />
-                        Mi Perfil
-                    </Link>
-                </nav>
-
-                <div className="p-4 border-t border-slate-100">
-                    <button
-                        onClick={() => supabase.auth.signOut().then(() => window.location.href = '/')}
-                        className="w-full flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-red-50 hover:text-red-500 rounded-xl font-medium transition-all hover:scale-[1.02]"
-                    >
-                        <LogOut className="w-5 h-5" />
-                        Cerrar Sesión
-                    </button>
-                </div>
-            </aside>
+            <ProSidebarPatient active="/homepatient" />
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col relative overflow-hidden">

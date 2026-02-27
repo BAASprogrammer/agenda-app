@@ -72,7 +72,7 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
             if (isProfessional === "true") {
                 router.replace("/homeprofessional");
             } else if (isProfessional === "false") {
-                router.replace("/homepatiente");
+                router.replace("/homepatient");
             } else {
                 router.replace("/");
             }

@@ -1,19 +1,11 @@
 {
+  "/(patient)/homepatient/page": "app/(patient)/homepatient/page.js",
+  "/(patient)/medicalhistory/page": "app/(patient)/medicalhistory/page.js",
+  "/(patient)/myappointments/page": "app/(patient)/myappointments/page.js",
+  "/(patient)/profile/page": "app/(patient)/profile/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
-  "/agenda/page": "app/agenda/page.js",
   "/contact/page": "app/contact/page.js",
   "/homepatiente/page": "app/homepatiente/page.js",
-  "/homeprofessional/page": "app/homeprofessional/page.js",
-  "/manage-appointments/page": "app/manage-appointments/page.js",
-  "/manageappointments/page": "app/manageappointments/page.js",
-  "/medicalhistory/page": "app/medicalhistory/page.js",
-  "/my-patients/page": "app/my-patients/page.js",
-  "/myappointments/page": "app/myappointments/page.js",
-  "/mypatients/page": "app/mypatients/page.js",
-  "/page": "app/page.js",
-  "/profile/page": "app/profile/page.js",
-  "/schedule/page": "app/schedule/page.js",
-  "/scheduleappointment/page": "app/scheduleappointment/page.js",
-  "/settings/page": "app/settings/page.js"
+  "/page": "app/page.js"
 }

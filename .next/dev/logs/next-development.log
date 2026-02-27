@@ -1,2347 +1,424 @@
-[00:00:00.665] Server  LOG     ✓ Ready in 529ms
-[00:02:30.583] Server  LOG     isProfessional ""
-[00:02:30.697] Browser LOG     isProfessional 
-[00:02:30.697] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[00:02:42.545] Browser LOG     isProfessional 
-[00:02:42.545] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[00:02:44.744] Browser LOG     isProfessional 
-[00:02:44.744] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[00:02:44.744] Browser LOG     isProfessional 
-[00:02:44.745] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[00:03:12.456] Server  LOG     isProfessional "false"
-[00:03:12.543] Browser LOG     isProfessional false
-[00:03:12.543] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:04:26.275] Browser LOG     isProfessional false
-[00:04:26.275] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:04:26.275] Browser LOG     isProfessional false
-[00:04:26.275] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:04:26.275] Browser LOG     isProfessional false
-[00:04:26.275] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:04:32.858] Browser LOG     subspecialty_id 9020324c-c13c-4257-9839-e77a0403551f
-[00:04:32.858] Browser LOG     subspecialty_id 2 9020324c-c13c-4257-9839-e77a0403551f
-[00:04:33.175] Browser LOG     data professionals [{"first_name":"Ignacio","id":"5d96c650-ad7b-408a-808d-c94f73a214bb","last_name":"Gutiérrez León"},{"first_name":"Paola","id":"96a6aa8a-2559-4889-abeb-d1da85a93d06","last_name":"Vega Morales"},{"first_name":"Cristian","id":"5aa91cbb-4829-4c62-8f0a-107d28a72ff7","last_name":"Ramírez Flores"},{"first_name":"Antonia","id":"586475ca-0f28-4b12-ac52-571ba2507a74","last_name":"Carrasco Vidal"},{"first_name":"Mauricio","id":"b8808eb4-f6d3-437a-8e3b-8991e55adbd8","last_name":"Contreras Pinto"}]
-[00:04:48.743] Browser LOG     isProfessional false
-[00:04:48.743] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:06:34.493] Server  LOG     ✓ Compiled in 233ms
-[00:06:42.110] Server  LOG     ✓ Compiled in 20ms
-[00:06:51.745] Server  LOG     isProfessional "false"
-[00:06:51.834] Browser LOG     isProfessional false
-[00:06:51.834] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:08:13.530] Server  LOG     ✓ Compiled in 20ms
-[00:08:47.691] Server  LOG     ✓ Compiled in 15ms
-[00:19:37.707] Server  LOG     isProfessional "false"
-[00:19:37.796] Browser LOG     isProfessional false
-[00:19:37.796] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:20:33.728] Server  LOG     isProfessional ""
-[00:20:44.753] Server  LOG     isProfessional "false"
-[00:20:44.870] Browser LOG     isProfessional false
-[00:20:44.870] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:21:45.990] Server  LOG     ✓ Compiled in 25ms
-[00:21:46.990] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:21:46.990] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:21:46.990] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:21:46.990] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:21:46.990] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:21:46.990] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:21:46.990] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:21:46.990] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:21:52.140] Server  LOG     isProfessional "false"
-[00:21:52.249] Browser LOG     isProfessional false
-[00:21:52.249] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:21:53.393] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:21:53.393] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:21:53.393] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:21:53.393] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:21:53.393] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:21:53.393] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:21:53.393] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:21:53.393] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:22:21.138] Server  LOG     ✓ Compiled in 42ms
-[00:22:22.260] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:22:22.260] Browser LOG     d "2026-02-27T12:25:00.000Z"
-[00:22:22.260] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:22:22.260] Browser LOG     d "2026-02-28T09:00:00.000Z"
-[00:22:22.260] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:22:22.260] Browser LOG     d "2026-03-06T11:30:00.000Z"
-[00:22:22.260] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:22:22.260] Browser LOG     d "2026-03-06T12:34:00.000Z"
-[00:22:22.260] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:22:22.260] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) d "2026-02-27T12:25:00.000Z"
-[00:22:22.260] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:22:22.260] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) d "2026-02-28T09:00:00.000Z"
-[00:22:22.260] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:22:22.260] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) d "2026-03-06T11:30:00.000Z"
-[00:22:22.260] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:22:22.260] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) d "2026-03-06T12:34:00.000Z"
-[00:22:37.347] Server  LOG     isProfessional "false"
-[00:22:37.464] Browser LOG     isProfessional false
-[00:22:37.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:22:38.056] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:22:38.056] Browser LOG     d "2026-02-27T12:25:00.000Z"
-[00:22:38.056] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:22:38.056] Browser LOG     d "2026-02-28T09:00:00.000Z"
-[00:22:38.056] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:22:38.056] Browser LOG     d "2026-03-06T11:30:00.000Z"
-[00:22:38.056] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:22:38.056] Browser LOG     d "2026-03-06T12:34:00.000Z"
-[00:22:38.056] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:22:38.056] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) d "2026-02-27T12:25:00.000Z"
-[00:22:38.056] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:22:38.056] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) d "2026-02-28T09:00:00.000Z"
-[00:22:38.056] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:22:38.056] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) d "2026-03-06T11:30:00.000Z"
-[00:22:38.056] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:22:38.056] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) d "2026-03-06T12:34:00.000Z"
-[00:24:01.572] Server  LOG     ✓ Compiled in 24ms
-[00:24:02.576] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:24:02.576] Browser LOG     d false
-[00:24:02.576] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:24:02.576] Browser LOG     d false
-[00:24:02.576] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:24:02.576] Browser LOG     d false
-[00:24:02.576] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:24:02.576] Browser LOG     d false
-[00:24:02.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:24:02.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) d false
-[00:24:02.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:24:02.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) d false
-[00:24:02.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:24:02.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) d false
-[00:24:02.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:24:02.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) d false
-[00:24:03.528] Server  LOG     ✓ Compiled in 22ms
-[00:24:04.612] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:24:04.612] Browser LOG     isLegacy false
-[00:24:04.612] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:24:04.612] Browser LOG     isLegacy false
-[00:24:04.612] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:24:04.612] Browser LOG     isLegacy false
-[00:24:04.612] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:24:04.612] Browser LOG     isLegacy false
-[00:24:04.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:24:04.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:24:04.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:24:04.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:24:04.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:24:04.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:24:04.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:24:04.612] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:24:09.770] Server  LOG     isProfessional "false"
-[00:24:09.892] Browser LOG     isProfessional false
-[00:24:09.892] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:24:10.595] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:24:10.595] Browser LOG     isLegacy false
-[00:24:10.595] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:24:10.595] Browser LOG     isLegacy false
-[00:24:10.595] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:24:10.595] Browser LOG     isLegacy false
-[00:24:10.595] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:24:10.595] Browser LOG     isLegacy false
-[00:24:10.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:24:10.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:24:10.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:24:10.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:24:10.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:24:10.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:24:10.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:24:10.596] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:25:35.389] Server  LOG     ✓ Compiled in 23ms
-[00:25:36.464] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:25:36.464] Browser LOG     date "2026-02-27T12:25:00.000Z"
-[00:25:36.464] Browser LOG     isLegacy false
-[00:25:36.464] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:25:36.464] Browser LOG     date "2026-02-28T09:00:00.000Z"
-[00:25:36.464] Browser LOG     isLegacy false
-[00:25:36.464] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:25:36.464] Browser LOG     date "2026-03-06T11:30:00.000Z"
-[00:25:36.464] Browser LOG     isLegacy false
-[00:25:36.464] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:25:36.464] Browser LOG     date "2026-03-06T12:34:00.000Z"
-[00:25:36.464] Browser LOG     isLegacy false
-[00:25:36.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:25:36.464] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date "2026-02-27T12:25:00.000Z"
-[00:25:36.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:25:36.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:25:36.464] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date "2026-02-28T09:00:00.000Z"
-[00:25:36.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:25:36.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:25:36.464] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date "2026-03-06T11:30:00.000Z"
-[00:25:36.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:25:36.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:25:36.464] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date "2026-03-06T12:34:00.000Z"
-[00:25:36.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:26:30.651] Server  LOG     ✓ Compiled in 20ms
-[00:26:31.646] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:26:31.646] Browser LOG     date 2026-02-27
-[00:26:31.646] Browser LOG     isLegacy false
-[00:26:31.646] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:26:31.646] Browser LOG     date 2026-02-28
-[00:26:31.646] Browser LOG     isLegacy false
-[00:26:31.646] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:26:31.646] Browser LOG     date 2026-03-06
-[00:26:31.646] Browser LOG     isLegacy false
-[00:26:31.646] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:26:31.646] Browser LOG     date 2026-03-06
-[00:26:31.646] Browser LOG     isLegacy false
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 2026-02-27
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 2026-02-28
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 2026-03-06
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 2026-03-06
-[00:26:31.646] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:26:48.620] Server  LOG     ✓ Compiled in 13ms
-[00:26:49.604] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:26:49.604] Browser LOG     date 12:25:00+00:00
-[00:26:49.604] Browser LOG     isLegacy false
-[00:26:49.604] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:26:49.604] Browser LOG     date 09:00:00+00:00
-[00:26:49.604] Browser LOG     isLegacy false
-[00:26:49.604] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:26:49.604] Browser LOG     date 11:30:00+00:00
-[00:26:49.604] Browser LOG     isLegacy false
-[00:26:49.605] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:26:49.605] Browser LOG     date 12:34:00+00:00
-[00:26:49.605] Browser LOG     isLegacy false
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:00+00:00
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:00+00:00
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:00+00:00
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:00+00:00
-[00:26:49.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:27:13.077] Server  LOG     ✓ Compiled in 24ms
-[00:27:14.075] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:27:14.075] Browser LOG     date 12:25:0000:00
-[00:27:14.075] Browser LOG     isLegacy false
-[00:27:14.075] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:27:14.075] Browser LOG     date 09:00:0000:00
-[00:27:14.075] Browser LOG     isLegacy false
-[00:27:14.075] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:27:14.075] Browser LOG     date 11:30:0000:00
-[00:27:14.075] Browser LOG     isLegacy false
-[00:27:14.075] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:27:14.075] Browser LOG     date 12:34:0000:00
-[00:27:14.075] Browser LOG     isLegacy false
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:0000:00
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:0000:00
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:0000:00
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:0000:00
-[00:27:14.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:28:47.973] Server  LOG     ✓ Compiled in 21ms
-[00:28:49.024] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:28:49.024] Browser LOG     date 2026-02-27T12
-[00:28:49.024] Browser LOG     isLegacy false
-[00:28:49.024] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:28:49.024] Browser LOG     date 2026-02-28T09
-[00:28:49.024] Browser LOG     isLegacy false
-[00:28:49.024] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:28:49.024] Browser LOG     date 2026-03-06T11
-[00:28:49.024] Browser LOG     isLegacy false
-[00:28:49.024] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:28:49.024] Browser LOG     date 2026-03-06T12
-[00:28:49.024] Browser LOG     isLegacy false
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 2026-02-27T12
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 2026-02-28T09
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 2026-03-06T11
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 2026-03-06T12
-[00:28:49.024] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:07.602] Server  LOG     ✓ Compiled in 20ms
-[00:29:08.595] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:29:08.595] Browser LOG     date ["2026-02-27T12","25","00+00","00"]
-[00:29:08.595] Browser LOG     isLegacy false
-[00:29:08.595] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:29:08.595] Browser LOG     date ["2026-02-28T09","00","00+00","00"]
-[00:29:08.595] Browser LOG     isLegacy false
-[00:29:08.595] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:29:08.595] Browser LOG     date ["2026-03-06T11","30","00+00","00"]
-[00:29:08.595] Browser LOG     isLegacy false
-[00:29:08.595] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:29:08.595] Browser LOG     date ["2026-03-06T12","34","00+00","00"]
-[00:29:08.595] Browser LOG     isLegacy false
-[00:29:08.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:29:08.595] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-02-27T12","25","00+00","00"]
-[00:29:08.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:08.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:29:08.595] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-02-28T09","00","00+00","00"]
-[00:29:08.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:08.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:29:08.595] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-03-06T11","30","00+00","00"]
-[00:29:08.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:08.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:29:08.595] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-03-06T12","34","00+00","00"]
-[00:29:08.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:32.558] Server  LOG     ✓ Compiled in 21ms
-[00:29:33.554] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:29:33.554] Browser LOG     date ["2026-02-27","12:25:00+00:00"]
-[00:29:33.554] Browser LOG     isLegacy false
-[00:29:33.554] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:29:33.554] Browser LOG     date ["2026-02-28","09:00:00+00:00"]
-[00:29:33.554] Browser LOG     isLegacy false
-[00:29:33.554] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:29:33.554] Browser LOG     date ["2026-03-06","11:30:00+00:00"]
-[00:29:33.554] Browser LOG     isLegacy false
-[00:29:33.554] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:29:33.554] Browser LOG     date ["2026-03-06","12:34:00+00:00"]
-[00:29:33.554] Browser LOG     isLegacy false
-[00:29:33.554] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:29:33.554] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-02-27","12:25:00+00:00"]
-[00:29:33.554] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:33.554] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:29:33.554] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-02-28","09:00:00+00:00"]
-[00:29:33.554] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:33.554] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:29:33.554] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-03-06","11:30:00+00:00"]
-[00:29:33.554] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:33.554] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:29:33.554] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-03-06","12:34:00+00:00"]
-[00:29:33.554] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:34.433] Server  LOG     ✓ Compiled in 17ms
-[00:29:35.416] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:29:35.416] Browser LOG     date 12:25:00+00:00
-[00:29:35.416] Browser LOG     isLegacy false
-[00:29:35.416] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:29:35.416] Browser LOG     date 09:00:00+00:00
-[00:29:35.416] Browser LOG     isLegacy false
-[00:29:35.416] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:29:35.416] Browser LOG     date 11:30:00+00:00
-[00:29:35.416] Browser LOG     isLegacy false
-[00:29:35.416] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:29:35.416] Browser LOG     date 12:34:00+00:00
-[00:29:35.416] Browser LOG     isLegacy false
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:00+00:00
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:00+00:00
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:00+00:00
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:00+00:00
-[00:29:35.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:36.533] Server  LOG     ✓ Compiled in 12ms
-[00:29:37.522] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:29:37.522] Browser LOG     date 12
-[00:29:37.522] Browser LOG     isLegacy false
-[00:29:37.522] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:29:37.522] Browser LOG     date 09
-[00:29:37.522] Browser LOG     isLegacy false
-[00:29:37.522] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:29:37.522] Browser LOG     date 11
-[00:29:37.522] Browser LOG     isLegacy false
-[00:29:37.522] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:29:37.522] Browser LOG     date 12
-[00:29:37.522] Browser LOG     isLegacy false
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12
-[00:29:37.522] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:30:02.607] Server  LOG     ✓ Compiled in 20ms
-[00:30:03.684] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:30:03.684] Browser LOG     date ["12","25","00+00","00"]
-[00:30:03.684] Browser LOG     isLegacy false
-[00:30:03.684] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:30:03.684] Browser LOG     date ["09","00","00+00","00"]
-[00:30:03.684] Browser LOG     isLegacy false
-[00:30:03.684] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:30:03.684] Browser LOG     date ["11","30","00+00","00"]
-[00:30:03.684] Browser LOG     isLegacy false
-[00:30:03.684] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:30:03.684] Browser LOG     date ["12","34","00+00","00"]
-[00:30:03.684] Browser LOG     isLegacy false
-[00:30:03.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:30:03.684] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:30:03.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:30:03.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:30:03.684] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:30:03.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:30:03.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:30:03.684] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:30:03.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:30:03.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:30:03.684] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:30:03.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:30:37.319] Server  LOG     ✓ Compiled in 19ms
-[00:30:38.314] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:30:38.314] Browser LOG     date 12:25:00+00:00
-[00:30:38.314] Browser LOG     isLegacy false
-[00:30:38.314] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:30:38.314] Browser LOG     date 09:00:00+00:00
-[00:30:38.314] Browser LOG     isLegacy false
-[00:30:38.314] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:30:38.314] Browser LOG     date 11:30:00+00:00
-[00:30:38.314] Browser LOG     isLegacy false
-[00:30:38.314] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:30:38.314] Browser LOG     date 12:34:00+00:00
-[00:30:38.314] Browser LOG     isLegacy false
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:00+00:00
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:00+00:00
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:00+00:00
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:00+00:00
-[00:30:38.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:31:34.438] Server  LOG     ✓ Compiled in 11ms
-[00:31:35.429] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:31:35.429] Browser LOG     date ["2026-02-27T12","25","00+00","00"]
-[00:31:35.429] Browser LOG     isLegacy false
-[00:31:35.429] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:31:35.429] Browser LOG     date ["2026-02-28T09","00","00+00","00"]
-[00:31:35.429] Browser LOG     isLegacy false
-[00:31:35.429] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:31:35.429] Browser LOG     date ["2026-03-06T11","30","00+00","00"]
-[00:31:35.429] Browser LOG     isLegacy false
-[00:31:35.429] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:31:35.429] Browser LOG     date ["2026-03-06T12","34","00+00","00"]
-[00:31:35.429] Browser LOG     isLegacy false
-[00:31:35.429] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:31:35.429] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-02-27T12","25","00+00","00"]
-[00:31:35.429] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:31:35.429] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:31:35.429] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-02-28T09","00","00+00","00"]
-[00:31:35.429] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:31:35.429] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:31:35.429] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-03-06T11","30","00+00","00"]
-[00:31:35.429] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:31:35.429] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:31:35.429] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-03-06T12","34","00+00","00"]
-[00:31:35.429] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:31:58.869] Server  LOG     ✓ Compiled in 18ms
-[00:31:59.855] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:31:59.855] Browser LOG     date ["2026-02-27","12:25:00+00:00"]
-[00:31:59.855] Browser LOG     isLegacy false
-[00:31:59.855] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:31:59.855] Browser LOG     date ["2026-02-28","09:00:00+00:00"]
-[00:31:59.855] Browser LOG     isLegacy false
-[00:31:59.855] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:31:59.855] Browser LOG     date ["2026-03-06","11:30:00+00:00"]
-[00:31:59.855] Browser LOG     isLegacy false
-[00:31:59.855] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:31:59.855] Browser LOG     date ["2026-03-06","12:34:00+00:00"]
-[00:31:59.855] Browser LOG     isLegacy false
-[00:31:59.855] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:31:59.855] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-02-27","12:25:00+00:00"]
-[00:31:59.855] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:31:59.855] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:31:59.855] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-02-28","09:00:00+00:00"]
-[00:31:59.855] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:31:59.855] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:31:59.855] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-03-06","11:30:00+00:00"]
-[00:31:59.855] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:31:59.855] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:31:59.855] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["2026-03-06","12:34:00+00:00"]
-[00:31:59.855] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:32:20.285] Server  LOG     ✓ Compiled in 12ms
-[00:32:21.283] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:32:21.283] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:32:21.283] Browser ERROR   uncaughtError: TypeError: dateStr.split(...).split is not a function
-[00:32:44.171] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:44.192] Server  LOG     ✓ Compiled in 16ms
-[00:32:44.337] Server  LOG     isProfessional "false"
-[00:32:44.448] Browser LOG     isProfessional false
-[00:32:44.449] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:32:46.383] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:32:46.383] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:32:46.383] Browser ERROR   uncaughtError: TypeError: dateStr.split(...).split is not a function
-[00:32:47.559] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:47.626] Server  LOG     ✓ Compiled in 16ms
-[00:32:47.669] Server  LOG     isProfessional "false"
-[00:32:47.784] Browser LOG     isProfessional false
-[00:32:47.784] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:32:48.711] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:32:48.711] Browser LOG     date 12
-[00:32:48.711] Browser LOG     isLegacy false
-[00:32:48.711] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:32:48.711] Browser LOG     date 09
-[00:32:48.711] Browser LOG     isLegacy false
-[00:32:48.711] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:32:48.711] Browser LOG     date 11
-[00:32:48.711] Browser LOG     isLegacy false
-[00:32:48.711] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:32:48.711] Browser LOG     date 12
-[00:32:48.711] Browser LOG     isLegacy false
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12
-[00:32:48.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:32:53.713] Server  LOG     ✓ Compiled in 21ms
-[00:32:54.722] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:32:54.722] Browser LOG     date ["12","25","00+00","00"]
-[00:32:54.722] Browser LOG     isLegacy false
-[00:32:54.722] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:32:54.722] Browser LOG     date ["09","00","00+00","00"]
-[00:32:54.722] Browser LOG     isLegacy false
-[00:32:54.722] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:32:54.722] Browser LOG     date ["11","30","00+00","00"]
-[00:32:54.722] Browser LOG     isLegacy false
-[00:32:54.722] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:32:54.722] Browser LOG     date ["12","34","00+00","00"]
-[00:32:54.722] Browser LOG     isLegacy false
-[00:32:54.722] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:32:54.722] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:32:54.722] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:32:54.722] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:32:54.722] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:32:54.722] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:32:54.722] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:32:54.722] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:32:54.722] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:32:54.723] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:32:54.723] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:32:54.723] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isLegacy false
-[00:33:40.081] Server  LOG     ✓ Compiled in 21ms
-[00:33:41.085] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:33:41.085] Browser LOG     date ["12","25","00+00","00"]
-[00:33:41.085] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:33:41.085] Browser LOG     date ["09","00","00+00","00"]
-[00:33:41.085] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:33:41.085] Browser LOG     date ["11","30","00+00","00"]
-[00:33:41.085] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:33:41.085] Browser LOG     date ["12","34","00+00","00"]
-[00:33:41.085] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:33:41.085] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:33:41.085] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:33:41.086] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:33:41.086] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:33:41.086] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:33:41.086] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:33:41.086] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:33:46.219] Server  LOG     ✓ Compiled in 17ms
-[00:33:47.213] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:33:47.213] Browser LOG     date ["12","25","00+00","00"]
-[00:33:47.213] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:33:47.213] Browser LOG     date ["09","00","00+00","00"]
-[00:33:47.213] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:33:47.213] Browser LOG     date ["11","30","00+00","00"]
-[00:33:47.213] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:33:47.213] Browser LOG     date ["12","34","00+00","00"]
-[00:33:47.213] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:33:47.213] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:33:47.213] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:33:47.213] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:33:47.213] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:33:47.213] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:33:47.213] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:33:47.213] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:35:01.494] Server  LOG     ✓ Compiled in 21ms
-[00:35:02.503] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:35:02.503] Browser LOG     date ["12","25","00+00","00"]
-[00:35:02.503] Browser LOG     date ["12","25","00+00","00"]
-[00:35:02.503] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:35:02.503] Browser LOG     date ["09","00","00+00","00"]
-[00:35:02.503] Browser LOG     date ["09","00","00+00","00"]
-[00:35:02.503] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:35:02.503] Browser LOG     date ["11","30","00+00","00"]
-[00:35:02.503] Browser LOG     date ["11","30","00+00","00"]
-[00:35:02.503] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:35:02.503] Browser LOG     date ["12","34","00+00","00"]
-[00:35:02.503] Browser LOG     date ["12","34","00+00","00"]
-[00:35:02.503] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:35:02.503] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:35:02.503] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:35:02.503] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:35:02.503] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:35:02.503] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:35:02.503] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:35:02.503] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:35:02.503] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:35:02.503] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:35:02.503] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:35:02.503] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:35:03.921] Server  LOG     ✓ Compiled in 15ms
-[00:35:04.938] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:35:04.938] Browser LOG     date ["12","25","00+00","00"]
-[00:35:04.938] Browser LOG     date 12:25:00+00:00
-[00:35:04.938] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:35:04.938] Browser LOG     date ["09","00","00+00","00"]
-[00:35:04.938] Browser LOG     date 09:00:00+00:00
-[00:35:04.938] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:35:04.938] Browser LOG     date ["11","30","00+00","00"]
-[00:35:04.938] Browser LOG     date 11:30:00+00:00
-[00:35:04.938] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:35:04.938] Browser LOG     date ["12","34","00+00","00"]
-[00:35:04.938] Browser LOG     date 12:34:00+00:00
-[00:35:04.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:35:04.938] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:35:04.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:00+00:00
-[00:35:04.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:35:04.938] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:35:04.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:00+00:00
-[00:35:04.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:35:04.938] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:35:04.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:00+00:00
-[00:35:04.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:35:04.938] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:35:04.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:00+00:00
-[00:35:05.797] Server  LOG     ✓ Compiled in 19ms
-[00:35:05.939] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:35:05.939] Browser LOG     date ["12","25","00+00","00"]
-[00:35:05.939] Browser LOG     date 12:25:00+00:00
-[00:35:05.939] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:35:05.939] Browser LOG     date ["09","00","00+00","00"]
-[00:35:05.939] Browser LOG     date 09:00:00+00:00
-[00:35:05.939] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:35:05.939] Browser LOG     date ["11","30","00+00","00"]
-[00:35:05.939] Browser LOG     date 11:30:00+00:00
-[00:35:05.939] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:35:05.939] Browser LOG     date ["12","34","00+00","00"]
-[00:35:05.939] Browser LOG     date 12:34:00+00:00
-[00:35:05.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:35:05.939] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:35:05.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:00+00:00
-[00:35:05.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:35:05.939] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:35:05.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:00+00:00
-[00:35:05.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:35:05.939] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:35:05.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:00+00:00
-[00:35:05.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:35:05.939] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:35:05.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:00+00:00
-[00:39:35.642] Server  LOG     ✓ Compiled in 22ms
-[00:39:36.683] Browser LOG     appointments [{"appointment_date":"2026-02-27T12:25:00+00:00","id":"bf5f36ae-eadc-4ee1-8319-7eea63ce71f1","professional":{"first_name":"Pedro","last_name":"Fuentes Sánchez"},"professional_id":"1862d7cf-c8c7-4cc4-b829-216133709176","status":"agendada"},{"appointment_date":"2026-02-28T09:00:00+00:00","id":"4105b428-3157-46f8-88fd-60560f43ea81","professional":{"first_name":"Pedro","last_name":"Fuentes Sánchez"},"professional_id":"1862d7cf-c8c7-4cc4-b829-216133709176","status":"agendada"},{"appointment_date":"2026-03-06T11:30:00+00:00","id":"e60557ac-3625-4955-9e73-067080904813","professional":{"first_name":"Valentina","last_name":"Navarro Díaz"},"professional_id":"97188969-684d-4068-a8b2-f549e837820a","status":"agendada"},{"appointment_date":"2026-03-06T12:34:00+00:00","id":"06c26daa-bb17-4531-9e29-e6288f44cbb4","professional":{"first_name":"Cristian","last_name":"Ramírez Flores"},"professional_id":"5aa91cbb-4829-4c62-8f0a-107d28a72ff7","status":"agendada"}]
-[00:39:36.683] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:39:36.683] Browser LOG     date ["12","25","00+00","00"]
-[00:39:36.683] Browser LOG     date 12:25:00+00:00
-[00:39:36.683] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:39:36.683] Browser LOG     date ["09","00","00+00","00"]
-[00:39:36.683] Browser LOG     date 09:00:00+00:00
-[00:39:36.683] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:39:36.683] Browser LOG     date ["11","30","00+00","00"]
-[00:39:36.683] Browser LOG     date 11:30:00+00:00
-[00:39:36.683] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:39:36.683] Browser LOG     date ["12","34","00+00","00"]
-[00:39:36.683] Browser LOG     date 12:34:00+00:00
-[00:39:36.683] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) appointments [{"appointment_date":"2026-02-27T12:25:00+00:00","id":"bf5f36ae-eadc-4ee1-8319-7eea63ce71f1","professional":{"first_name":"Pedro","last_name":"Fuentes Sánchez"},"professional_id":"1862d7cf-c8c7-4cc4-b829-216133709176","status":"agendada"},{"appointment_date":"2026-02-28T09:00:00+00:00","id":"4105b428-3157-46f8-88fd-60560f43ea81","professional":{"first_name":"Pedro","last_name":"Fuentes Sánchez"},"professional_id":"1862d7cf-c8c7-4cc4-b829-216133709176","status":"agendada"},{"appointment_date":"2026-03-06T11:30:00+00:00","id":"e60557ac-3625-4955-9e73-067080904813","professional":{"first_name":"Valentina","last_name":"Navarro Díaz"},"professional_id":"97188969-684d-4068-a8b2-f549e837820a","status":"agendada"},{"appointment_date":"2026-03-06T12:34:00+00:00","id":"06c26daa-bb17-4531-9e29-e6288f44cbb4","professional":{"first_name":"Cristian","last_name":"Ramírez Flores"},"professional_id":"5aa91cbb-4829-4c62-8f0a-107d28a72ff7","status":"agendada"}]
-[00:39:36.683] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:39:36.683] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:39:36.683] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:00+00:00
-[00:39:36.683] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:39:36.683] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:39:36.683] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:00+00:00
-[00:39:36.683] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:39:36.683] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:39:36.683] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:00+00:00
-[00:39:36.683] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:39:36.683] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:39:36.683] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:00+00:00
-[00:39:43.319] Server  LOG     isProfessional "false"
-[00:39:43.326] Server  LOG     appointments []
-[00:39:43.430] Browser LOG     isProfessional false
-[00:39:43.430] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:39:43.430] Browser LOG     appointments []
-[00:39:43.430] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) appointments []
-[00:39:44.610] Browser LOG     appointments [{"appointment_date":"2026-02-27T12:25:00+00:00","id":"bf5f36ae-eadc-4ee1-8319-7eea63ce71f1","professional":{"first_name":"Pedro","last_name":"Fuentes Sánchez"},"professional_id":"1862d7cf-c8c7-4cc4-b829-216133709176","status":"agendada"},{"appointment_date":"2026-02-28T09:00:00+00:00","id":"4105b428-3157-46f8-88fd-60560f43ea81","professional":{"first_name":"Pedro","last_name":"Fuentes Sánchez"},"professional_id":"1862d7cf-c8c7-4cc4-b829-216133709176","status":"agendada"},{"appointment_date":"2026-03-06T11:30:00+00:00","id":"e60557ac-3625-4955-9e73-067080904813","professional":{"first_name":"Valentina","last_name":"Navarro Díaz"},"professional_id":"97188969-684d-4068-a8b2-f549e837820a","status":"agendada"},{"appointment_date":"2026-03-06T12:34:00+00:00","id":"06c26daa-bb17-4531-9e29-e6288f44cbb4","professional":{"first_name":"Cristian","last_name":"Ramírez Flores"},"professional_id":"5aa91cbb-4829-4c62-8f0a-107d28a72ff7","status":"agendada"}]
-[00:39:44.610] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:39:44.610] Browser LOG     date ["12","25","00+00","00"]
-[00:39:44.610] Browser LOG     date 12:25:00+00:00
-[00:39:44.610] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:39:44.610] Browser LOG     date ["09","00","00+00","00"]
-[00:39:44.610] Browser LOG     date 09:00:00+00:00
-[00:39:44.610] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:39:44.610] Browser LOG     date ["11","30","00+00","00"]
-[00:39:44.610] Browser LOG     date 11:30:00+00:00
-[00:39:44.610] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:39:44.610] Browser LOG     date ["12","34","00+00","00"]
-[00:39:44.610] Browser LOG     date 12:34:00+00:00
-[00:39:44.610] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) appointments [{"appointment_date":"2026-02-27T12:25:00+00:00","id":"bf5f36ae-eadc-4ee1-8319-7eea63ce71f1","professional":{"first_name":"Pedro","last_name":"Fuentes Sánchez"},"professional_id":"1862d7cf-c8c7-4cc4-b829-216133709176","status":"agendada"},{"appointment_date":"2026-02-28T09:00:00+00:00","id":"4105b428-3157-46f8-88fd-60560f43ea81","professional":{"first_name":"Pedro","last_name":"Fuentes Sánchez"},"professional_id":"1862d7cf-c8c7-4cc4-b829-216133709176","status":"agendada"},{"appointment_date":"2026-03-06T11:30:00+00:00","id":"e60557ac-3625-4955-9e73-067080904813","professional":{"first_name":"Valentina","last_name":"Navarro Díaz"},"professional_id":"97188969-684d-4068-a8b2-f549e837820a","status":"agendada"},{"appointment_date":"2026-03-06T12:34:00+00:00","id":"06c26daa-bb17-4531-9e29-e6288f44cbb4","professional":{"first_name":"Cristian","last_name":"Ramírez Flores"},"professional_id":"5aa91cbb-4829-4c62-8f0a-107d28a72ff7","status":"agendada"}]
-[00:39:44.610] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:39:44.610] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:39:44.610] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:00+00:00
-[00:39:44.610] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:39:44.610] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:39:44.610] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:00+00:00
-[00:39:44.610] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:39:44.610] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:39:44.610] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:00+00:00
-[00:39:44.610] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:39:44.610] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:39:44.610] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:00+00:00
-[00:40:44.988] Server  LOG     ✓ Compiled in 19ms
-[00:40:45.993] Browser LOG     appointmentDate 2026-02-27T12:25:00+00:00
-[00:40:45.994] Browser LOG     date ["12","25","00+00","00"]
-[00:40:45.994] Browser LOG     date 12:25:00+00:00
-[00:40:45.994] Browser LOG     appointmentDate 2026-02-28T09:00:00+00:00
-[00:40:45.994] Browser LOG     date ["09","00","00+00","00"]
-[00:40:45.994] Browser LOG     date 09:00:00+00:00
-[00:40:45.994] Browser LOG     appointmentDate 2026-03-06T11:30:00+00:00
-[00:40:45.994] Browser LOG     date ["11","30","00+00","00"]
-[00:40:45.994] Browser LOG     date 11:30:00+00:00
-[00:40:45.994] Browser LOG     appointmentDate 2026-03-06T12:34:00+00:00
-[00:40:45.994] Browser LOG     date ["12","34","00+00","00"]
-[00:40:45.994] Browser LOG     date 12:34:00+00:00
-[00:40:45.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-27T12:25:00+00:00
-[00:40:45.994] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","25","00+00","00"]
-[00:40:45.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:25:00+00:00
-[00:40:45.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-02-28T09:00:00+00:00
-[00:40:45.994] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["09","00","00+00","00"]
-[00:40:45.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 09:00:00+00:00
-[00:40:45.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T11:30:00+00:00
-[00:40:45.994] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["11","30","00+00","00"]
-[00:40:45.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 11:30:00+00:00
-[00:40:45.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) appointmentDate 2026-03-06T12:34:00+00:00
-[00:40:45.994] Browser LOG     %c%s %o color: rgba(124, 124, 124, 0.75) date ["12","34","00+00","00"]
-[00:40:45.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) date 12:34:00+00:00
-[00:41:14.908] Server  LOG     ✓ Compiled in 71ms
-[00:41:32.670] Server  LOG     ✓ Compiled in 40ms
-[00:41:44.503] Server  LOG     ✓ Compiled in 15ms
-[00:42:39.798] Server  LOG     ✓ Compiled in 16ms
-[00:43:55.728] Server  LOG     ✓ Compiled in 19ms
-[00:44:35.677] Server  LOG     isProfessional "false"
-[00:44:35.782] Browser LOG     isProfessional false
-[00:44:35.782] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:51:57.623] Server  LOG     isProfessional "false"
-[00:51:57.734] Browser LOG     isProfessional false
-[00:51:57.734] Browser LOG     isProfessional false
-[00:52:03.539] Browser LOG     isProfessional false
-[00:52:03.539] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:52:03.539] Browser LOG     isProfessional false
-[00:52:03.539] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:52:03.539] Browser LOG     isProfessional false
-[00:52:03.539] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:52:07.073] Server  LOG     isProfessional "false"
-[00:52:30.725] Browser LOG     subspecialty_id 673937da-5673-4b77-ba92-20173f61794e
-[00:52:30.725] Browser LOG     subspecialty_id 2 673937da-5673-4b77-ba92-20173f61794e
-[00:52:31.011] Browser LOG     data professionals [{"first_name":"Claudia","id":"50ff3858-4dcb-4001-b3c3-69e12893b759","last_name":"Araya Fuentes"},{"first_name":"Rodrigo","id":"2b79b989-e439-4956-bcf4-d107479637d4","last_name":"Herrera Salas"},{"first_name":"Isidora","id":"a5553604-c796-4ee0-a9cc-a4b2a3949a4d","last_name":"Silva Méndez"},{"first_name":"Benjamín","id":"5b39a76b-420a-4002-aa2b-80e85e5de04d","last_name":"Castro Núñez"},{"first_name":"Catalina","id":"2b0043cb-d65f-442a-9d5b-3666848c393e","last_name":"Ortega Reyes"}]
-[00:52:56.487] Browser LOG     isProfessional false
-[00:52:56.487] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:53:22.982] Browser LOG     isProfessional false
-[00:53:22.982] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:53:28.995] Browser LOG     subspecialty_id c4e90924-1742-4741-9502-7dc5e37dc1a6
-[00:53:28.995] Browser LOG     subspecialty_id 2 c4e90924-1742-4741-9502-7dc5e37dc1a6
-[00:53:29.252] Browser LOG     data professionals [{"first_name":"Ignacio","id":"0ab8a9a9-8582-44d8-a056-7242b753854d","last_name":"Suarez Gómez"},{"first_name":"Paola","id":"a85d18db-291b-487d-b8cc-2c197a9a91f8","last_name":"Navarro Díaz"},{"first_name":"Cristian","id":"d372d763-489e-40e9-8646-437dd803bfbe","last_name":"Cáceres Molina"},{"first_name":"Antonia","id":"c55ac8c3-9029-4b10-a1ca-28383f8ba1c0","last_name":"Peña Vargas"},{"first_name":"Mauricio","id":"0a9b9ce3-6b61-4ac1-871c-2a084a4f6149","last_name":"Muñoz Rojas"}]
-[00:53:49.756] Browser LOG     isProfessional false
-[00:53:49.756] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:54:33.304] Browser LOG     isProfessional false
-[00:54:33.304] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:56:26.486] Server  LOG     ✓ Compiled in 26ms
-[00:57:11.334] Server  LOG     ✓ Compiled in 22ms
-[00:57:16.628] Server  LOG     isProfessional "false"
-[00:57:16.689] Server  LOG     isProfessional "false"
-[00:57:16.824] Browser LOG     isProfessional false
-[00:57:16.824] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:57:25.169] Browser LOG     subspecialty_id 0f85eeac-1137-495e-b84c-ef2635467aa8
-[00:57:25.169] Browser LOG     subspecialty_id 2 0f85eeac-1137-495e-b84c-ef2635467aa8
-[00:57:25.617] Browser LOG     data professionals [{"first_name":"Felipe","id":"8245be5b-c37e-4dbf-9a61-4d667a7f25b5","last_name":"Suarez Gómez"},{"first_name":"María","id":"006a1099-d364-41dc-b433-f41bbe90e51d","last_name":"Navarro Díaz"},{"first_name":"Andrés","id":"ff3049e9-ed50-42ab-8dcc-6d3d09b58b94","last_name":"Cáceres Molina"},{"first_name":"Camila","id":"0a4d62db-b1e4-4638-bf51-ffb7361d9f21","last_name":"Peña Vargas"},{"first_name":"Jorge","id":"1793024e-e9a7-4bc0-aac4-707c98a29d73","last_name":"Muñoz Rojas"}]
-[00:57:47.332] Browser LOG     isProfessional false
-[00:57:47.332] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:57:47.332] Browser LOG     isProfessional false
-[00:57:47.332] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:57:47.332] Browser LOG     isProfessional false
-[00:57:47.332] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:58:05.927] Server  LOG     ✓ Compiled in 23ms
-[00:59:15.084] Server  LOG     ✓ Compiled in 15ms
-[00:59:21.785] Server  LOG     isProfessional "false"
-[00:59:21.855] Server  LOG     isProfessional "false"
-[00:59:21.952] Browser LOG     isProfessional false
-[00:59:21.952] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:59:25.434] Browser LOG     isProfessional false
-[00:59:25.434] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:59:25.434] Browser LOG     isProfessional false
-[00:59:25.434] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:59:25.434] Browser LOG     isProfessional false
-[00:59:25.434] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:59:35.358] Browser LOG     isProfessional false
-[00:59:35.358] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:00:54.181] Server  LOG     ✓ Compiled in 18ms
-[01:01:38.545] Server  LOG     ✓ Compiled in 16ms
-[01:01:42.629] Browser LOG     isProfessional false
-[01:01:42.629] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:01:54.179] Browser LOG     subspecialty_id 168dc5be-5986-4c0e-b6b6-7ba3f6d9f654
-[01:01:54.179] Browser LOG     subspecialty_id 2 168dc5be-5986-4c0e-b6b6-7ba3f6d9f654
-[01:01:54.387] Browser LOG     data professionals [{"first_name":"Daniela","id":"08882a47-c7b5-4328-9f48-1fb1f64982f2","last_name":"Araya Fuentes"},{"first_name":"Matías","id":"078ec0f3-8d12-42a4-bd4c-b7a911afa64e","last_name":"Herrera Salas"},{"first_name":"Constanza","id":"568c6e2f-75e5-4018-983a-d83da6b1db2a","last_name":"Silva Méndez"},{"first_name":"Sebastián","id":"4129d02e-6f02-44e4-ba83-c0fa73a7a009","last_name":"Castro Núñez"},{"first_name":"Paula","id":"9cd1143d-69d8-4afd-91a3-636c0133ffca","last_name":"Ortega Reyes"}]
-[01:02:42.238] Server  LOG     ✓ Compiled in 19ms
-[01:02:53.938] Browser LOG     subspecialty_id ac6b356d-501d-4985-95bc-45df8c07a867
-[01:02:53.938] Browser LOG     subspecialty_id 2 ac6b356d-501d-4985-95bc-45df8c07a867
-[01:02:54.155] Browser LOG     data professionals [{"first_name":"Daniela","id":"353fdd4e-d702-48b3-a88c-435fb7afcb92","last_name":"Araya Fuentes"},{"first_name":"Matías","id":"725fbbcf-2e45-4d8d-b0cf-749861194f6c","last_name":"Herrera Salas"},{"first_name":"Constanza","id":"9442bacb-735e-4a73-a65a-5eb2b4cfbba2","last_name":"Silva Méndez"},{"first_name":"Sebastián","id":"7e7d6ad1-0190-44b6-ae03-de74a50052ab","last_name":"Castro Núñez"},{"first_name":"Paula","id":"d4317b49-0ef0-4567-819f-77efa32679ee","last_name":"Ortega Reyes"}]
-[01:03:24.909] Browser LOG     isProfessional false
-[01:03:24.909] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:04:04.283] Server  LOG     isProfessional "false"
-[01:04:04.376] Browser LOG     isProfessional false
-[01:04:04.376] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:04:06.420] Browser LOG     isProfessional false
-[01:04:06.420] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:04:06.420] Browser LOG     isProfessional false
-[01:04:06.420] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:04:06.420] Browser LOG     isProfessional false
-[01:04:06.420] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:04:11.705] Browser LOG     subspecialty_id bce0c017-0b81-487c-91e0-5505e8de4fed
-[01:04:11.705] Browser LOG     subspecialty_id 2 bce0c017-0b81-487c-91e0-5505e8de4fed
-[01:04:11.918] Browser LOG     data professionals [{"first_name":"Alejandra","id":"434ed344-94c5-4c06-a809-a7efbb73f747","last_name":"Godoy Castro"},{"first_name":"Diego","id":"7ea24aea-af61-47db-a22c-919278632fd1","last_name":"Reyes Bravo"},{"first_name":"Francisca","id":"6b047688-468d-465c-b4a5-fcc510c11520","last_name":"Maldonado Ríos"},{"first_name":"Esteban","id":"fde9bed9-d7b3-42cd-807a-50aac5f2449f","last_name":"Riquelme Torres"},{"first_name":"Carolina","id":"636a45b4-a2dc-45f0-b82b-12da81f686b1","last_name":"Paredes Soto"}]
-[01:05:07.989] Server  LOG     ✓ Compiled in 27ms
-[01:11:34.737] Browser LOG     isProfessional false
-[01:11:34.737] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:13:33.367] Server  LOG     ✓ Compiled in 48ms
-[01:13:34.124] Browser LOG     isProfessional false
-[01:13:34.124] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:13:58.579] Browser LOG     isProfessional false
-[01:13:58.579] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:14:19.170] Server  LOG     ✓ Compiled in 0ms
-[01:14:19.860] Browser LOG     isProfessional false
-[01:14:19.860] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:14:29.360] Server  LOG     ✓ Compiled in 25ms
-[01:14:39.256] Server  LOG     ✓ Compiled in 25ms
-[01:17:05.140] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/context/UserContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[01:17:05.150] Server  LOG     ✓ Compiled in 22ms
-[01:17:05.254] Server  LOG     isProfessional "false"
-[01:17:05.353] Browser LOG     isProfessional false
-[01:17:05.353] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:17:07.055] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/context/UserContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[01:17:07.111] Server  LOG     ✓ Compiled in 18ms
-[01:17:07.148] Server  LOG     isProfessional "false"
-[01:17:07.248] Browser LOG     isProfessional false
-[01:17:07.248] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:17:43.623] Server  LOG     isProfessional "false"
-[01:17:43.721] Browser LOG     isProfessional false
-[01:17:43.721] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:17:54.625] Server  LOG     isProfessional ""
-[01:18:55.966] Server  LOG     ✓ Compiled in 24ms
-[01:18:56.976] Browser LOG     isProfessional false
-[01:18:56.976] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:19:38.461] Server  LOG     ✓ Compiled in 23ms
-[01:19:50.279] Server  LOG     ✓ Compiled in 20ms
-[01:20:09.100] Browser LOG     isProfessional 
-[01:20:09.100] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:20:11.033] Browser LOG     isProfessional 
-[01:20:11.033] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:20:11.033] Browser LOG     isProfessional 
-[01:20:11.033] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:20:18.996] Server  LOG     isProfessional "false"
-[01:20:19.087] Browser LOG     isProfessional false
-[01:20:19.087] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:20:30.575] Server  LOG     isProfessional ""
-[01:21:14.748] Server  LOG     ✓ Compiled in 17ms
-[01:21:52.562] Server  LOG     isProfessional "false"
-[01:21:52.686] Browser LOG     isProfessional false
-[01:21:52.686] Browser LOG     isProfessional false
-[01:22:02.233] Server  LOG     isProfessional "false"
-[01:22:05.932] Server  LOG     isProfessional "false"
-[01:22:06.007] Server  LOG     isProfessional "false"
-[01:22:06.101] Browser LOG     isProfessional false
-[01:22:06.101] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:22:11.300] Browser LOG     isProfessional 
-[01:22:11.300] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:22:12.728] Browser LOG     isProfessional 
-[01:22:12.728] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:22:12.728] Browser LOG     isProfessional 
-[01:22:12.728] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:22:16.541] Server  LOG     isProfessional "false"
-[01:22:16.598] Server  LOG     isProfessional "false"
-[01:22:16.676] Browser LOG     isProfessional false
-[01:22:16.676] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:22:52.622] Browser LOG     isProfessional false
-[01:22:52.622] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:22:59.504] Browser LOG     isProfessional false
-[01:22:59.504] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:23:27.323] Server  LOG     isProfessional "false"
-[01:23:27.434] Server  LOG     isProfessional "false"
-[01:23:27.654] Browser LOG     isProfessional false
-[01:23:27.654] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:23:49.644] Browser LOG     isProfessional 
-[01:23:49.644] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:23:53.409] Browser LOG     isProfessional 
-[01:23:53.409] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:23:53.409] Browser LOG     isProfessional 
-[01:23:53.409] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:23:58.120] Server  LOG     isProfessional "true"
-[01:23:58.208] Browser LOG     isProfessional true
-[01:23:58.208] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:24:07.963] Browser LOG     isProfessional true
-[01:24:07.963] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:24:08.647] Browser LOG     isProfessional true
-[01:24:08.647] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:24:10.219] Browser LOG     isProfessional 
-[01:24:10.219] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:24:11.517] Browser LOG     isProfessional 
-[01:24:11.517] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:24:11.517] Browser LOG     isProfessional 
-[01:24:11.517] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:24:15.093] Server  LOG     isProfessional "false"
-[01:24:15.192] Browser LOG     isProfessional false
-[01:24:15.192] Browser LOG     isProfessional false
-[01:24:18.711] Server  LOG     isProfessional "false"
-[01:24:18.794] Browser LOG     isProfessional false
-[01:24:18.794] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:21.752] Server  LOG     isProfessional "false"
-[01:24:21.871] Browser LOG     isProfessional false
-[01:24:21.871] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:23.083] Server  LOG     isProfessional "false"
-[01:24:23.173] Browser LOG     isProfessional false
-[01:24:23.173] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:24.541] Server  LOG     isProfessional "false"
-[01:24:24.633] Browser LOG     isProfessional false
-[01:24:24.633] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:25.861] Server  LOG     isProfessional "false"
-[01:24:25.966] Browser LOG     isProfessional false
-[01:24:25.966] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:26.871] Server  LOG     isProfessional "false"
-[01:24:26.968] Browser LOG     isProfessional false
-[01:24:26.968] Browser LOG     isProfessional false
-[01:24:27.977] Server  LOG     isProfessional "false"
-[01:24:28.085] Browser LOG     isProfessional false
-[01:24:28.085] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:29.435] Browser LOG     isProfessional false
-[01:24:29.435] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:29.435] Browser LOG     isProfessional false
-[01:24:29.435] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:29.435] Browser LOG     isProfessional false
-[01:24:29.435] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:24:29.867] Browser LOG     isProfessional false
-[01:24:29.867] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:25:37.521] Server  LOG     ✓ Compiled in 17ms
-[01:26:01.638] Server  LOG     ✓ Compiled in 12ms
-[01:26:09.780] Browser LOG     isProfessional false
-[01:26:09.781] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:11.275] Browser LOG     isProfessional false
-[01:26:11.275] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:11.275] Browser LOG     isProfessional false
-[01:26:11.275] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:11.275] Browser LOG     isProfessional false
-[01:26:11.275] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:22.257] Browser LOG     isProfessional false
-[01:26:22.257] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:22.257] Browser LOG     isProfessional false
-[01:26:22.257] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:22.257] Browser LOG     isProfessional false
-[01:26:22.257] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:34.619] Browser LOG     isProfessional false
-[01:26:34.619] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:54.303] Browser LOG     isProfessional false
-[01:26:54.303] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:26:55.721] Browser LOG     isProfessional false
-[01:26:55.721] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:16.184] Server  LOG     ✓ Compiled in 16ms
-[01:29:23.696] Browser LOG     isProfessional false
-[01:29:23.696] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:26.841] Browser LOG     isProfessional false
-[01:29:26.841] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:30.838] Browser LOG     isProfessional false
-[01:29:30.838] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:32.506] Browser LOG     isProfessional false
-[01:29:32.506] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:33.983] Browser LOG     isProfessional false
-[01:29:33.983] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:35.502] Browser LOG     isProfessional false
-[01:29:35.502] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:48.869] Browser LOG     isProfessional false
-[01:29:48.869] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:49.577] Browser LOG     isProfessional false
-[01:29:49.577] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:31:02.702] Server  LOG     ✓ Compiled in 18ms
-[01:31:11.721] Server  LOG     ✓ Compiled in 19ms
-[01:32:16.519] Browser LOG     isProfessional 
-[01:32:16.519] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:32:18.869] Browser LOG     isProfessional 
-[01:32:18.869] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:32:18.869] Browser LOG     isProfessional 
-[01:32:18.869] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:32:21.763] Server  LOG     isProfessional "true"
-[01:32:21.867] Browser LOG     isProfessional true
-[01:32:21.867] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:34:46.845] Server  LOG     ✓ Compiled in 49ms
-[01:34:47.803] Browser ERROR   ./src/app/globals.css:2477:8
-Parsing CSS source code failed
-  2475 |   }
-  2476 | }
-> 2477 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2478 | :root {
-  2479 |   --background: #f8fafc;
-  2480 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:35:46.707] Browser ERROR   ./src/app/globals.css:2480:8
-Parsing CSS source code failed
-  2478 |   }
-  2479 | }
-> 2480 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2481 | :root {
-  2482 |   --background: #f8fafc;
-  2483 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:37.406] Server  ERROR   ⨯ ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:36:38.068] Server  ERROR   ⨯ ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:36:38.146] Server  ERROR   ⨯ ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:36:38.212] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:38.212] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:38.212] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:38.212] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:38.218] Server  ERROR   ⨯ ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:36:38.301] Server  ERROR   ⨯ ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:36:40.401] Browser ERROR   uncaughtError: Error: ./src/app/globals.css:2541:8
-Parsing CSS source code failed
-  2539 |   }
-  2540 | }
-> 2541 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2542 | :root {
-  2543 |   --background: #f8fafc;
-  2544 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:37:58.573] Server  ERROR   ⨯ ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:00.681] Browser ERROR   uncaughtError: Error: ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:38:38.558] Server  ERROR   ⨯ ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:38:38.800] Browser ERROR   uncaughtError: Error: ./src/app/globals.css:2560:8
-Parsing CSS source code failed
-  2558 |   }
-  2559 | }
-> 2560 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2561 | :root {
-  2562 |   --background: #f8fafc;
-  2563 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:38.945] Browser ERROR   ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.569] Server  ERROR   ⨯ ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:38:40.796] Browser ERROR   uncaughtError: Error: ./src/app/globals.css:2575:8
-Parsing CSS source code failed
-  2573 |   }
-  2574 | }
-> 2575 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2576 | :root {
-  2577 |   --background: #f8fafc;
-  2578 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.936] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:38:40.937] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:17.787] Server  ERROR   ⨯ ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:41:17.998] Browser ERROR   uncaughtError: Error: ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-
-
-[01:41:18.140] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:18.141] Browser ERROR   ./src/app/globals.css:2589:8
-Parsing CSS source code failed
-  2587 |   }
-  2588 | }
-> 2589 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-       |        ^
-  2590 | :root {
-  2591 |   --background: #f8fafc;
-  2592 |   --foreground: #0f172a;
-
-@import rules must precede all rules aside from @charset and @layer statements
-
-Import trace:
-  Client Component Browser:
-    ./src/app/globals.css [Client Component Browser]
-    ./src/app/layout.tsx [Server Component]
-[01:41:51.871] Server  LOG     isProfessional "true"
-[01:41:52.060] Browser LOG     isProfessional true
-[01:41:52.060] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:06.414] Browser LOG     isProfessional true
-[01:42:06.414] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:06.414] Browser LOG     isProfessional true
-[01:42:06.414] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:06.414] Browser LOG     isProfessional true
-[01:42:06.414] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:24.384] Browser LOG     isProfessional true
-[01:42:24.384] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:24.384] Browser LOG     isProfessional true
-[01:42:24.384] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:24.384] Browser LOG     isProfessional true
-[01:42:24.384] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:31.258] Browser LOG     isProfessional true
-[01:42:31.258] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:31.258] Browser LOG     isProfessional true
-[01:42:31.258] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:31.258] Browser LOG     isProfessional true
-[01:42:31.258] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:42:35.954] Browser LOG     isProfessional true
-[01:42:35.954] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:43:19.918] Browser LOG     isProfessional true
-[01:43:19.919] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:44:02.197] Server  LOG     ✓ Compiled in 25ms
-[01:44:15.788] Server  LOG     ✓ Compiled in 14ms
-[01:44:28.133] Browser LOG     isProfessional true
-[01:44:28.133] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:44:55.100] Server  LOG     ✓ Compiled in 14ms
-[01:45:05.282] Server  LOG     ✓ Compiled in 14ms
-[01:45:11.654] Browser LOG     isProfessional true
-[01:45:11.654] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:45:18.103] Browser LOG     isProfessional true
-[01:45:18.103] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:45:21.295] Browser LOG     isProfessional true
-[01:45:21.295] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:45:35.078] Browser LOG     isProfessional true
-[01:45:35.078] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:46:57.108] Server  LOG     isProfessional "true"
-[01:46:57.202] Browser LOG     isProfessional true
-[01:46:57.202] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:20.932] Browser LOG     isProfessional true
-[01:49:20.932] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:20.932] Browser LOG     isProfessional true
-[01:49:20.932] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:22.172] Browser LOG     isProfessional true
-[01:49:22.172] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:22.172] Browser LOG     isProfessional true
-[01:49:22.172] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:22.172] Browser LOG     isProfessional true
-[01:49:22.172] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:23.098] Server  LOG     isProfessional "true"
-[01:49:23.189] Browser LOG     isProfessional true
-[01:49:23.189] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:25.259] Browser LOG     isProfessional true
-[01:49:25.259] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:25.259] Browser LOG     isProfessional true
-[01:49:25.259] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:27.854] Browser LOG     isProfessional true
-[01:49:27.854] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:28.857] Browser LOG     isProfessional true
-[01:49:28.857] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:28.857] Browser LOG     isProfessional true
-[01:49:28.857] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:28.857] Browser LOG     isProfessional true
-[01:49:28.857] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:30.831] Browser LOG     isProfessional true
-[01:49:30.831] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:30.831] Browser LOG     isProfessional true
-[01:49:30.831] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:30.831] Browser LOG     isProfessional true
-[01:49:30.831] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:32.275] Browser LOG     isProfessional true
-[01:49:32.275] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:32.275] Browser LOG     isProfessional true
-[01:49:32.275] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:49:33.284] Server  LOG     isProfessional "true"
-[01:49:33.374] Browser LOG     isProfessional true
-[01:49:33.374] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:50:44.756] Browser LOG     isProfessional true
-[01:50:44.756] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:50:45.878] Browser LOG     isProfessional true
-[01:50:45.878] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:50:45.878] Browser LOG     isProfessional true
-[01:50:45.878] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:50:45.878] Browser LOG     isProfessional true
-[01:50:45.878] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:50:46.666] Browser LOG     isProfessional true
-[01:50:46.666] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:50:46.666] Browser LOG     isProfessional true
-[01:50:46.666] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:50:46.666] Browser LOG     isProfessional true
-[01:50:46.666] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
-[01:52:49.945] Browser LOG     isProfessional 
-[01:52:49.945] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:52:52.567] Browser LOG     isProfessional 
-[01:52:52.567] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:52:52.567] Browser LOG     isProfessional 
-[01:52:52.567] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[01:53:01.438] Server  LOG     isProfessional "false"
-[01:53:01.552] Browser LOG     isProfessional false
-[01:53:01.552] Browser LOG     isProfessional false
-[01:53:06.362] Browser LOG     isProfessional false
-[01:53:06.362] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:53:06.362] Browser LOG     isProfessional false
-[01:53:06.362] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:53:06.362] Browser LOG     isProfessional false
-[01:53:06.362] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:57:28.667] Server  LOG     ✓ Compiled in 29ms
-[02:02:47.605] Server  LOG     ✓ Compiled in 36ms
-[02:06:07.676] Browser LOG     isProfessional false
-[02:06:07.676] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:06:07.676] Browser LOG     isProfessional false
-[02:06:07.676] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:06:09.556] Browser LOG     isProfessional false
-[02:06:09.556] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:06:11.567] Browser LOG     isProfessional false
-[02:06:11.567] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:06:13.119] Browser LOG     isProfessional false
-[02:06:13.119] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:06:13.119] Browser LOG     isProfessional false
-[02:06:13.119] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:06:13.119] Browser LOG     isProfessional false
-[02:06:13.119] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:06:14.286] Browser LOG     isProfessional false
-[02:06:14.286] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:06:15.577] Browser LOG     isProfessional false
-[02:06:15.578] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[02:09:46.295] Browser LOG     isProfessional false
-[02:09:46.295] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:00:00.472] Server  LOG     ✓ Ready in 352ms
+[00:00:01.930] Server  LOG     isProfessional "false"
+[00:00:02.037] Browser LOG     isProfessional false
+[00:00:02.037] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:03:02.627] Server  LOG     isProfessional "false"
+[00:03:02.707] Browser LOG     isProfessional false
+[00:03:02.707] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:03:07.305] Server  LOG     isProfessional "false"
+[00:03:07.388] Browser LOG     isProfessional false
+[00:03:07.388] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:03:08.853] Browser LOG     isProfessional false
+[00:03:08.853] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:03:09.707] Server  LOG     isProfessional "false"
+[00:03:09.799] Browser LOG     isProfessional false
+[00:03:09.799] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:03:10.910] Server  LOG     isProfessional "false"
+[00:03:10.984] Browser LOG     isProfessional false
+[00:03:10.984] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:03:52.942] Server  LOG     ✓ Compiled in 25ms
+[00:03:53.949] Browser LOG     isProfessional false
+[00:03:53.949] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:25.088] Browser LOG     isProfessional false
+[00:04:25.088] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:27.018] Browser LOG     isProfessional false
+[00:04:27.018] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:27.018] Browser LOG     isProfessional false
+[00:04:27.018] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:27.018] Browser LOG     isProfessional false
+[00:04:27.018] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:28.464] Browser LOG     isProfessional false
+[00:04:28.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:28.464] Browser LOG     isProfessional false
+[00:04:28.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:28.464] Browser LOG     isProfessional false
+[00:04:28.464] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:29.911] Browser LOG     isProfessional false
+[00:04:29.911] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:29.911] Browser LOG     isProfessional false
+[00:04:29.911] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:04:29.911] Browser LOG     isProfessional false
+[00:04:29.911] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:05:25.326] Browser LOG     isProfessional false
+[00:05:25.326] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:07:13.236] Server  LOG     ✓ Compiled in 33ms
+[00:15:06.739] Browser LOG     isProfessional false
+[00:15:06.739] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:15:35.346] Browser LOG     isProfessional false
+[00:15:35.346] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:15:36.756] Browser LOG     isProfessional false
+[00:15:36.756] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:15:49.853] Browser LOG     isProfessional false
+[00:15:49.853] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:15:50.876] Browser LOG     isProfessional false
+[00:15:50.876] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:15:52.259] Browser LOG     isProfessional false
+[00:15:52.259] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:15:54.680] Server  LOG     isProfessional "false"
+[00:15:54.772] Browser LOG     isProfessional false
+[00:15:54.772] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:02.608] Server  LOG     isProfessional "false"
+[00:16:02.687] Browser LOG     isProfessional false
+[00:16:02.687] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:05.170] Browser LOG     isProfessional false
+[00:16:05.170] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:05.170] Browser LOG     isProfessional false
+[00:16:05.170] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:06.648] Server  LOG     isProfessional "false"
+[00:16:06.739] Browser LOG     isProfessional false
+[00:16:06.739] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:08.853] Server  LOG     isProfessional "false"
+[00:16:08.936] Browser LOG     isProfessional false
+[00:16:08.936] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:11.673] Browser LOG     isProfessional false
+[00:16:11.673] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:14.032] Browser LOG     isProfessional false
+[00:16:14.032] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:14.032] Browser LOG     isProfessional false
+[00:16:14.032] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:14.032] Browser LOG     isProfessional false
+[00:16:14.032] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:16:47.495] Server  LOG     ✓ Compiled in 27ms
+[00:16:59.798] Server  LOG     ✓ Compiled in 24ms
+[00:19:24.314] Server  LOG     ✓ Compiled in 29ms
+[00:19:41.462] Server  LOG     isProfessional "false"
+[00:19:41.577] Browser LOG     isProfessional false
+[00:19:41.577] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:19:42.734] Server  LOG     isProfessional "false"
+[00:19:42.823] Browser LOG     isProfessional false
+[00:19:42.823] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:19:46.180] Server  LOG     isProfessional "false"
+[00:19:46.265] Browser LOG     isProfessional false
+[00:19:46.265] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:27.117] Server  LOG     isProfessional "false"
+[00:20:27.200] Browser LOG     isProfessional false
+[00:20:27.200] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:28.335] Browser LOG     isProfessional false
+[00:20:28.335] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:28.335] Browser LOG     isProfessional false
+[00:20:28.335] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:28.335] Browser LOG     isProfessional false
+[00:20:28.335] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:32.605] Browser LOG     isProfessional false
+[00:20:32.605] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:34.840] Server  LOG     isProfessional "false"
+[00:20:34.919] Browser LOG     isProfessional false
+[00:20:34.919] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:36.154] Browser LOG     isProfessional false
+[00:20:36.154] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:37.733] Browser LOG     isProfessional false
+[00:20:37.733] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:51.125] Server  LOG     ✓ Compiled in 23ms
+[00:20:55.995] Server  LOG     isProfessional "false"
+[00:20:56.080] Browser LOG     isProfessional false
+[00:20:56.080] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:56.940] Browser LOG     isProfessional false
+[00:20:56.940] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:56.940] Browser LOG     isProfessional false
+[00:20:56.940] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:56.940] Browser LOG     isProfessional false
+[00:20:56.940] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:58.177] Server  LOG     isProfessional "false"
+[00:20:58.266] Browser LOG     isProfessional false
+[00:20:58.266] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:20:59.894] Server  LOG     isProfessional "false"
+[00:20:59.989] Browser LOG     isProfessional false
+[00:20:59.989] Browser LOG     isProfessional false
+[00:21:00.681] Server  LOG     isProfessional "false"
+[00:21:00.778] Browser LOG     isProfessional false
+[00:21:00.778] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:21:01.883] Server  LOG     isProfessional "false"
+[00:21:01.978] Browser LOG     isProfessional false
+[00:21:01.978] Browser LOG     isProfessional false
+[00:22:07.779] Server  LOG     ✓ Compiled in 24ms
+[00:22:13.883] Server  LOG     isProfessional "false"
+[00:22:13.980] Browser LOG     isProfessional false
+[00:22:13.980] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:22:15.307] Browser LOG     isProfessional 
+[00:22:15.307] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:22:16.967] Server  LOG     isProfessional ""
+[00:22:17.075] Browser LOG     isProfessional 
+[00:22:17.075] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:26:38.183] Browser LOG     isProfessional 
+[00:26:38.183] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:26:38.183] Browser LOG     isProfessional 
+[00:26:38.183] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:26:42.419] Server  LOG     isProfessional "false"
+[00:26:42.505] Browser LOG     isProfessional false
+[00:26:42.505] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:22.888] Server  LOG     isProfessional "false"
+[00:27:22.986] Browser LOG     isProfessional false
+[00:27:22.986] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:27.937] Server  LOG     isProfessional "false"
+[00:27:28.043] Browser LOG     isProfessional false
+[00:27:28.043] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:29.195] Browser LOG     isProfessional false
+[00:27:29.195] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:29.195] Browser LOG     isProfessional false
+[00:27:29.195] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:29.195] Browser LOG     isProfessional false
+[00:27:29.195] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:30.478] Browser LOG     isProfessional false
+[00:27:30.478] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:32.124] Browser LOG     isProfessional 
+[00:27:32.124] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:27:34.811] Browser LOG     isProfessional 
+[00:27:34.811] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:27:34.811] Browser LOG     isProfessional 
+[00:27:34.811] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:27:39.746] Server  LOG     isProfessional "false"
+[00:27:39.836] Browser LOG     isProfessional false
+[00:27:39.836] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:43.989] Browser LOG     isProfessional false
+[00:27:43.989] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:43.989] Browser LOG     isProfessional false
+[00:27:43.989] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:43.989] Browser LOG     isProfessional false
+[00:27:43.989] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:47.907] Browser LOG     isProfessional false
+[00:27:47.907] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:47.907] Browser LOG     isProfessional false
+[00:27:47.907] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:47.907] Browser LOG     isProfessional false
+[00:27:47.907] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:49.097] Browser LOG     isProfessional false
+[00:27:49.097] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:27:50.414] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:27:51.994] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:27:52.747] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:28:58.881] Server  LOG     ✓ Compiled in 25ms
+[00:29:20.858] Server  LOG     ✓ Compiled in 29ms
+[00:29:20.981] Browser ERROR   ./src/components/ProSidebarPatient.tsx:6:1
+Export default doesn't exist in target module
+  4 | import { useCallback } from "react";
+  5 | import { useRouter } from "next/navigation";
+> 6 | import useLogout from "@/hooks/useLogout";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | interface ProSidebarPatientProps {
+  9 |     active: "/homepatient" | "/medicalhistory" | "/myappointments" | "/profile";
+
+The export default was not found in module [project]/src/hooks/useLogout.ts [app-client] (ecmascript).
+Did you mean to import useLogout?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ProSidebarPatient.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ProSidebarPatient.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+[00:29:20.981] Browser ERROR   ./src/components/ProSidebarPatient.tsx:6:1
+Export default doesn't exist in target module
+  4 | import { useCallback } from "react";
+  5 | import { useRouter } from "next/navigation";
+> 6 | import useLogout from "@/hooks/useLogout";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | interface ProSidebarPatientProps {
+  9 |     active: "/homepatient" | "/medicalhistory" | "/myappointments" | "/profile";
+
+The export default was not found in module [project]/src/hooks/useLogout.ts [app-ssr] (ecmascript).
+Did you mean to import useLogout?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ProSidebarPatient.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ProSidebarPatient.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+[00:30:36.034] Browser ERROR   ./src/components/ProSidebarPatient.tsx:6:1
+Export default doesn't exist in target module
+  4 | import { useCallback } from "react";
+  5 | import { useRouter } from "next/navigation";
+> 6 | import useLogout from "@/hooks/useLogout";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | interface ProSidebarPatientProps {
+  9 |     active: "/homepatient" | "/medicalhistory" | "/myappointments" | "/profile";
+
+The export default was not found in module [project]/src/hooks/useLogout.ts [app-client] (ecmascript).
+Did you mean to import useLogout?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ProSidebarPatient.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ProSidebarPatient.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+[00:30:36.034] Browser ERROR   ./src/components/ProSidebarPatient.tsx:6:1
+Export default doesn't exist in target module
+  4 | import { useCallback } from "react";
+  5 | import { useRouter } from "next/navigation";
+> 6 | import useLogout from "@/hooks/useLogout";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | interface ProSidebarPatientProps {
+  9 |     active: "/homepatient" | "/medicalhistory" | "/myappointments" | "/profile";
+
+The export default was not found in module [project]/src/hooks/useLogout.ts [app-ssr] (ecmascript).
+Did you mean to import useLogout?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ProSidebarPatient.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ProSidebarPatient.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+[00:30:46.103] Browser ERROR   ./src/components/ProSidebarPatient.tsx:6:1
+Export default doesn't exist in target module
+  4 | import { useCallback } from "react";
+  5 | import { useRouter } from "next/navigation";
+> 6 | import useLogout from "@/hooks/useLogout";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | interface ProSidebarPatientProps {
+  9 |     active: "/homepatient" | "/medicalhistory" | "/myappointments" | "/profile";
+
+The export default was not found in module [project]/src/hooks/useLogout.ts [app-client] (ecmascript).
+Did you mean to import useLogout?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ProSidebarPatient.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ProSidebarPatient.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+[00:30:46.104] Browser ERROR   ./src/components/ProSidebarPatient.tsx:6:1
+Export default doesn't exist in target module
+  4 | import { useCallback } from "react";
+  5 | import { useRouter } from "next/navigation";
+> 6 | import useLogout from "@/hooks/useLogout";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | interface ProSidebarPatientProps {
+  9 |     active: "/homepatient" | "/medicalhistory" | "/myappointments" | "/profile";
+
+The export default was not found in module [project]/src/hooks/useLogout.ts [app-ssr] (ecmascript).
+Did you mean to import useLogout?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ProSidebarPatient.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ProSidebarPatient.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+[00:32:09.865] Server  LOG     ✓ Compiled in 27ms
+[00:32:10.196] Browser LOG     isProfessional false
+[00:32:10.196] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:24.714] Server  LOG     ✓ Compiled in 23ms
+[00:33:28.502] Browser LOG     isProfessional false
+[00:33:28.502] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:29.230] Browser LOG     isProfessional false
+[00:33:29.230] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:29.970] Browser LOG     isProfessional false
+[00:33:29.970] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:30.608] Browser LOG     isProfessional false
+[00:33:30.608] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:30.608] Browser LOG     isProfessional false
+[00:33:30.608] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:30.608] Browser LOG     isProfessional false
+[00:33:30.608] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:31.307] Browser LOG     isProfessional false
+[00:33:31.307] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:31.881] Browser LOG     isProfessional false
+[00:33:31.882] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:32.449] Browser LOG     isProfessional false
+[00:33:32.449] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:33:43.279] Server  LOG     ✓ Compiled in 16ms
+[00:35:57.520] Browser LOG     isProfessional 
+[00:35:57.520] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:35:59.140] Browser LOG     isProfessional 
+[00:35:59.140] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:35:59.140] Browser LOG     isProfessional 
+[00:35:59.140] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:36:02.582] Server  LOG     isProfessional "false"
+[00:36:02.675] Browser LOG     isProfessional false
+[00:36:02.675] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:06.088] Browser LOG     isProfessional false
+[00:36:06.088] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:06.088] Browser LOG     isProfessional false
+[00:36:06.088] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:06.088] Browser LOG     isProfessional false
+[00:36:06.088] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:09.104] Browser LOG     isProfessional 
+[00:36:09.105] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:36:10.668] Browser LOG     isProfessional 
+[00:36:10.668] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:36:10.668] Browser LOG     isProfessional 
+[00:36:10.668] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:36:13.451] Server  LOG     isProfessional "false"
+[00:36:13.479] Server  LOG     isProfessional "false"
+[00:36:13.562] Browser LOG     isProfessional false
+[00:36:13.562] Browser LOG     isProfessional false
+[00:36:17.300] Browser LOG     isProfessional false
+[00:36:17.300] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:17.300] Browser LOG     isProfessional false
+[00:36:17.300] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:20.047] Browser LOG     isProfessional false
+[00:36:20.047] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:21.158] Browser LOG     isProfessional false
+[00:36:21.158] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:21.158] Browser LOG     isProfessional false
+[00:36:21.158] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:26.595] Browser LOG     isProfessional false
+[00:36:26.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:27.335] Browser LOG     isProfessional false
+[00:36:27.335] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:34.616] Browser LOG     isProfessional false
+[00:36:34.616] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:35.643] Browser LOG     isProfessional false
+[00:36:35.643] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:36.608] Browser LOG     isProfessional false
+[00:36:36.608] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:36:38.557] Browser LOG     isProfessional false
+[00:36:38.557] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:38:26.970] Browser LOG     isProfessional false
+[00:38:26.970] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:38:28.370] Browser LOG     isProfessional false
+[00:38:28.370] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:38:29.833] Browser LOG     isProfessional false
+[00:38:29.833] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:38:30.746] Browser LOG     isProfessional false
+[00:38:30.746] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false

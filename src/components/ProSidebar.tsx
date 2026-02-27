@@ -1,13 +1,10 @@
 "use client";
-// ✅ DRY: Component extracted to /components so it's never duplicated.
-// One source of truth — change the sidebar here and it updates everywhere.
-
-import { supabase } from "@/lib/supabaseClient";
 import {
     Activity, Calendar, ClipboardList, Users,
     Settings, LogOut
 } from "lucide-react";
 import Link from "next/link";
+import { useLogout } from "@/hooks/useLogout";
 
 // ✅ TypeScript: define the exact prop this component accepts (union type, not just string).
 // TypeScript will warn you if you pass an invalid route.
@@ -27,6 +24,7 @@ const NAV_ITEMS = [
 // ✅ Accessibility: aria-label on the nav and aria-current="page" on the active item.
 // Screen readers use these to help users navigate. Zero visual impact, high a11y value.
 export default function ProSidebar({ active }: ProSidebarProps) {
+    const handleLogout = useLogout();
     return (
         <aside className="w-full md:w-64 bg-white border-r border-slate-200 flex flex-col z-20">
             <div className="p-6 border-b border-slate-100 flex items-center gap-3">
@@ -50,8 +48,8 @@ export default function ProSidebar({ active }: ProSidebarProps) {
                             // aria-current="page" tells the browser which page is currently active
                             aria-current={isActive ? "page" : undefined}
                             className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all hover:scale-[1.02] ${isActive
-                                    ? "bg-indigo-50 text-indigo-600"
-                                    : "text-slate-600 hover:bg-slate-50 hover:text-indigo-600"
+                                ? "bg-indigo-50 text-indigo-600"
+                                : "text-slate-600 hover:bg-slate-50 hover:text-indigo-600"
                                 }`}
                         >
                             <Icon className="w-5 h-5" aria-hidden="true" />
@@ -63,7 +61,7 @@ export default function ProSidebar({ active }: ProSidebarProps) {
 
             <div className="p-4 border-t border-slate-100">
                 <button
-                    onClick={() => supabase.auth.signOut().then(() => window.location.href = "/")}
+                    onClick={handleLogout}
                     // aria-label: the button text already says "Cerrar Sesión" which is fine,
                     // but if it were icon-only, this would be mandatory for accessibility.
                     aria-label="Sign out and return to home"
