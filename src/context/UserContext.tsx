@@ -4,14 +4,16 @@ import { createContext, use, useContext } from "react";
 export interface UserContextType {
     isLoggedIn: boolean;
     firstName: string;
+    lastName: string;
+    email: string;
     userId: string;
     isProfessional: string;
 }
 export const UserContext = createContext<UserContextType | undefined>(undefined);
 
-export const UserProvider = ({ isLoggedIn, firstName, userId, isProfessional, children }: { isLoggedIn: boolean, firstName: string, userId: string, isProfessional: string, children: React.ReactNode }) => {
+export const UserProvider = ({ isLoggedIn, firstName, lastName, email, userId, isProfessional, children }: { isLoggedIn: boolean, firstName: string, lastName: string, email: string, userId: string, isProfessional: string, children: React.ReactNode }) => {
     return (
-        <UserContext.Provider value={{ isLoggedIn, firstName, userId, isProfessional }}>
+        <UserContext.Provider value={{ isLoggedIn, firstName, lastName, email, userId, isProfessional }}>
             {children}
         </UserContext.Provider>
     );

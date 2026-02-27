@@ -59,22 +59,22 @@ export default function HomePatiente() {
                 </div>
 
                 <nav className="flex-1 p-4 space-y-2">
-                    <a href="#" className="flex items-center gap-3 px-4 py-3 bg-cyan-50 text-cyan-700 rounded-xl font-medium transition-all hover:scale-[1.02]">
+                    <Link href="/homepatiente" className="flex items-center gap-3 px-4 py-3 bg-cyan-50 text-cyan-700 rounded-xl font-medium transition-all hover:scale-[1.02]">
                         <HeartPulse className="w-5 h-5" />
                         Mi Resumen
-                    </a>
-                    <a href="#" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
+                    </Link>
+                    <Link href="/myappointments" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
                         <CalendarDays className="w-5 h-5" />
                         Mis Citas
-                    </a>
-                    <a href="#" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
+                    </Link>
+                    <Link href="/medicalhistory" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
                         <FileText className="w-5 h-5" />
                         Historial Médico
-                    </a>
-                    <a href="#" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
+                    </Link>
+                    <Link href="/profile" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-cyan-600 rounded-xl font-medium transition-all hover:scale-[1.02]">
                         <UserCircle className="w-5 h-5" />
                         Mi Perfil
-                    </a>
+                    </Link>
                 </nav>
 
                 <div className="p-4 border-t border-slate-100">
@@ -127,9 +127,11 @@ export default function HomePatiente() {
                             </div>
                             <h4 className="text-lg font-bold text-slate-800 mb-2">Mis Citas</h4>
                             <p className="text-slate-500 text-sm mb-4">Revisa, reprograma o cancela tus citas agendadas.</p>
-                            <span className="text-indigo-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                                Ver panel <ChevronRight className="w-4 h-4" />
-                            </span>
+                            <Link href="/myappointments">
+                                <span className="text-indigo-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                    Ver panel <ChevronRight className="w-4 h-4" />
+                                </span>
+                            </Link>
                         </div>
 
                         {/* Card 2 */}
@@ -139,9 +141,11 @@ export default function HomePatiente() {
                             </div>
                             <h4 className="text-lg font-bold text-slate-800 mb-2">Historial Médico</h4>
                             <p className="text-slate-500 text-sm mb-4">Accede a tus diagnósticos y recetas anteriores.</p>
-                            <span className="text-teal-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                                Ver historial <ChevronRight className="w-4 h-4" />
-                            </span>
+                            <Link href="/medicalhistory">
+                                <span className="text-teal-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                    Ver historial <ChevronRight className="w-4 h-4" />
+                                </span>
+                            </Link>
                         </div>
 
                         {/* Card 3 */}
@@ -151,9 +155,11 @@ export default function HomePatiente() {
                             </div>
                             <h4 className="text-lg font-bold text-slate-800 mb-2">Mi Perfil</h4>
                             <p className="text-slate-500 text-sm mb-4">Actualiza tus datos personales y de contacto.</p>
-                            <span className="text-rose-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                                Configurar <ChevronRight className="w-4 h-4" />
-                            </span>
+                            <Link href="/profile">
+                                <span className="text-rose-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                    Configurar <ChevronRight className="w-4 h-4" />
+                                </span>
+                            </Link>
                         </div>
                     </div>
 

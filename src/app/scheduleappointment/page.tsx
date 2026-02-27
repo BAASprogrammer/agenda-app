@@ -80,25 +80,22 @@ export default function ScheduleAppointment() {
         }
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.SubmitEvent) => {
         e.preventDefault();
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) {
-            console.error('Debes iniciar sesión para crear una cita');
+            setMessage('Debes iniciar sesión para crear una cita');
             return;
         }
         if (!selectedSpecialty || !selectedSubSpecialty || !appointment.professional || !appointment.date || !appointment.time || !appointment.reason) {
-            console.error('Debes completar todos los campos');
+            setMessage('Debes completar todos los campos');
             return;
         }
-        const [year, month, day] = appointment.date.split('-').map(Number);
-        const [hours, minutes] = appointment.time.split(':').map(Number);
-        const appointmentDate = new Date(year, month - 1, day, hours, minutes);
         const appointmentData = {
             patient_id: user.id,
             subspecialty_id: selectedSubSpecialty,
             professional_id: appointment.professional,
-            appointment_date: appointmentDate.toISOString(),
+            appointment_date: appointment.date + " " + appointment.time,
             reason: appointment.reason,
             status: 'agendada'
         };
@@ -108,23 +105,25 @@ export default function ScheduleAppointment() {
         } else {
             setMessage('Cita creada exitosamente');
             setIsScheduleAppointmentOpen(false);
-            // Clean form
-            setAppointment({
-                date: '',
-                time: '',
-                professional: '',
-                reason: ''
-            });
-            setSelectedSpecialty('');
-            setSelectedSubSpecialty('');
-            setSubSpecialties([]);
-            setProfessionals([]);
+            resetForm();
         }
     };
     const handleCloseModal = () => {
-        setIsScheduleAppointmentOpen(false);
         setMessage('');
-        router.push('/homepatiente');
+        resetForm();
+    };
+
+    const resetForm = () => {
+        setAppointment({
+            date: '',
+            time: '',
+            professional: '',
+            reason: ''
+        });
+        setSelectedSpecialty('');
+        setSelectedSubSpecialty('');
+        setSubSpecialties([]);
+        setProfessionals([]);
     };
     return (
         <div className="min-h-screen bg-slate-50 relative overflow-hidden font-sans text-slate-800">
@@ -356,7 +355,7 @@ export default function ScheduleAppointment() {
                                     <input
                                         type="time"
                                         className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer"
-                                        value={appointment.time}
+                                        value={appointment.time.substring(0, 5)}
                                         onChange={(e) => setAppointment({ ...appointment, time: e.target.value })}
                                     />
                                 </div>

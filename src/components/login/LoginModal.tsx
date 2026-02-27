@@ -32,23 +32,24 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
             // Get the authenticated user from Supabase session
             const user = (await supabase.auth.getSession()).data.session?.user;
             let firstName = "";
+            let lastName = "";
+            let email = "";
             let isProfessional = "false";
             if (user) {
                 // Query the 'users' table to get the real first name
                 const { data: userData, error: userError } = await supabase
                     .from('users')
-                    .select('first_name, is_professional')
+                    .select('first_name, last_name, email, is_professional')
                     .eq('id', user.id)
                     .single();
                 if (!userError && userData?.first_name) {
                     firstName = userData.first_name;
+                    lastName = userData.last_name || "";
+                    email = userData.email || "";
+                    isProfessional = userData.is_professional?.toString() || "false";
                 } else {
                     setError('first_name no encontrado en la tabla de usuarios.');
                     return false;
-                }
-                if (!userError && userData?.is_professional) {
-                    isProfessional = String(userData.is_professional);
-                    console.log("isProfessional login modal:", isProfessional);
                 }
 
             } else {
@@ -57,6 +58,8 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
             }
             // Set the first_name and user_id cookies for the server layout to read (codificando tildes y caracteres especiales)
             document.cookie = `first_name=${encodeURIComponent(firstName)}; path=/;`;
+            document.cookie = `last_name=${encodeURIComponent(lastName)}; path=/;`;
+            document.cookie = `email=${encodeURIComponent(email)}; path=/;`;
             document.cookie = `user_id=${user.id}; path=/;`;
             document.cookie = `is_professional=${isProfessional}; path=/;`;
 
