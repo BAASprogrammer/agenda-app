@@ -1,11 +1,6 @@
 {
   "/(patient)/homepatient/page": "app/(patient)/homepatient/page.js",
-  "/(patient)/medicalhistory/page": "app/(patient)/medicalhistory/page.js",
   "/(patient)/myappointments/page": "app/(patient)/myappointments/page.js",
-  "/(patient)/profile/page": "app/(patient)/profile/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/homepatiente/page": "app/homepatiente/page.js",
+  "/(patient)/scheduleappointment/page": "app/(patient)/scheduleappointment/page.js",
   "/page": "app/page.js"
 }
