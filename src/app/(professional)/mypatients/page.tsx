@@ -2,7 +2,7 @@
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 // ✅ MEJORA 1: componente compartido
-import ProSidebar from "@/components/ProSidebar";
+import ProSidebar from "@/components/professional/ProSidebar";
 import { Users, Search, UserCircle, Clock, ChevronLeft, CalendarDays } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { use } from "react";
 import Header from "@/components/Header";
 import "./globals.css";
 import { cookies } from "next/headers";
 import { UserProvider } from "@/context/UserContext";
+import { redirect } from "next/navigation";
 
 export default async function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default async function RootLayout({
   const isProfessional = cookieStore.get("is_professional")?.value || "";
   const userId = cookieStore.get("user_id")?.value || "";
   const isLoggedIn = !!firstName;
+
   return (
     <html lang="es">
       <body className="antialiased">

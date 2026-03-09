@@ -1,193 +1,116 @@
-[00:00:01.113] Server  LOG     ✓ Ready in 979ms
-[00:00:08.619] Server  LOG     isProfessional ""
-[00:00:08.921] Browser LOG     isProfessional 
-[00:00:08.921] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[00:01:06.515] Browser LOG     isProfessional 
-[00:01:06.515] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[00:01:06.515] Browser LOG     isProfessional 
-[00:01:06.515] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
-[00:01:12.313] Server  LOG     isProfessional "false"
-[00:01:12.404] Browser LOG     isProfessional false
-[00:01:12.404] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:02:08.540] Browser LOG     isProfessional false
-[00:02:08.540] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:02:08.540] Browser LOG     isProfessional false
-[00:02:08.540] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:07:10.026] Server  LOG     ✓ Compiled in 294ms
-[00:07:12.321] Server  LOG     ✓ Compiled in 19ms
-[00:15:45.330] Server  LOG     ✓ Compiled in 37ms
-[00:15:45.361] Server  LOG     ✓ Compiled in 22ms
-[00:15:45.507] Browser ERROR   ./src/app/(patient)/myappointments/page.tsx:164:29
+[00:00:00.648] Server  LOG     ✓ Ready in 511ms
+[00:00:06.219] Server  LOG     isProfessional ""
+[00:00:06.363] Browser LOG     isProfessional 
+[00:00:06.363] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:00:10.515] Browser LOG     isProfessional 
+[00:00:10.515] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:00:10.515] Browser LOG     isProfessional 
+[00:00:10.515] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:00:19.819] Server  LOG     isProfessional "true"
+[00:00:19.915] Browser LOG     isProfessional true
+[00:00:19.915] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional true
+[00:00:36.400] Browser LOG     isProfessional 
+[00:00:36.400] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:00:38.437] Browser LOG     isProfessional 
+[00:00:38.437] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:00:38.437] Browser LOG     isProfessional 
+[00:00:38.437] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:00:41.862] Server  LOG     isProfessional "false"
+[00:00:41.960] Browser LOG     isProfessional false
+[00:00:41.960] Browser LOG     isProfessional false
+[00:00:52.174] Browser LOG     isProfessional false
+[00:00:52.174] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:14.840] Browser LOG     isProfessional false
+[00:08:14.840] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:14.840] Browser LOG     isProfessional false
+[00:08:14.840] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:17.198] Browser LOG     isProfessional false
+[00:08:17.198] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:17.198] Browser LOG     isProfessional false
+[00:08:17.198] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:18.762] Browser LOG     isProfessional false
+[00:08:18.762] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:20.397] Browser LOG     isProfessional false
+[00:08:20.397] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:15:01.950] Server  LOG     ✓ Compiled in 234ms
+[00:16:11.806] Server  LOG     ✓ Compiled in 44ms
+[00:16:17.752] Server  LOG     isProfessional "false"
+[00:16:17.864] Browser LOG     isProfessional false
+[00:16:17.864] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:17:12.853] Server  LOG     ✓ Compiled in 21ms
+[00:17:18.660] Server  LOG     isProfessional "false"
+[00:17:18.768] Browser LOG     isProfessional false
+[00:17:18.768] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:17:40.273] Server  LOG     ✓ Compiled in 22ms
+[00:17:48.790] Server  LOG     ✓ Compiled in 20ms
+[00:18:48.253] Server  LOG     ✓ Compiled in 22ms
+[00:18:48.363] Browser ERROR   ./src/app/(patient)/homepatient/page.tsx:146:63
 Parsing ecmascript source code failed
-  162 |                     <div className="grid grid-cols-1 gap-4">
-  163 |                         {appointments.length > 0 ? (
-> 164 |                             appointments.map((appointment, index) => (
-      |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 165 |                                 appointment.fullDate === 'Fecha inválida' ? null : (
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 166 |                                     <div
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 167 |                                         key={appointment.id}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 168 |                                         className="bg-white/80 backdrop-blur-md rounded-4xl p-6 border border-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col md:flex-row md:items-center gap-6 group animate-fade-in-up"
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 169 |                                         style={{ animationDelay: `${index * 0.1}s` }}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 170 |                                     >
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 171 |                                         {/* Date Badge */}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 172 |                                         <div className="w-20 h-20 bg-linear-to-br from-cyan-50 to-blue-50 rounded-3xl flex flex-col items-center justify-center shrink-0 border border-white shadow-inner group-hover:from-cyan-100 group-hover:to-blue-100 transition-colors">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 173 |                                             <span className="text-xs font-black text-cyan-600 uppercase tracking-tighter">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 174 |                                                 {appointment.displayMonth}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 175 |                                             </span>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 176 |                                             <span className="text-3xl font-black text-slate-800 leading-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 177 |                                                 {appointment.displayDay}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 178 |                                             </span>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 179 |                                         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 180 |
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 181 |                                         <div className="flex-1">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 182 |                                             <div className="flex flex-wrap items-center gap-3 mb-2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 183 |                                                 <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider ${getStatusColor(appointment.status)}`}>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 184 |                                                     {appointment.status}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 185 |                                                 </span>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 186 |                                                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">ID: #{appointment.id?.toString().slice(-6)}</span>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 187 |                                             </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 188 |                                             <h4 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-cyan-700 transition-colors">Dr. {appointment.professional?.first_name} {appointment.professional?.last_name}</h4>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 189 |                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 190 |                                                 <div className="flex items-center gap-3 text-slate-600 font-medium text-sm">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 191 |                                                     <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-cyan-500">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 192 |                                                         <Clock className="w-4 h-4" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 193 |                                                     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 194 |                                                     <span>{appointment.displayTime} hrs</span>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 195 |                                                 </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 196 |                                                 <div className="flex items-center gap-3 text-slate-600 font-medium text-sm">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 197 |                                                     <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-cyan-500">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 198 |                                                         <FileText className="w-4 h-4" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 199 |                                                     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 200 |                                                     <span className="truncate max-w-[200px]">{appointment.reason || "Consulta general"}</span>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 201 |                                                 </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 202 |                                             </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 203 |                                         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 204 |
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 205 |                                         <div className="flex items-center gap-3 mt-4 md:mt-0 relative">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 206 |                                             <button
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 207 |                                                 onClick={() => setSelectedAppointment(appointment)}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 208 |                                                 className="flex-1 md:flex-none px-6 py-3 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 hover:border-slate-300 transition-all text-sm shadow-sm active:scale-95"
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 209 |                                             >
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 210 |                                                 Detalles
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 211 |                                             </button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 212 |                                             <div className="relative">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 213 |                                                 <button
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 214 |                                                     onClick={() => setOpenMenuId(openMenuId === appointment.id ? null : appointment.id)}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 215 |                                                     className={`p-3 border rounded-2xl transition-all active:scale-90 ${openMenuId === appointment.id ? 'bg-cyan-50 border-cyan-200 text-cyan-600' : 'bg-white border-slate-200 text-slate-400 hover:bg-slate-50 hover:text-slate-800'}`}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 216 |                                                 >
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 217 |                                                     <MoreVertical className="w-5 h-5" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 218 |                                                 </button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 219 |
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 220 |                                                 {/* Dropdown Menu */}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 221 |                                                 {openMenuId === appointment.id && (
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 222 |                                                     <>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 223 |                                                         <div className="fixed inset-0 z-40" onClick={() => setOpenMenuId(null)}></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 224 |                                                         <div className="absolute right-0 top-full mt-2 w-56 bg-white/90 backdrop-blur-xl border border-slate-200 rounded-3xl shadow-2xl z-50 overflow-hidden animate-zoom-in origin-top-right">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 225 |                                                             <div className="p-1.5">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 226 |                                                                 <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 227 |                                                                     <User className="w-4 h-4 text-cyan-500" /> Ver Perfil Doctor
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 228 |                                                                 </button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 229 |                                                                 <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 230 |                                                                     <MessageSquare className="w-4 h-4 text-cyan-500" /> Enviar Mensaje
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 231 |                                                                 </button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 232 |                                                                 <div className="h-px bg-slate-100 my-1 mx-2"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 233 |                                                                 <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-rose-600 hover:bg-rose-50 rounded-2xl transition-colors text-left">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 234 |                                                                     <Trash2 className="w-4 h-4" /> Cancelar Cita
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 235 |                                                                 </button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 236 |                                                             </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 237 |                                                         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 238 |                                                     </>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 239 |                                                 )}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 240 |                                             </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 241 |                                         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 242 |                                     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 243 |                                 ))
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 244 |                             ) : (
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  245 |                             <div className="bg-white/60 backdrop-blur-sm rounded-[3rem] p-20 border border-dashed border-slate-200 text-center animate-fade-in">
-  246 |                                 <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 text-slate-300">
-  247 |                                     <CalendarDays className="w-10 h-10" />
+  144 |                                 >
+  145 |                                     {/* Date Badge */}
+> 146 |                                     <div>{displayAppointments</div>
+      |                                                               ^^^^^
+  147 |                                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl flex flex-col items-center justify-center shrink-0 border border-white shadow-sm group-hover:from-cyan-100 group-hover:to-blue-100 transition-colors">
+  148 |                                         <span className="text-[10px] font-black text-cyan-600 uppercase tracking-tighter">
+  149 |                                             {appointment.displayMonth}
 
-Not a pattern
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+[00:18:55.423] Browser LOG     isProfessional false
+[00:18:55.423] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:18:55.423] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {id, appointment_date, status, professional_id, professional, displayMonth, displayDay, displayTime}). If you meant to render a collection of children, use an array instead.
+[00:18:58.601] Server  LOG     isProfessional "false"
+[00:18:58.709] Browser LOG     isProfessional false
+[00:18:58.710] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:18:59.485] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {id, appointment_date, status, professional_id, professional, displayMonth, displayDay, displayTime}). If you meant to render a collection of children, use an array instead.
+[00:19:09.872] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:19:09.889] Server  LOG     ✓ Compiled in 21ms
+[00:19:09.987] Server  LOG     isProfessional "false"
+[00:19:10.091] Browser LOG     isProfessional false
+[00:19:10.091] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:19:44.700] Server  LOG     ✓ Compiled in 24ms
+[00:19:55.107] Server  LOG     isProfessional "false"
+[00:19:55.216] Browser LOG     isProfessional false
+[00:19:55.216] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:09:30.247] Server  LOG     isProfessional "false"
+[06:09:30.370] Browser LOG     isProfessional false
+[06:09:30.370] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:09:41.089] Server  LOG     ✓ Compiled in 20ms
+[06:10:02.066] Server  LOG     ✓ Compiled in 20ms
+[06:10:23.717] Server  LOG     ✓ Compiled in 18ms
+[06:11:15.544] Server  LOG     ✓ Compiled in 40ms
+[06:11:30.490] Server  LOG     ✓ Compiled in 20ms
+[06:12:05.890] Server  LOG     ✓ Compiled in 15ms
+[06:12:22.001] Browser LOG     isProfessional false
+[06:12:22.001] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:12:22.001] Browser LOG     isProfessional false
+[06:12:22.001] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:14:16.310] Server  LOG     ✓ Compiled in 352ms
+[06:14:16.571] Browser ERROR   uncaughtError: Error: An unexpected Turbopack error occurred. Please see the output of `next dev` for more details.
+[06:14:31.212] Browser ERROR   uncaughtError: Error: An unexpected Turbopack error occurred. Please see the output of `next dev` for more details.
+[06:14:31.934] Browser ERROR   uncaughtError: Error: An unexpected Turbopack error occurred. Please see the output of `next dev` for more details.
+[06:14:44.232] Server  LOG     isProfessional "false"
+[06:14:44.324] Browser LOG     isProfessional false
+[06:14:44.324] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:15:10.421] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
 
 Import traces:
   Client Component Browser:
@@ -197,33 +120,21 @@ Import traces:
   Client Component SSR:
     ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
     ./src/app/(patient)/myappointments/page.tsx [Server Component]
-[00:15:45.620] Browser LOG     isProfessional false
-[00:15:45.620] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:16:49.568] Server  LOG     ✓ Compiled in 20ms
-[00:27:16.267] Server  LOG     ✓ Compiled in 23ms
-[00:28:16.922] Server  LOG     ✓ Compiled in 25ms
-[00:28:56.433] Server  LOG     ✓ Compiled in 21ms
-[00:29:11.168] Server  LOG     ✓ Compiled in 20ms
-[00:29:11.270] Browser ERROR   uncaughtError: RangeError: invalid date
-[00:29:14.153] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:29:14.172] Server  LOG     ✓ Compiled in 16ms
-[00:29:14.312] Server  LOG     isProfessional "false"
-[00:29:14.405] Browser LOG     isProfessional false
-[00:29:14.405] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:29:32.187] Server  LOG     ✓ Compiled in 22ms
-[00:29:40.071] Server  LOG     ✓ Compiled in 19ms
-[00:29:45.905] Server  LOG     ✓ Compiled in 13ms
-[00:29:46.011] Browser ERROR   ./src/app/(patient)/myappointments/page.tsx:172:86
-Parsing ecmascript source code failed
-  170 |                                     >
-  171 |                                         <div>{appointment.displayFullDate}</div>
-> 172 |                                         <div>{new Date().toISOString().split('T')[0].}</div>
-      |                                                                                      ^
-  173 |                                         {/* Date Badge */}
-  174 |                                         <div className="w-20 h-20 bg-linear-to-br from-cyan-50 to-blue-50 rounded-3xl flex flex-col items-center justify-center shrink-0 border border-white shadow-inner group-hover:from-cyan-100 group-hover:to-blue-100 transition-colors">
-  175 |                                             <span className="text-xs font-black text-cyan-600 uppercase tracking-tighter">
 
-Expected '</', got '}'
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.422] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
 
 Import traces:
   Client Component Browser:
@@ -233,125 +144,21 @@ Import traces:
   Client Component SSR:
     ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
     ./src/app/(patient)/myappointments/page.tsx [Server Component]
-[00:29:47.519] Browser LOG     isProfessional false
-[00:29:47.519] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:30:14.856] Server  LOG     ✓ Compiled in 15ms
-[00:30:41.857] Server  LOG     ✓ Compiled in 22ms
-[00:31:30.250] Server  LOG     ✓ Compiled in 22ms
-[00:31:30.358] Browser ERROR   uncaughtError: ReferenceError: appointment_date is not defined
-[00:31:41.449] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:31:41.469] Server  LOG     ✓ Compiled in 19ms
-[00:31:41.586] Server  LOG     isProfessional "false"
-[00:31:41.676] Browser LOG     isProfessional false
-[00:31:41.676] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:31:42.216] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {id, appointment_date, status, professional_id, reason, professional, displayMonth, displayDay, displayFullDate, displayTime}). If you meant to render a collection of children, use an array instead.
-[00:31:56.710] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:31:56.780] Server  LOG     ✓ Compiled in 22ms
-[00:31:56.821] Server  LOG     isProfessional "false"
-[00:31:56.921] Browser LOG     isProfessional false
-[00:31:56.921] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:31:57.319] Browser ERROR   uncaughtError: TypeError: appointment.getDate is not a function
-[00:32:06.188] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:06.249] Server  LOG     ✓ Compiled in 16ms
-[00:32:06.289] Server  LOG     isProfessional "false"
-[00:32:06.388] Browser LOG     isProfessional false
-[00:32:06.388] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:32:06.687] Browser ERROR   uncaughtError: TypeError: appointment.getDate is not a function
-[00:32:19.261] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:19.277] Server  LOG     ✓ Compiled in 15ms
-[00:32:19.381] Server  LOG     isProfessional "false"
-[00:32:19.478] Browser LOG     isProfessional false
-[00:32:19.478] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:33:48.723] Server  LOG     ✓ Compiled in 27ms
-[00:33:55.358] Server  LOG     isProfessional "false"
-[00:33:55.455] Browser LOG     isProfessional false
-[00:33:55.455] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:34:10.127] Server  LOG     ✓ Compiled in 19ms
-[00:34:11.202] Server  LOG     ✓ Compiled in 15ms
-[00:34:14.710] Server  LOG     isProfessional "false"
-[00:34:14.799] Browser LOG     isProfessional false
-[00:34:14.799] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:34:15.357] Browser ERROR   unhandledRejection: TypeError: datePart.toLocaleDateString is not a function
-[00:34:29.833] Server  LOG     ✓ Compiled in 21ms
-[00:34:48.462] Server  LOG     ✓ Compiled in 15ms
-[00:34:52.839] Server  LOG     isProfessional "false"
-[00:34:52.932] Browser LOG     isProfessional false
-[00:34:52.932] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:35:13.732] Server  LOG     ✓ Compiled in 20ms
-[00:35:20.661] Server  LOG     ✓ Compiled in 16ms
-[00:35:39.596] Server  LOG     ✓ Compiled in 26ms
-[00:35:49.300] Server  LOG     ✓ Compiled in 19ms
-[00:36:29.254] Server  LOG     isProfessional "false"
-[00:36:29.365] Browser LOG     isProfessional false
-[00:36:29.365] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:36:57.966] Server  LOG     ✓ Compiled in 16ms
-[00:37:13.067] Server  LOG     ✓ Compiled in 13ms
-[00:38:31.362] Server  LOG     ✓ Compiled in 23ms
-[00:38:42.845] Server  LOG     ✓ Compiled in 24ms
-[00:39:34.997] Server  LOG     ✓ Compiled in 18ms
-[00:39:46.521] Server  LOG     ✓ Compiled in 13ms
-[00:40:08.053] Server  LOG     ✓ Compiled in 15ms
-[00:40:08.149] Browser ERROR   Functions are not valid as a React child. This may happen if you return %s instead of <%s /> from render. Or maybe you meant to call this function rather than return it.
-  <%s>{%s}</%s> getFullYear getFullYear div getFullYear div
-[00:40:29.302] Server  LOG     ✓ Compiled in 21ms
-[00:40:43.299] Server  LOG     ✓ Compiled in 23ms
-[00:40:49.637] Server  LOG     ✓ Compiled in 20ms
-[00:41:02.147] Server  LOG     ✓ Compiled in 22ms
-[00:41:02.208] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: [object Date]). If you meant to render a collection of children, use an array instead.
-[00:41:06.445] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:41:06.464] Server  LOG     ✓ Compiled in 20ms
-[00:41:06.578] Server  LOG     isProfessional "false"
-[00:41:06.666] Browser LOG     isProfessional false
-[00:41:06.666] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[00:41:20.169] Server  LOG     ✓ Compiled in 12ms
-[00:41:27.361] Server  LOG     ✓ Compiled in 25ms
-[00:41:33.705] Server  LOG     ✓ Compiled in 14ms
-[00:42:14.227] Server  LOG     ✓ Compiled in 21ms
-[00:42:16.055] Server  LOG     ✓ Compiled in 13ms
-[00:42:29.602] Server  LOG     ✓ Compiled in 34ms
-[00:42:54.878] Server  LOG     ✓ Compiled in 23ms
-[01:03:04.822] Server  LOG     ✓ Compiled in 19ms
-[01:04:08.165] Server  LOG     ✓ Compiled in 20ms
-[01:04:37.818] Server  LOG     ✓ Compiled in 16ms
-[01:05:08.156] Server  LOG     ✓ Compiled in 13ms
-[01:05:31.612] Server  LOG     ✓ Compiled in 16ms
-[01:06:02.286] Server  LOG     ✓ Compiled in 16ms
-[01:06:17.244] Server  LOG     ✓ Compiled in 23ms
-[01:06:25.605] Server  LOG     ✓ Compiled in 13ms
-[01:06:58.943] Server  LOG     ✓ Compiled in 24ms
-[01:07:30.720] Server  LOG     ✓ Compiled in 18ms
-[01:08:01.161] Server  LOG     ✓ Compiled in 19ms
-[01:08:01.263] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
 
-Check the render method of `MyAppointments`. 
-[01:08:25.114] Server  LOG     ✓ Compiled in 13ms
-[01:08:40.696] Server  LOG     ✓ Compiled in 18ms
-[01:08:54.843] Server  LOG     ✓ Compiled in 19ms
-[01:09:07.365] Server  LOG     ✓ Compiled in 13ms
-[01:09:14.138] Server  LOG     ✓ Compiled in 16ms
-[01:09:25.377] Server  LOG     ✓ Compiled in 12ms
-[01:09:28.841] Server  LOG     ✓ Compiled in 14ms
-[01:09:37.009] Server  LOG     ✓ Compiled in 17ms
-[01:15:43.466] Server  LOG     ✓ Compiled in 22ms
-[01:15:51.714] Server  LOG     ✓ Compiled in 19ms
-[01:16:17.516] Server  LOG     ✓ Compiled in 18ms
-[01:16:50.201] Server  LOG     ✓ Compiled in 13ms
-[01:17:13.160] Server  LOG     ✓ Compiled in 14ms
-[01:18:05.378] Server  LOG     ✓ Compiled in 19ms
-[01:19:09.754] Server  LOG     ✓ Compiled in 18ms
-[01:19:09.858] Browser ERROR   ./src/app/(patient)/myappointments/page.tsx:262:15
-Parsing ecmascript source code failed
-  260 |                     </div>
-  261 |                 </div>
-> 262 |         </div>
-      |               ^
-> 263 |             </main >
-      | ^^^^^^^^^^^^^
-  264 |
-  265 |         {/* Appointment Details Modal */ }
-  266 |     {
+https://nextjs.org/docs/messages/module-not-found
 
-Expected '</', got 'jsx text'
+
+[06:15:10.423] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
 
 Import traces:
   Client Component Browser:
@@ -361,53 +168,1985 @@ Import traces:
   Client Component SSR:
     ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
     ./src/app/(patient)/myappointments/page.tsx [Server Component]
-[01:20:10.692] Browser LOG     isProfessional false
-[01:20:10.692] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:20:41.305] Server  LOG     ✓ Compiled in 24ms
-[01:21:51.142] Server  LOG     ✓ Compiled in 19ms
-[01:27:23.460] Server  LOG     ✓ Compiled in 19ms
-[01:28:45.603] Browser LOG     isProfessional false
-[01:28:45.603] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:28:45.603] Browser LOG     isProfessional false
-[01:28:45.603] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:28:58.478] Browser LOG     isProfessional false
-[01:28:58.478] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:28:58.478] Browser LOG     isProfessional false
-[01:28:58.478] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:04.734] Browser LOG     subspecialty_id ac6b356d-501d-4985-95bc-45df8c07a867
-[01:29:04.734] Browser LOG     subspecialty_id 2 ac6b356d-501d-4985-95bc-45df8c07a867
-[01:29:05.000] Browser LOG     data professionals [{"first_name":"Daniela","id":"353fdd4e-d702-48b3-a88c-435fb7afcb92","last_name":"Araya Fuentes"},{"first_name":"Matías","id":"725fbbcf-2e45-4d8d-b0cf-749861194f6c","last_name":"Herrera Salas"},{"first_name":"Constanza","id":"9442bacb-735e-4a73-a65a-5eb2b4cfbba2","last_name":"Silva Méndez"},{"first_name":"Sebastián","id":"7e7d6ad1-0190-44b6-ae03-de74a50052ab","last_name":"Castro Núñez"},{"first_name":"Paula","id":"d4317b49-0ef0-4567-819f-77efa32679ee","last_name":"Ortega Reyes"}]
-[01:29:48.606] Browser LOG     isProfessional false
-[01:29:48.606] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:29:59.638] Browser LOG     isProfessional false
-[01:29:59.638] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:33:26.649] Server  LOG     ✓ Compiled in 17ms
-[01:39:51.240] Server  LOG     ✓ Compiled in 24ms
-[01:40:42.859] Server  LOG     ✓ Compiled in 24ms
-[01:41:49.873] Server  LOG     ✓ Compiled in 22ms
-[01:41:49.978] Browser ERROR   uncaughtError: TypeError: can't access property "length", appointments.futureAppointments is undefined
-[01:46:55.421] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[01:46:55.442] Server  LOG     ✓ Compiled in 23ms
-[01:46:55.549] Server  LOG     isProfessional "false"
-[01:46:55.561] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'length')
-[01:46:55.762] Browser LOG     isProfessional false
-[01:46:55.762] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:46:55.762] Browser LOG     isProfessional false
-[01:46:55.762] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:46:55.762] Browser ERROR   uncaughtError: TypeError: can't access property "length", appointments.futureAppointments is undefined
-[01:47:20.414] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[01:47:20.429] Server  LOG     ✓ Compiled in 18ms
-[01:47:20.519] Server  LOG     isProfessional "false"
-[01:47:20.620] Browser LOG     isProfessional false
-[01:47:20.620] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
-[01:48:15.487] Server  LOG     ✓ Compiled in 21ms
-[01:48:44.327] Server  LOG     ✓ Compiled in 16ms
-[01:48:49.905] Server  LOG     ✓ Compiled in 20ms
-[01:48:55.232] Server  LOG     ✓ Compiled in 22ms
-[01:49:20.319] Server  LOG     ✓ Compiled in 22ms
-[01:50:07.870] Server  LOG     ✓ Compiled in 22ms
-[02:04:59.663] Server  LOG     ✓ Compiled in 15ms
-[02:08:05.771] Server  LOG     ✓ Compiled in 23ms
-[02:08:31.290] Server  LOG     ✓ Compiled in 23ms
-[02:11:25.118] Server  LOG     ✓ Compiled in 22ms
-[02:11:33.175] Server  LOG     ✓ Compiled in 13ms
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.423] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.427] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.428] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.429] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.430] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.434] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.437] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.438] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.439] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.443] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.444] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.445] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.446] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.449] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.450] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.451] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.452] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.457] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.458] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.458] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.459] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.462] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.463] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.464] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.464] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.467] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.468] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.470] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.473] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[06:15:10.474] Server  LOG     ✓ Compiled in 20ms
+[06:15:10.581] Browser ERROR   ./src/app/(patient)/myappointments/page.tsx:2:1
+Module not found: Can't resolve '@/components/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/ProSidebarPatient' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[06:15:12.035] Server  LOG     isProfessional "false"
+[06:15:12.134] Browser LOG     isProfessional false
+[06:15:12.134] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:16:26.246] Server  LOG     ✓ Compiled in 20ms
+[06:18:18.772] Server  LOG     ✓ Compiled in 30ms
+[06:18:31.400] Server  LOG     ✓ Compiled in 16ms
+[06:18:31.503] Browser ERROR   ./src/app/(patient)/myappointments/page.tsx:267:121
+Parsing ecmascript source code failed
+  265 |             {/* Appointment Details Modal */}
+  266 |             {selectedAppointment && (
+> 267 |                 <AppointmentDetails appointment={selectedAppointment} setSelectedAppointment={setSelectedAppointment} />ß
+      |                                                                                                                         ^^
+  268 |             )}
+  269 |         </div>
+  270 |     );
+
+Expected '</', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+[06:18:32.574] Browser LOG     isProfessional false
+[06:18:32.574] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:18:32.574] Browser LOG     isProfessional false
+[06:18:32.574] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:19:02.076] Server  LOG     ✓ Compiled in 10ms
+[06:19:52.801] Server  LOG     ✓ Compiled in 5ms
+[06:20:07.800] Server  LOG     ✓ Compiled in 4ms
+[06:20:25.189] Server  LOG     ✓ Compiled in 9ms
+[06:20:25.302] Browser ERROR   uncaughtError: ReferenceError: getStatusColor is not defined
+[06:20:36.034] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[06:20:36.047] Server  LOG     ✓ Compiled in 7ms
+[06:20:36.189] Server  LOG     isProfessional "false"
+[06:20:36.291] Browser LOG     isProfessional false
+[06:20:36.291] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:20:37.278] Browser ERROR   uncaughtError: ReferenceError: getStatusColor is not defined
+[06:20:48.374] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[06:20:48.436] Server  LOG     ✓ Compiled in 8ms
+[06:20:48.477] Server  LOG     isProfessional "false"
+[06:20:48.581] Browser LOG     isProfessional false
+[06:20:48.581] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:20:48.964] Browser ERROR   uncaughtError: ReferenceError: getStatusColor is not defined
+[06:20:49.190] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[06:20:49.249] Server  LOG     ✓ Compiled in 9ms
+[06:20:49.288] Server  LOG     isProfessional "false"
+[06:20:49.383] Browser LOG     isProfessional false
+[06:20:49.383] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:22:17.510] Server  LOG     ✓ Compiled in 9ms
+[06:22:17.612] Browser ERROR   uncaughtError: ReferenceError: getStatusColor is not defined
+[06:22:55.232] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[06:22:55.246] Server  LOG     ✓ Compiled in 39ms
+[06:22:55.399] Server  LOG     isProfessional "false"
+[06:22:55.491] Browser LOG     isProfessional false
+[06:22:55.491] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:23:14.078] Server  LOG     ✓ Compiled in 12ms
+[06:23:17.595] Server  LOG     ✓ Compiled in 4ms
+[06:32:18.697] Browser LOG     isProfessional false
+[06:32:18.697] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:32:18.697] Browser LOG     isProfessional false
+[06:32:18.697] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:32:18.697] Browser LOG     isProfessional false
+[06:32:18.697] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:30.112] Browser LOG     isProfessional false
+[06:35:30.112] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:30.112] Browser LOG     isProfessional false
+[06:35:30.112] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:30.112] Browser LOG     isProfessional false
+[06:35:30.112] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:33.564] Browser LOG     isProfessional false
+[06:35:33.564] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:36.831] Browser LOG     isProfessional false
+[06:35:36.831] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:40.879] Browser LOG     isProfessional false
+[06:35:40.879] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:46.496] Browser LOG     isProfessional false
+[06:35:46.496] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:46.496] Browser LOG     isProfessional false
+[06:35:46.496] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:35:46.496] Browser LOG     isProfessional false
+[06:35:46.496] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:36:01.320] Browser LOG     isProfessional false
+[06:36:01.320] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:36:06.017] Browser LOG     isProfessional false
+[06:36:06.017] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:36:06.017] Browser LOG     isProfessional false
+[06:36:06.017] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:36:06.017] Browser LOG     isProfessional false
+[06:36:06.017] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:36:13.354] Browser LOG     isProfessional false
+[06:36:13.354] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:36:13.354] Browser LOG     isProfessional false
+[06:36:13.354] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:36:17.711] Browser LOG     isProfessional false
+[06:36:17.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:36:37.854] Browser LOG     isProfessional 
+[06:36:37.854] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:39.695] Server  LOG     isProfessional ""
+[06:36:39.795] Browser LOG     isProfessional 
+[06:36:39.795] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:40.656] Browser LOG     isProfessional 
+[06:36:40.656] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.635] Browser LOG     isProfessional 
+[06:36:44.635] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.635] Browser LOG     isProfessional 
+[06:36:44.635] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.635] Browser LOG     isProfessional 
+[06:36:44.635] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.635] Browser LOG     isProfessional 
+[06:36:44.635] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.635] Browser LOG     isProfessional 
+[06:36:44.635] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.635] Browser LOG     isProfessional 
+[06:36:44.635] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:44.636] Browser LOG     isProfessional 
+[06:36:44.636] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:45.443] Browser LOG     isProfessional 
+[06:36:45.443] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:45.730] Browser LOG     isProfessional 
+[06:36:45.730] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:47.183] Server  LOG     isProfessional ""
+[06:36:47.285] Browser LOG     isProfessional 
+[06:36:47.285] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:50.089] Browser LOG     isProfessional 
+[06:36:50.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:51.094] Browser LOG     isProfessional 
+[06:36:51.094] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:54.126] Browser LOG     isProfessional 
+[06:36:54.126] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:54.126] Browser LOG     isProfessional 
+[06:36:54.126] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:36:58.308] Server  LOG     isProfessional "false"
+[06:36:58.397] Browser LOG     isProfessional false
+[06:36:58.397] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:37:00.125] Server  LOG     isProfessional "false"
+[06:37:00.221] Browser LOG     isProfessional false
+[06:37:00.221] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:37:01.569] Server  LOG     isProfessional "false"
+[06:37:01.661] Browser LOG     isProfessional false
+[06:37:01.661] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[06:37:04.234] Browser LOG     isProfessional 
+[06:37:04.234] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:37:05.514] Server  LOG     isProfessional ""
+[06:37:05.629] Browser LOG     isProfessional 
+[06:37:05.629] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:37:06.443] Server  LOG     isProfessional ""
+[06:37:06.538] Browser LOG     isProfessional 
+[06:37:06.538] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:40:05.997] Server  LOG     isProfessional ""
+[06:40:06.098] Browser LOG     isProfessional 
+[06:40:06.098] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:40:07.662] Server  LOG     isProfessional ""
+[06:40:07.758] Browser LOG     isProfessional 
+[06:40:07.758] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:40:08.874] Server  LOG     isProfessional ""
+[06:40:08.983] Browser LOG     isProfessional 
+[06:40:08.983] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:40:09.644] Server  LOG     isProfessional ""
+[06:40:09.740] Browser LOG     isProfessional 
+[06:40:09.740] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:41:12.145] Server  ERROR   ⨯ ReferenceError: redirect is not defined
+[06:41:12.184] Server  ERROR   ⨯ ReferenceError: redirect is not defined
+[06:41:12.202] Server  ERROR   ⨯ ReferenceError: redirect is not defined
+[06:41:12.222] Server  ERROR   ⨯ ReferenceError: redirect is not defined
+[06:41:12.238] Server  ERROR   ⨯ ReferenceError: redirect is not defined
+[06:41:12.239] Server  ERROR   ⨯ ReferenceError: redirect is not defined
+[06:41:12.348] Browser ERROR   uncaughtError: ReferenceError: redirect is not defined
+[06:41:17.457] Server  LOG     ✓ Compiled in 4ms
+[06:41:17.562] Server  ERROR   ⨯ ReferenceError: redirect is not defined
+[06:41:17.640] Browser ERROR   uncaughtError: ReferenceError: redirect is not defined
+[06:41:36.167] Server  LOG     ✓ Compiled in 1ms
+[06:41:49.897] Server  LOG     ✓ Compiled in 1ms
+[06:42:15.033] Server  LOG     ✓ Compiled in 27ms
+[06:43:49.604] Server  LOG     ✓ Compiled in 41ms
+[06:44:36.577] Server  LOG     ✓ Compiled in 3ms
+[06:44:39.706] Server  LOG     isProfessional ""
+[06:44:39.825] Browser LOG     isProfessional 
+[06:44:39.825] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:04.682] Server  LOG     ✓ Compiled in 5ms
+[06:45:04.995] Browser LOG     isProfessional 
+[06:45:04.995] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:08.967] Server  LOG     isProfessional ""
+[06:45:09.064] Browser LOG     isProfessional 
+[06:45:09.064] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:10.584] Server  LOG     isProfessional ""
+[06:45:10.699] Browser LOG     isProfessional 
+[06:45:10.699] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:11.614] Server  LOG     isProfessional ""
+[06:45:11.717] Browser LOG     isProfessional 
+[06:45:11.717] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:19.580] Server  LOG     ✓ Compiled in 3ms
+[06:45:19.889] Browser LOG     isProfessional 
+[06:45:19.889] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:21.855] Server  LOG     isProfessional ""
+[06:45:21.944] Browser LOG     isProfessional 
+[06:45:21.944] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:26.685] Server  LOG     isProfessional ""
+[06:45:26.799] Browser LOG     isProfessional 
+[06:45:26.799] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:33.155] Server  LOG     ✓ Compiled in 5ms
+[06:45:33.467] Browser LOG     isProfessional 
+[06:45:33.467] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:45:39.158] Server  LOG     ✓ Compiled in 3ms
+[06:45:56.018] Server  LOG     ✓ Compiled in 4ms
+[06:45:58.577] Server  LOG     isProfessional ""
+[06:45:58.669] Browser LOG     isProfessional 
+[06:45:58.669] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:46:06.604] Server  LOG     ✓ Compiled in 4ms
+[06:46:09.849] Server  LOG     ✓ Compiled in 3ms
+[06:46:13.028] Server  LOG     isProfessional ""
+[06:46:13.144] Browser LOG     isProfessional 
+[06:46:13.144] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:46:15.767] Server  LOG     isProfessional ""
+[06:46:15.863] Browser LOG     isProfessional 
+[06:46:15.863] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:46:17.396] Server  LOG     isProfessional ""
+[06:46:17.488] Browser LOG     isProfessional 
+[06:46:17.488] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:46:18.939] Server  LOG     isProfessional ""
+[06:46:19.201] Browser LOG     isProfessional 
+[06:46:19.201] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:46:19.387] Server  LOG     isProfessional ""
+[06:46:19.465] Browser LOG     isProfessional 
+[06:46:19.465] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:46:29.450] Server  LOG     ✓ Compiled in 6ms
+[06:46:29.511] Server  LOG      false
+[06:46:29.590] Server  LOG      false
+[06:46:29.591] Server  LOG      false
+[06:46:29.611] Server  LOG      false
+[06:46:29.630] Server  LOG      false
+[06:46:29.646] Server  LOG      false
+[06:46:29.668] Server  LOG      false
+[06:46:29.775] Browser LOG     isProfessional 
+[06:46:29.775] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:46:32.071] Server  LOG      false
+[06:46:32.078] Server  LOG     isProfessional ""
+[06:46:37.475] Server  LOG      false
+[06:46:37.476] Server  LOG     isProfessional ""
+[06:46:37.589] Browser LOG     isProfessional 
+[06:46:37.589] Browser LOG     isProfessional 
+[06:46:47.127] Server  LOG      false
+[06:46:47.129] Server  LOG     isProfessional ""
+[06:46:47.246] Browser LOG     isProfessional 
+[06:46:47.246] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:47:01.780] Server  LOG     ✓ Compiled in 9ms
+[06:47:01.907] Server  LOG     userId "" "isLoggedIn" false
+[06:47:01.928] Server  LOG     userId "" "isLoggedIn" false
+[06:47:01.948] Server  LOG     userId "" "isLoggedIn" false
+[06:47:01.965] Server  LOG     userId "" "isLoggedIn" false
+[06:47:01.984] Server  LOG     userId "" "isLoggedIn" false
+[06:47:02.000] Server  LOG     userId "" "isLoggedIn" false
+[06:47:02.018] Server  LOG     userId "" "isLoggedIn" false
+[06:47:02.139] Browser LOG     isProfessional 
+[06:47:02.139] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:47:09.016] Server  LOG     userId "" "isLoggedIn" false
+[06:47:09.021] Server  LOG     isProfessional ""
+[06:47:09.141] Browser LOG     isProfessional 
+[06:47:09.141] Browser LOG     isProfessional 
+[06:47:23.588] Server  LOG     ✓ Compiled in 6ms
+[06:47:23.648] Server  LOG     userId "" "isLoggedIn" false
+[06:47:23.685] Server  LOG     userId "" "isLoggedIn" false
+[06:47:23.766] Server  LOG     userId "" "isLoggedIn" false
+[06:47:23.767] Server  LOG     userId "" "isLoggedIn" false
+[06:47:23.801] Server  LOG     userId "" "isLoggedIn" false
+[06:47:23.801] Server  LOG     userId "" "isLoggedIn" false
+[06:47:23.820] Server  LOG     userId "" "isLoggedIn" false
+[06:47:36.071] Server  LOG     ✓ Compiled in 3ms
+[06:47:40.066] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.094] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.119] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.142] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.167] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.191] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.212] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.234] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.257] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.279] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.302] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.325] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.350] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.371] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.396] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.421] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.444] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.467] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.489] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.511] Server  LOG     userId "" "isLoggedIn" false
+[06:47:40.534] Server  LOG     userId "" "isLoggedIn" false
+[06:47:54.182] Server  LOG     ✓ Compiled in 1ms
+[06:47:57.216] Server  LOG     userId "" "isLoggedIn" false
+[06:47:57.219] Server  LOG     isProfessional ""
+[06:47:57.345] Browser LOG     isProfessional 
+[06:47:57.345] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:50:29.416] Browser LOG     isProfessional 
+[06:50:29.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:51:28.038] Server  LOG     isProfessional ""
+[06:51:28.261] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:51:29.229] Browser LOG     isProfessional 
+[06:51:29.229] Browser LOG     isProfessional 
+[06:52:46.399] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:52:46.476] Server  LOG     ✓ Compiled in 27ms
+[06:52:46.697] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.731] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.796] Browser ERROR   ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:52:46.798] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.834] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.935] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.987] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.991] Server  LOG     isProfessional ""
+[06:52:46.995] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.997] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.997] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:46.998] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.001] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.005] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.005] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.006] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.009] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.010] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.011] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.011] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.016] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.017] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.018] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.019] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.020] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.021] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.055] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.058] Browser ERROR   uncaughtError: Error: ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+
+[06:52:47.060] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.152] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.152] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.179] Server  LOG     isProfessional ""
+[06:52:47.197] Browser ERROR   ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:52:47.197] Browser ERROR   ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:52:47.257] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:52:47.302] Browser ERROR   ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:52:57.086] Server  LOG     ✓ Compiled in 14ms
+[06:52:57.117] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.161] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.168] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.169] Server  LOG     isProfessional ""
+[06:52:57.174] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.179] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.184] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.189] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.196] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.201] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.206] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.212] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.217] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.227] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.231] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.236] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.242] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.247] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.253] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.258] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.264] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.268] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.316] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.316] Browser ERROR   uncaughtError: ReferenceError: NextResponse is not defined
+[06:52:57.327] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:52:57.364] Server  ERROR   ⨯ ReferenceError: NextResponse is not defined
+[06:53:10.529] Server  LOG     ✓ Compiled in 57ms
+[06:53:24.230] Server  LOG     ✓ Compiled in 1ms
+[06:53:26.849] Server  LOG     ✓ Compiled in 1ms
+[06:53:37.359] Server  LOG     ✓ Compiled in 4ms
+[06:57:35.167] Server  LOG     ✓ Compiled in 1ms
+[06:58:00.814] Server  LOG     ✓ Compiled in 3ms
+[06:58:03.578] Server  LOG     ✓ Compiled in 2ms
+[06:58:07.415] Server  LOG     ✓ Compiled in 3ms
+[06:58:49.889] Server  ERROR   ⨯ The file "./src/middleware.ts" must export a function, either as a default export or as a named "middleware" export.
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:58:49.922] Server  LOG     ✓ Compiled in 5ms
+[06:58:52.501] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.546] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.547] Server  LOG     isProfessional ""
+[06:58:52.549] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.551] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.552] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.553] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.554] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.559] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.562] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.564] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.568] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.570] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.574] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.576] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.576] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.581] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.581] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.583] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.584] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.586] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.589] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.631] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.681] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.682] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.714] Server  LOG     isProfessional ""
+[06:58:52.763] Server  ERROR   ⨯ Error: The Middleware file "/middleware" must export a function named `middleware` or a default function.
+[06:58:52.838] Browser ERROR   ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:58:52.838] Browser ERROR   uncaughtError: Error: ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+
+[06:58:52.838] Browser ERROR   ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:58:52.838] Browser ERROR   ./src/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[06:59:05.728] Server  LOG     isProfessional ""
+[06:59:05.734] Server  LOG     ✓ Compiled in 3ms
+[06:59:05.858] Browser LOG     isProfessional 
+[06:59:05.858] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[06:59:09.696] Server  LOG     ✓ Compiled in 5ms
+[07:00:43.093] Server  LOG     ✓ Compiled in 1ms
+[07:00:44.669] Server  LOG     ✓ Compiled in 1ms
+[07:00:52.019] Server  LOG     ✓ Compiled in 1ms
+[07:01:14.570] Server  LOG     ✓ Compiled in 1ms
+[07:01:27.472] Server  LOG     ✓ Compiled in 1ms
+[07:02:02.450] Server  LOG     ✓ Compiled in 1ms
+[07:02:21.452] Server  LOG     isProfessional ""
+[07:02:21.565] Browser LOG     isProfessional 
+[07:02:21.565] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:03:28.797] Server  LOG     ✓ Compiled in 2ms
+[07:03:51.000] Server  LOG     ✓ Compiled in 4ms
+[07:04:10.319] Server  LOG     ✓ Compiled in 2ms
+[07:04:45.020] Server  LOG     ✓ Compiled in 1ms
+[07:04:47.767] Server  LOG     isProfessional ""
+[07:04:47.874] Browser LOG     isProfessional 
+[07:04:47.874] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:04:52.483] Server  LOG     isProfessional ""
+[07:04:52.592] Browser LOG     isProfessional 
+[07:04:52.592] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:04:53.750] Server  LOG     isProfessional ""
+[07:04:53.884] Browser LOG     isProfessional 
+[07:04:53.884] Browser LOG     isProfessional 
+[07:05:08.832] Server  LOG     isProfessional ""
+[07:05:08.955] Browser LOG     isProfessional 
+[07:05:08.955] Browser LOG     isProfessional 
+[07:05:14.296] Server  LOG     isProfessional ""
+[07:05:14.407] Browser LOG     isProfessional 
+[07:05:14.407] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:15.279] Browser LOG     isProfessional 
+[07:05:15.279] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:16.114] Browser LOG     isProfessional 
+[07:05:16.114] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:05:16.286] Server  LOG     isProfessional ""
+[07:05:16.398] Browser LOG     isProfessional 
+[07:05:16.398] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:06:36.265] Server  LOG     ✓ Compiled in 4ms
+[07:06:48.918] Server  LOG     isProfessional ""
+[07:06:49.089] Browser LOG     isProfessional 
+[07:06:49.089] Browser LOG     isProfessional 
+[07:06:52.446] Server  LOG     isProfessional ""
+[07:06:52.543] Browser LOG     isProfessional 
+[07:06:52.543] Browser LOG     isProfessional 
+[07:06:53.791] Server  LOG     isProfessional ""
+[07:06:53.900] Browser LOG     isProfessional 
+[07:06:53.900] Browser LOG     isProfessional 
+[07:06:54.780] Server  LOG     isProfessional ""
+[07:06:54.923] Browser LOG     isProfessional 
+[07:06:54.923] Browser LOG     isProfessional 
+[07:07:15.225] Server  LOG     ✓ Compiled in 3ms
+[07:08:04.430] Server  LOG     ✓ Compiled in 4ms
+[07:09:04.483] Browser LOG     isProfessional 
+[07:09:04.483] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:05.411] Browser LOG     isProfessional 
+[07:09:05.411] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:08.906] Browser LOG     isProfessional 
+[07:09:08.906] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:10.507] Browser LOG     isProfessional 
+[07:09:10.507] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:11.260] Server  LOG     isProfessional ""
+[07:09:11.359] Browser LOG     isProfessional 
+[07:09:11.359] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:12.518] Browser LOG     isProfessional 
+[07:09:12.518] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:12.518] Browser LOG     isProfessional 
+[07:09:12.518] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:14.142] Server  LOG     isProfessional ""
+[07:09:14.239] Browser LOG     isProfessional 
+[07:09:14.239] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:15.775] Browser LOG     isProfessional 
+[07:09:15.775] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:15.775] Browser LOG     isProfessional 
+[07:09:15.775] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:22.591] Server  LOG     isProfessional "false"
+[07:09:22.686] Browser LOG     isProfessional false
+[07:09:22.686] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:24.107] Browser LOG     isProfessional false
+[07:09:24.107] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:24.107] Browser LOG     isProfessional false
+[07:09:24.107] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:24.107] Browser LOG     isProfessional false
+[07:09:24.107] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:25.157] Browser LOG     isProfessional false
+[07:09:25.157] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:26.052] Browser LOG     isProfessional false
+[07:09:26.053] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:26.053] Browser LOG     isProfessional false
+[07:09:26.053] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:26.053] Browser LOG     isProfessional false
+[07:09:26.053] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:28.002] Browser LOG     isProfessional false
+[07:09:28.002] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:29.332] Browser LOG     isProfessional false
+[07:09:29.332] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[07:09:32.004] Browser LOG     isProfessional 
+[07:09:32.004] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.480] Browser LOG     isProfessional 
+[07:09:33.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:33.510] Server  LOG     isProfessional ""
+[07:09:33.594] Browser LOG     isProfessional 
+[07:09:33.594] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:34.386] Server  LOG     isProfessional ""
+[07:09:34.560] Browser LOG     isProfessional 
+[07:09:34.561] Browser LOG     isProfessional 
+[07:09:35.303] Server  LOG     isProfessional ""
+[07:09:35.397] Browser LOG     isProfessional 
+[07:09:35.397] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[07:09:45.120] Server  LOG     isProfessional ""
+[07:09:45.212] Browser LOG     isProfessional 
+[07:09:45.212] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 

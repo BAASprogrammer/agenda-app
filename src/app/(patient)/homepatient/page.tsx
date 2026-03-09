@@ -1,5 +1,6 @@
 "use client";
-import ProSidebarPatient from "@/components/ProSidebarPatient";
+import AppointmentDetails from "@/components/patient/AppointmentDetails";
+import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
@@ -9,9 +10,11 @@ import { useEffect, useState } from "react";
 export default function HomePatient() {
     const user = useUser();
     const [appointments, setAppointments] = useState<any[]>([]);
+    const [selectedAppointment, setSelectedAppointment] = useState<any>(null);
 
     useEffect(() => {
         const fetchAppointments = async () => {
+            if (!user.userId) return;
             const { data, error } = await supabase
                 .from('medical_appointments')
                 .select(`id, appointment_date, status, professional_id, professional:users!medical_appointments_professional_id_fkey (first_name, last_name)`)
@@ -45,7 +48,7 @@ export default function HomePatient() {
         }
         fetchAppointments();
     }, [user.userId])
-
+    const futureAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] >= new Date().toLocaleDateString("en-CA"));
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
             <ProSidebarPatient active="/homepatient" />
@@ -134,8 +137,8 @@ export default function HomePatient() {
                     </div>
 
                     <div className="space-y-4 mb-12">
-                        {appointments.length > 0 ? (
-                            appointments.map((appointment, index) => (
+                        {futureAppointments.length > 0 ? (
+                            futureAppointments.map((appointment, index) => (
                                 <div
                                     key={appointment.id}
                                     className="bg-white/80 backdrop-blur-md rounded-3xl p-5 border border-white shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-6 group animate-fade-in-up"
@@ -172,7 +175,8 @@ export default function HomePatient() {
                                                     </p>
                                                 </div>
                                             </div>
-                                            <button className="self-start md:self-center bg-white border border-slate-100 text-slate-700 px-5 py-2.5 rounded-2xl text-sm font-bold shadow-sm hover:bg-slate-50 hover:border-slate-200 transition-all active:scale-95">
+                                            <button className="self-start md:self-center bg-white border border-slate-100 text-slate-700 px-5 py-2.5 rounded-2xl text-sm font-bold shadow-sm hover:bg-slate-50 hover:border-slate-200 transition-all active:scale-95"
+                                                onClick={() => setSelectedAppointment(appointment)}>
                                                 Detalles
                                             </button>
                                         </div>
@@ -194,6 +198,10 @@ export default function HomePatient() {
                     </div>
                 </div>
             </main>
+            {/* Appointment Details Modal */}
+            {selectedAppointment && (
+                <AppointmentDetails appointment={selectedAppointment} setSelectedAppointment={setSelectedAppointment} />
+            )}
         </div>
     );
 }

@@ -2,7 +2,7 @@
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 // ✅ MEJORA 1: componente compartido, ya no repetimos código
-import ProSidebar from "@/components/ProSidebar";
+import ProSidebar from "@/components/professional/ProSidebar";
 import {
     Calendar, Clock, ChevronLeft, ChevronRight, ClipboardList,
     CheckCircle2, XCircle

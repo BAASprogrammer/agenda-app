@@ -1,7 +1,7 @@
 "use client";
 // ✅ Import the hook that replaces all useState + useEffect + fetch logic
 import { useAppointments, type Appointment } from "@/hooks/useAppointments";
-import ProSidebar from "@/components/ProSidebar";
+import ProSidebar from "@/components/professional/ProSidebar";
 import {
     ClipboardList, Search, Filter,
     CheckCircle2, XCircle, Clock, ChevronLeft
