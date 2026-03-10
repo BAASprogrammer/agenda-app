@@ -84,12 +84,20 @@ export default function ScheduleAppointment() {
         e.preventDefault();
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) {
-            setMessage('Debes iniciar sesión para crear una cita');
-            return;
+            setMessage('Error: Debes iniciar sesión para crear una cita');
+            return false;
         }
         if (!selectedSpecialty || !selectedSubSpecialty || !appointment.professional || !appointment.date || !appointment.time || !appointment.reason) {
-            setMessage('Debes completar todos los campos');
-            return;
+            setMessage('Error: Debes completar todos los campos');
+            return false;
+        }
+        const now = new Date();
+        const nowHours = now.getHours();
+        const nowMinutes = now.getMinutes();
+        const nowDate = now.toLocaleDateString("en-CA");
+        if (appointment.date == nowDate && appointment.time < nowHours + ":" + nowMinutes) {
+            setMessage('Error: No es posible agendar citas con fecha y hora anteriores a la actual');
+            return false;
         }
         const appointmentData = {
             patient_id: user.id,
@@ -102,15 +110,16 @@ export default function ScheduleAppointment() {
         const { error } = await supabase.from('medical_appointments').insert(appointmentData);
         if (error) {
             setMessage('Error al crear la cita');
+            return false;
         } else {
             setMessage('Cita creada exitosamente');
             setIsScheduleAppointmentOpen(false);
             resetForm();
+            return true;
         }
     };
     const handleCloseModal = () => {
         setMessage('');
-        resetForm();
     };
 
     const resetForm = () => {
@@ -340,7 +349,7 @@ export default function ScheduleAppointment() {
                                         <Calendar className="w-4 h-4 text-cyan-500" /> Fecha
                                     </label>
                                     <input
-                                        type="date"
+                                        type="date" min={new Date().toISOString().split('T')[0]}
                                         className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer"
                                         value={appointment.date}
                                         onChange={(e) => setAppointment({ ...appointment, date: e.target.value })}
@@ -352,12 +361,19 @@ export default function ScheduleAppointment() {
                                     <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
                                         <Clock className="w-4 h-4 text-cyan-500" /> Hora
                                     </label>
-                                    <input
-                                        type="time"
-                                        className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer"
-                                        value={appointment.time.substring(0, 5)}
-                                        onChange={(e) => setAppointment({ ...appointment, time: e.target.value })}
-                                    />
+                                    <select name="time" id="time" className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer" value={appointment.time.substring(0, 5)} onChange={(e) => setAppointment({ ...appointment, time: e.target.value })}>
+                                        <option value="">Seleccionar Hora</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                    </select>
                                 </div>
                             </div>
 

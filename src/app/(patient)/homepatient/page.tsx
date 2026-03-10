@@ -131,7 +131,7 @@ export default function HomePatient() {
                     {/* Appointments Section */}
                     <div className="flex justify-between items-end mb-6">
                         <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Mis Próximas Citas</h3>
-                        <Link href="/scheduleappointment" className="text-cyan-600 text-sm font-bold hover:underline">
+                        <Link href="/myappointments" className="text-cyan-600 text-sm font-bold hover:underline">
                             Ver todas
                         </Link>
                     </div>

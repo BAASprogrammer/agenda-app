@@ -36,6 +36,8 @@ export default function MyAppointments() {
     const [selectedAppointment, setSelectedAppointment] = useState<any | null>(null);
     const [openMenuId, setOpenMenuId] = useState<number | null>(null);
     const [searchTerm, setSearchTerm] = useState<string>("");
+    const [message, setMessage] = useState<string>("");
+    const [appointmentToCancel, setAppointmentToCancel] = useState<number | null>(null);
 
     useEffect(() => {
         const fetchAppointments = async () => {
@@ -103,6 +105,31 @@ export default function MyAppointments() {
         setAppointments(filteredAppointments);
     };
 
+    const handleCancelAppointment = (appointmentId: number) => {
+        setAppointmentToCancel(appointmentId);
+        setMessage("¿Estás seguro de cancelar la cita?");
+        // No cerramos el menú aquí para mostrar la pregunta dentro
+    };
+
+    const confirmCancel = async () => {
+        if (!appointmentToCancel) return;
+
+        const { error } = await supabase
+            .from('medical_appointments')
+            .update({ status: 'cancelada' })
+            .eq('id', appointmentToCancel);
+
+        if (error) {
+            setMessage("Error: No se pudo cancelar la cita");
+        } else {
+            setAppointments(appointments.filter(appt => appt.id !== appointmentToCancel));
+            setMessage("Cita cancelada con éxito");
+        }
+
+        setAppointmentToCancel(null);
+        setOpenMenuId(null);
+        setTimeout(() => setMessage(""), 3000);
+    };
     const futureAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] >= new Date().toLocaleDateString("en-CA").split('T')[0]);
     const pastAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] < new Date().toLocaleDateString("en-CA").split('T')[0]);
     const displayAppointments = filter === 'pasada' ? pastAppointments : futureAppointments;
@@ -159,7 +186,8 @@ export default function MyAppointments() {
 
                                 <div
                                     key={appointment.id}
-                                    className="bg-white/80 backdrop-blur-md rounded-4xl p-6 border border-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col md:flex-row md:items-center gap-6 group animate-fade-in-up"
+                                    className={`bg-white/80 backdrop-blur-md rounded-4xl p-6 border border-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col md:flex-row md:items-center gap-6 group animate-fade-in-up
+                            ${openMenuId === appointment.id ? 'relative z-50' : 'relative z-10'}`}
                                     style={{ animationDelay: `${index * 0.1}s` }}
                                 >
                                     {/* Date Badge */}
@@ -214,19 +242,49 @@ export default function MyAppointments() {
                                             {/* Dropdown Menu */}
                                             {openMenuId === appointment.id && (
                                                 <>
-                                                    <div className="fixed inset-0 z-40" onClick={() => setOpenMenuId(null)}></div>
-                                                    <div className="absolute right-0 top-full mt-2 w-56 bg-white/90 backdrop-blur-xl border border-slate-200 rounded-3xl shadow-2xl z-50 overflow-hidden animate-zoom-in origin-top-right">
+                                                    <div className="fixed inset-0 z-40" onClick={() => { setOpenMenuId(null); setAppointmentToCancel(null); setMessage(""); }}></div>
+                                                    <div className="absolute right-0 top-full mt-2 w-56 bg-white border border-slate-200 rounded-3xl shadow-2xl z-50 overflow-hidden animate-zoom-in origin-top-right">
                                                         <div className="p-1.5">
-                                                            <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left">
-                                                                <User className="w-4 h-4 text-cyan-500" /> Ver Perfil Doctor
-                                                            </button>
-                                                            <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left">
-                                                                <MessageSquare className="w-4 h-4 text-cyan-500" /> Enviar Mensaje
-                                                            </button>
-                                                            <div className="h-px bg-slate-100 my-1 mx-2"></div>
-                                                            <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-rose-600 hover:bg-rose-50 rounded-2xl transition-colors text-left">
-                                                                <Trash2 className="w-4 h-4" /> Cancelar Cita
-                                                            </button>
+                                                            {appointmentToCancel === appointment.id ? (
+                                                                <div className="p-5 flex flex-col items-center text-center animate-fade-in-up">
+                                                                    <div className="w-12 h-12 bg-rose-50 rounded-2xl flex items-center justify-center text-rose-500 mb-3 shadow-inner">
+                                                                        <AlertCircle className="w-6 h-6" />
+                                                                    </div>
+                                                                    <div className="space-y-1 mb-5">
+                                                                        <p className="text-xs font-black text-slate-800 uppercase tracking-wider">¿Confirmar acción?</p>
+                                                                        <p className="text-[10px] font-bold text-slate-400 leading-relaxed px-2">Esta cita será marcada como cancelada permanentemente.</p>
+                                                                    </div>
+                                                                    <div className="flex flex-col gap-2 w-full">
+                                                                        <button
+                                                                            onClick={confirmCancel}
+                                                                            className="w-full py-3 bg-gradient-to-r from-rose-500 to-rose-600 text-black rounded-2xl font-black text-[10px] uppercase tracking-widest hover:from-rose-600 hover:to-rose-700 transition-all shadow-lg shadow-rose-100 active:scale-95"
+                                                                        >
+                                                                            Si, cancelar cita
+                                                                        </button>
+                                                                        <button
+                                                                            onClick={() => { setAppointmentToCancel(null); setMessage(""); }}
+                                                                            className="w-full py-3 bg-slate-50 text-slate-500 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-slate-100 transition-all active:scale-95"
+                                                                        >
+                                                                            No, volver
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            ) : (
+                                                                <>
+                                                                    <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left">
+                                                                        <User className="w-4 h-4 text-cyan-500" /> Ver Perfil Doctor
+                                                                    </button>
+                                                                    {(filter === 'agendada' || filter === 'todas') && appointment.status === 'agendada' && (
+                                                                        <div>
+                                                                            <div className="h-px bg-slate-100 my-1 mx-2"></div>
+                                                                            <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-rose-600 hover:bg-rose-50 rounded-2xl transition-colors text-left"
+                                                                                onClick={() => handleCancelAppointment(appointment.id)}>
+                                                                                <Trash2 className="w-4 h-4" /> Cancelar Cita
+                                                                            </button>
+                                                                        </div>
+                                                                    )}
+                                                                </>
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </>
@@ -250,6 +308,29 @@ export default function MyAppointments() {
                                 </button>
                             </div>
                         )}
+                        {message && !appointmentToCancel && (
+                            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-100 animate-fade-in-up">
+                                <div className="bg-white/90 backdrop-blur-2xl border border-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] rounded-[2.5rem] p-6 flex flex-col gap-4 min-w-[350px]">
+                                    <div className="flex items-center gap-4">
+                                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${message.toLowerCase().includes('error') ? 'bg-rose-50 text-rose-500' : 'bg-cyan-50 text-cyan-600'
+                                            }`}>
+                                            <CheckCircle2 className="w-6 h-6" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-sm font-black text-slate-800 leading-tight">{message}</p>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        onClick={() => setMessage("")}
+                                        className="w-full py-3 bg-slate-50 text-slate-400 rounded-2xl font-bold text-xs hover:bg-slate-100 transition-all"
+                                    >
+                                        Entendido
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
                     </div>
                 </div>
             </main>
