@@ -16,11 +16,63 @@ import {
     ClipboardList
 } from "lucide-react";
 import Link from "next/link";
+import jsPDF from "jspdf";
 import { useEffect, useState } from "react";
 
 export default function MedicalHistory() {
     const user = useUser();
     const [history, setHistory] = useState<any[]>([]);
+
+    const generatePDF = (record: any) => {
+        const doc = new jsPDF();
+
+        // Header
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(22);
+        doc.setTextColor(30, 41, 59); // slate-800
+        doc.text("RECETA MÉDICA", 105, 30, { align: "center" });
+
+        // Decorative line
+        doc.setDrawColor(6, 182, 212); // cyan-500
+        doc.setLineWidth(1);
+        doc.line(20, 35, 190, 35);
+
+        // Info Section
+        doc.setFontSize(10);
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(100, 116, 139); // slate-500
+        doc.text(`ID CITA: #${record.id}`, 20, 45);
+        doc.text(`FECHA: ${new Date(record.appointment_date).toLocaleDateString('cl-CL')}`, 20, 50);
+
+        doc.setFontSize(14);
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(30, 41, 59);
+        doc.text(`PROFESIONAL: Dr. ${record.professional?.first_name} ${record.professional?.last_name}`, 20, 65);
+
+        // Content
+        doc.setFontSize(12);
+        doc.setFont("helvetica", "bold");
+        doc.text("INDICACIONES:", 20, 85);
+
+        doc.setFont("helvetica", "normal");
+        const reason = record.reason || "Consulta de Routine";
+        const bodyContent = `Motivo: ${reason}\n\nDiagnóstico y Plan:\nEl paciente presenta una evolución favorable. Se recomienda continuar con el tratamiento preventivo y realizar chequeo de control en 6 meses.\n\nMedicamentos sugeridos: Paracetamol 500mg cada 8 horas en caso de dolor persistente, y abundante hidratación.\n\nFirma del Profesional:`;
+
+        const splitText = doc.splitTextToSize(bodyContent, 170);
+        doc.text(splitText, 20, 95);
+
+        // Signature area
+        doc.line(20, 160, 100, 160);
+        doc.setFontSize(10);
+        doc.text(`Dr. ${record.professional?.first_name} ${record.professional?.last_name}`, 20, 165);
+
+        // Footer
+        doc.setFontSize(8);
+        doc.setTextColor(148, 163, 184); // slate-400
+        doc.text("Este documento es una representación digital de una receta médica emitida en AgendaApp.", 105, 280, { align: "center" });
+
+        doc.save(`receta_${record.id}.pdf`);
+    };
 
     useEffect(() => {
         const fetchHistory = async () => {
@@ -128,11 +180,15 @@ export default function MedicalHistory() {
                                         </div>
 
                                         <div className="flex flex-row md:flex-col gap-3">
-                                            <button className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-slate-50 text-slate-700 px-6 py-3.5 rounded-2xl font-bold hover:bg-slate-100 transition-all text-sm">
+                                            <button
+                                                onClick={() => generatePDF(record)}
+                                                className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-slate-50 text-slate-700 px-6 py-3.5 rounded-2xl font-bold hover:bg-slate-100 transition-all text-sm cursor-pointer"
+                                                title="Descargar receta">
                                                 <Download className="w-4 h-4" /> Receta.pdf
                                             </button>
-                                            <button className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-700 px-6 py-3.5 rounded-2xl font-bold hover:border-cyan-200 hover:text-cyan-600 transition-all text-sm">
-                                                <ExternalLink className="w-4 h-4" /> Lab Results
+                                            <button className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-700 px-6 py-3.5 rounded-2xl font-bold hover:border-cyan-200 hover:text-cyan-600 transition-all text-sm cursor-pointer"
+                                                title="Ver resultados de laboratorio">
+                                                <ExternalLink className="w-4 h-4" /> Resultados de Laboratorio
                                             </button>
                                         </div>
                                     </div>

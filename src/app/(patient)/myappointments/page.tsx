@@ -4,6 +4,7 @@ import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 import { getStatusColor } from "@/utils/getStatusColor";
+import DoctorProfileModal from "@/components/patient/DoctorProfileModal";
 import {
     CalendarDays,
     HeartPulse,
@@ -38,22 +39,18 @@ export default function MyAppointments() {
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [message, setMessage] = useState<string>("");
     const [appointmentToCancel, setAppointmentToCancel] = useState<number | null>(null);
+    const [isDoctorProfileOpen, setIsDoctorProfileOpen] = useState(false);
+    const [selectedDoctor, setSelectedDoctor] = useState<any>(null);
 
     useEffect(() => {
         const fetchAppointments = async () => {
             if (!user.userId) return;
 
-            let query = supabase
+            const { data, error } = await supabase
                 .from('medical_appointments')
                 .select(`id, appointment_date, status, professional_id, reason, professional:users!medical_appointments_professional_id_fkey (first_name, last_name)`)
                 .eq('patient_id', user.userId)
                 .order('appointment_date', { ascending: true });
-
-            if (filter !== "todas") {
-                query = query.eq('status', filter);
-            }
-
-            const { data, error } = await query;
 
             if (error) {
                 console.error("Error obteniendo citas:", error);
@@ -77,38 +74,18 @@ export default function MyAppointments() {
             });
 
             setAppointments(formattedData);
-            setAppointmentsFiltered(formattedData);
         }
         fetchAppointments();
-    }, [user.userId, filter]);
+    }, [user.userId]);
 
     const searchProfessional = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const searchData = e.target.value.toLowerCase();
-        setSearchTerm(searchData);
-    };
-
-    useEffect(() => {
-        filterAppointments(searchTerm);
-    }, [searchTerm]);
-
-    const filterAppointments = (searchData: string) => {
-        if (searchData.length === 0) {
-            setAppointments(appointmentsFiltered);
-            return;
-        }
-        const filteredAppointments = appointmentsFiltered.filter(appointmentfilter => {
-            if (appointmentfilter.professional?.first_name.toLowerCase().includes(searchData) ||
-                appointmentfilter.professional?.last_name.toLowerCase().includes(searchData)) {
-                return appointmentfilter;
-            }
-        });
-        setAppointments(filteredAppointments);
+        setSearchTerm(e.target.value.toLowerCase());
     };
 
     const handleCancelAppointment = (appointmentId: number) => {
         setAppointmentToCancel(appointmentId);
         setMessage("¿Estás seguro de cancelar la cita?");
-        // No cerramos el menú aquí para mostrar la pregunta dentro
+        // Do not close the menu here to show the question inside it
     };
 
     const confirmCancel = async () => {
@@ -130,9 +107,23 @@ export default function MyAppointments() {
         setOpenMenuId(null);
         setTimeout(() => setMessage(""), 3000);
     };
-    const futureAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] >= new Date().toLocaleDateString("en-CA").split('T')[0]);
-    const pastAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] < new Date().toLocaleDateString("en-CA").split('T')[0]);
-    const displayAppointments = filter === 'pasada' ? pastAppointments : futureAppointments;
+
+    const today = new Date().toLocaleDateString("en-CA");
+
+    const displayAppointments = appointments.filter(appt => {
+        // 1. Search filter (doctor's first/last name)
+        const matchesSearch =
+            appt.professional?.first_name.toLowerCase().includes(searchTerm) ||
+            appt.professional?.last_name.toLowerCase().includes(searchTerm);
+
+        if (!matchesSearch) return false;
+
+        // 2. Tab filter (status/time)
+        if (filter === 'todas') return appt.appointment_date.split(' ')[0];
+        if (filter === 'pasada') return appt.appointment_date.split(' ')[0] < today && appt.status === 'pasada';
+
+        return appt.status === filter;
+    });
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
             <ProSidebarPatient active="/myappointments" />
@@ -157,9 +148,6 @@ export default function MyAppointments() {
                                 className="pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none transition-all w-64" onChange={searchProfessional} value={searchTerm}
                             />
                         </div>
-                        <button className="p-2 bg-white border border-slate-200 rounded-xl text-slate-600 hover:bg-slate-50 transition-all">
-                            <Filter className="w-5 h-5" />
-                        </button>
                     </div>
                 </header>
 
@@ -271,7 +259,13 @@ export default function MyAppointments() {
                                                                 </div>
                                                             ) : (
                                                                 <>
-                                                                    <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left">
+                                                                    <button
+                                                                        className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left"
+                                                                        onClick={() => {
+                                                                            setSelectedDoctor(appointment.professional);
+                                                                            setIsDoctorProfileOpen(true);
+                                                                        }}
+                                                                    >
                                                                         <User className="w-4 h-4 text-cyan-500" /> Ver Perfil Doctor
                                                                     </button>
                                                                     {(filter === 'agendada' || filter === 'todas') && appointment.status === 'agendada' && (
@@ -338,6 +332,13 @@ export default function MyAppointments() {
             {/* Appointment Details Modal */}
             {selectedAppointment && (
                 <AppointmentDetails appointment={selectedAppointment} setSelectedAppointment={setSelectedAppointment} />
+            )}
+            {/* Doctor Profile Modal */}
+            {isDoctorProfileOpen && (
+                <DoctorProfileModal
+                    professional={selectedDoctor}
+                    onClose={() => setIsDoctorProfileOpen(false)}
+                />
             )}
         </div>
     );

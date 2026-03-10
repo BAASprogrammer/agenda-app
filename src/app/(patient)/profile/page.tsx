@@ -23,34 +23,55 @@ export default function Profile() {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
+        first_name: "",
+        last_name: "",
         email: "",
         phone: "",
         address: ""
     });
 
     useEffect(() => {
-        if (user.userId) {
-            setFormData({
-                firstName: user.firstName || "",
-                lastName: user.lastName || "",
-                email: user.email || "",
-                phone: "", // Simulado ya que no está en el contexto actual
-                address: ""
-            });
-        }
+        const fetchPatientData = async () => {
+            if (user.userId) {
+                const { data: patient, error } = await supabase
+                    .from("users")
+                    .select("phone, address")
+                    .eq("id", user.userId)
+                    .single();
+                if (error) {
+                    console.error("Error fetching patient data:", error);
+                }
+                setFormData({
+                    first_name: user.firstName || "",
+                    last_name: user.lastName || "",
+                    email: user.email || "",
+                    phone: patient?.phone || "",
+                    address: patient?.address || ""
+                });
+            }
+        };
+
+        fetchPatientData();
     }, [user]);
 
     const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
-        // Aquí iría la lógica para actualizar en Supabase
-        setTimeout(() => {
-            setLoading(false);
-            setMessage("Perfil actualizado con éxito");
-            setTimeout(() => setMessage(""), 3000);
-        }, 1000);
+        setMessage("");
+
+        const { error } = await supabase
+            .from("users")
+            .update(formData)
+            .eq("id", user.userId);
+
+        if (error) {
+            setMessage("Error updating profile, please contact us");
+        } else {
+            setMessage("Profile updated successfully");
+        }
+
+        setLoading(false);
+        setTimeout(() => setMessage(""), 5000);
     };
 
     return (
@@ -105,7 +126,7 @@ export default function Profile() {
                                         </div>
                                     </label>
                                     <label className="flex items-center justify-between cursor-pointer group">
-                                        <span className="text-sm font-medium text-slate-600 group-hover:text-slate-800">Recordatorios de Cita</span>
+                                        <span className="text-sm font-medium text-slate-600 group-hover:text-slate-800">Recordatorios de Citas</span>
                                         <div className="w-10 h-5 bg-cyan-600 rounded-full relative">
                                             <div className="absolute right-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
                                         </div>
@@ -123,8 +144,8 @@ export default function Profile() {
                                             <label className="text-sm font-bold text-slate-700 ml-1">Nombre</label>
                                             <input
                                                 type="text"
-                                                value={formData.firstName}
-                                                onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                                                value={formData.first_name}
+                                                onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
                                                 className="w-full px-5 py-3.5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-none transition-all font-medium"
                                             />
                                         </div>
@@ -132,8 +153,8 @@ export default function Profile() {
                                             <label className="text-sm font-bold text-slate-700 ml-1">Apellido</label>
                                             <input
                                                 type="text"
-                                                value={formData.lastName}
-                                                onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                                                value={formData.last_name}
+                                                onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
                                                 className="w-full px-5 py-3.5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-none transition-all font-medium"
                                             />
                                         </div>
@@ -150,7 +171,7 @@ export default function Profile() {
                                             </div>
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-sm font-bold text-slate-700 ml-1">Teléfono</label>
+                                            <label className="text-sm font-bold text-slate-700 ml-1">Número de Teléfono</label>
                                             <div className="relative">
                                                 <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                                                 <input
@@ -168,7 +189,7 @@ export default function Profile() {
                                                 <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                                                 <input
                                                     type="text"
-                                                    placeholder="Calle Ejemplo 123, Ciudad"
+                                                    placeholder="123 Example St, City"
                                                     value={formData.address}
                                                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                                                     className="w-full pl-12 pr-5 py-3.5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-none transition-all font-medium"
@@ -178,7 +199,8 @@ export default function Profile() {
                                     </div>
 
                                     <div className="pt-6 flex items-center justify-between">
-                                        <p className={`text-sm font-bold transition-all ${message ? 'text-emerald-600 opacity-100' : 'opacity-0'}`}>
+                                        <p className={`text-sm font-bold transition-all ${message &&
+                                            (message.toLowerCase().includes("error") ? 'text-red-500 opacity-100' : 'text-emerald-500 opacity-100')}`}>
                                             {message}
                                         </p>
                                         <button

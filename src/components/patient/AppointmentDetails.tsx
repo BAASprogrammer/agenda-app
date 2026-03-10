@@ -1,7 +1,17 @@
-import { Calendar, FileText, MapPin, User, X } from "lucide-react";
+import { Calendar, FileText, MapPin, User, X, Info } from "lucide-react";
 import { getStatusColor } from "@/utils/getStatusColor";
+import { useState } from "react";
+import RescheduleModal from "./RescheduleModal";
+import DoctorProfileModal from "./DoctorProfileModal";
 
 export default function AppointmentDetails({ appointment, setSelectedAppointment }: { appointment: any, setSelectedAppointment: (appointment: any) => void }) {
+    const [isRescheduleModalOpen, setIsRescheduleModalOpen] = useState(false);
+    const [isDoctorProfileOpen, setIsDoctorProfileOpen] = useState(false);
+
+    const handleRescheduleSuccess = (newDate: string, newTime: string) => {
+        setSelectedAppointment(null);
+    };
+
     return (
         <div>
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -30,9 +40,17 @@ export default function AppointmentDetails({ appointment, setSelectedAppointment
                                 <span className={`px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest ${getStatusColor(appointment.status)}`}>
                                     {appointment.status}
                                 </span>
-                                <h2 className="text-3xl font-black text-slate-800 mt-2 tracking-tight">
-                                    Dr. {appointment.professional?.first_name} {appointment.professional?.last_name}
-                                </h2>
+                                <button
+                                    onClick={() => setIsDoctorProfileOpen(true)}
+                                    className="group flex items-center gap-2 mt-2 hover:bg-slate-50 transition-colors rounded-2xl -ml-2 p-2 pr-4"
+                                >
+                                    <h2 className="text-3xl font-black text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">
+                                        Dr. {appointment.professional?.first_name} {appointment.professional?.last_name}
+                                    </h2>
+                                    <div className="w-8 h-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500 opacity-0 group-hover:opacity-100 transition-all scale-75 group-hover:scale-100">
+                                        <Info className="w-4 h-4" />
+                                    </div>
+                                </button>
                                 <p className="text-slate-500 font-bold flex items-center gap-2 mt-1">
                                     Especialista Médico <span className="w-1 h-1 bg-slate-300 rounded-full"></span> ID: #{appointment.id?.toString().slice(-6)}
                                 </p>
@@ -72,18 +90,32 @@ export default function AppointmentDetails({ appointment, setSelectedAppointment
                                 {appointment.reason || "Sin motivo especificado. El paciente requiere una evaluación general de su estado de salud actual."}
                             </p>
                         </div>
-
-                        <div className="flex flex-col sm:flex-row gap-3">
-                            <button className="flex-1 bg-cyan-600 text-white py-4 rounded-2xl font-black text-sm shadow-xl shadow-cyan-200 hover:bg-cyan-700 hover:-translate-y-0.5 transition-all active:translate-y-0">
+                        {appointment.status === 'agendada' && (
+                            <button
+                                onClick={() => setIsRescheduleModalOpen(true)}
+                                className="w-full bg-cyan-600 text-white py-4 rounded-2xl font-black text-sm shadow-xl shadow-cyan-200 hover:bg-cyan-700 hover:-translate-y-0.5 transition-all active:translate-y-0"
+                            >
                                 Reprogramar Cita
                             </button>
-                            <button className="flex-1 bg-white border border-slate-200 text-slate-700 py-4 rounded-2xl font-black text-sm hover:bg-slate-50 hover:border-slate-300 transition-all">
-                                Contactar Soporte
-                            </button>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>
+
+            {isRescheduleModalOpen && (
+                <RescheduleModal
+                    appointment={appointment}
+                    onClose={() => setIsRescheduleModalOpen(false)}
+                    onSuccess={handleRescheduleSuccess}
+                />
+            )}
+
+            {isDoctorProfileOpen && (
+                <DoctorProfileModal
+                    professional={appointment.professional}
+                    onClose={() => setIsDoctorProfileOpen(false)}
+                />
+            )}
         </div>
     );
 }

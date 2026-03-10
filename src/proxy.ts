@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
     const userId = req.cookies.get("user_id")?.value;
     const { pathname } = req.nextUrl;
     const publicRoutes = ["/", "/about", "/contact"];
