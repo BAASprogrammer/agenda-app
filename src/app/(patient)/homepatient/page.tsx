@@ -17,7 +17,7 @@ export default function HomePatient() {
             if (!user.userId) return;
             const { data, error } = await supabase
                 .from('medical_appointments')
-                .select(`id, appointment_date, status, professional_id, professional:users!medical_appointments_professional_id_fkey (first_name, last_name)`)
+                .select(`id, appointment_date, status, reason, professional_id, professional:users!medical_appointments_professional_id_fkey (first_name, last_name)`)
                 .eq('patient_id', user.userId)
                 .order('appointment_date', { ascending: true });
 
