@@ -1,6 +1,6 @@
 "use client";
 import AppointmentDetails from "@/components/patient/AppointmentDetails";
-import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";

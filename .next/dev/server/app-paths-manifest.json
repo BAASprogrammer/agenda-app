@@ -2,5 +2,8 @@
   "/(patient)/homepatient/page": "app/(patient)/homepatient/page.js",
   "/(patient)/medicalhistory/page": "app/(patient)/medicalhistory/page.js",
   "/(patient)/myappointments/page": "app/(patient)/myappointments/page.js",
-  "/(patient)/profile/page": "app/(patient)/profile/page.js"
+  "/(patient)/profile/page": "app/(patient)/profile/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/page": "app/page.js"
 }

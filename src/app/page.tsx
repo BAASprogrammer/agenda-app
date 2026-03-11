@@ -39,30 +39,36 @@ export default function Home() {
         </div>
 
         {/* Features Glassmorphism Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32 text-center">
           {[
             {
-              icon: <Calendar className="w-8 h-8 text-indigo-600" />,
+              icon: Calendar,
               title: "Gestión Inteligente",
               desc: "Calendarios sincronizados y alertas automáticas para que nunca pierdas una cita.",
-              color: "bg-indigo-50"
+              color: "bg-indigo-50",
+              hoverColor: "group-hover:bg-indigo-600",
+              iconColor: "text-indigo-600"
             },
             {
-              icon: <Clock className="w-8 h-8 text-cyan-600" />,
+              icon: Clock,
               title: "Ahorra Tiempo",
               desc: "Automatiza confirmaciones, recordatorios y reagendamientos con un solo clic.",
-              color: "bg-cyan-50"
+              color: "bg-cyan-50",
+              hoverColor: "group-hover:bg-cyan-600",
+              iconColor: "text-cyan-600"
             },
             {
-              icon: <ShieldCheck className="w-8 h-8 text-pink-600" />,
+              icon: ShieldCheck,
               title: "Seguridad Total",
               desc: "Tus datos y los de tus pacientes están protegidos con los más altos estándares.",
-              color: "bg-pink-50"
+              color: "bg-pink-50",
+              hoverColor: "group-hover:bg-pink-600",
+              iconColor: "text-pink-600"
             }
           ].map((feature, i) => (
             <div key={i} className="bg-white/70 backdrop-blur-xl border border-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:-translate-y-2 transition-all duration-500 group animate-fade-in-up" style={{ animationDelay: `${0.2 * i}s` }}>
-              <div className={`w-16 h-16 rounded-2xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                {feature.icon}
+              <div className={`w-16 h-16 rounded-2xl ${feature.color} ${feature.hoverColor} ${feature.iconColor} group-hover:text-white flex items-center justify-center mb-6 transition-all duration-500 ml-auto mr-auto group-hover:rotate-y-360`}>
+                <feature.icon className="w-8 h-8 transition-colors duration-300" />
               </div>
               <h3 className="text-2xl font-bold text-slate-800 mb-3">{feature.title}</h3>
               <p className="text-slate-600 font-medium leading-relaxed">{feature.desc}</p>

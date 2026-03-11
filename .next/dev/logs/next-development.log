@@ -42,3 +42,1876 @@
 [00:03:17.909] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
 [00:03:18.497] Browser LOG     isProfessional false
 [00:03:18.497] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:06:01.731] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.733] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.735] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.741] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.753] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.758] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.760] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.762] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.783] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.788] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.790] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.793] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.800] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.800] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.804] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.809] Server  ERROR   ⨯ ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.819] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.821] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.822] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.822] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.827] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.828] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.829] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.829] Server  ERROR   ⨯ ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.832] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.834] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.841] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.843] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.846] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.848] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.849] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.850] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.853] Server  LOG     ✓ Compiled in 254ms
+[00:06:01.860] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.861] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.865] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.868] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.874] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.876] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.878] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.881] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.887] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.888] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.889] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.891] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.897] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.898] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.900] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.905] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.909] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.910] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.912] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.913] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.917] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.919] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.920] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.921] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.926] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.927] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.929] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.930] Server  ERROR   ⨯ ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.935] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.935] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.936] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.937] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.941] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.942] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.942] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.943] Server  ERROR   ⨯ ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:01.960] Browser ERROR   ./src/app/(patient)/homepatient/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component Browser]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/homepatient/page.tsx [Client Component SSR]
+    ./src/app/(patient)/homepatient/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:01.960] Browser ERROR   ./src/app/(patient)/myappointments/page.tsx:3:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+  2 | import AppointmentDetails from "@/components/patient/AppointmentDetails";
+> 3 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useUser } from "@/context/UserContext";
+  5 | import { supabase } from "@/lib/supabaseClient";
+  6 | import { getStatusColor } from "@/utils/getStatusColor";
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component Browser]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/myappointments/page.tsx [Client Component SSR]
+    ./src/app/(patient)/myappointments/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:01.960] Browser ERROR   ./src/app/(patient)/medicalhistory/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component Browser]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/medicalhistory/page.tsx [Client Component SSR]
+    ./src/app/(patient)/medicalhistory/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:01.960] Browser ERROR   ./src/app/(patient)/profile/page.tsx:2:1
+Module not found: Can't resolve '@/components/patient/ProSidebarPatient'
+  1 | "use client";
+> 2 | import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { useUser } from "@/context/UserContext";
+  4 | import { supabase } from "@/lib/supabaseClient";
+  5 | import {
+
+Import map: aliased to relative './src/components/patient/ProSidebarPatient' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:03.738] Server  LOG     ✓ Compiled in 143ms
+[00:06:03.885] Server  LOG     isProfessional "false"
+[00:06:04.001] Browser LOG     isProfessional false
+[00:06:04.001] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:07:43.103] Server  LOG     ✓ Compiled in 59ms
+[00:08:08.710] Browser LOG     isProfessional false
+[00:08:08.710] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:08.710] Browser LOG     isProfessional false
+[00:08:08.710] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:08.710] Browser LOG     isProfessional false
+[00:08:08.710] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:09.347] Browser LOG     isProfessional false
+[00:08:09.347] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:09.347] Browser LOG     isProfessional false
+[00:08:09.347] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:09.347] Browser LOG     isProfessional false
+[00:08:09.347] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:09.888] Browser LOG     isProfessional false
+[00:08:09.888] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:09.888] Browser LOG     isProfessional false
+[00:08:09.888] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:09.888] Browser LOG     isProfessional false
+[00:08:09.888] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:10.834] Browser LOG     isProfessional false
+[00:08:10.834] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:10.834] Browser LOG     isProfessional false
+[00:08:10.834] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:10.834] Browser LOG     isProfessional false
+[00:08:10.834] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:08:17.307] Server  LOG     isProfessional ""
+[00:09:01.062] Server  LOG     isProfessional "false"
+[00:09:01.158] Browser LOG     isProfessional false
+[00:09:01.158] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:09:26.409] Server  LOG     ✓ Compiled in 41ms
+[00:09:32.023] Server  LOG     isProfessional "false"
+[00:09:32.116] Browser LOG     isProfessional false
+[00:09:32.116] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:09:40.269] Server  LOG     ✓ Compiled in 25ms
+[00:09:55.813] Server  LOG     ✓ Compiled in 33ms
+[00:10:01.495] Server  LOG     isProfessional "false"
+[00:10:01.701] Browser LOG     isProfessional false
+[00:10:01.701] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:10:26.819] Server  LOG     ✓ Compiled in 23ms
+[00:10:34.549] Server  LOG     ✓ Compiled in 24ms
+[00:10:46.748] Server  LOG     ✓ Compiled in 15ms
+[00:12:17.949] Server  LOG     ✓ Compiled in 31ms
+[00:12:56.364] Browser LOG     isProfessional false
+[00:12:56.364] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:12:57.484] Browser LOG     isProfessional false
+[00:12:57.484] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:12:59.724] Browser LOG     isProfessional false
+[00:12:59.724] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional false
+[00:13:01.509] Browser LOG     isProfessional 
+[00:13:01.509] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:13:49.518] Server  LOG     isProfessional ""
+[00:17:18.187] Server  LOG     ✓ Compiled in 21ms
+[00:17:20.663] Server  LOG     isProfessional ""
+[00:17:20.784] Browser LOG     isProfessional 
+[00:17:20.784] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:17:41.444] Server  LOG     ✓ Compiled in 42ms
+[00:17:47.720] Server  LOG     isProfessional ""
+[00:17:47.836] Browser LOG     isProfessional 
+[00:17:47.836] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:19:01.435] Server  LOG     ✓ Compiled in 26ms
+[00:29:01.822] Server  LOG     ✓ Compiled in 44ms
+[00:29:13.412] Server  LOG     ✓ Compiled in 38ms
+[00:29:21.271] Server  LOG     ✓ Compiled in 31ms
+[00:29:28.180] Server  LOG     ✓ Compiled in 28ms
+[00:29:40.579] Server  LOG     ✓ Compiled in 30ms
+[00:30:18.059] Server  LOG     ✓ Compiled in 37ms
+[00:30:27.113] Server  LOG     ✓ Compiled in 22ms
+[00:30:29.803] Server  LOG     ✓ Compiled in 31ms
+[00:30:41.119] Server  LOG     ✓ Compiled in 17ms
+[00:30:48.771] Server  LOG     ✓ Compiled in 28ms
+[00:31:20.147] Server  LOG     ✓ Compiled in 15ms
+[00:31:44.646] Server  LOG     ✓ Compiled in 14ms
+[00:32:02.799] Server  LOG     ✓ Compiled in 28ms
+[00:32:28.141] Server  LOG     ✓ Compiled in 29ms
+[00:32:40.870] Server  LOG     ✓ Compiled in 20ms
+[00:33:02.284] Server  LOG     ✓ Compiled in 28ms
+[00:33:46.188] Server  LOG     ✓ Compiled in 17ms
+[00:34:26.631] Server  LOG     ✓ Compiled in 16ms
+[00:35:23.850] Server  LOG     ✓ Compiled in 46ms
+[00:36:19.962] Server  LOG     ✓ Compiled in 25ms
+[00:36:47.310] Server  LOG     ✓ Compiled in 21ms
+[00:37:02.470] Server  LOG     ✓ Compiled in 20ms
+[00:37:30.056] Server  LOG     ✓ Compiled in 18ms
+[00:37:37.075] Server  LOG     isProfessional ""
+[00:37:37.215] Browser LOG     isProfessional 
+[00:37:37.215] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:37:51.243] Server  LOG     ✓ Compiled in 37ms
+[00:37:59.052] Server  LOG     ✓ Compiled in 38ms
+[00:38:34.806] Server  LOG     ✓ Compiled in 25ms
+[00:38:51.421] Server  LOG     ✓ Compiled in 15ms
+[00:40:19.328] Server  LOG     ✓ Compiled in 19ms
+[00:40:49.444] Server  LOG     ✓ Compiled in 16ms
+[00:41:03.779] Browser LOG     isProfessional 
+[00:41:03.779] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:41:08.577] Browser LOG     isProfessional 
+[00:41:08.577] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:41:09.845] Browser LOG     isProfessional 
+[00:41:09.845] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:41:17.150] Browser LOG     isProfessional 
+[00:41:17.150] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:41:30.626] Browser LOG     isProfessional 
+[00:41:30.626] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:41:31.734] Browser LOG     isProfessional 
+[00:41:31.734] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 
+[00:41:32.927] Browser LOG     isProfessional 
+[00:41:32.927] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) isProfessional 

@@ -1,4 +1,4 @@
-import { CalendarDays, FileText, HeartPulse, LogOut, UserCircle } from "lucide-react";
+import { CalendarDays, FileText, HeartPulse, LogOut, UserCircle, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLogout } from "@/hooks/useLogout";
@@ -20,13 +20,13 @@ export default function ProSidebarPatient({ active }: ProSidebarPatientProps) {
     return (
         <div>
             {/* Sidebar */}
-            <aside className="w-full md:w-64 bg-white border-r border-slate-200 flex flex-col z-20">
+            <aside className="w-full h-full md:w-64 bg-white border-r border-slate-200 flex flex-col z-20">
                 <div className="p-6 border-b border-slate-100 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center shadow-md">
-                        <HeartPulse className="text-white w-6 h-6 animate-pulse-slow" />
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center shadow-md hover:scale-105 transition-transform duration-300">
+                        <LayoutGrid className="text-white w-6 h-6" />
                     </div>
-                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-blue-600">
-                        AgendaApp
+                    <span className="text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-600 tracking-tight">
+                        Menú Principal
                     </span>
                 </div>
 
@@ -49,16 +49,6 @@ export default function ProSidebarPatient({ active }: ProSidebarPatientProps) {
                         );
                     })}
                 </nav>
-
-                <div className="p-4 border-t border-slate-100">
-                    <button
-                        onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-red-50 hover:text-red-500 rounded-xl font-medium transition-all hover:scale-[1.02]"
-                    >
-                        <LogOut className="w-5 h-5" />
-                        Cerrar Sesión
-                    </button>
-                </div>
             </aside>
         </div>
     )

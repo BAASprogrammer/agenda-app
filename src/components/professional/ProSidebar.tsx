@@ -1,7 +1,7 @@
 "use client";
 import {
     Activity, Calendar, ClipboardList, Users,
-    Settings, LogOut
+    Settings, LogOut, LayoutGrid
 } from "lucide-react";
 import Link from "next/link";
 import { useLogout } from "@/hooks/useLogout";
@@ -28,12 +28,11 @@ export default function ProSidebar({ active }: ProSidebarProps) {
     return (
         <aside className="w-full md:w-64 bg-white border-r border-slate-200 flex flex-col z-20">
             <div className="p-6 border-b border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-linear-to-br from-indigo-500 to-cyan-400 flex items-center justify-center shadow-md">
-                    {/* aria-hidden on decorative icons: screen readers will skip them */}
-                    <Activity className="text-white w-6 h-6" aria-hidden="true" />
+                <div className="w-10 h-10 rounded-xl bg-linear-to-br from-indigo-500 to-cyan-400 flex items-center justify-center shadow-md hover:scale-105 transition-transform duration-300">
+                    <LayoutGrid className="text-white w-6 h-6" aria-hidden="true" />
                 </div>
-                <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-indigo-600 to-cyan-500">
-                    AgendaApp
+                <span className="text-xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-indigo-600 to-cyan-500 tracking-tight">
+                    Menú Profesional
                 </span>
             </div>
 

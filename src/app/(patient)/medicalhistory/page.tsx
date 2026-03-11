@@ -1,5 +1,5 @@
 "use client";
-import ProSidebarPatient from "@/components/patient/ProSidebarPatient";
+import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 import {
