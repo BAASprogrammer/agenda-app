@@ -145,7 +145,7 @@ export default function ScheduleAppointment() {
 
                 {/* Back Link */}
                 <div className="w-full mb-8 animate-fade-in">
-                    <Link href="/homepatient" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-cyan-600 hover:border-cyan-200 hover:bg-cyan-50 transition-all shadow-sm group">
+                    <Link href="/home/patient" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-cyan-600 hover:border-cyan-200 hover:bg-cyan-50 transition-all shadow-sm group">
                         <ChevronLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
                         <span className="font-semibold text-sm">Volver al Panel</span>
                     </Link>

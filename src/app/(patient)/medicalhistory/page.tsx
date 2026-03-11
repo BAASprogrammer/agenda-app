@@ -3,17 +3,15 @@ import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 import {
-    FileText,
-    HeartPulse,
-    CalendarDays,
-    UserCircle,
-    LogOut,
+    NotepadText,
+    CalendarClock,
     Download,
     ExternalLink,
     Search,
     Stethoscope,
     Activity,
-    ClipboardList
+    ClipboardList,
+    CircleUser
 } from "lucide-react";
 import Link from "next/link";
 import jsPDF from "jspdf";
@@ -100,7 +98,7 @@ export default function MedicalHistory() {
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-cyan-50/80 to-transparent -z-10"></div>
+                <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-blue-50/60 to-transparent -z-10"></div>
 
                 <header className="px-8 py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in">
                     <div>
@@ -113,7 +111,7 @@ export default function MedicalHistory() {
                             <input
                                 type="text"
                                 placeholder="Filtrar por diagnóstico..."
-                                className="pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none transition-all w-64"
+                                className="pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all w-64"
                             />
                         </div>
                     </div>
@@ -123,7 +121,7 @@ export default function MedicalHistory() {
                     {/* Stats Summary */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                         <div className="bg-white p-6 rounded-4xl border border-white shadow-sm flex items-center gap-4">
-                            <div className="w-12 h-12 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center">
+                            <div className="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center">
                                 <Stethoscope className="w-6 h-6" />
                             </div>
                             <div>
@@ -162,7 +160,7 @@ export default function MedicalHistory() {
                                     <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
                                         <div className="space-y-4 flex-1">
                                             <div className="flex items-center gap-3">
-                                                <span className="text-sm font-bold text-cyan-600 bg-cyan-50 px-4 py-1.5 rounded-full">
+                                                <span className="text-sm font-bold text-teal-700 bg-teal-50 px-4 py-1.5 rounded-full">
                                                     {new Date(record.appointment_date).toLocaleDateString('cl-CL', { day: '2-digit', month: 'long', year: 'numeric' })}
                                                 </span>
                                                 <span className="text-xs font-bold text-slate-400">Verificado</span>
@@ -171,7 +169,7 @@ export default function MedicalHistory() {
                                                 {record.reason || "Consulta de Routine"}
                                             </h3>
                                             <div className="flex items-center gap-2 text-slate-600">
-                                                <UserCircle className="w-5 h-5 text-slate-400" />
+                                                <CircleUser className="w-5 h-5 text-slate-400" />
                                                 <span className="font-bold">Dr. {record.professional?.first_name} {record.professional?.last_name}</span>
                                             </div>
                                             <p className="text-slate-500 leading-relaxed font-medium">
@@ -196,7 +194,7 @@ export default function MedicalHistory() {
                             ))
                         ) : (
                             <div className="bg-white/60 backdrop-blur-sm rounded-[3rem] p-20 border border-dashed border-slate-200 text-center">
-                                <FileText className="w-12 h-12 text-slate-300 mx-auto mb-4" />
+                                <NotepadText className="w-12 h-12 text-slate-300 mx-auto mb-4" />
                                 <h3 className="text-xl font-bold text-slate-800">No hay registros médicos completados</h3>
                                 <p className="text-slate-500">Tus diagnósticos aparecerán aquí después de tus consultas.</p>
                             </div>

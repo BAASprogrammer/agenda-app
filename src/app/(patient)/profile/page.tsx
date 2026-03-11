@@ -3,11 +3,7 @@ import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 import {
-    UserCircle,
-    HeartPulse,
-    CalendarDays,
-    FileText,
-    LogOut,
+    CircleUser,
     Mail,
     Phone,
     MapPin,
@@ -95,8 +91,8 @@ export default function Profile() {
                             <div className="bg-white rounded-[2.5rem] p-8 border border-white shadow-sm text-center relative overflow-hidden group">
                                 <div className="absolute top-0 left-0 w-full h-24 bg-linear-to-br from-cyan-500 to-blue-600 -z-10"></div>
                                 <div className="relative inline-block mb-4 mt-8">
-                                    <div className="w-32 h-32 rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-slate-50 flex items-center justify-center text-cyan-600">
-                                        <UserCircle className="w-20 h-20" />
+                                    <div className="w-32 h-32 rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-slate-50 flex items-center justify-center text-teal-500">
+                                        <CircleUser className="w-20 h-20" />
                                     </div>
                                 </div>
                                 <h2 className="text-2xl font-bold text-slate-800">{user.firstName} {user.lastName}</h2>
@@ -104,7 +100,7 @@ export default function Profile() {
 
                                 <div className="space-y-3 pt-6 border-t border-slate-50">
                                     <div className="flex items-center gap-3 text-slate-600 text-sm font-medium">
-                                        <Mail className="w-4 h-4 text-cyan-500" />
+                                        <Mail className="w-4 h-4 text-teal-500" />
                                         {user.email}
                                     </div>
                                     <div className="flex items-center gap-3 text-slate-600 text-sm font-medium">
@@ -121,13 +117,13 @@ export default function Profile() {
                                 <div className="space-y-4">
                                     <label className="flex items-center justify-between cursor-pointer group">
                                         <span className="text-sm font-medium text-slate-600 group-hover:text-slate-800">Alertas por Email</span>
-                                        <div className="w-10 h-5 bg-cyan-600 rounded-full relative">
+                                        <div className="w-10 h-5 bg-teal-600 rounded-full relative">
                                             <div className="absolute right-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
                                         </div>
                                     </label>
                                     <label className="flex items-center justify-between cursor-pointer group">
                                         <span className="text-sm font-medium text-slate-600 group-hover:text-slate-800">Recordatorios de Citas</span>
-                                        <div className="w-10 h-5 bg-cyan-600 rounded-full relative">
+                                        <div className="w-10 h-5 bg-teal-600 rounded-full relative">
                                             <div className="absolute right-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
                                         </div>
                                     </label>
@@ -206,7 +202,7 @@ export default function Profile() {
                                         <button
                                             type="submit"
                                             disabled={loading}
-                                            className="flex items-center gap-2 bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg active:scale-95 disabled:opacity-50"
+                                            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-10 py-4 rounded-2xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 shadow-md shadow-blue-200 active:scale-95 disabled:opacity-50"
                                         >
                                             <Save className="w-5 h-5" />
                                             {loading ? "Guardando..." : "Guardar Cambios"}

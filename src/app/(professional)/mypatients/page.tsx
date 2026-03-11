@@ -79,7 +79,7 @@ export default function MyPatients() {
                 <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-indigo-50/80 to-transparent -z-10"></div>
                 <header className="px-8 py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in">
                     <div>
-                        <Link href="/homeprofessional" className="text-indigo-600 flex items-center gap-1 text-sm font-bold mb-2 hover:gap-2 transition-all">
+                        <Link href="/home/professional" className="text-indigo-600 flex items-center gap-1 text-sm font-bold mb-2 hover:gap-2 transition-all">
                             <ChevronLeft className="w-4 h-4" /> Dashboard
                         </Link>
                         <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight">Mis Pacientes</h1>

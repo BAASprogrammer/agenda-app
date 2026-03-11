@@ -3,11 +3,11 @@ import AppointmentDetails from "@/components/patient/AppointmentDetails";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
-import { CalendarDays, FileText, UserCircle, LogOut, HeartPulse, ChevronRight, Clock } from "lucide-react";
+import { CalendarClock, NotepadText, CircleUser, ChevronRight, Clock } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function HomePatient() {
+export default function Home() {
     const user = useUser();
     const [appointments, setAppointments] = useState<any[]>([]);
     const [selectedAppointment, setSelectedAppointment] = useState<any>(null);
@@ -51,13 +51,13 @@ export default function HomePatient() {
     const futureAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] >= new Date().toLocaleDateString("en-CA"));
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
-            <ProSidebarPatient active="/homepatient" />
+            <ProSidebarPatient active="/home/patient" />
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-cyan-50/80 to-transparent -z-10"></div>
-                <div className="absolute top-10 right-10 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float pointer-events-none"></div>
-                <div className="absolute bottom-20 left-20 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float pointer-events-none" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-teal-50/70 to-transparent -z-10"></div>
+                <div className="absolute top-10 right-10 w-80 h-80 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-float pointer-events-none"></div>
+                <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-float pointer-events-none" style={{ animationDelay: '2s' }}></div>
 
                 {/* Header */}
                 <header className="px-8 py-6 flex justify-between items-center animate-fade-in border-b border-transparent">
@@ -70,13 +70,13 @@ export default function HomePatient() {
                 {/* Dashboard Content */}
                 <div className="px-8 py-6 flex-1 overflow-y-auto">
                     {/* Welcome Card */}
-                    <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-8 text-white mb-8 shadow-lg shadow-cyan-200 relative overflow-hidden animate-fade-in-up">
+                    <div className="bg-gradient-to-r from-teal-600 to-teal-500 rounded-3xl p-8 text-white mb-8 shadow-lg shadow-teal-200/50 relative overflow-hidden animate-fade-in-up">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
                         <h2 className="text-2xl font-bold mb-2">¡Bienvenido de nuevo, {user.firstName}!</h2>
-                        <p className="text-cyan-50 max-w-lg mb-6 leading-relaxed">
+                        <p className="text-teal-50 max-w-lg mb-6 leading-relaxed">
                             Aquí podrás gestionar tus citas, revisar tu historial médico y actualizar tu información personal de forma rápida y segura.
                         </p>
-                        <Link href="/scheduleappointment" className="bg-white text-cyan-700 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        <Link href="/scheduleappointment" className="bg-white text-teal-700 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
                             Agendar Nueva Cita
                         </Link>
                     </div>
@@ -86,42 +86,42 @@ export default function HomePatient() {
                     {/* Action Cards Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         {/* Card 1 */}
-                        <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-50 to-blue-100 flex items-center justify-center text-indigo-600 mb-4 group-hover:scale-110 transition-transform">
-                                <CalendarDays className="w-7 h-7" />
+                        <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                            <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <CalendarClock className="w-7 h-7" />
                             </div>
                             <h4 className="text-lg font-bold text-slate-800 mb-2">Mis Citas</h4>
                             <p className="text-slate-500 text-sm mb-4">Revisa, reprograma o cancela tus citas agendadas.</p>
                             <Link href="/myappointments">
-                                <span className="text-indigo-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                <span className="text-teal-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                                     Ver panel <ChevronRight className="w-4 h-4" />
                                 </span>
                             </Link>
                         </div>
 
                         {/* Card 2 */}
-                        <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-100 flex items-center justify-center text-teal-600 mb-4 group-hover:scale-110 transition-transform">
-                                <FileText className="w-7 h-7" />
+                        <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                            <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <NotepadText className="w-7 h-7" />
                             </div>
                             <h4 className="text-lg font-bold text-slate-800 mb-2">Historial Médico</h4>
                             <p className="text-slate-500 text-sm mb-4">Accede a tus diagnósticos y recetas anteriores.</p>
                             <Link href="/medicalhistory">
-                                <span className="text-teal-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                <span className="text-blue-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                                     Ver historial <ChevronRight className="w-4 h-4" />
                                 </span>
                             </Link>
                         </div>
 
                         {/* Card 3 */}
-                        <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-100 flex items-center justify-center text-rose-600 mb-4 group-hover:scale-110 transition-transform">
-                                <UserCircle className="w-7 h-7" />
+                        <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                            <div className="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600 mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <CircleUser className="w-7 h-7" />
                             </div>
                             <h4 className="text-lg font-bold text-slate-800 mb-2">Mi Perfil</h4>
                             <p className="text-slate-500 text-sm mb-4">Actualiza tus datos personales y de contacto.</p>
                             <Link href="/profile">
-                                <span className="text-rose-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                <span className="text-amber-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                                     Configurar <ChevronRight className="w-4 h-4" />
                                 </span>
                             </Link>
@@ -158,7 +158,10 @@ export default function HomePatient() {
                                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                             <div>
                                                 <div className="flex items-center gap-2 mb-1">
-                                                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${index === 0 ? "bg-amber-100 text-amber-700" : "bg-slate-100 text-slate-600"}`}>
+                                                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${index === 0
+                                                        ? "bg-amber-100 text-amber-700"
+                                                        : "bg-teal-50 text-teal-700"
+                                                        }`}>
                                                         {index === 0 ? "Próxima" : "Programada"}
                                                     </span>
                                                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Id: #{appointment.id?.toString().slice(-4) || '---'}</span>
@@ -166,11 +169,11 @@ export default function HomePatient() {
                                                 <h4 className="font-bold text-slate-800 text-lg group-hover:text-cyan-700 transition-colors">Cita de Especialidad</h4>
                                                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
                                                     <p className="text-slate-500 text-sm flex items-center gap-1.5 font-medium">
-                                                        <Clock className="w-4 h-4 text-cyan-500" />
+                                                        <Clock className="w-4 h-4 text-teal-500" />
                                                         {appointment.displayTime} hrs
                                                     </p>
                                                     <p className="text-slate-500 text-sm flex items-center gap-1.5 font-medium">
-                                                        <UserCircle className="w-4 h-4 text-cyan-500" />
+                                                        <CircleUser className="w-4 h-4 text-teal-500" />
                                                         Dr. {appointment.professional?.first_name} {appointment.professional?.last_name}
                                                     </p>
                                                 </div>
@@ -186,11 +189,11 @@ export default function HomePatient() {
                         ) : (
                             <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 border border-dashed border-slate-200 text-center animate-fade-in">
                                 <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-300">
-                                    <CalendarDays className="w-8 h-8" />
+                                    <CalendarClock className="w-8 h-8" />
                                 </div>
                                 <h4 className="text-slate-800 font-bold text-lg mb-1">Sin citas próximas</h4>
                                 <p className="text-slate-500 text-sm mb-6 max-w-xs mx-auto">Cuando agendes una nueva cita médica, aparecerá aquí detallada.</p>
-                                <Link href="/scheduleappointment" className="inline-flex items-center gap-2 bg-cyan-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-cyan-700 transition-all shadow-md shadow-cyan-100">
+                                <Link href="/scheduleappointment" className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-teal-700 transition-all shadow-md shadow-teal-100">
                                     Agendar ahora
                                 </Link>
                             </div>

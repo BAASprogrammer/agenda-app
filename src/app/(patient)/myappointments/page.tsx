@@ -6,22 +6,17 @@ import { supabase } from "@/lib/supabaseClient";
 import { getStatusColor } from "@/utils/getStatusColor";
 import DoctorProfileModal from "@/components/patient/DoctorProfileModal";
 import {
-    CalendarDays,
-    HeartPulse,
-    FileText,
-    UserCircle,
-    LogOut,
+    CalendarClock,
+    NotepadText,
+    CircleUser,
     ChevronLeft,
     Clock,
     Filter,
     Search,
     MoreVertical,
     X,
-    Calendar,
-    MapPin,
+    CalendarDays,
     Trash2,
-    Video,
-    MessageSquare,
     User,
     CheckCircle2,
     AlertCircle
@@ -130,10 +125,10 @@ export default function MyAppointments() {
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-cyan-50/80 to-transparent -z-10"></div>
+                <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-teal-50/70 to-transparent -z-10"></div>
                 <header className="px-8 py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in">
                     <div>
-                        <Link href="/homepatient" className="text-cyan-600 flex items-center gap-1 text-sm font-bold mb-2 hover:gap-2 transition-all">
+                        <Link href="/home/patient" className="text-teal-600 flex items-center gap-1 text-sm font-bold mb-2 hover:gap-2 transition-all">
                             <ChevronLeft className="w-4 h-4" /> Volver al inicio
                         </Link>
                         <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight">Mis Citas Médicas</h1>
@@ -145,7 +140,7 @@ export default function MyAppointments() {
                             <input
                                 type="text"
                                 placeholder="Buscar doctor..."
-                                className="pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none transition-all w-64" onChange={searchProfessional} value={searchTerm}
+                                className="pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all w-64" onChange={searchProfessional} value={searchTerm}
                             />
                         </div>
                     </div>
@@ -159,7 +154,7 @@ export default function MyAppointments() {
                                 key={status}
                                 onClick={() => setFilter(status)}
                                 className={`px-6 py-2.5 rounded-xl text-sm font-bold capitalize transition-all ${filter === status
-                                    ? 'bg-white text-cyan-600 shadow-sm'
+                                    ? 'bg-white text-teal-600 shadow-sm'
                                     : 'text-slate-500 hover:text-slate-700'
                                     }`}
                             >
@@ -179,8 +174,8 @@ export default function MyAppointments() {
                                     style={{ animationDelay: `${index * 0.1}s` }}
                                 >
                                     {/* Date Badge */}
-                                    <div className="w-20 h-20 bg-linear-to-br from-cyan-50 to-blue-50 rounded-3xl flex flex-col items-center justify-center shrink-0 border border-white shadow-inner group-hover:from-cyan-100 group-hover:to-blue-100 transition-colors">
-                                        <span className="text-xs font-black text-cyan-600 uppercase tracking-tighter">
+                                    <div className="w-20 h-20 bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl flex flex-col items-center justify-center shrink-0 border border-white shadow-inner group-hover:from-teal-100 group-hover:to-blue-100 transition-colors">
+                                        <span className="text-xs font-black text-teal-600 uppercase tracking-tighter">
                                             {appointment.displayMonth}
                                         </span>
                                         <span className="text-3xl font-black text-slate-800 leading-none">
@@ -198,14 +193,14 @@ export default function MyAppointments() {
                                         <h4 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-cyan-700 transition-colors">Dr. {appointment.professional?.first_name} {appointment.professional?.last_name}</h4>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                             <div className="flex items-center gap-3 text-slate-600 font-medium text-sm">
-                                                <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-cyan-500">
+                                                <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-teal-500">
                                                     <Clock className="w-4 h-4" />
                                                 </div>
                                                 <span>{appointment.displayTime} hrs</span>
                                             </div>
                                             <div className="flex items-center gap-3 text-slate-600 font-medium text-sm">
-                                                <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-cyan-500">
-                                                    <FileText className="w-4 h-4" />
+                                                <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-teal-500">
+                                                    <NotepadText className="w-4 h-4" />
                                                 </div>
                                                 <span className="truncate max-w-[200px]">{appointment.reason || "Consulta general"}</span>
                                             </div>
@@ -222,7 +217,7 @@ export default function MyAppointments() {
                                         <div className="relative">
                                             <button
                                                 onClick={() => setOpenMenuId(openMenuId === appointment.id ? null : appointment.id)}
-                                                className={`p-3 border rounded-2xl transition-all active:scale-90 ${openMenuId === appointment.id ? 'bg-cyan-50 border-cyan-200 text-cyan-600' : 'bg-white border-slate-200 text-slate-400 hover:bg-slate-50 hover:text-slate-800'}`}
+                                                className={`p-3 border rounded-2xl transition-all active:scale-90 ${openMenuId === appointment.id ? 'bg-teal-50 border-teal-200 text-teal-600' : 'bg-white border-slate-200 text-slate-400 hover:bg-slate-50 hover:text-slate-800'}`}
                                             >
                                                 <MoreVertical className="w-5 h-5" />
                                             </button>
@@ -259,14 +254,13 @@ export default function MyAppointments() {
                                                                 </div>
                                                             ) : (
                                                                 <>
-                                                                    <button
-                                                                        className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left"
+                                                                    <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-2xl transition-colors text-left"
                                                                         onClick={() => {
                                                                             setSelectedDoctor(appointment.professional);
                                                                             setIsDoctorProfileOpen(true);
                                                                         }}
                                                                     >
-                                                                        <User className="w-4 h-4 text-cyan-500" /> Ver Perfil Doctor
+                                                                        <User className="w-4 h-4 text-teal-500" /> Ver Perfil Doctor
                                                                     </button>
                                                                     {(filter === 'agendada' || filter === 'todas') && appointment.status === 'agendada' && (
                                                                         <div>
@@ -296,7 +290,7 @@ export default function MyAppointments() {
                                 <p className="text-slate-500 mb-8 max-w-xs mx-auto">No tienes citas que coincidan con el filtro seleccionado.</p>
                                 <button
                                     onClick={() => setFilter('todas')}
-                                    className="bg-cyan-600 text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-cyan-700 transition-all shadow-lg shadow-cyan-100"
+                                    className="bg-teal-600 text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-teal-700 transition-all shadow-lg shadow-teal-100"
                                 >
                                     Ver todas las citas
                                 </button>
@@ -306,7 +300,7 @@ export default function MyAppointments() {
                             <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-100 animate-fade-in-up">
                                 <div className="bg-white/90 backdrop-blur-2xl border border-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] rounded-[2.5rem] p-6 flex flex-col gap-4 min-w-[350px]">
                                     <div className="flex items-center gap-4">
-                                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${message.toLowerCase().includes('error') ? 'bg-rose-50 text-rose-500' : 'bg-cyan-50 text-cyan-600'
+                                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${message.toLowerCase().includes('error') ? 'bg-rose-50 text-rose-500' : 'bg-teal-50 text-teal-600'}
                                             }`}>
                                             <CheckCircle2 className="w-6 h-6" />
                                         </div>
