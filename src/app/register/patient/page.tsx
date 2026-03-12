@@ -3,9 +3,7 @@ import { useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { User, Mail, Lock, Phone, ArrowRight, Activity, CalendarClock, ShieldCheck } from "lucide-react";
-import { useUser } from "@/context/UserContext";
-
+import { User, Mail, Lock, Phone, ArrowRight, CalendarClock, ShieldCheck, Stethoscope } from "lucide-react";
 import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
 
@@ -95,7 +93,7 @@ export default function PatientRegistration() {
 
                 <div className="max-w-md w-full mx-auto">
                     <Link href="/" className="inline-flex items-center gap-2 text-teal-600 font-bold mb-8 hover:text-teal-700 transition-colors group">
-                        <Activity className="w-6 h-6 text-teal-500 group-hover:scale-110 transition-transform" />
+                        <Stethoscope className="w-6 h-6 text-teal-500 group-hover:scale-110 transition-transform" />
                         AgendaApp
                     </Link>
 
@@ -145,7 +143,7 @@ export default function PatientRegistration() {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-slate-700 mb-1.5">Teléfono (opcional)</label>
+                            <label className="block text-sm font-bold text-slate-700 mb-1.5">Teléfono</label>
                             <div className="relative">
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
                                     <Phone className="w-5 h-5" />

@@ -212,7 +212,7 @@ export default function ProfessionalRegistration() {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-slate-700 mb-1.5">Teléfono (opcional)</label>
+                            <label className="block text-sm font-bold text-slate-700 mb-1.5">Teléfono</label>
                             <div className="relative">
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
                                     <Phone className="w-5 h-5" />

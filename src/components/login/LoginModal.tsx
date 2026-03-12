@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { supabase } from '../../lib/supabaseClient';
 import { useRouter } from 'next/navigation';
-import { X, Mail, Lock, ArrowRight, Activity } from 'lucide-react';
+import { X, Mail, Lock, ArrowRight, Activity, Stethoscope } from 'lucide-react';
 
 interface LoginModalProps {
     open: boolean;
@@ -16,6 +16,7 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isforgetPassword, setIsForgetPassword] = useState(false);
 
     // If modal is not open, render nothing
     if (!open) return null;
@@ -112,7 +113,7 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
                 {/* Header */}
                 <div className="text-center mb-8 mt-2">
                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 mb-5 shadow-inner">
-                        <Activity className="w-7 h-7" />
+                        <Stethoscope className="w-7 h-7" />
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Iniciar Sesión</h2>
                     <p className="text-slate-500 font-medium text-[15px]">Accede a tu cuenta segura de AgendaApp.</p>

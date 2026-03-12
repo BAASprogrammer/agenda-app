@@ -1,6 +1,6 @@
-import { CalendarClock, NotepadText, LayoutDashboard, LogOut, CircleUser, HeartPulse } from "lucide-react";
+import { CalendarClock, NotepadText, LayoutDashboard, LogOut, CircleUser, HeartPulse, Menu } from "lucide-react";
 import Link from "next/link";
-import { useLogout } from "@/hooks/useLogout";
+import { useState } from "react";
 
 interface ProSidebarPatientProps {
     active: "/home/patient" | "/medicalhistory" | "/myappointments" | "/profile";
@@ -14,11 +14,15 @@ const NAV_ITEMS = [
 ] as const;
 
 export default function ProSidebarPatient({ active }: ProSidebarPatientProps) {
-    const handleLogout = useLogout();
+    const [open, setOpen] = useState(false);
+    console.log("open", open);
 
     return (
         <div>
-            <aside className="w-full h-full md:w-64 bg-white border-r border-slate-100 flex flex-col z-20 animate-slide-in-left">
+            <div className="block md:hidden absolute top-20 right-5 z-61 w-8 h-8 bg-teal-500 rounded">
+                <Menu className="w-6 h-6 m-auto mt-1 group-hover:scale-110 transition-transform cursor-pointer text-white" onClick={() => setOpen(!open)} />
+            </div>
+            <aside className={`absolute md:block right-4 md:right-0 top-28 md:top-0 h-1/2 w-1/2 md:static md:h-full md:w-64 bg-white md:border-r md:border-slate-100 rounded-lg md:rounded-none border-2 border-slate-200 flex flex-col z-20 animate-slide-in-left ${open ? "translate-x-0 opacity-100" : "translate-x-full hidden md:translate-x-0 md:opacity-100"}`}>
                 {/* Header */}
                 <div className="p-6 border-b border-slate-100 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-600 to-teal-400 flex items-center justify-center shadow-md shadow-teal-200/60 hover:scale-105 transition-transform duration-300">
@@ -52,17 +56,6 @@ export default function ProSidebarPatient({ active }: ProSidebarPatientProps) {
                         );
                     })}
                 </nav>
-
-                {/* Logout */}
-                <div className="p-3 border-t border-slate-100">
-                    <button
-                        onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-rose-50 hover:text-rose-600 rounded-xl font-semibold text-sm transition-all duration-200"
-                    >
-                        <LogOut className="w-5 h-5" aria-hidden="true" />
-                        Cerrar Sesión
-                    </button>
-                </div>
             </aside>
         </div>
     );

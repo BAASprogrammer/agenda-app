@@ -72,9 +72,6 @@ export default function Home() {
                         <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight">Panel Profesional</h1>
                         <p className="text-slate-500 mt-1 font-medium">Bienvenido, Dr. {user.firstName} {user.lastName}</p>
                     </div>
-                    <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center shadow-sm hover:ring-2 hover:ring-blue-200 transition-all cursor-pointer hover:scale-105 duration-300">
-                        <Stethoscope className="w-6 h-6 text-blue-600" />
-                    </div>
                 </header>
 
                 {/* Dashboard Content */}
