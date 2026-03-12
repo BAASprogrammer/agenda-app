@@ -14,15 +14,16 @@ import {
     Clock
 } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+interface Specialty { id: string; name: string; }
+interface SubSpecialty { id: string; name: string; specialty_id: string; }
+interface Professional { id: string; first_name: string; last_name: string; }
 
 export default function ScheduleAppointment() {
-    const router = useRouter();
     const [isScheduleAppointmentOpen, setIsScheduleAppointmentOpen] = useState<boolean>(false);
-    const [specialties, setSpecialties] = useState<any[]>([]);
-    const [subSpecialties, setSubSpecialties] = useState<any[]>([]);
-    const [professionals, setProfessionals] = useState<any[]>([]);
+    const [specialties, setSpecialties] = useState<Specialty[]>([]);
+    const [subSpecialties, setSubSpecialties] = useState<SubSpecialty[]>([]);
+    const [professionals, setProfessionals] = useState<Professional[]>([]);
     const [selectedSpecialty, setSelectedSpecialty] = useState<string>("");
     const [selectedSubSpecialty, setSelectedSubSpecialty] = useState<string>("");
     const [message, setMessage] = useState<string>("");
@@ -65,9 +66,7 @@ export default function ScheduleAppointment() {
     };
     const handleSubSpecialtyChange = async (subspecialty_id: string) => {
         setSelectedSubSpecialty(subspecialty_id);
-        console.log("subspecialty_id", subspecialty_id);
         if (subspecialty_id) {
-            console.log("subspecialty_id 2", subspecialty_id);
 
             const { data, error } = await supabase.from('users').select('first_name, last_name, id').eq('is_professional', true).eq('subspecialty_id', subspecialty_id);
             if (error) {
@@ -75,12 +74,11 @@ export default function ScheduleAppointment() {
                 setProfessionals([]);
             } else {
                 setProfessionals(data);
-                console.log("data professionals", data);
             }
         }
     };
 
-    const handleSubmit = async (e: React.SubmitEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) {

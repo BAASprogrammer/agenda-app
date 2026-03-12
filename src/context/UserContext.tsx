@@ -1,5 +1,5 @@
 "use client";
-import { createContext, use, useContext } from "react";
+import { createContext, useContext } from "react";
 
 export interface UserContextType {
     isLoggedIn: boolean;

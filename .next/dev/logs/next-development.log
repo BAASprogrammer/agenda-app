@@ -1,6 +1,184 @@
-[00:00:00.458] Server  LOG     ✓ Ready in 371ms
-[00:00:02.424] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:02.440] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:20.756] Server  LOG     ✓ Compiled in 284ms
-[00:03:43.365] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:52.952] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.696] Server  LOG     ✓ Ready in 562ms
+[00:00:10.008] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:09.813] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:25.070] Browser ERROR   Error en registro: {"__isAuthError":true,"code":"email_address_invalid","name":"AuthApiError","status":400}
+[00:16:43.931] Browser ERROR   Error en registro: {"__isAuthError":true,"code":"email_address_invalid","name":"AuthApiError","status":400}
+[00:16:56.511] Browser ERROR   Error en registro: {"__isAuthError":true,"code":"over_email_send_rate_limit","name":"AuthApiError","status":429}
+[00:17:00.381] Browser ERROR   Error en registro: {"__isAuthError":true,"code":"over_email_send_rate_limit","name":"AuthApiError","status":429}
+[00:17:07.776] Browser ERROR   Error en registro: {"__isAuthError":true,"code":"over_email_send_rate_limit","name":"AuthApiError","status":429}
+[00:18:01.734] Browser ERROR   Error en registro: {"__isAuthError":true,"code":"over_email_send_rate_limit","name":"AuthApiError","status":429}
+[00:19:43.036] Browser ERROR   Error en registro: {"__isAuthError":true,"code":"over_email_send_rate_limit","name":"AuthApiError","status":429}
+[00:19:51.659] Browser ERROR   Error en registro: {"__isAuthError":true,"code":"over_email_send_rate_limit","name":"AuthApiError","status":429}
+[00:21:40.382] Server  LOG     ✓ Compiled in 45ms
+[00:21:45.783] Server  LOG     ✓ Compiled in 36ms
+[00:25:16.081] Browser LOG     subspecialty_id d96b11ba-5188-4ea5-ac30-627340e6a8e5
+[00:25:16.081] Browser LOG     subspecialty_id 2 d96b11ba-5188-4ea5-ac30-627340e6a8e5
+[00:25:16.310] Browser LOG     data professionals [{"first_name":"Constanza","id":"7515ac96-9808-4c3c-9f5d-2fc4522521be","last_name":"Maldonado Ríos"},{"first_name":"Sebastián","id":"80477a09-42d2-490f-963c-43b4ed59ecf0","last_name":"Riquelme Torres"},{"first_name":"Matías","id":"84872138-7249-42f9-a396-b117b8027873","last_name":"Reyes Bravo"},{"first_name":"Paula","id":"b331a767-bc57-491e-b962-9dfcb7f693af","last_name":"Paredes Soto"},{"first_name":"Daniela","id":"2d52ef3b-c617-40bb-bba3-69dbde9c1892","last_name":"Godoy Castro"}]
+[00:25:17.406] Browser LOG     subspecialty_id dceb4c48-7653-4392-b211-d2309e94544a
+[00:25:17.406] Browser LOG     subspecialty_id 2 dceb4c48-7653-4392-b211-d2309e94544a
+[00:25:17.664] Browser LOG     data professionals [{"first_name":"Ricardo","id":"653688b4-9a51-406c-a0e5-efdac8d2fb75","last_name":"Suarez Gómez"},{"first_name":"Fernanda","id":"70df75d1-b8ab-4907-8934-8aceaad44d19","last_name":"Peña Vargas"},{"first_name":"Pablo","id":"8561d024-cba0-4d05-b93b-b29b4911a22f","last_name":"Muñoz Rojas"},{"first_name":"Valentina","id":"97188969-684d-4068-a8b2-f549e837820a","last_name":"Navarro Díaz"},{"first_name":"Tomás","id":"b66ecee1-4229-41f6-8140-750a966628f0","last_name":"Cáceres Molina"}]
+[00:25:21.170] Browser LOG     subspecialty_id d96b11ba-5188-4ea5-ac30-627340e6a8e5
+[00:25:21.170] Browser LOG     subspecialty_id 2 d96b11ba-5188-4ea5-ac30-627340e6a8e5
+[00:25:21.358] Browser LOG     data professionals [{"first_name":"Constanza","id":"7515ac96-9808-4c3c-9f5d-2fc4522521be","last_name":"Maldonado Ríos"},{"first_name":"Sebastián","id":"80477a09-42d2-490f-963c-43b4ed59ecf0","last_name":"Riquelme Torres"},{"first_name":"Matías","id":"84872138-7249-42f9-a396-b117b8027873","last_name":"Reyes Bravo"},{"first_name":"Paula","id":"b331a767-bc57-491e-b962-9dfcb7f693af","last_name":"Paredes Soto"},{"first_name":"Daniela","id":"2d52ef3b-c617-40bb-bba3-69dbde9c1892","last_name":"Godoy Castro"}]
+[00:25:27.201] Browser LOG     subspecialty_id bce0c017-0b81-487c-91e0-5505e8de4fed
+[00:25:27.201] Browser LOG     subspecialty_id 2 bce0c017-0b81-487c-91e0-5505e8de4fed
+[00:25:27.420] Browser LOG     data professionals [{"first_name":"Carolina","id":"636a45b4-a2dc-45f0-b82b-12da81f686b1","last_name":"Paredes Soto"},{"first_name":"Francisca","id":"6b047688-468d-465c-b4a5-fcc510c11520","last_name":"Maldonado Ríos"},{"first_name":"Diego","id":"7ea24aea-af61-47db-a22c-919278632fd1","last_name":"Reyes Bravo"},{"first_name":"Alejandra","id":"434ed344-94c5-4c06-a809-a7efbb73f747","last_name":"Godoy Castro"},{"first_name":"Esteban","id":"fde9bed9-d7b3-42cd-807a-50aac5f2449f","last_name":"Riquelme Torres"}]
+[00:25:33.586] Browser LOG     subspecialty_id d81c9f4a-be93-43ab-bb19-c0037781b930
+[00:25:33.586] Browser LOG     subspecialty_id 2 d81c9f4a-be93-43ab-bb19-c0037781b930
+[00:25:33.803] Browser LOG     data professionals [{"first_name":"Andrés","id":"02309edd-86ff-46d9-ac8b-5599ddfe026d","last_name":"Ramírez Flores"},{"first_name":"Camila","id":"08477b34-e20e-4b14-9740-f8ba2db8263a","last_name":"Carrasco Vidal"},{"first_name":"Jorge","id":"11bc3340-7c52-4980-afc0-e492bcce8503","last_name":"Contreras Pinto"},{"first_name":"Felipe","id":"dedf944e-cb13-43a4-b992-f4d6b2d3ffad","last_name":"Gutiérrez León"},{"first_name":"María","id":"c3fb98ae-1637-4f2a-a743-ab09015bc9e9","last_name":"Vega Morales"}]
+[00:25:37.128] Browser LOG     subspecialty_id 908f63a8-8873-458e-9017-a9e863483586
+[00:25:37.128] Browser LOG     subspecialty_id 2 908f63a8-8873-458e-9017-a9e863483586
+[00:25:37.361] Browser LOG     data professionals [{"first_name":"Claudia","id":"83ed6ce0-9da5-41f7-8923-dcc29f195af5","last_name":"Godoy Castro"},{"first_name":"Benjamín","id":"ad82bacd-350a-4a2c-aa5a-759ab895b5da","last_name":"Riquelme Torres"},{"first_name":"Isidora","id":"cfeb13b1-e66d-489d-bed8-6914939b7ae3","last_name":"Maldonado Ríos"},{"first_name":"Rodrigo","id":"c2edbde2-8011-4b71-82e4-4e597bb9a070","last_name":"Reyes Bravo"},{"first_name":"Catalina","id":"fed091f2-8557-4b65-a22c-d89ae16c8e1a","last_name":"Paredes Soto"}]
+[00:25:43.444] Browser LOG     subspecialty_id 8493597b-47dc-4a92-ab6b-5155aa3bb77b
+[00:25:43.444] Browser LOG     subspecialty_id 2 8493597b-47dc-4a92-ab6b-5155aa3bb77b
+[00:25:43.654] Browser LOG     data professionals [{"first_name":"Fernanda","id":"12544775-b457-47d4-aa9e-35d159e2c7ad","last_name":"Peña Vargas"},{"first_name":"Tomás","id":"76959472-ec5d-4f4e-8a3d-bd514e073fd8","last_name":"Cáceres Molina"},{"first_name":"Pablo","id":"b4790e01-7ff9-4865-9617-ad570c518441","last_name":"Muñoz Rojas"},{"first_name":"Valentina","id":"3c371988-bf97-4f4b-975e-ca8a8c712442","last_name":"Navarro Díaz"},{"first_name":"Ricardo","id":"ea409251-2b70-4bf2-becb-88c9848e0553","last_name":"Suarez Gómez"}]
+[00:25:47.360] Browser LOG     subspecialty_id 535e635a-bed3-4a49-8b15-15725579a62e
+[00:25:47.360] Browser LOG     subspecialty_id 2 535e635a-bed3-4a49-8b15-15725579a62e
+[00:25:47.575] Browser LOG     data professionals [{"first_name":"Carolina","id":"3c8bd368-88d8-4c43-bc87-0d2359f7fc03","last_name":"Paredes Soto"},{"first_name":"Esteban","id":"6e298136-b828-4701-9003-6beb992369fc","last_name":"Riquelme Torres"},{"first_name":"Francisca","id":"b35b29e4-70e5-410c-b32e-c2aeda55ac4a","last_name":"Maldonado Ríos"},{"first_name":"Diego","id":"d958059f-2bdf-42a9-9a8b-607ec5ca1ded","last_name":"Reyes Bravo"},{"first_name":"Alejandra","id":"fc932b09-7daa-40ee-ba4f-ba9bd9306897","last_name":"Godoy Castro"}]
+[00:25:53.564] Browser LOG     subspecialty_id 868442bf-b406-4723-99ec-e5ff16cca532
+[00:25:53.564] Browser LOG     subspecialty_id 2 868442bf-b406-4723-99ec-e5ff16cca532
+[00:25:53.784] Browser LOG     data professionals [{"first_name":"Diego","id":"5e0f1134-d235-4ccb-b15d-6c0f1ac593bd","last_name":"Herrera Salas"},{"first_name":"Francisca","id":"768a3da1-8519-4975-bd89-2c554b5a9b24","last_name":"Silva Méndez"},{"first_name":"Alejandra","id":"922c6711-f12d-42a7-8ce9-f49a65124c80","last_name":"Araya Fuentes"},{"first_name":"Esteban","id":"24e4520e-4b1c-4f37-8fd5-c71cf7d38628","last_name":"Castro Núñez"},{"first_name":"Carolina","id":"4b2e076e-c936-4e20-a1b1-2aee90f8ca5c","last_name":"Ortega Reyes"}]
+[00:25:57.892] Browser LOG     subspecialty_id 168dc5be-5986-4c0e-b6b6-7ba3f6d9f654
+[00:25:57.892] Browser LOG     subspecialty_id 2 168dc5be-5986-4c0e-b6b6-7ba3f6d9f654
+[00:25:58.122] Browser LOG     data professionals [{"first_name":"Daniela","id":"08882a47-c7b5-4328-9f48-1fb1f64982f2","last_name":"Araya Fuentes"},{"first_name":"Matías","id":"078ec0f3-8d12-42a4-bd4c-b7a911afa64e","last_name":"Herrera Salas"},{"first_name":"Paula","id":"9cd1143d-69d8-4afd-91a3-636c0133ffca","last_name":"Ortega Reyes"},{"first_name":"Sebastián","id":"4129d02e-6f02-44e4-ba83-c0fa73a7a009","last_name":"Castro Núñez"},{"first_name":"Constanza","id":"568c6e2f-75e5-4018-983a-d83da6b1db2a","last_name":"Silva Méndez"}]
+[00:26:04.042] Browser LOG     subspecialty_id ac6b356d-501d-4985-95bc-45df8c07a867
+[00:26:04.042] Browser LOG     subspecialty_id 2 ac6b356d-501d-4985-95bc-45df8c07a867
+[00:26:04.271] Browser LOG     data professionals [{"first_name":"Matías","id":"725fbbcf-2e45-4d8d-b0cf-749861194f6c","last_name":"Herrera Salas"},{"first_name":"Sebastián","id":"7e7d6ad1-0190-44b6-ae03-de74a50052ab","last_name":"Castro Núñez"},{"first_name":"Constanza","id":"9442bacb-735e-4a73-a65a-5eb2b4cfbba2","last_name":"Silva Méndez"},{"first_name":"Daniela","id":"353fdd4e-d702-48b3-a88c-435fb7afcb92","last_name":"Araya Fuentes"},{"first_name":"Paula","id":"d4317b49-0ef0-4567-819f-77efa32679ee","last_name":"Ortega Reyes"}]
+[00:26:08.000] Browser LOG     subspecialty_id 9020324c-c13c-4257-9839-e77a0403551f
+[00:26:08.000] Browser LOG     subspecialty_id 2 9020324c-c13c-4257-9839-e77a0403551f
+[00:26:08.234] Browser LOG     data professionals [{"first_name":"Antonia","id":"586475ca-0f28-4b12-ac52-571ba2507a74","last_name":"Carrasco Vidal"},{"first_name":"Cristian","id":"5aa91cbb-4829-4c62-8f0a-107d28a72ff7","last_name":"Ramírez Flores"},{"first_name":"Ignacio","id":"5d96c650-ad7b-408a-808d-c94f73a214bb","last_name":"Gutiérrez León"},{"first_name":"Paola","id":"96a6aa8a-2559-4889-abeb-d1da85a93d06","last_name":"Vega Morales"},{"first_name":"Mauricio","id":"b8808eb4-f6d3-437a-8e3b-8991e55adbd8","last_name":"Contreras Pinto"}]
+[00:26:16.294] Browser LOG     subspecialty_id 1dc1e7ea-b607-46e2-b5a3-9fda55b318f9
+[00:26:16.294] Browser LOG     subspecialty_id 2 1dc1e7ea-b607-46e2-b5a3-9fda55b318f9
+[00:26:16.527] Browser LOG     data professionals [{"first_name":"Pablo","id":"3742ea3d-fedd-4e49-b6bb-d59f18f98dca","last_name":"Contreras Pinto"},{"first_name":"Ricardo","id":"55a65ad5-7c84-450d-ae0f-91884ca19324","last_name":"Gutiérrez León"},{"first_name":"Fernanda","id":"5dd25e45-d50a-4748-b24c-98d143e67ca5","last_name":"Carrasco Vidal"},{"first_name":"Valentina","id":"7f75eab5-494d-435e-af50-3403f90e6ba1","last_name":"Vega Morales"},{"first_name":"Tomás","id":"93133486-995a-4d99-a803-ff1712a0922d","last_name":"Ramírez Flores"}]
+[00:26:19.821] Browser LOG     subspecialty_id fbd6f28f-e5ff-46c9-b23b-7e2d4d1a8ca1
+[00:26:19.821] Browser LOG     subspecialty_id 2 fbd6f28f-e5ff-46c9-b23b-7e2d4d1a8ca1
+[00:26:20.125] Browser LOG     data professionals [{"first_name":"Diego","id":"5f3eaf15-b52c-4467-a733-e0841d5c69bd","last_name":"Herrera Salas"},{"first_name":"Esteban","id":"aec607f6-23b5-4566-9172-b2e6c784c404","last_name":"Castro Núñez"},{"first_name":"Francisca","id":"03dd90db-644a-47ce-bcf3-89b8e78ac778","last_name":"Silva Méndez"},{"first_name":"Carolina","id":"ca965c44-8c7a-4182-ab32-e95f1273dc3e","last_name":"Ortega Reyes"},{"first_name":"Alejandra","id":"deaf74bc-c93d-412c-96d5-b09c0f7eb1d7","last_name":"Araya Fuentes"}]
+[00:26:24.817] Browser LOG     subspecialty_id 6d15fc5d-d909-4f17-aa9e-a5a6bac5ee90
+[00:26:24.818] Browser LOG     subspecialty_id 2 6d15fc5d-d909-4f17-aa9e-a5a6bac5ee90
+[00:26:25.047] Browser LOG     data professionals [{"first_name":"Sebastián","id":"0959b840-cab6-4bdf-ac1c-2c8c0f7ad7f6","last_name":"Riquelme Torres"},{"first_name":"Paula","id":"9ca13df5-25c2-41eb-a7a6-f415c80eb0ba","last_name":"Paredes Soto"},{"first_name":"Matías","id":"46e651ea-5a5e-499c-8d33-e7dafe97584b","last_name":"Reyes Bravo"},{"first_name":"Constanza","id":"54d8d32d-de64-4c7e-83ed-e703aa6dee0a","last_name":"Maldonado Ríos"},{"first_name":"Daniela","id":"f993cd27-49af-4478-b5a2-0b4a683fbde0","last_name":"Godoy Castro"}]
+[00:26:29.234] Browser LOG     subspecialty_id 673937da-5673-4b77-ba92-20173f61794e
+[00:26:29.234] Browser LOG     subspecialty_id 2 673937da-5673-4b77-ba92-20173f61794e
+[00:26:29.474] Browser LOG     data professionals [{"first_name":"Rodrigo","id":"2b79b989-e439-4956-bcf4-d107479637d4","last_name":"Herrera Salas"},{"first_name":"Claudia","id":"50ff3858-4dcb-4001-b3c3-69e12893b759","last_name":"Araya Fuentes"},{"first_name":"Benjamín","id":"5b39a76b-420a-4002-aa2b-80e85e5de04d","last_name":"Castro Núñez"},{"first_name":"Isidora","id":"a5553604-c796-4ee0-a9cc-a4b2a3949a4d","last_name":"Silva Méndez"},{"first_name":"Catalina","id":"2b0043cb-d65f-442a-9d5b-3666848c393e","last_name":"Ortega Reyes"}]
+[00:26:37.062] Browser LOG     subspecialty_id 54dffa39-b5b3-48ea-88b6-6dc427b5d48b
+[00:26:37.062] Browser LOG     subspecialty_id 2 54dffa39-b5b3-48ea-88b6-6dc427b5d48b
+[00:26:37.294] Browser LOG     data professionals [{"first_name":"Mauricio","id":"30584a43-06f5-4dfe-bc4a-6eed31fec571","last_name":"Muñoz Rojas"},{"first_name":"Antonia","id":"a70c6838-f6a8-4c65-9631-a9df37ce8ba7","last_name":"Peña Vargas"},{"first_name":"Cristian","id":"b14036b1-1752-4add-ab3f-2d8132fcc0a5","last_name":"Cáceres Molina"},{"first_name":"Ignacio","id":"fcca79a5-6a09-4d3e-ac97-491e825feed4","last_name":"Suarez Gómez"},{"first_name":"Paola","id":"fd2470aa-007d-4524-af42-f1849d320771","last_name":"Navarro Díaz"}]
+[00:26:40.996] Browser LOG     subspecialty_id 0f85eeac-1137-495e-b84c-ef2635467aa8
+[00:26:40.996] Browser LOG     subspecialty_id 2 0f85eeac-1137-495e-b84c-ef2635467aa8
+[00:26:41.213] Browser LOG     data professionals [{"first_name":"María","id":"006a1099-d364-41dc-b433-f41bbe90e51d","last_name":"Navarro Díaz"},{"first_name":"Camila","id":"0a4d62db-b1e4-4638-bf51-ffb7361d9f21","last_name":"Peña Vargas"},{"first_name":"Jorge","id":"1793024e-e9a7-4bc0-aac4-707c98a29d73","last_name":"Muñoz Rojas"},{"first_name":"Felipe","id":"8245be5b-c37e-4dbf-9a61-4d667a7f25b5","last_name":"Suarez Gómez"},{"first_name":"Andrés","id":"ff3049e9-ed50-42ab-8dcc-6d3d09b58b94","last_name":"Cáceres Molina"}]
+[00:26:49.579] Browser LOG     subspecialty_id 6cac3e10-3bb5-4f4a-ba24-5f0b4a917876
+[00:26:49.579] Browser LOG     subspecialty_id 2 6cac3e10-3bb5-4f4a-ba24-5f0b4a917876
+[00:26:49.801] Browser LOG     data professionals [{"first_name":"Andrés","id":"41c781ff-9645-45f5-8b89-72d0c299ce60","last_name":"Ramírez Flores"},{"first_name":"Jorge","id":"0cb738ad-ace7-453e-8b7e-a685eb9ad82b","last_name":"Contreras Pinto"},{"first_name":"María","id":"1f4072ec-1c77-4449-adf6-d2140bc48435","last_name":"Vega Morales"},{"first_name":"Felipe","id":"e71c269a-33de-44ce-b739-8c08a9544203","last_name":"Gutiérrez León"},{"first_name":"Camila","id":"ef9a4574-983a-40ee-b6c9-1e9f499f44b4","last_name":"Carrasco Vidal"}]
+[00:26:55.128] Browser LOG     subspecialty_id c4e90924-1742-4741-9502-7dc5e37dc1a6
+[00:26:55.128] Browser LOG     subspecialty_id 2 c4e90924-1742-4741-9502-7dc5e37dc1a6
+[00:26:55.356] Browser LOG     data professionals [{"first_name":"Paola","id":"a85d18db-291b-487d-b8cc-2c197a9a91f8","last_name":"Navarro Díaz"},{"first_name":"Ignacio","id":"0ab8a9a9-8582-44d8-a056-7242b753854d","last_name":"Suarez Gómez"},{"first_name":"Mauricio","id":"0a9b9ce3-6b61-4ac1-871c-2a084a4f6149","last_name":"Muñoz Rojas"},{"first_name":"Cristian","id":"d372d763-489e-40e9-8646-437dd803bfbe","last_name":"Cáceres Molina"},{"first_name":"Antonia","id":"c55ac8c3-9029-4b10-a1ca-28383f8ba1c0","last_name":"Peña Vargas"}]
+[00:27:02.778] Browser LOG     subspecialty_id 980d9a1d-d36a-4f27-9ca1-ad83ea2d042e
+[00:27:02.778] Browser LOG     subspecialty_id 2 980d9a1d-d36a-4f27-9ca1-ad83ea2d042e
+[00:27:03.003] Browser LOG     data professionals [{"first_name":"Felipe","id":"57d1832b-e7cf-4e1f-bda0-eaf1e9045072","last_name":"Suarez Gómez"},{"first_name":"Camila","id":"a4c82afd-c99b-43b7-bcff-bbde83c132db","last_name":"Peña Vargas"},{"first_name":"Andrés","id":"3e99ca51-cdd6-41c9-bef7-a335a2bf4f2f","last_name":"Cáceres Molina"},{"first_name":"Jorge","id":"4b31a456-f329-4749-ac2e-5199e52a8567","last_name":"Muñoz Rojas"},{"first_name":"María","id":"f8b5bd33-4b25-4e83-ac93-fdf378ba95a4","last_name":"Navarro Díaz"}]
+[00:27:10.262] Browser LOG     subspecialty_id d22cc251-eee2-44d4-8e66-baa980c63859
+[00:27:10.262] Browser LOG     subspecialty_id 2 d22cc251-eee2-44d4-8e66-baa980c63859
+[00:27:10.563] Browser LOG     data professionals [{"first_name":"Claudia","id":"970dd532-8ff9-4e90-b278-23af6352d2f9","last_name":"Araya Fuentes"},{"first_name":"Isidora","id":"c25c876c-b0f3-4f05-ac96-bc38d0903b04","last_name":"Silva Méndez"},{"first_name":"Pedro","id":"1862d7cf-c8c7-4cc4-b829-216133709176","last_name":"Fuentes Sánchez"},{"first_name":"Catalina","id":"ca54e23d-0e4f-467f-9612-88ea28c8b1bc","last_name":"Ortega Reyes"},{"first_name":"Benjamín","id":"d7fd32ed-00fc-4618-9f73-791c357879eb","last_name":"Castro Núñez"},{"first_name":"Rodrigo","id":"c78b5b05-61fc-4dc2-b06e-a207c0edaa47","last_name":"Herrera Salas"}]
+[00:30:29.876] Browser LOG     subspecialty_id 980d9a1d-d36a-4f27-9ca1-ad83ea2d042e
+[00:30:29.876] Browser LOG     subspecialty_id 2 980d9a1d-d36a-4f27-9ca1-ad83ea2d042e
+[00:30:30.070] Browser LOG     data professionals [{"first_name":"Felipe","id":"57d1832b-e7cf-4e1f-bda0-eaf1e9045072","last_name":"Suarez Gómez"},{"first_name":"Camila","id":"a4c82afd-c99b-43b7-bcff-bbde83c132db","last_name":"Peña Vargas"},{"first_name":"Andrés","id":"3e99ca51-cdd6-41c9-bef7-a335a2bf4f2f","last_name":"Cáceres Molina"},{"first_name":"Jorge","id":"4b31a456-f329-4749-ac2e-5199e52a8567","last_name":"Muñoz Rojas"},{"first_name":"María","id":"f8b5bd33-4b25-4e83-ac93-fdf378ba95a4","last_name":"Navarro Díaz"}]
+[00:30:31.468] Browser LOG     subspecialty_id d22cc251-eee2-44d4-8e66-baa980c63859
+[00:30:31.468] Browser LOG     subspecialty_id 2 d22cc251-eee2-44d4-8e66-baa980c63859
+[00:30:31.655] Browser LOG     data professionals [{"first_name":"Claudia","id":"970dd532-8ff9-4e90-b278-23af6352d2f9","last_name":"Araya Fuentes"},{"first_name":"Isidora","id":"c25c876c-b0f3-4f05-ac96-bc38d0903b04","last_name":"Silva Méndez"},{"first_name":"Pedro","id":"1862d7cf-c8c7-4cc4-b829-216133709176","last_name":"Fuentes Sánchez"},{"first_name":"Catalina","id":"ca54e23d-0e4f-467f-9612-88ea28c8b1bc","last_name":"Ortega Reyes"},{"first_name":"Benjamín","id":"d7fd32ed-00fc-4618-9f73-791c357879eb","last_name":"Castro Núñez"},{"first_name":"Rodrigo","id":"c78b5b05-61fc-4dc2-b06e-a207c0edaa47","last_name":"Herrera Salas"}]
+[00:32:58.593] Server  LOG     ✓ Compiled in 28ms
+[00:37:43.861] Server  LOG     ✓ Compiled in 29ms
+[00:37:48.308] Server  LOG     ✓ Compiled in 23ms
+[00:38:02.756] Server  LOG     ✓ Compiled in 15ms
+[00:38:12.532] Server  LOG     ✓ Compiled in 26ms
+[00:42:43.843] Server  LOG     ✓ Compiled in 19ms
+[00:43:07.522] Server  LOG     ✓ Compiled in 28ms
+[00:43:53.920] Server  LOG     ✓ Compiled in 26ms
+[00:44:21.732] Server  LOG     ✓ Compiled in 24ms
+[00:54:09.111] Server  LOG     ✓ Compiled in 24ms
+[00:54:09.262] Browser ERROR   ./src/app/(patient)/profile/page.tsx:217:40
+Parsing ecmascript source code failed
+  215 |                                             </button>
+  216 |                                         </div>
+> 217 |                                 </form>
+      |                                        ^
+> 218 |                             </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  219 |                         </div>
+  220 |                     </div>
+  221 |                 </div>
+
+Expected '</', got 'jsx text'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+[00:54:09.377] Browser ERROR   ./src/app/(patient)/profile/page.tsx:217:40
+Parsing ecmascript source code failed
+  215 |                                             </button>
+  216 |                                         </div>
+> 217 |                                 </form>
+      |                                        ^
+> 218 |                             </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  219 |                         </div>
+  220 |                     </div>
+  221 |                 </div>
+
+Expected '</', got 'jsx text'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(patient)/profile/page.tsx [Client Component Browser]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(patient)/profile/page.tsx [Client Component SSR]
+    ./src/app/(patient)/profile/page.tsx [Server Component]
+[01:00:03.024] Server  LOG     ✓ Compiled in 31ms
+[01:02:01.496] Server  LOG     ✓ Compiled in 25ms
+[01:02:26.604] Server  LOG     ✓ Compiled in 36ms
+[01:03:07.643] Server  LOG     ✓ Compiled in 42ms
+[01:03:12.187] Server  LOG     ✓ Compiled in 22ms
+[01:03:15.031] Server  LOG     ✓ Compiled in 20ms
+[01:03:57.966] Server  LOG     ✓ Compiled in 21ms
+[01:04:34.592] Server  LOG     ✓ Compiled in 28ms
+[01:05:00.613] Server  LOG     ✓ Compiled in 63ms
+[01:11:06.055] Server  LOG     ✓ Compiled in 40ms
+[01:11:49.342] Server  LOG     ✓ Compiled in 25ms
+[01:12:23.482] Server  LOG     ✓ Compiled in 22ms
+[01:12:34.810] Server  LOG     ✓ Compiled in 42ms
+[01:16:21.046] Server  LOG     ✓ Compiled in 43ms
+[01:16:54.147] Server  LOG     ✓ Compiled in 30ms
+[01:17:06.164] Server  LOG     ✓ Compiled in 0ms
+[01:17:42.026] Server  LOG     ✓ Compiled in 44ms
+[01:18:08.262] Server  LOG     ✓ Compiled in 20ms
+[01:18:30.930] Server  LOG     ✓ Compiled in 18ms
+[01:19:18.432] Server  LOG     ✓ Compiled in 42ms
+[01:19:52.769] Server  LOG     ✓ Compiled in 30ms
+[01:20:19.219] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:21:28.239] Server  LOG     ✓ Compiled in 17ms
+[01:21:52.121] Server  LOG     ✓ Compiled in 28ms
+[01:22:51.994] Server  LOG     ✓ Compiled in 17ms
+[01:24:04.743] Server  LOG     ✓ Compiled in 21ms
+[01:24:11.532] Server  LOG     ✓ Compiled in 18ms
+[01:24:54.529] Browser ERROR   Error en registro prof: {"code":"23514","details":null,"hint":null,"message":"new row for relation \"users\" violates check constraint \"professional_must_have_subspecialty\""}
+[01:25:23.247] Server  LOG     ✓ Compiled in 17ms
+[01:26:21.900] Server  LOG     ✓ Compiled in 39ms
+[01:29:25.350] Server  LOG     ✓ Compiled in 20ms
+[01:31:05.440] Server  LOG     ✓ Compiled in 19ms
+[01:32:16.133] Server  LOG     ✓ Compiled in 26ms
+[01:32:53.441] Server  LOG     ✓ Compiled in 22ms
+[01:37:47.349] Server  LOG     ✓ Compiled in 24ms
+[01:38:09.139] Server  LOG     ✓ Compiled in 23ms
+[01:38:29.929] Server  LOG     ✓ Compiled in 23ms
+[01:40:21.725] Server  LOG     ✓ Compiled in 19ms
+[01:41:37.087] Server  LOG     ✓ Compiled in 49ms
+[01:44:22.715] Browser ERROR   Error en registro prof: {"code":"23514","details":null,"hint":null,"message":"new row for relation \"users\" violates check constraint \"professional_must_have_subspecialty\""}
+[01:49:30.468] Server  LOG     ✓ Compiled in 61ms
+[01:49:56.173] Server  LOG     ✓ Compiled in 29ms
+[01:50:03.081] Server  LOG     ✓ Compiled in 21ms
+[01:50:11.572] Server  LOG     ✓ Compiled in 23ms
+[01:52:22.872] Browser ERROR   Error en registro prof: {"__isAuthError":true,"code":"user_already_exists","name":"AuthApiError","status":422}

@@ -4,7 +4,7 @@ import { supabase } from "@/lib/supabaseClient";
 // ✅ MEJORA 1: componente compartido, ya no repetimos código
 import ProSidebar from "@/components/professional/ProSidebar";
 import {
-    Calendar, Clock, ChevronLeft, ChevronRight, ClipboardList,
+    Calendar, Clock, ChevronLeft, ChevronRight,
     CheckCircle2, XCircle
 } from "lucide-react";
 import Link from "next/link";

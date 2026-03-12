@@ -1,6 +1,5 @@
 "use client";
 import { useUser } from "@/context/UserContext";
-import { supabase } from "@/lib/supabaseClient";
 // ✅ MEJORA 1: componente compartido
 import ProSidebar from "@/components/professional/ProSidebar";
 import { Stethoscope, Mail, Save, Bell, Shield, ChevronLeft } from "lucide-react";
@@ -22,7 +21,7 @@ export default function ProfessionalSettings() {
     });
 
     useEffect(() => {
-        if (user.userId) {
+        if (user.userId && !formData.firstName && !formData.lastName && !formData.email) {
             setFormData(prev => ({
                 ...prev,
                 firstName: user.firstName || "",
@@ -30,7 +29,7 @@ export default function ProfessionalSettings() {
                 email: user.email || "",
             }));
         }
-    }, [user]);
+    }, [user, formData.firstName, formData.lastName, formData.email]);
 
     const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

@@ -1,9 +1,8 @@
-import React, { use } from "react";
+import React from "react";
 import Header from "@/components/Header";
 import "./globals.css";
 import { cookies } from "next/headers";
 import { UserProvider } from "@/context/UserContext";
-import { redirect } from "next/navigation";
 
 export default async function RootLayout({
   children,

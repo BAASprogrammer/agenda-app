@@ -1,6 +1,5 @@
 import { CalendarClock, NotepadText, LayoutDashboard, LogOut, CircleUser, HeartPulse } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useLogout } from "@/hooks/useLogout";
 
 interface ProSidebarPatientProps {
@@ -15,7 +14,6 @@ const NAV_ITEMS = [
 ] as const;
 
 export default function ProSidebarPatient({ active }: ProSidebarPatientProps) {
-    const router = useRouter();
     const handleLogout = useLogout();
 
     return (

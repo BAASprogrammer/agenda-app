@@ -27,7 +27,6 @@ import { useEffect, useState } from "react";
 export default function MyAppointments() {
     const user = useUser();
     const [appointments, setAppointments] = useState<any[]>([]);
-    const [appointmentsFiltered, setAppointmentsFiltered] = useState<any[]>([]);
     const [filter, setFilter] = useState("todas");
     const [selectedAppointment, setSelectedAppointment] = useState<any | null>(null);
     const [openMenuId, setOpenMenuId] = useState<number | null>(null);

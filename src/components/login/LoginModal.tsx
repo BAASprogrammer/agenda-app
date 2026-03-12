@@ -31,7 +31,8 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
         setLoading(true);
         setError(null);
 
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        const emailTrimmed = email.trim();
+        const { error } = await supabase.auth.signInWithPassword({ email: emailTrimmed, password });
         if (error) {
             setError('Ingrese email y contraseña válidos.');
             setLoading(false);

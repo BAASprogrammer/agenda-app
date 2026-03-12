@@ -8,7 +8,7 @@ export default function AppointmentDetails({ appointment, setSelectedAppointment
     const [isRescheduleModalOpen, setIsRescheduleModalOpen] = useState(false);
     const [isDoctorProfileOpen, setIsDoctorProfileOpen] = useState(false);
 
-    const handleRescheduleSuccess = (newDate: string, newTime: string) => {
+    const handleRescheduleSuccess = () => {
         setSelectedAppointment(null);
     };
 

@@ -48,7 +48,7 @@ export default function Home() {
         }
         fetchAppointments();
     }, [user.userId])
-    const futureAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] >= new Date().toLocaleDateString("en-CA"));
+    const futureAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] >= new Date().toLocaleDateString("en-CA") && appt.status == "agendada");
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
             <ProSidebarPatient active="/home/patient" />

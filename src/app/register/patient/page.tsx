@@ -7,10 +7,10 @@ import { User, Mail, Lock, Phone, ArrowRight, Activity, CalendarClock, ShieldChe
 import { useUser } from "@/context/UserContext";
 
 import { LoginModal } from "@/components/login/LoginModal";
+import { validateRegister } from "@/utils/validateRegister";
 
 export default function PatientRegistration() {
     const router = useRouter();
-    const user = useUser();
 
     const [showLoginModal, setShowLoginModal] = useState(false);
 
@@ -33,13 +33,9 @@ export default function PatientRegistration() {
         e.preventDefault();
         setError(null);
 
-        if (formData.password !== formData.confirmPassword) {
-            setError("Las contraseñas no coinciden");
-            return;
-        }
-
-        if (formData.password.length < 6) {
-            setError("La contraseña debe tener al menos 6 caracteres");
+        const error = validateRegister(formData);
+        if (error) {
+            setError(error);
             return;
         }
 
@@ -47,8 +43,9 @@ export default function PatientRegistration() {
 
         try {
             // 1. Sign up with Supabase Auth
+            const emailTrimmed = formData.email.trim();
             const { data: authData, error: authError } = await supabase.auth.signUp({
-                email: formData.email,
+                email: emailTrimmed,
                 password: formData.password,
             });
 
@@ -61,10 +58,10 @@ export default function PatientRegistration() {
                     .insert([
                         {
                             id: authData.user.id,
-                            first_name: formData.firstName,
-                            last_name: formData.lastName,
-                            email: formData.email,
-                            phone: formData.phone,
+                            first_name: formData.firstName.trim(),
+                            last_name: formData.lastName.trim(),
+                            email: emailTrimmed,
+                            phone: formData.phone.trim(),
                             is_professional: false
                         }
                     ]);
@@ -72,9 +69,9 @@ export default function PatientRegistration() {
                 if (dbError) throw dbError;
 
                 // 3. Set cookies just like LoginModal to establish session
-                document.cookie = `first_name=${encodeURIComponent(formData.firstName)}; path=/;`;
-                document.cookie = `last_name=${encodeURIComponent(formData.lastName)}; path=/;`;
-                document.cookie = `email=${encodeURIComponent(formData.email)}; path=/;`;
+                document.cookie = `first_name=${encodeURIComponent(formData.firstName.trim())}; path=/;`;
+                document.cookie = `last_name=${encodeURIComponent(formData.lastName.trim())}; path=/;`;
+                document.cookie = `email=${encodeURIComponent(emailTrimmed)}; path=/;`;
                 document.cookie = `user_id=${authData.user.id}; path=/;`;
                 document.cookie = `is_professional=false; path=/;`;
 
@@ -218,7 +215,7 @@ export default function PatientRegistration() {
             </div>
 
             {/* Right Column - Presentation */}
-            <div className="hidden lg:flex w-1/2 bg-teal-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tl-[50%] rounded-bl-[50%]">
+            <div className="hidden lg:flex w-1/2 bg-teal-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tl-[50%] rounded-bl-[50%] transition-all ease-in-out duration-300 hover:rounded-tl-[30%] hover:rounded-bl-[30%]">
                 <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
                 <div className="absolute bottom-[-10%] right-[-10%] w-[35rem] h-[35rem] bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
 

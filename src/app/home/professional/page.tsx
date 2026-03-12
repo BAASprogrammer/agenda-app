@@ -3,7 +3,7 @@ import ProSidebar from "@/components/professional/ProSidebar";
 import { useUser } from "@/context/UserContext";
 import { supabase } from "@/lib/supabaseClient";
 import {
-    Calendar, Users, ClipboardList, BarChart2,
+    Calendar, Users, ClipboardList,
     Clock, ChevronRight, Stethoscope
 } from "lucide-react";
 import Link from "next/link";
@@ -146,7 +146,7 @@ export default function Home() {
                                 </Link>
                             </div>
                             <div className="space-y-3">
-                                {upcomingAppts.length > 0 ? upcomingAppts.map((appt, i) => (
+                                {upcomingAppts.length > 0 ? upcomingAppts.map((appt) => (
                                     <div key={appt.id} className="group flex items-center p-3 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 cursor-pointer">
                                         <div className="w-16 text-center">
                                             <span className="block text-sm font-black text-slate-700">{appt.displayTime}</span>

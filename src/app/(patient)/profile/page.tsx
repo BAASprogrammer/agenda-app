@@ -11,7 +11,6 @@ import {
     Bell,
     Save
 } from "lucide-react";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Profile() {
@@ -35,7 +34,7 @@ export default function Profile() {
                     .eq("id", user.userId)
                     .single();
                 if (error) {
-                    console.error("Error fetching patient data:", error);
+                    console.error("Error obteniendo datos del paciente:", error);
                 }
                 setFormData({
                     first_name: user.firstName || "",
@@ -54,16 +53,20 @@ export default function Profile() {
         e.preventDefault();
         setLoading(true);
         setMessage("");
-
+        if (formData.phone.trim().replace(/\s/g, '').length !== 12 || !formData.phone.trim().match(/^\+[0-9]+$/)) {
+            setMessage("Por favor, ingrese un número de teléfono válido");
+            setLoading(false);
+            return;
+        }
         const { error } = await supabase
             .from("users")
             .update(formData)
             .eq("id", user.userId);
 
         if (error) {
-            setMessage("Error updating profile, please contact us");
+            setMessage("Error actualizando perfil, por favor contáctanos");
         } else {
-            setMessage("Profile updated successfully");
+            setMessage("Perfil actualizado correctamente");
         }
 
         setLoading(false);
@@ -194,8 +197,8 @@ export default function Profile() {
                                         </div>
                                     </div>
 
-                                    <div className="pt-6 flex items-center justify-between">
-                                        <p className={`text-sm font-bold transition-all ${message &&
+                                    <div className="pt-6 flex items-center justify-between sm:flex-row flex-col">
+                                        <p className={`text-sm font-bold transition-all lg:w-1/2 w-full mb-4 sm:mb-0 ${message &&
                                             (message.toLowerCase().includes("error") ? 'text-red-500 opacity-100' : 'text-emerald-500 opacity-100')}`}>
                                             {message}
                                         </p>
