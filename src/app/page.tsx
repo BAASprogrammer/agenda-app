@@ -1,10 +1,6 @@
 'use client';
 import { useState } from "react";
-import {
-  ArrowRight, CalendarClock, Clock, ShieldCheck, Stethoscope, Star,
-  HeartPulse, Brain, Baby, Sparkles, Eye, Smile, Activity,
-  BrainCircuit, BicepsFlexed, Venus, Search, ChevronRight, BrainCog
-} from "lucide-react";
+import { ArrowRight, Stethoscope, Star, Search, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import SpecialistsModal from "@/components/patient/SpecialistsModal";
 import { features } from "@/data/features";

@@ -1,6 +1,6 @@
 "use client";
 import ProSidebar from "@/components/professional/ProSidebar";
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
 import {
     Calendar, Users, ClipboardList,
@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-    const user = useUser();
+    const user = useUserStore();
     const [todayCount, setTodayCount] = useState(0);
     const [patientCount, setPatientCount] = useState(0);
     const [upcomingAppts, setUpcomingAppts] = useState<any[]>([]);

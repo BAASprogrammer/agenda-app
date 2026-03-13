@@ -20,8 +20,56 @@
           "exportedName": "clearAuthCookies",
           "filename": "src/app/actions.ts"
         },
+        "app/(professional)/manageappointments/page": {
+          "moduleId": "[project]/.next-internal/server/app/(professional)/manageappointments/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/(professional)/schedule/page": {
+          "moduleId": "[project]/.next-internal/server/app/(professional)/schedule/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/about/page": {
+          "moduleId": "[project]/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/contact/page": {
+          "moduleId": "[project]/.next-internal/server/app/contact/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
         "app/home/patient/page": {
           "moduleId": "[project]/.next-internal/server/app/home/patient/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/home/professional/page": {
+          "moduleId": "[project]/.next-internal/server/app/home/professional/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/register/patient/page": {
+          "moduleId": "[project]/.next-internal/server/app/register/patient/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/register/professional/page": {
+          "moduleId": "[project]/.next-internal/server/app/register/professional/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "clearAuthCookies",
           "filename": "src/app/actions.ts"
@@ -31,7 +79,15 @@
         "app/(patient)/medicalhistory/page": "action-browser",
         "app/(patient)/myappointments/page": "action-browser",
         "app/(patient)/profile/page": "action-browser",
-        "app/home/patient/page": "action-browser"
+        "app/(professional)/manageappointments/page": "action-browser",
+        "app/(professional)/schedule/page": "action-browser",
+        "app/about/page": "action-browser",
+        "app/contact/page": "action-browser",
+        "app/home/patient/page": "action-browser",
+        "app/home/professional/page": "action-browser",
+        "app/page": "action-browser",
+        "app/register/patient/page": "action-browser",
+        "app/register/professional/page": "action-browser"
       },
       "filename": "src/app/actions.ts",
       "exportedName": "clearAuthCookies"
@@ -56,8 +112,56 @@
           "exportedName": "setAuthCookies",
           "filename": "src/app/actions.ts"
         },
+        "app/(professional)/manageappointments/page": {
+          "moduleId": "[project]/.next-internal/server/app/(professional)/manageappointments/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/(professional)/schedule/page": {
+          "moduleId": "[project]/.next-internal/server/app/(professional)/schedule/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/about/page": {
+          "moduleId": "[project]/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/contact/page": {
+          "moduleId": "[project]/.next-internal/server/app/contact/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
         "app/home/patient/page": {
           "moduleId": "[project]/.next-internal/server/app/home/patient/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/home/professional/page": {
+          "moduleId": "[project]/.next-internal/server/app/home/professional/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/register/patient/page": {
+          "moduleId": "[project]/.next-internal/server/app/register/patient/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/register/professional/page": {
+          "moduleId": "[project]/.next-internal/server/app/register/professional/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "setAuthCookies",
           "filename": "src/app/actions.ts"
@@ -67,7 +171,15 @@
         "app/(patient)/medicalhistory/page": "action-browser",
         "app/(patient)/myappointments/page": "action-browser",
         "app/(patient)/profile/page": "action-browser",
-        "app/home/patient/page": "action-browser"
+        "app/(professional)/manageappointments/page": "action-browser",
+        "app/(professional)/schedule/page": "action-browser",
+        "app/about/page": "action-browser",
+        "app/contact/page": "action-browser",
+        "app/home/patient/page": "action-browser",
+        "app/home/professional/page": "action-browser",
+        "app/page": "action-browser",
+        "app/register/patient/page": "action-browser",
+        "app/register/professional/page": "action-browser"
       },
       "filename": "src/app/actions.ts",
       "exportedName": "setAuthCookies"

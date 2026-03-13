@@ -5,17 +5,18 @@ import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { User, Mail, Lock, Phone, ArrowRight, Activity, Stethoscope } from "lucide-react";
-import { useUser } from "@/context/UserContext";
+import { useMutation, useQuery } from "@tanstack/react-query";
 
 import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
+import { ProfessionalFormData } from "@/types/professional-form-data";
+import { useUserStore } from "@/store/userStore";
 
 export default function ProfessionalRegistration() {
     const router = useRouter();
-
-    const [showLoginModal, setShowLoginModal] = useState(false);
-
-    const [formData, setFormData] = useState({
+    const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
+    const setUser = useUserStore((state) => state.setUser);
+    const [formData, setFormData] = useState<ProfessionalFormData>({
         firstName: "",
         lastName: "",
         email: "",
@@ -27,41 +28,78 @@ export default function ProfessionalRegistration() {
         specialtyId: "",
         subspecialtyId: ""
     });
-    const [specialties, setSpecialties] = useState<any[]>([]);
-    const [subSpecialties, setSubSpecialties] = useState<any[]>([]);
-    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        const fetchSpecialties = async () => {
-            const { data, error } = await supabase.from('medical_specialties').select('*');
-            if (error) {
-                console.error('Error al obtener las especialidades:', error);
-            } else {
-                setSpecialties(data || []);
-            }
-        };
-        fetchSpecialties();
-    }, []);
+    const { data: specialties = [] } = useQuery({
+        queryKey: ['medical-specialties'],
+        queryFn: async () => {
+            const { data } = await supabase.from('medical_specialties').select('*');
+            return data || [];
+        }
+    });
+    const { data: subspecialties = [] } = useQuery({
+        queryKey: ['medical-subspecialties', formData.specialtyId],
+        enabled: !!formData.specialtyId,
+        queryFn: async () => {
+            const { data } = await supabase.from('medical_subspecialties').select('*').eq('specialty_id', formData.specialtyId);
+            return data || [];
+        }
+    });
+
+    const { mutate: register, isPending } = useMutation({
+        mutationFn: async (formData: any) => {
+            const emailTrimmed = formData.email.trim();
+            const { data: authData, error: authError } = await supabase.auth.signUp({
+                email: emailTrimmed,
+                password: formData.password,
+            });
+
+            if (authError) throw authError;
+
+            const { error: dbError } = await supabase
+                .from('users')
+                .insert([
+                    {
+                        id: authData.user?.id,
+                        first_name: formData.firstName.trim(),
+                        last_name: formData.lastName.trim(),
+                        email: emailTrimmed,
+                        phone: formData.phone.trim(),
+                        is_professional: true, // Mark as professional
+                        subspecialty_id: formData.subspecialtyId
+                    }
+                ]);
+            if (dbError) throw dbError;
+            await setAuthCookies({
+                firstName: formData.firstName.trim(),
+                lastName: formData.lastName.trim(),
+                email: emailTrimmed,
+                userId: authData.user!.id,
+                isProfessional: "true"
+            });
+            return authData;
+        },
+        onSuccess: (authData) => {
+            setUser({
+                isLoggedIn: true,
+                firstName: formData.firstName.trim(),
+                lastName: formData.lastName.trim(),
+                email: formData.email.trim(),
+                userId: authData.user?.id,
+                isProfessional: "true"
+            });
+            router.replace("/home/professional");
+            router.refresh();
+        },
+        onError: (err) => {
+            console.error("Error en registro prof:", err);
+            setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
+        }
+    })
 
     const handleSpecialtyChange = async (specialtyId: string) => {
         setFormData(prev => ({ ...prev, specialtyId, subspecialtyId: "" }));
-        if (specialtyId) {
-            const { data, error } = await supabase
-                .from('medical_subspecialties')
-                .select('*')
-                .eq('specialty_id', specialtyId);
-            if (error) {
-                console.error('Error al obtener las subespecialidades:', error);
-                setSubSpecialties([]);
-            } else {
-                setSubSpecialties(data || []);
-            }
-        } else {
-            setSubSpecialties([]);
-        }
-    };
-
+    }
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -74,56 +112,8 @@ export default function ProfessionalRegistration() {
             setError(error);
             return;
         }
-        setLoading(true);
-
-        try {
-            // 1. Sign up with Supabase Auth
-            const emailTrimmed = formData.email.trim();
-            const { data: authData, error: authError } = await supabase.auth.signUp({
-                email: emailTrimmed,
-                password: formData.password,
-            });
-
-            if (authError) throw authError;
-
-            // 2. Insert into public.users table manually
-            if (authData.user) {
-                const { error: dbError } = await supabase
-                    .from('users')
-                    .insert([
-                        {
-                            id: authData.user.id,
-                            first_name: formData.firstName.trim(),
-                            last_name: formData.lastName.trim(),
-                            email: emailTrimmed,
-                            phone: formData.phone.trim(),
-                            is_professional: true, // Mark as professional
-                            subspecialty_id: formData.subspecialtyId
-                        }
-                    ]);
-
-                if (dbError) throw dbError;
-
-                // 3. Set cookies using Next.js Server Action
-                await setAuthCookies({
-                    firstName: formData.firstName.trim(),
-                    lastName: formData.lastName.trim(),
-                    email: emailTrimmed,
-                    userId: authData.user.id,
-                    isProfessional: "true"
-                });
-
-                // 4. Redirect
-                router.replace("/home/professional");
-                router.refresh();
-            }
-        } catch (err: any) {
-            console.error("Error en registro prof:", err);
-            setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
-        } finally {
-            setLoading(false);
-        }
-    };
+        register(formData);
+    }
 
     return (
         <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800">
@@ -254,7 +244,7 @@ export default function ProfessionalRegistration() {
                                     className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium disabled:opacity-50"
                                 >
                                     <option value="">Seleccionar...</option>
-                                    {subSpecialties.map(s => (
+                                    {subspecialties.map((s: any) => (
                                         <option key={s.id} value={s.id}>{s.name}</option>
                                     ))}
                                 </select>
@@ -331,11 +321,11 @@ export default function ProfessionalRegistration() {
 
                         <button
                             type="submit"
-                            disabled={loading}
+                            disabled={isPending}
                             className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 disabled:opacity-70 mt-6"
                         >
-                            {loading ? "Creando cuenta..." : "Comenzar Gratis"}
-                            {!loading && <ArrowRight className="w-5 h-5" />}
+                            {isPending ? "Creando cuenta..." : "Comenzar Gratis"}
+                            {!isPending && <ArrowRight className="w-5 h-5" />}
                         </button>
                     </form>
 

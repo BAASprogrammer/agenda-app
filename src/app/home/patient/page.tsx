@@ -1,14 +1,14 @@
 "use client";
 import AppointmentDetails from "@/components/patient/AppointmentDetails";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
 import { CalendarClock, NotepadText, CircleUser, ChevronRight, Clock } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-    const user = useUser();
+    const user = useUserStore();
     const [appointments, setAppointments] = useState<any[]>([]);
     const [selectedAppointment, setSelectedAppointment] = useState<any>(null);
 

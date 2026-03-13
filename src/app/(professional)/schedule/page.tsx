@@ -1,5 +1,5 @@
 "use client";
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
 // ✅ MEJORA 1: componente compartido, ya no repetimos código
 import ProSidebar from "@/components/professional/ProSidebar";
@@ -29,7 +29,7 @@ interface ScheduleAppointment {
 }
 
 export default function Schedule() {
-    const user = useUser();
+    const user = useUserStore();
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [appointments, setAppointments] = useState<ScheduleAppointment[]>([]);
     const [weekOffset, setWeekOffset] = useState(0);

@@ -10,7 +10,7 @@
 //     only THIS file needs to change, not the page.
 // ===================================================================
 
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
 import { useEffect, useState, useCallback } from "react";
 
@@ -40,8 +40,8 @@ export function useAppointments(filter: string) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    // useUser() also works inside hooks (because it's a hook itself).
-    const user = useUser();
+    // useUserStore() also works inside hooks (because it's a hook itself).
+    const user = useUserStore();
 
     // STEP 3: useCallback prevents fetchAppointments from being re-created on every render.
     // Think of it as "memoizing" the function. It only re-creates if its dependencies change.

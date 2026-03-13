@@ -2,7 +2,8 @@ import React from "react";
 import Header from "@/components/Header";
 import "./globals.css";
 import { cookies } from "next/headers";
-import { UserProvider } from "@/context/UserContext";
+import UserStoreInitializer from "@/components/providers/UserStoreInitializer";
+import QueryProvider from "@/components/providers/QueryProvider";
 
 export default async function RootLayout({
   children,
@@ -21,10 +22,11 @@ export default async function RootLayout({
   return (
     <html lang="es">
       <body className="antialiased">
-        <UserProvider isLoggedIn={isLoggedIn} firstName={firstName} lastName={lastName} email={email} userId={userId} isProfessional={isProfessional}>
+        <QueryProvider>
+          <UserStoreInitializer isLoggedIn={isLoggedIn} firstName={firstName} lastName={lastName} email={email} userId={userId} isProfessional={isProfessional} />
           <Header isLoggedIn={isLoggedIn} firstName={firstName} isProfessional={isProfessional} />
           <main>{children}</main>
-        </UserProvider>
+        </QueryProvider>
       </body>
     </html>
   );

@@ -621,3 +621,470 @@ Expression expected
 [04:47:13.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
 [04:47:14.371] Browser LOG     open false
 [04:47:14.371] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[05:02:02.507] Server  LOG     ✓ Compiled in 0ms
+[05:02:02.561] Server  LOG     open false
+[05:02:02.762] Browser LOG     open false
+[05:02:02.762] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[05:02:03.742] Browser LOG     open false
+[05:02:03.742] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[05:02:07.864] Browser LOG     open false
+[05:02:07.864] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[05:02:08.211] Browser LOG     open false
+[05:02:08.211] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[05:02:08.394] Browser LOG     open false
+[05:02:08.394] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[05:21:49.341] Browser ERROR   ./src/app/register/professional/page.tsx:52:10
+Parsing ecmascript source code failed
+  50 |             return data || [];
+  51 |
+> 52 |         })
+     |          ^
+  53 |     const handleSpecialtyChange = async (specialtyId: string) => {
+  54 |         setFormData(prev => ({ ...prev, specialtyId, subspecialtyId: "" }));
+  55 |         if (specialtyId) {
+
+Expected ',', got ')'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:21:57.709] Browser ERROR   ./src/app/register/professional/page.tsx:46:19
+Ecmascript file had an error
+  44 |         fetchSpecialties();
+  45 |     }, []);
+> 46 |     const { data: specialties = [], isLoading } = useQuery({
+     |                   ^^^^^^^^^^^
+  47 |         queryKey: ['medical-specialties'],
+  48 |         queryFn: async () => {
+  49 |             const { data } = await supabase.from('medical_specialties').select('*');
+
+the name `specialties` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:22:24.413] Server  LOG     ✓ Compiled in 17ms
+[05:22:24.525] Browser LOG     open false
+[05:22:24.525] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[05:22:44.392] Server  LOG     ✓ Compiled in 20ms
+[05:23:00.452] Server  LOG     ✓ Compiled in 19ms
+[05:23:21.531] Server  LOG     ✓ Compiled in 30ms
+[05:23:52.312] Server  LOG     ✓ Compiled in 21ms
+[05:24:13.986] Server  LOG     ✓ Compiled in 30ms
+[05:25:12.232] Server  LOG     ✓ Compiled in 30ms
+[05:26:47.551] Server  LOG     ✓ Compiled in 25ms
+[05:26:47.657] Browser ERROR   ./src/app/register/professional/page.tsx:46:5
+Parsing ecmascript source code failed
+  44 |
+  45 |             }
+> 46 |     };
+     |     ^
+  47 |
+  48 |         const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  49 |             setFormData({ ...formData, [e.target.name]: e.target.value });
+
+Expected ',', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:27:14.484] Browser ERROR   ./src/app/register/professional/page.tsx:46:5
+Parsing ecmascript source code failed
+  44 |
+  45 |             }
+> 46 |     };
+     |     ^
+  47 |
+  48 |         const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  49 |             setFormData({ ...formData, [e.target.name]: e.target.value });
+
+Expected ',', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:28:28.626] Server  LOG     ✓ Compiled in 24ms
+[05:28:28.734] Browser ERROR   ./src/app/register/professional/page.tsx:44:26
+Parsing ecmascript source code failed
+  42 |         if (specialtyId) {
+  43 |             const { data: subspecialties = [], isLoading: isLoadingSubspecialties } = useQuery({
+> 44 |                 queryKey ['medical-subspecialties', specialtyId],
+     |                          ^
+  45 |                 queryFn: async () => {
+  46 |                     const { data } = await supabase.from('medical_subspecialties').select('*').eq('specialty_id', specialtyId);
+  47 |                     return data || [];
+
+Unexpected token `[`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:28:48.004] Browser ERROR   ./src/app/register/professional/page.tsx:44:26
+Parsing ecmascript source code failed
+  42 |         if (specialtyId) {
+  43 |             const { data: subspecialties = [], isLoading: isLoadingSubspecialties } = useQuery({
+> 44 |                 queryKey ['medical-subspecialties', specialtyId],
+     |                          ^
+  45 |                 queryFn: async () => {
+  46 |                     const { data } = await supabase.from('medical_subspecialties').select('*').eq('specialty_id', specialtyId);
+  47 |                     return data || [];
+
+Unexpected token `[`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:28:57.647] Server  LOG     ✓ Compiled in 28ms
+[05:28:57.759] Browser ERROR   ./src/app/register/professional/page.tsx:347:1
+Parsing ecmascript source code failed
+  345 |         );
+  346 |     }
+> 347 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:29:12.755] Browser ERROR   ./src/app/register/professional/page.tsx:347:1
+Parsing ecmascript source code failed
+  345 |         );
+  346 |     }
+> 347 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:31:40.816] Browser ERROR   ./src/app/register/professional/page.tsx:347:1
+Parsing ecmascript source code failed
+  345 |         );
+  346 |     }
+> 347 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:34:57.758] Browser ERROR   ./src/app/register/professional/page.tsx:347:1
+Parsing ecmascript source code failed
+  345 |         );
+  346 |     }
+> 347 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:36:05.309] Browser ERROR   ./src/app/register/professional/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |         );
+  347 |     }
+> 348 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:37:16.406] Browser ERROR   ./src/app/register/professional/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |         );
+  347 |     }
+> 348 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:37:57.942] Browser ERROR   ./src/app/register/professional/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |         );
+  347 |     }
+> 348 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:39:50.182] Browser ERROR   uncaughtError: ReferenceError: subSpecialties is not defined
+[05:40:03.126] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:40:03.144] Server  LOG     ✓ Compiled in 26ms
+[05:41:37.269] Server  LOG     ✓ Compiled in 35ms
+[05:41:37.384] Browser ERROR   ./src/app/register/professional/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |         );
+  347 |     }
+> 348 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:41:55.826] Browser ERROR   ./src/app/register/professional/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |         );
+  347 |     }
+> 348 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:42:05.699] Browser ERROR   ./src/app/register/professional/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |         );
+  347 |     }
+> 348 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:43:10.289] Browser ERROR   ./src/app/register/professional/page.tsx:346:1
+Parsing ecmascript source code failed
+  344 |         );
+  345 |     }
+> 346 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:44:53.462] Browser ERROR   uncaughtError: ReferenceError: isLoading is not defined
+[05:46:15.551] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:46:15.570] Server  LOG     ✓ Compiled in 18ms
+[05:46:15.736] Server  ERROR   ⨯ ReferenceError: isLoading is not defined
+[05:46:15.971] Browser ERROR   uncaughtError: ReferenceError: isLoading is not defined
+[05:48:18.951] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:48:19.022] Server  LOG     ✓ Compiled in 52ms
+[05:48:19.059] Server  ERROR   ⨯ ReferenceError: isLoading is not defined
+[05:48:19.274] Browser ERROR   uncaughtError: ReferenceError: isLoading is not defined
+[05:48:29.531] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:48:29.607] Server  LOG     ✓ Compiled in 15ms
+[05:48:29.656] Server  ERROR   ⨯ ReferenceError: isLoading is not defined
+[05:48:29.899] Browser ERROR   uncaughtError: ReferenceError: isLoading is not defined
+[05:51:52.902] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:51:52.975] Server  LOG     ✓ Compiled in 21ms
+[05:51:53.026] Server  ERROR   ⨯ ReferenceError: isLoading is not defined
+[05:51:53.248] Browser ERROR   uncaughtError: ReferenceError: isLoading is not defined
+[05:52:03.107] Server  LOG     ✓ Compiled in 18ms
+[05:52:03.215] Browser ERROR   ./src/app/register/professional/page.tsx:350:1
+Parsing ecmascript source code failed
+  348 |         );
+  349 |     }
+> 350 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:52:25.505] Browser ERROR   ./src/app/register/professional/page.tsx:350:1
+Parsing ecmascript source code failed
+  348 |         );
+  349 |     }
+> 350 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:52:27.153] Browser ERROR   ./src/app/register/professional/page.tsx:350:1
+Parsing ecmascript source code failed
+  348 |         );
+  349 |     }
+> 350 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/professional/page.tsx [Client Component Browser]
+    ./src/app/register/professional/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/professional/page.tsx [Client Component SSR]
+    ./src/app/register/professional/page.tsx [Server Component]
+[05:53:37.815] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:57:44.589] Server  LOG     ✓ Compiled in 57ms
+[06:00:27.203] Server  LOG     ✓ Compiled in 24ms
+[06:01:12.244] Server  LOG     ✓ Compiled in 20ms
+[06:01:37.426] Server  LOG     ✓ Compiled in 20ms
+[06:01:53.152] Server  LOG     ✓ Compiled in 21ms
+[06:02:11.239] Server  LOG     ✓ Compiled in 22ms
+[06:02:25.100] Server  LOG     ✓ Compiled in 24ms
+[06:03:04.209] Server  LOG     ✓ Compiled in 30ms
+[06:03:21.199] Server  LOG     ✓ Compiled in 21ms
+[06:03:59.038] Server  LOG     ✓ Compiled in 32ms
+[06:04:03.255] Server  LOG     ✓ Compiled in 17ms
+[06:04:06.504] Server  LOG     ✓ Compiled in 20ms
+[06:06:49.039] Server  LOG     ✓ Compiled in 22ms
+[06:08:28.434] Server  LOG     ✓ Compiled in 67ms
+[06:08:56.064] Server  LOG     ✓ Compiled in 31ms
+[06:10:24.660] Server  LOG     ✓ Compiled in 32ms
+[06:11:33.901] Server  LOG     ✓ Compiled in 20ms
+[06:11:47.883] Server  LOG     ✓ Compiled in 18ms
+[06:11:49.514] Server  LOG     ✓ Compiled in 19ms
+[06:13:44.640] Server  LOG     ✓ Compiled in 19ms
+[07:18:50.859] Browser ERROR   Query data cannot be undefined. Please make sure to return a value other than undefined from your query function. Affected query key: ["patient",""]
+[07:18:52.634] Browser ERROR   Query data cannot be undefined. Please make sure to return a value other than undefined from your query function. Affected query key: ["patient",""]
+[07:19:07.187] Browser ERROR   Query data cannot be undefined. Please make sure to return a value other than undefined from your query function. Affected query key: ["patient",""]
+[07:19:31.246] Server  LOG     ✓ Compiled in 28ms
+[07:19:36.616] Browser ERROR   Query data cannot be undefined. Please make sure to return a value other than undefined from your query function. Affected query key: ["patient",""]
+[07:20:10.166] Server  LOG     ✓ Compiled in 28ms
+[07:22:11.306] Server  LOG     ✓ Compiled in 31ms
+[07:22:11.390] Browser ERROR   Error obteniendo datos del paciente: {"code":"","details":"","hint":"","message":"TypeError: NetworkError when attempting to fetch resource."}
+[07:22:20.706] Server  LOG     ✓ Compiled in 21ms
+[07:22:29.258] Server  LOG     ✓ Compiled in 27ms
+[07:23:00.625] Server  LOG     ✓ Compiled in 18ms
+[07:23:35.830] Server  LOG     ✓ Compiled in 55ms
+[07:23:41.609] Server  LOG     ✓ Compiled in 27ms
+[07:23:49.313] Server  LOG     ✓ Compiled in 27ms
+[07:24:24.646] Server  LOG     ✓ Compiled in 23ms
+[07:24:26.538] Server  LOG     ✓ Compiled in 20ms
+[07:24:42.892] Server  LOG     ✓ Compiled in 21ms
+[07:24:42.990] Browser ERROR   uncaughtError: ReferenceError: isPending is not defined
+[07:25:01.723] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[07:25:01.745] Server  LOG     ✓ Compiled in 22ms
+[07:25:01.879] Server  ERROR   ⨯ ReferenceError: isPending is not defined
+[07:25:02.098] Browser ERROR   uncaughtError: ReferenceError: isPending is not defined
+[07:25:37.866] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[07:25:37.938] Server  LOG     ✓ Compiled in 20ms
+[07:26:04.392] Server  LOG     ✓ Compiled in 16ms
+[07:27:06.917] Server  LOG     ✓ Compiled in 34ms
+[07:27:43.532] Server  LOG     ✓ Compiled in 27ms
+[07:28:07.258] Server  LOG     ✓ Compiled in 22ms
+[07:28:14.044] Server  LOG     ✓ Compiled in 21ms
+[07:28:20.648] Server  LOG     ✓ Compiled in 19ms
+[07:28:23.038] Server  LOG     ✓ Compiled in 17ms
+[07:29:34.558] Server  LOG     ✓ Compiled in 21ms
+[07:30:12.608] Server  LOG     ✓ Compiled in 31ms
+[07:32:25.106] Server  LOG     ✓ Compiled in 30ms
+[07:32:33.984] Server  LOG     ✓ Compiled in 31ms
+[07:33:15.740] Server  LOG     ✓ Compiled in 20ms
+[07:33:23.453] Server  LOG     ✓ Compiled in 19ms
+[07:33:33.647] Server  LOG     ✓ Compiled in 20ms
+[07:34:25.985] Server  LOG     ✓ Compiled in 62ms
+[07:35:01.714] Server  LOG     ✓ Compiled in 24ms
+[07:36:03.089] Server  LOG     ✓ Compiled in 18ms
+[07:37:02.051] Server  LOG     ✓ Compiled in 27ms

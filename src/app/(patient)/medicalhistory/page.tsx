@@ -1,6 +1,6 @@
 "use client";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
 import {
     NotepadText,
@@ -18,7 +18,7 @@ import jsPDF from "jspdf";
 import { useEffect, useState } from "react";
 
 export default function MedicalHistory() {
-    const user = useUser();
+    const user = useUserStore();
     const [history, setHistory] = useState<any[]>([]);
 
     const generatePDF = (record: any) => {

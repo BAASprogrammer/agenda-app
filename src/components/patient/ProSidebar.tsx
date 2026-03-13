@@ -15,7 +15,6 @@ const NAV_ITEMS = [
 
 export default function ProSidebarPatient({ active }: ProSidebarPatientProps) {
     const [open, setOpen] = useState(false);
-    console.log("open", open);
 
     return (
         <div>

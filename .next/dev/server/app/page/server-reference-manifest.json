@@ -1,4 +1,35 @@
 {
-  "node": {},
+  "node": {
+    "009b9043e554a5c514f026627ffbd52d3a6201d1d9": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "clearAuthCookies",
+      "filename": "src/app/actions.ts"
+    },
+    "40cba019d8b1d5826429ba3194085c1be7434ca4c4": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "setAuthCookies",
+      "filename": "src/app/actions.ts"
+    }
+  },
   "edge": {}
 }

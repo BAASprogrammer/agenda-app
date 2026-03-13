@@ -1,5 +1,5 @@
 "use client";
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
 // ✅ MEJORA 1: componente compartido
 import ProSidebar from "@/components/professional/ProSidebar";
@@ -17,7 +17,7 @@ interface Patient {
 }
 
 export default function MyPatients() {
-    const user = useUser();
+    const user = useUserStore();
     const [patients, setPatients] = useState<Patient[]>([]);
     const [search, setSearch] = useState("");
     const [loading, setLoading] = useState(true);

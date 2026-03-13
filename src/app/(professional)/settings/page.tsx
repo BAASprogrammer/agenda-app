@@ -1,5 +1,5 @@
 "use client";
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 // ✅ MEJORA 1: componente compartido
 import ProSidebar from "@/components/professional/ProSidebar";
 import { Stethoscope, Mail, Save, Bell, Shield, ChevronLeft } from "lucide-react";
@@ -7,7 +7,11 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function ProfessionalSettings() {
-    const user = useUser();
+    const firstNameStore = useUserStore(state => state.firstName);
+    const lastNameStore = useUserStore(state => state.lastName);
+    const emailStore = useUserStore(state => state.email);
+    const userId = useUserStore(state => state.userId);
+    const setUser = useUserStore(state => state.setUser);
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
     const [formData, setFormData] = useState({
@@ -21,22 +25,23 @@ export default function ProfessionalSettings() {
     });
 
     useEffect(() => {
-        if (user.userId && !formData.firstName && !formData.lastName && !formData.email) {
+        // Solo llenamos el formulario si tenemos datos en el store y el formulario está vacío
+        if (userId && !formData.firstName && (firstNameStore || lastNameStore)) {
             setFormData(prev => ({
                 ...prev,
-                firstName: user.firstName || "",
-                lastName: user.lastName || "",
-                email: user.email || "",
+                firstName: firstNameStore || "",
+                lastName: lastNameStore || "",
+                email: emailStore || "",
             }));
         }
-    }, [user, formData.firstName, formData.lastName, formData.email]);
+    }, [userId, firstNameStore, lastNameStore, emailStore, formData.firstName]);
 
     const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
-            setMessage("Configuración guardada con éxito");
+            setMessage("Configuración guardada y actualizada con éxito ✨");
             setTimeout(() => setMessage(""), 3000);
         }, 800);
     };
@@ -67,12 +72,12 @@ export default function ProfessionalSettings() {
                                         <Stethoscope className="w-16 h-16 text-indigo-400" />
                                     </div>
                                 </div>
-                                <h2 className="text-2xl font-bold text-slate-800">Dr. {user.firstName} {user.lastName}</h2>
+                                <h2 className="text-2xl font-bold text-slate-800">Dr. {firstNameStore} {lastNameStore}</h2>
                                 <p className="text-slate-500 font-medium text-sm mb-6">Profesional de la Salud</p>
                                 <div className="space-y-3 pt-6 border-t border-slate-50">
                                     <div className="flex items-center gap-3 text-slate-600 text-sm font-medium">
                                         <Mail className="w-4 h-4 text-indigo-500" />
-                                        {user.email}
+                                        {emailStore}
                                     </div>
                                     <div className="flex items-center gap-3 text-slate-600 text-sm font-medium">
                                         <Shield className="w-4 h-4 text-emerald-500" />

@@ -2,6 +2,8 @@
   "/(patient)/medicalhistory/page": "app/(patient)/medicalhistory/page.js",
   "/(patient)/myappointments/page": "app/(patient)/myappointments/page.js",
   "/(patient)/profile/page": "app/(patient)/profile/page.js",
+  "/(professional)/manageappointments/page": "app/(professional)/manageappointments/page.js",
+  "/(professional)/schedule/page": "app/(professional)/schedule/page.js",
   "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
   "/home/patient/page": "app/home/patient/page.js",

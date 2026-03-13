@@ -1,6 +1,6 @@
 "use client";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
 import {
     CircleUser,
@@ -12,64 +12,109 @@ import {
     Save
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { setAuthCookies } from "@/app/actions";
 
+interface PatientData {
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone: string;
+    address: string;
+}
 export default function Profile() {
-    const user = useUser();
-    const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState("");
-    const [formData, setFormData] = useState({
+    const userId = useUserStore(state => state.userId);
+    const firstNameStore = useUserStore(state => state.firstName);
+    const lastNameStore = useUserStore(state => state.lastName);
+    const emailStore = useUserStore(state => state.email);
+    const setUser = useUserStore(state => state.setUser);
+    const [message, setMessage] = useState<string>("");
+    const [formData, setFormData] = useState<PatientData>({
         first_name: "",
         last_name: "",
         email: "",
         phone: "",
         address: ""
     });
+    //queryclient
+    const { data: patient } = useQuery({
+        queryKey: ["patient", userId],
+        queryFn: async () => {
+            if (!userId) return null;
+            const { data: patient, error } = await supabase
+                .from("users")
+                .select("phone, address")
+                .eq("id", userId)
+                .single();
+            if (error) {
+                console.error("Error obteniendo datos del paciente:", error);
+                return null;
+            }
+            return patient;
+        },
+        enabled: !!userId
+    });
+    const { mutate: update, isPending } = useMutation({
+        mutationFn: async (patientData: PatientData) => {
+            // Extract email to NOT try to update it in the 'users' table
+            // since it is usually managed by Supabase Auth or is read-only.
+            const { email, ...updateData } = patientData;
+
+            const { error } = await supabase
+                .from("users")
+                .update(updateData)
+                .eq("id", userId);
+
+            if (error) throw error; // CRITICO: Lanzar el error para que useMutation lo detecte
+            return patientData;
+        },
+        onSuccess: (updatedData) => {
+            // Set user in store
+            setUser({
+                userId: userId,
+                firstName: updatedData.first_name,
+                lastName: updatedData.last_name,
+                email: updatedData.email
+            });
+            // Update cookies
+            setAuthCookies({
+                firstName: updatedData.first_name,
+                lastName: updatedData.last_name,
+                email: updatedData.email,
+                userId: userId,
+                isProfessional: "false"
+            });
+            setMessage("Perfil actualizado correctamente");
+        },
+        onError: (error: any) => {
+            console.error("Error al actualizar:", error);
+            setMessage(`Error al guardar: ${error.message || "Contacta a soporte"}`);
+        }
+    });
 
     useEffect(() => {
-        const fetchPatientData = async () => {
-            if (user.userId) {
-                const { data: patient, error } = await supabase
-                    .from("users")
-                    .select("phone, address")
-                    .eq("id", user.userId)
-                    .single();
-                if (error) {
-                    console.error("Error obteniendo datos del paciente:", error);
-                }
-                setFormData({
-                    first_name: user.firstName || "",
-                    last_name: user.lastName || "",
-                    email: user.email || "",
-                    phone: patient?.phone || "",
-                    address: patient?.address || ""
-                });
-            }
-        };
-
-        fetchPatientData();
-    }, [user]);
+        // Only fill the form if we have the ID and the patient has already loaded (patient is not undefined)
+        // And only if the name is still empty to not overwrite what the user is writing
+        if (userId && patient && !formData.first_name) {
+            setFormData({
+                first_name: firstNameStore || "",
+                last_name: lastNameStore || "",
+                email: emailStore || "",
+                phone: patient.phone || "",
+                address: patient.address || ""
+            });
+        }
+    }, [userId, firstNameStore, lastNameStore, emailStore, patient, formData.first_name]);
 
     const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setLoading(true);
         setMessage("");
         if (formData.phone.trim().replace(/\s/g, '').length !== 12 || !formData.phone.trim().match(/^\+[0-9]+$/)) {
             setMessage("Por favor, ingrese un número de teléfono válido");
-            setLoading(false);
             return;
         }
-        const { error } = await supabase
-            .from("users")
-            .update(formData)
-            .eq("id", user.userId);
+        update(formData);
 
-        if (error) {
-            setMessage("Error actualizando perfil, por favor contáctanos");
-        } else {
-            setMessage("Perfil actualizado correctamente");
-        }
-
-        setLoading(false);
         setTimeout(() => setMessage(""), 5000);
     };
 
@@ -98,13 +143,13 @@ export default function Profile() {
                                         <CircleUser className="w-20 h-20" />
                                     </div>
                                 </div>
-                                <h2 className="text-2xl font-bold text-slate-800">{user.firstName} {user.lastName}</h2>
+                                <h2 className="text-2xl font-bold text-slate-800">{firstNameStore} {lastNameStore}</h2>
                                 <p className="text-slate-500 font-medium text-sm mb-6">Paciente Miembro</p>
 
                                 <div className="space-y-3 pt-6 border-t border-slate-50">
                                     <div className="flex items-center gap-3 text-slate-600 text-sm font-medium">
                                         <Mail className="w-4 h-4 text-teal-500" />
-                                        {user.email}
+                                        {emailStore}
                                     </div>
                                     <div className="flex items-center gap-3 text-slate-600 text-sm font-medium">
                                         <Shield className="w-4 h-4 text-emerald-500" />
@@ -204,11 +249,11 @@ export default function Profile() {
                                         </p>
                                         <button
                                             type="submit"
-                                            disabled={loading}
+                                            disabled={isPending}
                                             className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-10 py-4 rounded-2xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 shadow-md shadow-blue-200 active:scale-95 disabled:opacity-50"
                                         >
                                             <Save className="w-5 h-5" />
-                                            {loading ? "Guardando..." : "Guardar Cambios"}
+                                            {isPending ? "Guardando..." : "Guardar Cambios"}
                                         </button>
                                     </div>
                                 </form>

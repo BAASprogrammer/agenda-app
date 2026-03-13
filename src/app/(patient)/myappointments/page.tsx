@@ -1,7 +1,7 @@
 "use client";
 import AppointmentDetails from "@/components/patient/AppointmentDetails";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
-import { useUser } from "@/context/UserContext";
+import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
 import { getStatusColor } from "@/utils/getStatusColor";
 import DoctorProfileModal from "@/components/patient/DoctorProfileModal";
@@ -25,7 +25,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function MyAppointments() {
-    const user = useUser();
+    const user = useUserStore();
     const [appointments, setAppointments] = useState<any[]>([]);
     const [filter, setFilter] = useState("todas");
     const [selectedAppointment, setSelectedAppointment] = useState<any | null>(null);
