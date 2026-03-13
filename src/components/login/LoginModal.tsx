@@ -1,4 +1,5 @@
 "use client";
+import { setAuthCookies } from '@/app/actions';
 import { useState } from 'react';
 import { supabase } from '../../lib/supabaseClient';
 import { useRouter } from 'next/navigation';
@@ -70,12 +71,14 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
                 setLoading(false);
                 return false;
             }
-            // Set the first_name and user_id cookies for the server layout to read (codificando tildes y caracteres especiales)
-            document.cookie = `first_name=${encodeURIComponent(firstName)}; path=/;`;
-            document.cookie = `last_name=${encodeURIComponent(lastName)}; path=/;`;
-            document.cookie = `email=${encodeURIComponent(emailValue)}; path=/;`;
-            document.cookie = `user_id=${user.id}; path=/;`;
-            document.cookie = `is_professional=${isProfessional}; path=/;`;
+            // Set the cookies using Next.js Server Action
+            await setAuthCookies({
+                firstName,
+                lastName,
+                email: emailValue,
+                userId: user.id,
+                isProfessional
+            });
 
             // Call setIsLoggedIn and close the modal
             setIsLoggedIn(true);

@@ -1,5 +1,78 @@
 {
-  "node": {},
+  "node": {
+    "009b9043e554a5c514f026627ffbd52d3a6201d1d9": {
+      "workers": {
+        "app/(patient)/medicalhistory/page": {
+          "moduleId": "[project]/.next-internal/server/app/(patient)/medicalhistory/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/(patient)/myappointments/page": {
+          "moduleId": "[project]/.next-internal/server/app/(patient)/myappointments/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/(patient)/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/(patient)/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/home/patient/page": {
+          "moduleId": "[project]/.next-internal/server/app/home/patient/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "clearAuthCookies",
+          "filename": "src/app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(patient)/medicalhistory/page": "action-browser",
+        "app/(patient)/myappointments/page": "action-browser",
+        "app/(patient)/profile/page": "action-browser",
+        "app/home/patient/page": "action-browser"
+      },
+      "filename": "src/app/actions.ts",
+      "exportedName": "clearAuthCookies"
+    },
+    "40cba019d8b1d5826429ba3194085c1be7434ca4c4": {
+      "workers": {
+        "app/(patient)/medicalhistory/page": {
+          "moduleId": "[project]/.next-internal/server/app/(patient)/medicalhistory/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/(patient)/myappointments/page": {
+          "moduleId": "[project]/.next-internal/server/app/(patient)/myappointments/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/(patient)/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/(patient)/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        },
+        "app/home/patient/page": {
+          "moduleId": "[project]/.next-internal/server/app/home/patient/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookies",
+          "filename": "src/app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(patient)/medicalhistory/page": "action-browser",
+        "app/(patient)/myappointments/page": "action-browser",
+        "app/(patient)/profile/page": "action-browser",
+        "app/home/patient/page": "action-browser"
+      },
+      "filename": "src/app/actions.ts",
+      "exportedName": "setAuthCookies"
+    }
+  },
   "edge": {},
   "encryptionKey": "VUQRVIDmh1eiGF7vr7+h7hWO/AZWx0nqjMUzHVt65FA="
 }

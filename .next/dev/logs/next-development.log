@@ -1,515 +1,623 @@
-[00:00:00.847] Server  LOG     ✓ Ready in 670ms
-[00:07:55.658] Server  LOG     ✓ Compiled in 254ms
-[00:08:21.681] Server  LOG     ✓ Compiled in 52ms
-[00:08:49.045] Server  LOG     ✓ Compiled in 47ms
-[00:09:53.773] Server  LOG     ✓ Compiled in 42ms
-[00:10:12.896] Server  LOG     ✓ Compiled in 35ms
-[00:10:46.426] Server  LOG     ✓ Compiled in 43ms
-[00:11:07.529] Server  LOG     ✓ Compiled in 43ms
-[00:12:24.842] Server  LOG     ✓ Compiled in 24ms
-[00:12:50.014] Server  LOG     ✓ Compiled in 40ms
-[00:14:32.917] Server  LOG     ✓ Compiled in 44ms
-[00:14:48.863] Server  LOG     ✓ Compiled in 18ms
-[00:16:22.055] Server  LOG     ✓ Compiled in 28ms
-[00:17:13.816] Server  LOG     ✓ Compiled in 59ms
-[00:17:15.528] Server  LOG     ✓ Compiled in 33ms
-[00:18:39.883] Server  LOG     ✓ Compiled in 38ms
-[00:18:55.400] Server  LOG     ✓ Compiled in 46ms
-[00:19:02.241] Server  LOG     ✓ Compiled in 32ms
-[00:19:32.671] Server  LOG     ✓ Compiled in 44ms
-[00:19:50.092] Server  LOG     ✓ Compiled in 41ms
-[00:20:34.969] Server  LOG     ✓ Compiled in 44ms
-[00:20:52.462] Server  LOG     ✓ Compiled in 22ms
-[00:21:17.984] Server  LOG     ✓ Compiled in 29ms
-[00:21:23.661] Server  LOG     ✓ Compiled in 25ms
-[00:22:01.720] Server  LOG     ✓ Compiled in 42ms
-[00:22:11.217] Server  LOG     ✓ Compiled in 19ms
-[00:23:27.138] Server  LOG     ✓ Compiled in 26ms
-[00:23:52.897] Server  LOG     ✓ Compiled in 42ms
-[00:26:30.607] Server  LOG     ✓ Compiled in 43ms
-[00:26:52.768] Server  LOG     ✓ Compiled in 34ms
-[00:27:22.408] Server  LOG     ✓ Compiled in 45ms
-[00:29:38.713] Server  LOG     ✓ Compiled in 34ms
-[00:29:52.166] Server  LOG     ✓ Compiled in 44ms
-[00:30:13.897] Server  LOG     ✓ Compiled in 86ms
-[00:33:00.940] Server  LOG     ✓ Compiled in 31ms
-[00:33:31.565] Server  LOG     ✓ Compiled in 26ms
-[00:33:37.808] Server  LOG     ✓ Compiled in 36ms
-[00:34:03.411] Server  LOG     ✓ Compiled in 23ms
-[00:34:43.967] Server  LOG     ✓ Compiled in 24ms
-[00:34:44.065] Browser LOG     open false
-[00:34:44.065] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:34:53.858] Server  LOG     ✓ Compiled in 19ms
-[00:34:53.938] Browser LOG     open false
-[00:34:53.938] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:34:58.602] Server  LOG     open false
-[00:34:58.720] Browser LOG     open false
-[00:34:58.720] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:34:59.096] Browser LOG     open false
-[00:34:59.096] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:35:02.846] Browser LOG     open false
-[00:35:02.846] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:35:03.122] Browser LOG     open false
-[00:35:03.122] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:35:03.365] Browser LOG     open false
-[00:35:03.365] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:35:03.365] Browser LOG     open false
-[00:35:03.365] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:35:58.384] Browser LOG     open false
-[00:35:58.384] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:35:59.030] Browser LOG     open false
-[00:35:59.030] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:36:13.719] Server  LOG     ✓ Compiled in 43ms
-[00:36:13.814] Browser LOG     open false
-[00:36:13.814] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:36:20.133] Server  LOG     open false
-[00:36:20.261] Browser LOG     open false
-[00:36:20.261] Browser LOG     open false
-[00:36:21.098] Browser LOG     open false
-[00:36:21.098] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:36:23.314] Browser LOG     open true
-[00:36:23.314] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:36:24.506] Browser LOG     open false
-[00:36:24.506] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:36:25.713] Browser LOG     open true
-[00:36:25.713] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:36:26.902] Browser LOG     open false
-[00:36:26.902] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:37:10.257] Browser LOG     open true
-[00:37:10.257] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:37:11.115] Browser LOG     open false
-[00:37:11.116] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:37:13.628] Browser LOG     open true
-[00:37:13.628] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:37:19.449] Browser LOG     open false
-[00:37:19.449] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:37:20.114] Browser LOG     open true
-[00:37:20.114] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:37:39.777] Server  LOG     open false
-[00:37:39.872] Browser LOG     open false
-[00:37:39.872] Browser LOG     open false
-[00:37:40.181] Browser LOG     open false
-[00:37:40.181] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:37:49.046] Browser LOG     open true
-[00:37:49.046] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:37:50.844] Browser LOG     open false
-[00:37:50.845] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:37:53.959] Browser LOG     open true
-[00:37:53.959] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:37:54.928] Browser LOG     open false
-[00:37:54.928] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:38:11.756] Server  LOG     ✓ Compiled in 25ms
-[00:38:11.849] Browser LOG     open false
-[00:38:11.849] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:38:27.323] Server  LOG     ✓ Compiled in 35ms
-[00:38:27.407] Browser LOG     open false
-[00:38:27.407] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:38:36.928] Server  LOG     ✓ Compiled in 31ms
-[00:38:37.020] Browser LOG     open false
-[00:38:37.020] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:38:42.818] Server  LOG     ✓ Compiled in 25ms
-[00:38:42.910] Browser LOG     open false
-[00:38:42.910] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:01.459] Server  LOG     ✓ Compiled in 22ms
-[00:39:01.549] Browser LOG     open false
-[00:39:01.549] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:18.432] Server  LOG     ✓ Compiled in 18ms
-[00:39:18.521] Browser LOG     open false
-[00:39:18.521] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:22.678] Server  LOG     open false
-[00:39:22.888] Browser LOG     open false
-[00:39:22.888] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:23.613] Browser LOG     open false
-[00:39:23.613] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:28.735] Server  LOG     ✓ Compiled in 19ms
-[00:39:28.815] Browser LOG     open false
-[00:39:28.816] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:32.072] Server  LOG     open false
-[00:39:32.182] Browser LOG     open false
-[00:39:32.182] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:32.475] Browser LOG     open false
-[00:39:32.475] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:35.185] Browser LOG     open true
-[00:39:35.185] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:39:36.327] Browser LOG     open false
-[00:39:36.327] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:37.658] Browser LOG     open true
-[00:39:37.658] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:39:39.668] Browser LOG     open false
-[00:39:39.668] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:39:54.634] Server  LOG     ✓ Compiled in 37ms
-[00:39:54.719] Browser LOG     open false
-[00:39:54.719] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:09.574] Server  LOG     ✓ Compiled in 41ms
-[00:40:09.676] Browser LOG     open false
-[00:40:09.676] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:23.357] Server  LOG     ✓ Compiled in 27ms
-[00:40:23.458] Browser LOG     open false
-[00:40:23.458] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:25.976] Server  LOG     open false
-[00:40:26.073] Browser LOG     open false
-[00:40:26.073] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:26.695] Browser LOG     open false
-[00:40:26.695] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:27.721] Browser LOG     open true
-[00:40:27.721] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:40:28.212] Browser LOG     open false
-[00:40:28.212] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:35.512] Server  LOG     ✓ Compiled in 41ms
-[00:40:35.618] Browser LOG     open false
-[00:40:35.618] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:39.254] Server  LOG     open false
-[00:40:39.468] Browser LOG     open false
-[00:40:39.468] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:39.680] Browser LOG     open false
-[00:40:39.680] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:40:45.054] Server  LOG     ✓ Compiled in 30ms
-[00:40:45.140] Browser LOG     open false
-[00:40:45.140] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:41:30.496] Server  LOG     ✓ Compiled in 46ms
-[00:41:30.588] Browser LOG     open false
-[00:41:30.588] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:41:32.770] Server  LOG     open false
-[00:41:32.903] Browser LOG     open false
-[00:41:32.903] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:41:33.528] Browser LOG     open false
-[00:41:33.528] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:41:35.873] Browser LOG     open true
-[00:41:35.873] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:41:36.320] Browser LOG     open false
-[00:41:36.320] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:06.646] Server  LOG     ✓ Compiled in 66ms
-[00:42:10.003] Server  LOG     open false
-[00:42:10.140] Browser LOG     open false
-[00:42:10.140] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:10.591] Browser LOG     open false
-[00:42:10.591] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:15.643] Browser LOG     open true
-[00:42:15.643] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:42:16.430] Browser LOG     open false
-[00:42:16.430] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:28.720] Server  LOG     ✓ Compiled in 41ms
-[00:42:28.814] Browser LOG     open false
-[00:42:28.814] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:31.512] Server  LOG     open false
-[00:42:31.638] Browser LOG     open false
-[00:42:31.638] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:31.988] Browser LOG     open false
-[00:42:31.988] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:33.944] Browser LOG     open true
-[00:42:33.944] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:42:34.759] Browser LOG     open false
-[00:42:34.759] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:39.055] Browser LOG     open true
-[00:42:39.055] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:42:40.105] Browser LOG     open false
-[00:42:40.105] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:41.545] Browser LOG     open true
-[00:42:41.545] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:42:44.236] Browser LOG     open false
-[00:42:44.236] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:42:48.491] Browser LOG     open true
-[00:42:48.492] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:42:49.926] Browser LOG     open false
-[00:42:49.926] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:43:07.737] Server  LOG     ✓ Compiled in 30ms
-[00:43:07.826] Browser LOG     open false
-[00:43:07.826] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:43:27.526] Server  LOG     ✓ Compiled in 33ms
-[00:43:27.618] Browser LOG     open false
-[00:43:27.618] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:43:49.938] Server  LOG     ✓ Compiled in 18ms
-[00:43:50.018] Browser LOG     open false
-[00:43:50.018] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:43:52.561] Server  LOG     ✓ Compiled in 21ms
-[00:43:52.650] Browser LOG     open false
-[00:43:52.650] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:43:55.231] Server  LOG     open false
-[00:43:55.331] Browser LOG     open false
-[00:43:55.331] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:43:55.958] Browser LOG     open false
-[00:43:55.958] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:43:57.339] Browser LOG     open true
-[00:43:57.339] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:43:58.281] Browser LOG     open false
-[00:43:58.281] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:44:31.273] Server  LOG     ✓ Compiled in 26ms
-[00:44:31.371] Browser LOG     open false
-[00:44:31.371] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:44:44.040] Server  LOG     ✓ Compiled in 23ms
-[00:44:44.129] Browser LOG     open false
-[00:44:44.129] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:44:46.858] Server  LOG     ✓ Compiled in 17ms
-[00:44:46.945] Browser LOG     open false
-[00:44:46.945] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:44:52.554] Server  LOG     open false
-[00:44:52.648] Browser LOG     open false
-[00:44:52.648] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:44:53.271] Browser LOG     open false
-[00:44:53.271] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:44:59.829] Server  LOG     ✓ Compiled in 18ms
-[00:44:59.916] Browser LOG     open false
-[00:44:59.916] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:45:03.566] Server  LOG     open false
-[00:45:03.681] Browser LOG     open false
-[00:45:03.681] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:45:04.159] Browser LOG     open false
-[00:45:04.159] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:45:06.427] Browser LOG     open true
-[00:45:06.427] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:45:07.254] Browser LOG     open false
-[00:45:07.254] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:45:15.026] Server  LOG     ✓ Compiled in 49ms
-[00:45:15.120] Browser LOG     open false
-[00:45:15.120] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:45:18.079] Server  LOG     open false
-[00:45:18.296] Browser LOG     open false
-[00:45:18.296] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:45:18.488] Browser LOG     open false
-[00:45:18.488] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:45:44.224] Server  LOG     open false
-[00:45:44.453] Browser LOG     open false
-[00:45:44.453] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:45:44.714] Browser LOG     open false
-[00:45:44.714] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:46:02.306] Server  LOG     ✓ Compiled in 27ms
-[00:46:02.407] Browser LOG     open false
-[00:46:02.407] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:46:08.375] Server  LOG     ✓ Compiled in 21ms
-[00:46:08.467] Browser LOG     open false
-[00:46:08.467] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:46:24.576] Server  LOG     ✓ Compiled in 20ms
-[00:46:24.668] Browser LOG     open false
-[00:46:24.668] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:48:05.975] Server  LOG     ✓ Compiled in 25ms
-[00:48:06.069] Browser LOG     open false
-[00:48:06.069] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:48:27.858] Server  LOG     ✓ Compiled in 27ms
-[00:48:27.958] Browser LOG     open false
-[00:48:27.958] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:48:30.768] Server  LOG     open false
-[00:48:30.894] Browser LOG     open false
-[00:48:30.895] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:48:31.633] Browser LOG     open false
-[00:48:31.633] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:49:19.707] Server  LOG     ✓ Compiled in 31ms
-[00:49:19.799] Browser LOG     open false
-[00:49:19.799] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:49:23.948] Server  LOG     open false
-[00:49:24.076] Browser LOG     open false
-[00:49:24.076] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:49:24.421] Browser LOG     open false
-[00:49:24.421] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:51:58.900] Server  LOG     ✓ Compiled in 19ms
-[00:51:58.994] Browser LOG     open false
-[00:51:58.994] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:52:03.193] Server  LOG     open false
-[00:52:03.324] Browser LOG     open false
-[00:52:03.324] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:52:04.471] Browser LOG     open false
-[00:52:04.471] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:52:08.191] Server  LOG     open false
-[00:52:08.348] Browser LOG     open false
-[00:52:08.348] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:52:08.710] Browser LOG     open false
-[00:52:08.710] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:52:12.265] Server  LOG     ✓ Compiled in 21ms
-[00:52:12.357] Browser LOG     open false
-[00:52:12.357] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:52:23.343] Browser LOG     open true
-[00:52:23.343] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:52:23.577] Browser LOG     open false
-[00:52:23.577] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:52:23.825] Browser LOG     open true
-[00:52:23.825] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:52:24.972] Browser LOG     open false
-[00:52:24.972] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:52:55.798] Server  LOG     ✓ Compiled in 19ms
-[00:52:55.887] Browser LOG     open false
-[00:52:55.887] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:53:15.434] Server  LOG     ✓ Compiled in 25ms
-[00:53:15.530] Browser LOG     open false
-[00:53:15.530] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:53:20.891] Browser LOG     open true
-[00:53:20.892] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:53:21.895] Browser LOG     open false
-[00:53:21.895] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:53:38.207] Browser LOG     open true
-[00:53:38.207] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:53:45.758] Browser LOG     open false
-[00:53:45.758] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:53:46.433] Browser LOG     open true
-[00:53:46.433] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:53:48.398] Browser LOG     open false
-[00:53:48.398] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:53:49.077] Browser LOG     open true
-[00:53:49.077] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:01.033] Server  LOG     ✓ Compiled in 26ms
-[00:54:01.125] Browser LOG     open true
-[00:54:01.125] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:04.021] Server  LOG     open false
-[00:54:04.222] Browser LOG     open false
-[00:54:04.222] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:04.860] Browser LOG     open false
-[00:54:04.860] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:06.325] Browser LOG     open true
-[00:54:06.325] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:10.915] Server  LOG     ✓ Compiled in 25ms
-[00:54:11.006] Browser LOG     open true
-[00:54:11.006] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:15.313] Server  LOG     open false
-[00:54:15.529] Browser LOG     open false
-[00:54:15.529] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:15.760] Browser LOG     open false
-[00:54:15.760] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:20.658] Browser LOG     open true
-[00:54:20.658] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:25.230] Browser LOG     open false
-[00:54:25.230] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:25.792] Browser LOG     open true
-[00:54:25.792] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:26.541] Browser LOG     open false
-[00:54:26.541] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:27.506] Browser LOG     open true
-[00:54:27.506] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:28.216] Browser LOG     open false
-[00:54:28.217] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:28.789] Browser LOG     open true
-[00:54:28.790] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:29.733] Browser LOG     open false
-[00:54:29.733] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:38.956] Browser LOG     open true
-[00:54:38.956] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:40.400] Browser LOG     open false
-[00:54:40.400] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:40.614] Browser LOG     open false
-[00:54:40.614] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:40.799] Browser LOG     open false
-[00:54:40.799] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:43.575] Browser LOG     open true
-[00:54:43.575] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:46.226] Browser LOG     open false
-[00:54:46.226] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:46.614] Browser LOG     open false
-[00:54:46.614] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:46.820] Browser LOG     open false
-[00:54:46.820] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:51.958] Browser LOG     open true
-[00:54:51.958] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[00:54:53.741] Browser LOG     open false
-[00:54:53.741] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:53.990] Browser LOG     open false
-[00:54:53.990] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:54:54.171] Browser LOG     open false
-[00:54:54.171] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[00:56:10.995] Server  LOG     ✓ Compiled in 41ms
-[00:58:07.205] Server  LOG     ✓ Compiled in 27ms
-[00:58:10.750] Browser ERROR   uncaughtError: ReferenceError: setOpen is not defined
-[00:58:32.468] Server  LOG     ✓ Compiled in 29ms
-[00:58:54.196] Server  LOG     ✓ Compiled in 27ms
-[00:58:54.305] Browser ERROR   uncaughtError: ReferenceError: useState is not defined
-[00:58:58.735] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:58:58.758] Server  LOG     ✓ Compiled in 28ms
-[00:59:43.431] Server  LOG     ✓ Compiled in 28ms
-[01:00:16.273] Server  LOG     ✓ Compiled in 33ms
-[01:01:41.308] Server  LOG     ✓ Compiled in 24ms
-[01:07:30.334] Server  LOG     ✓ Compiled in 40ms
-[01:11:48.209] Server  LOG     ✓ Compiled in 23ms
-[01:11:53.738] Server  LOG     ✓ Compiled in 29ms
-[01:12:31.391] Server  LOG     ✓ Compiled in 25ms
-[01:12:49.447] Server  LOG     ✓ Compiled in 48ms
-[01:14:08.885] Server  LOG     open false
-[01:14:09.070] Browser LOG     open false
-[01:14:09.070] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:14:09.404] Browser LOG     open false
-[01:14:09.404] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:14:11.119] Browser LOG     open true
-[01:14:11.119] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:14:14.684] Browser LOG     open false
-[01:14:14.684] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:14:53.626] Server  LOG     open false
-[01:14:53.858] Browser LOG     open false
-[01:14:53.858] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:14:54.101] Browser LOG     open false
-[01:14:54.101] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:15:01.220] Browser LOG     open true
-[01:15:01.220] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:15:08.568] Browser LOG     open false
-[01:15:08.568] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:15:40.625] Server  LOG     ✓ Compiled in 26ms
-[01:15:40.712] Browser LOG     open false
-[01:15:40.712] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:16:04.009] Server  LOG     open false
-[01:16:04.217] Browser LOG     open false
-[01:16:04.218] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:16:04.783] Browser LOG     open false
-[01:16:04.783] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:16:35.161] Browser LOG     open true
-[01:16:35.161] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:16:55.939] Browser LOG     open false
-[01:16:55.939] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:16:56.621] Browser LOG     open true
-[01:16:56.621] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:16:57.424] Browser LOG     open false
-[01:16:57.424] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:16:58.178] Browser LOG     open true
-[01:16:58.178] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:17:35.036] Server  LOG     ✓ Compiled in 48ms
-[01:17:35.127] Browser LOG     open true
-[01:17:35.127] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:17:43.672] Server  LOG     ✓ Compiled in 25ms
-[01:17:43.764] Browser LOG     open true
-[01:17:43.764] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:18:06.847] Server  LOG     open false
-[01:18:07.063] Browser LOG     open false
-[01:18:07.063] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:18:07.766] Browser LOG     open false
-[01:18:07.766] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:18:08.634] Browser LOG     open true
-[01:18:08.634] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:18:23.892] Server  LOG     ✓ Compiled in 33ms
-[01:18:27.192] Browser LOG     open false
-[01:18:27.192] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:18:27.808] Browser LOG     open true
-[01:18:27.808] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:18:29.394] Server  LOG     open false
-[01:18:29.593] Browser LOG     open false
-[01:18:29.593] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:18:29.787] Browser LOG     open false
-[01:18:29.787] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:18:31.127] Browser LOG     open true
-[01:18:31.127] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:19:14.158] Server  LOG     open false
-[01:19:14.361] Browser LOG     open false
-[01:19:14.361] Browser LOG     open false
-[01:19:14.637] Browser LOG     open false
-[01:19:14.637] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:19:15.617] Browser LOG     open true
-[01:19:15.617] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:19:54.679] Server  LOG     ✓ Compiled in 25ms
-[01:20:05.682] Server  LOG     ✓ Compiled in 18ms
-[01:20:36.771] Server  LOG     open false
-[01:20:36.958] Browser LOG     open false
-[01:20:36.958] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:20:37.164] Browser LOG     open false
-[01:20:37.164] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:20:38.541] Browser LOG     open true
-[01:20:38.541] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:20:42.155] Browser LOG     open false
-[01:20:42.155] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:20:43.386] Server  LOG     open false
-[01:20:43.591] Browser LOG     open false
-[01:20:43.591] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:20:43.801] Browser LOG     open false
-[01:20:43.801] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:20:45.088] Browser LOG     open true
-[01:20:45.088] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:20:46.089] Browser LOG     open false
-[01:20:46.089] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:20:50.255] Browser LOG     open true
-[01:20:50.255] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:20:51.228] Browser LOG     open false
-[01:20:51.228] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
-[01:21:11.260] Browser LOG     open true
-[01:21:11.260] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open true
-[01:21:45.685] Server  LOG     ✓ Compiled in 38ms
+[00:00:00.829] Server  LOG     ✓ Ready in 698ms
+[00:03:31.534] Server  LOG     ✓ Compiled in 318ms
+[00:03:32.190] Browser ERROR   ./src/app/page.tsx:166:5
+Parsing ecmascript source code failed
+  164 | }
+  165 | r>
+> 166 |     </div>
+      |     ^
+  167 |   );
+  168 | }
+
+Expression expected
+[00:10:10.283] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:26.550] Server  LOG     ✓ Compiled in 39ms
+[00:38:12.908] Server  LOG     ✓ Compiled in 40ms
+[00:38:57.659] Server  LOG     ✓ Compiled in 30ms
+[00:39:29.446] Server  LOG     ✓ Compiled in 38ms
+[00:41:43.610] Server  LOG     ✓ Compiled in 172ms
+[00:41:43.716] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import {
+  3 |   ArrowRight, CalendarClock, Clock, ShieldCheck, Stethoscope, Star,
+  4 |   HeartPulse, Brain, Baby, Sparkles, Bone, Eye, Smile, Activity, Heart, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:41:55.052] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import {
+  3 |   ArrowRight, CalendarClock, Clock, ShieldCheck, Stethoscope, Star,
+  4 |   HeartPulse, Brain, Baby, Sparkles, Bone, Eye, Smile, Activity, Heart, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:42:00.980] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import {
+  3 |   ArrowRight, CalendarClock, Clock, ShieldCheck, Stethoscope, Star,
+  4 |   HeartPulse, Brain, Baby, Sparkles, Bone, Eye, Smile, Activity, Heart, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:43:22.289] Server  ERROR   ⨯ ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import {
+  3 |   ArrowRight, CalendarClock, Clock, ShieldCheck, Stethoscope, Star,
+  4 |   HeartPulse, Brain, Baby, Sparkles, Bone, Eye, Smile, Activity, Heart, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:43:22.509] Browser ERROR   uncaughtError: Error: ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import {
+  3 |   ArrowRight, CalendarClock, Clock, ShieldCheck, Stethoscope, Star,
+  4 |   HeartPulse, Brain, Baby, Sparkles, Bone, Eye, Smile, Activity, Heart, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:43:22.646] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import {
+  3 |   ArrowRight, CalendarClock, Clock, ShieldCheck, Stethoscope, Star,
+  4 |   HeartPulse, Brain, Baby, Sparkles, Bone, Eye, Smile, Activity, Heart, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:43:22.646] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import {
+  3 |   ArrowRight, CalendarClock, Clock, ShieldCheck, Stethoscope, Star,
+  4 |   HeartPulse, Brain, Baby, Sparkles, Bone, Eye, Smile, Activity, Heart, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:43:37.466] Server  LOG     ✓ Compiled in 27ms
+[00:45:57.522] Server  LOG     ✓ Compiled in 45ms
+[00:46:11.063] Server  LOG     ✓ Compiled in 67ms
+[01:00:10.768] Server  LOG     ✓ Compiled in 25ms
+[01:00:14.401] Browser ERROR   Error fetching specialty: {"code":"42703","details":null,"hint":null,"message":"column medical_specialties.first_name does not exist"}
+[01:00:14.590] Browser ERROR   Error fetching specialty: {"code":"42703","details":null,"hint":null,"message":"column medical_specialties.first_name does not exist"}
+[01:00:34.080] Server  LOG     ✓ Compiled in 23ms
+[01:05:05.416] Server  LOG     ✓ Compiled in 25ms
+[01:05:18.340] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:05:18.781] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:05:32.469] Server  LOG     ✓ Compiled in 23ms
+[01:05:38.199] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:05:38.395] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:05:38.395] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:05:38.576] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:06:08.185] Server  LOG     ✓ Compiled in 28ms
+[01:06:18.402] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:06:18.581] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:06:18.581] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:06:18.754] Browser LOG     []
+[01:06:18.754] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:06:18.935] Browser LOG     []
+[01:06:59.148] Server  LOG     ✓ Compiled in 24ms
+[01:07:05.219] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:07:05.405] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:07:05.405] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:07:05.585] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:07:05.585] Browser LOG     ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:07:05.786] Browser LOG     ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:07:21.991] Server  LOG     ✓ Compiled in 26ms
+[01:07:27.608] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:07:27.787] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:07:27.787] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:07:27.962] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:07:27.962] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:07:28.131] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:08:00.348] Server  LOG     ✓ Compiled in 25ms
+[01:08:05.831] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:08:06.029] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:08:06.029] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:08:06.221] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:08:06.222] Browser LOG     profData []
+[01:08:06.222] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:08:06.378] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:08:06.378] Browser LOG     profData []
+[01:13:08.018] Server  LOG     ✓ Compiled in 28ms
+[01:13:13.534] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:13:13.534] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:13:13.797] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:13:14.103] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:13:14.103] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:13:14.103] Browser LOG     profData null
+[01:13:14.103] Browser ERROR   Error fetching professionals: {"code":"PGRST205","details":null,"hint":"Perhaps you meant the table 'public.users'","message":"Could not find the table 'public.public.users' in the schema cache"}
+[01:13:14.487] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:13:14.487] Browser LOG     profData null
+[01:13:14.487] Browser ERROR   Error fetching professionals: {"code":"PGRST205","details":null,"hint":"Perhaps you meant the table 'public.users'","message":"Could not find the table 'public.public.users' in the schema cache"}
+[01:13:38.240] Server  LOG     ✓ Compiled in 31ms
+[01:13:40.015] Server  LOG     ✓ Compiled in 19ms
+[01:13:46.823] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:13:47.078] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:13:47.078] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:13:47.329] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:13:47.329] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:13:47.329] Browser LOG     profData []
+[01:13:47.567] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:13:47.567] Browser LOG     profData []
+[01:14:40.744] Server  LOG     ✓ Compiled in 35ms
+[01:15:08.711] Server  LOG     ✓ Compiled in 29ms
+[01:19:52.049] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:19:52.263] Browser LOG     {"id":"bab176a7-a1cd-4afc-bc2d-c07faa78f260"}
+[01:19:52.473] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:19:52.682] Browser LOG     [{"id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b","name":"Neonatología"},{"id":"535e635a-bed3-4a49-8b15-15725579a62e","name":"Pediatría Oncológica"}]
+[01:19:52.683] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:19:52.683] Browser LOG     profData [{"first_name":"Fernanda","id":"12544775-b457-47d4-aa9e-35d159e2c7ad","last_name":"Peña Vargas","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Carolina","id":"3c8bd368-88d8-4c43-bc87-0d2359f7fc03","last_name":"Paredes Soto","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"},{"first_name":"Esteban","id":"6e298136-b828-4701-9003-6beb992369fc","last_name":"Riquelme Torres","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"},{"first_name":"Tomás","id":"76959472-ec5d-4f4e-8a3d-bd514e073fd8","last_name":"Cáceres Molina","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Francisca","id":"b35b29e4-70e5-410c-b32e-c2aeda55ac4a","last_name":"Maldonado Ríos","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"},{"first_name":"Pablo","id":"b4790e01-7ff9-4865-9617-ad570c518441","last_name":"Muñoz Rojas","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Valentina","id":"3c371988-bf97-4f4b-975e-ca8a8c712442","last_name":"Navarro Díaz","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Diego","id":"d958059f-2bdf-42a9-9a8b-607ec5ca1ded","last_name":"Reyes Bravo","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"},{"first_name":"Ricardo","id":"ea409251-2b70-4bf2-becb-88c9848e0553","last_name":"Suarez Gómez","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Alejandra","id":"fc932b09-7daa-40ee-ba4f-ba9bd9306897","last_name":"Godoy Castro","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"}]
+[01:19:52.863] Browser LOG     subIds ["8493597b-47dc-4a92-ab6b-5155aa3bb77b","535e635a-bed3-4a49-8b15-15725579a62e"]
+[01:19:52.863] Browser LOG     profData [{"first_name":"Fernanda","id":"12544775-b457-47d4-aa9e-35d159e2c7ad","last_name":"Peña Vargas","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Carolina","id":"3c8bd368-88d8-4c43-bc87-0d2359f7fc03","last_name":"Paredes Soto","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"},{"first_name":"Esteban","id":"6e298136-b828-4701-9003-6beb992369fc","last_name":"Riquelme Torres","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"},{"first_name":"Tomás","id":"76959472-ec5d-4f4e-8a3d-bd514e073fd8","last_name":"Cáceres Molina","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Francisca","id":"b35b29e4-70e5-410c-b32e-c2aeda55ac4a","last_name":"Maldonado Ríos","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"},{"first_name":"Pablo","id":"b4790e01-7ff9-4865-9617-ad570c518441","last_name":"Muñoz Rojas","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Valentina","id":"3c371988-bf97-4f4b-975e-ca8a8c712442","last_name":"Navarro Díaz","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Diego","id":"d958059f-2bdf-42a9-9a8b-607ec5ca1ded","last_name":"Reyes Bravo","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"},{"first_name":"Ricardo","id":"ea409251-2b70-4bf2-becb-88c9848e0553","last_name":"Suarez Gómez","subspecialty_id":"8493597b-47dc-4a92-ab6b-5155aa3bb77b"},{"first_name":"Alejandra","id":"fc932b09-7daa-40ee-ba4f-ba9bd9306897","last_name":"Godoy Castro","subspecialty_id":"535e635a-bed3-4a49-8b15-15725579a62e"}]
+[01:20:55.440] Browser LOG     {"id":"aa259725-fbd7-4935-816c-8767e821c4f4"}
+[01:20:55.700] Browser LOG     {"id":"aa259725-fbd7-4935-816c-8767e821c4f4"}
+[01:20:55.700] Browser LOG     [{"id":"ac6b356d-501d-4985-95bc-45df8c07a867","name":"Ginecología Oncológica"},{"id":"9020324c-c13c-4257-9839-e77a0403551f","name":"Medicina Reproductiva"}]
+[01:20:55.904] Browser LOG     [{"id":"ac6b356d-501d-4985-95bc-45df8c07a867","name":"Ginecología Oncológica"},{"id":"9020324c-c13c-4257-9839-e77a0403551f","name":"Medicina Reproductiva"}]
+[01:20:55.904] Browser LOG     subIds ["ac6b356d-501d-4985-95bc-45df8c07a867","9020324c-c13c-4257-9839-e77a0403551f"]
+[01:20:55.904] Browser LOG     profData [{"first_name":"Antonia","id":"586475ca-0f28-4b12-ac52-571ba2507a74","last_name":"Carrasco Vidal","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Cristian","id":"5aa91cbb-4829-4c62-8f0a-107d28a72ff7","last_name":"Ramírez Flores","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Ignacio","id":"5d96c650-ad7b-408a-808d-c94f73a214bb","last_name":"Gutiérrez León","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Demopro2","id":"01a072c7-f181-4306-963e-4bdaa44f126e","last_name":"Demo2 Demo2","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Matías","id":"725fbbcf-2e45-4d8d-b0cf-749861194f6c","last_name":"Herrera Salas","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"},{"first_name":"Sebastián","id":"7e7d6ad1-0190-44b6-ae03-de74a50052ab","last_name":"Castro Núñez","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"},{"first_name":"Constanza","id":"9442bacb-735e-4a73-a65a-5eb2b4cfbba2","last_name":"Silva Méndez","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"},{"first_name":"Paola","id":"96a6aa8a-2559-4889-abeb-d1da85a93d06","last_name":"Vega Morales","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Mauricio","id":"b8808eb4-f6d3-437a-8e3b-8991e55adbd8","last_name":"Contreras Pinto","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Daniela","id":"353fdd4e-d702-48b3-a88c-435fb7afcb92","last_name":"Araya Fuentes","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"},{"first_name":"Paula","id":"d4317b49-0ef0-4567-819f-77efa32679ee","last_name":"Ortega Reyes","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"}]
+[01:20:56.081] Browser LOG     subIds ["ac6b356d-501d-4985-95bc-45df8c07a867","9020324c-c13c-4257-9839-e77a0403551f"]
+[01:20:56.081] Browser LOG     profData [{"first_name":"Antonia","id":"586475ca-0f28-4b12-ac52-571ba2507a74","last_name":"Carrasco Vidal","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Cristian","id":"5aa91cbb-4829-4c62-8f0a-107d28a72ff7","last_name":"Ramírez Flores","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Ignacio","id":"5d96c650-ad7b-408a-808d-c94f73a214bb","last_name":"Gutiérrez León","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Demopro2","id":"01a072c7-f181-4306-963e-4bdaa44f126e","last_name":"Demo2 Demo2","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Matías","id":"725fbbcf-2e45-4d8d-b0cf-749861194f6c","last_name":"Herrera Salas","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"},{"first_name":"Sebastián","id":"7e7d6ad1-0190-44b6-ae03-de74a50052ab","last_name":"Castro Núñez","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"},{"first_name":"Constanza","id":"9442bacb-735e-4a73-a65a-5eb2b4cfbba2","last_name":"Silva Méndez","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"},{"first_name":"Paola","id":"96a6aa8a-2559-4889-abeb-d1da85a93d06","last_name":"Vega Morales","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Mauricio","id":"b8808eb4-f6d3-437a-8e3b-8991e55adbd8","last_name":"Contreras Pinto","subspecialty_id":"9020324c-c13c-4257-9839-e77a0403551f"},{"first_name":"Daniela","id":"353fdd4e-d702-48b3-a88c-435fb7afcb92","last_name":"Araya Fuentes","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"},{"first_name":"Paula","id":"d4317b49-0ef0-4567-819f-77efa32679ee","last_name":"Ortega Reyes","subspecialty_id":"ac6b356d-501d-4985-95bc-45df8c07a867"}]
+[01:21:46.496] Server  LOG     ✓ Compiled in 30ms
+[01:21:51.321] Server  LOG     ✓ Compiled in 17ms
+[01:21:54.399] Server  LOG     ✓ Compiled in 19ms
+[01:21:58.430] Server  LOG     ✓ Compiled in 21ms
+[01:22:02.234] Server  LOG     ✓ Compiled in 18ms
+[01:25:37.394] Server  LOG     ✓ Compiled in 43ms
+[01:26:54.247] Server  LOG     ✓ Compiled in 21ms
+[01:26:54.349] Browser ERROR   ./src/app/page.tsx:16:167
+Parsing ecmascript source code failed
+  14 |
+  15 |   const specialties = [
+> 16 |     { name: 'Medicina General', desc: 'Atención médica integral para pacientes de todas las edades', icon: Stethoscope, color: 'text-blue-600', bg: 'bg-blue-50', bg- hover: 'bg-blue-600', popular: true },
+     |                                                                                                                                                                       ^
+  17 | { name: 'Cardiología', desc: 'Diagnóstico y tratamiento de enfermedades del corazón', icon: HeartPulse, color: 'text-rose-600', bg: 'bg-rose-50', popular: true },
+  18 | { name: 'Neurología', desc: 'Trastornos del sistema nervioso', icon: Brain, color: 'text-indigo-600', bg: 'bg-indigo-50' },
+  19 | { name: 'Pediatría', desc: 'Atención médica para niños y adolescentes', icon: Baby, color: 'text-orange-600', bg: 'bg-orange-50', popular: true },
+
+Expected a semicolon
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[01:26:54.349] Browser ERROR   ./src/app/page.tsx:16:167
+Parsing ecmascript source code failed
+  14 |
+  15 |   const specialties = [
+> 16 |     { name: 'Medicina General', desc: 'Atención médica integral para pacientes de todas las edades', icon: Stethoscope, color: 'text-blue-600', bg: 'bg-blue-50', bg- hover: 'bg-blue-600', popular: true },
+     |                                                                                                                                                                       ^
+  17 | { name: 'Cardiología', desc: 'Diagnóstico y tratamiento de enfermedades del corazón', icon: HeartPulse, color: 'text-rose-600', bg: 'bg-rose-50', popular: true },
+  18 | { name: 'Neurología', desc: 'Trastornos del sistema nervioso', icon: Brain, color: 'text-indigo-600', bg: 'bg-indigo-50' },
+  19 | { name: 'Pediatría', desc: 'Atención médica para niños y adolescentes', icon: Baby, color: 'text-orange-600', bg: 'bg-orange-50', popular: true },
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[01:27:42.365] Server  LOG     ✓ Compiled in 43ms
+[01:28:01.329] Server  LOG     ✓ Compiled in 23ms
+[01:28:39.967] Server  LOG     ✓ Compiled in 29ms
+[01:29:05.099] Server  LOG     ✓ Compiled in 25ms
+[01:29:44.477] Server  LOG     ✓ Compiled in 25ms
+[01:29:50.233] Server  LOG     ✓ Compiled in 19ms
+[01:30:20.936] Server  LOG     ✓ Compiled in 28ms
+[01:30:56.293] Server  LOG     ✓ Compiled in 27ms
+[01:31:17.574] Server  LOG     ✓ Compiled in 17ms
+[01:31:28.422] Server  LOG     ✓ Compiled in 31ms
+[01:31:41.470] Server  LOG     ✓ Compiled in 51ms
+[01:32:02.579] Server  LOG     ✓ Compiled in 36ms
+[01:32:22.853] Server  LOG     ✓ Compiled in 24ms
+[01:32:27.768] Server  LOG     ✓ Compiled in 20ms
+[01:32:47.985] Server  LOG     ✓ Compiled in 20ms
+[01:32:54.051] Server  LOG     ✓ Compiled in 18ms
+[01:33:14.360] Server  LOG     ✓ Compiled in 18ms
+[01:33:52.856] Server  LOG     ✓ Compiled in 44ms
+[01:35:45.216] Server  LOG     ✓ Compiled in 16ms
+[01:36:05.276] Server  LOG     ✓ Compiled in 38ms
+[01:36:25.759] Server  LOG     ✓ Compiled in 18ms
+[01:38:02.411] Server  LOG     ✓ Compiled in 15ms
+[01:40:29.977] Server  LOG     ✓ Compiled in 41ms
+[01:40:48.246] Server  LOG     ✓ Compiled in 22ms
+[01:41:19.806] Server  LOG     ✓ Compiled in 31ms
+[01:41:33.884] Server  LOG     ✓ Compiled in 29ms
+[01:41:51.054] Server  LOG     ✓ Compiled in 28ms
+[01:41:55.472] Server  LOG     ✓ Compiled in 37ms
+[01:41:57.774] Server  LOG     ✓ Compiled in 22ms
+[01:41:59.303] Server  LOG     ✓ Compiled in 31ms
+[02:11:40.965] Server  LOG     ✓ Compiled in 35ms
+[02:14:47.849] Server  LOG     ✓ Compiled in 37ms
+[02:15:19.677] Server  LOG     ✓ Compiled in 54ms
+[02:18:38.072] Server  LOG     ✓ Compiled in 69ms
+[02:19:36.827] Server  LOG     ✓ Compiled in 54ms
+[02:20:19.904] Server  LOG     ✓ Compiled in 50ms
+[02:20:52.236] Server  LOG     ✓ Compiled in 54ms
+[02:21:44.469] Server  LOG     ✓ Compiled in 27ms
+[02:24:02.994] Server  LOG     ✓ Compiled in 32ms
+[02:24:08.915] Server  LOG     ✓ Compiled in 29ms
+[02:24:23.124] Server  LOG     ✓ Compiled in 34ms
+[02:24:30.233] Server  LOG     ✓ Compiled in 37ms
+[02:24:36.659] Server  LOG     ✓ Compiled in 33ms
+[02:24:55.885] Server  LOG     ✓ Compiled in 22ms
+[02:25:02.630] Server  LOG     ✓ Compiled in 35ms
+[02:25:05.543] Server  LOG     ✓ Compiled in 21ms
+[02:26:35.337] Server  LOG     ✓ Compiled in 84ms
+[02:27:22.973] Server  LOG     ✓ Compiled in 48ms
+[02:27:34.818] Server  LOG     ✓ Compiled in 0ms
+[02:28:54.241] Server  LOG     ✓ Compiled in 26ms
+[02:29:39.337] Server  LOG     ✓ Compiled in 54ms
+[02:30:29.950] Server  LOG     ✓ Compiled in 20ms
+[02:30:39.872] Server  LOG     ✓ Compiled in 22ms
+[02:30:45.765] Server  LOG     ✓ Compiled in 18ms
+[02:32:28.945] Server  LOG     ✓ Compiled in 31ms
+[02:32:40.472] Server  LOG     ✓ Compiled in 21ms
+[02:32:47.342] Server  LOG     ✓ Compiled in 34ms
+[02:33:03.623] Server  LOG     ✓ Compiled in 19ms
+[02:34:08.332] Server  LOG     ✓ Compiled in 45ms
+[02:35:29.699] Server  LOG     ✓ Compiled in 34ms
+[02:35:44.654] Server  LOG     ✓ Compiled in 21ms
+[02:36:21.440] Server  LOG     ✓ Compiled in 95ms
+[02:36:28.812] Server  LOG     ✓ Compiled in 37ms
+[02:36:35.560] Server  LOG     ✓ Compiled in 34ms
+[02:36:51.626] Server  LOG     ✓ Compiled in 23ms
+[02:38:26.238] Server  LOG     ✓ Compiled in 38ms
+[02:39:23.438] Server  LOG     ✓ Compiled in 21ms
+[02:39:42.018] Server  LOG     ✓ Compiled in 23ms
+[02:40:09.313] Server  LOG     ✓ Compiled in 19ms
+[02:40:49.688] Server  LOG     ✓ Compiled in 36ms
+[02:40:49.791] Browser ERROR   ./src/app/register/patient/page.tsx:234:183
+Parsing ecmascript source code failed
+  232 |                             </div>
+  233 |                         </div>
+> 234 |                         <div className="flex items-center gap-4 bg-teal-700/30 backdrop-blur-md p-4 rounded-2xl border border-teal-500/30 hover:scale-110 transition-all duration-300"">
+      |                                                                                                                                                                                       ^^
+  235 |                         <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+  236 |                             <ShieldCheck className="w-6 h-6 text-white" />
+  237 |                         </div>
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/register/patient/page.tsx [Client Component Browser]
+    ./src/app/register/patient/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/register/patient/page.tsx [Client Component SSR]
+    ./src/app/register/patient/page.tsx [Server Component]
+[02:41:35.972] Server  LOG     ✓ Compiled in 61ms
+[02:41:36.081] Browser ERROR   ./src/app/register/professional/page.tsx:137:183
+Parsing ecmascript source code failed
+  135 |
+  136 |                     <div className="space-y-6">
+> 137 |                         <div className="flex items-center gap-4 bg-blue-700/30 backdrop-blur-md p-4 rounded-2xl border border-blue-500/30 hover:scale-110 transition-all duration-300"">
+      |                                                                                                                                                                                       ^^
+  138 |                         <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+  139 |                             <Stethoscope className="w-6 h-6 text-white" />
+  140 |                         </div>
+
+Unterminated string constant
+[02:41:46.049] Server  LOG     ✓ Compiled in 28ms
+[02:42:00.814] Server  LOG     ✓ Compiled in 24ms
+[02:44:18.427] Server  LOG     ✓ Compiled in 27ms
+[02:45:41.658] Server  LOG     ✓ Compiled in 44ms
+[02:45:48.703] Server  LOG     ✓ Compiled in 30ms
+[02:49:49.546] Server  LOG     ✓ Compiled in 24ms
+[02:50:16.673] Server  LOG     ✓ Compiled in 40ms
+[02:50:22.120] Server  LOG     ✓ Compiled in 45ms
+[02:50:57.679] Server  LOG     ✓ Compiled in 43ms
+[02:51:07.052] Server  LOG     ✓ Compiled in 27ms
+[02:51:13.441] Server  LOG     ✓ Compiled in 33ms
+[02:51:32.278] Server  LOG     ✓ Compiled in 20ms
+[02:51:57.609] Server  LOG     ✓ Compiled in 28ms
+[02:54:25.672] Server  LOG     ✓ Compiled in 201ms
+[02:54:25.786] Browser ERROR   ./src/app/contact/page.tsx:259:5
+Parsing ecmascript source code failed
+  257 |     );
+  258 | }
+> 259 |     );
+      |     ^
+  260 | }
+
+Expression expected
+[02:55:43.499] Server  LOG     ✓ Compiled in 168ms
+[02:58:07.695] Server  LOG     ✓ Compiled in 32ms
+[02:58:20.550] Server  LOG     ✓ Compiled in 21ms
+[02:59:25.198] Server  LOG     ✓ Compiled in 36ms
+[02:59:45.817] Server  LOG     ✓ Compiled in 27ms
+[03:00:12.731] Server  LOG     ✓ Compiled in 20ms
+[03:00:45.378] Server  LOG     ✓ Compiled in 20ms
+[03:00:48.245] Server  LOG     ✓ Compiled in 25ms
+[03:00:58.201] Server  LOG     ✓ Compiled in 30ms
+[03:01:09.607] Server  LOG     ✓ Compiled in 31ms
+[03:02:17.100] Server  LOG     ✓ Compiled in 26ms
+[03:06:02.025] Server  LOG     ✓ Compiled in 27ms
+[03:06:07.377] Server  LOG     ✓ Compiled in 20ms
+[03:11:47.230] Server  LOG     ✓ Compiled in 62ms
+[03:11:58.213] Server  LOG     ✓ Compiled in 22ms
+[03:12:07.879] Server  LOG     ✓ Compiled in 20ms
+[03:12:14.222] Server  LOG     ✓ Compiled in 23ms
+[03:12:53.226] Server  LOG     ✓ Compiled in 41ms
+[03:13:01.205] Server  LOG     ✓ Compiled in 19ms
+[03:13:44.481] Server  LOG     ✓ Compiled in 35ms
+[03:13:50.293] Server  LOG     ✓ Compiled in 43ms
+[03:13:59.008] Server  LOG     ✓ Compiled in 24ms
+[03:14:05.327] Server  LOG     ✓ Compiled in 19ms
+[03:14:17.829] Server  LOG     ✓ Compiled in 22ms
+[03:17:05.816] Server  LOG     ✓ Compiled in 22ms
+[03:22:19.802] Server  LOG     ✓ Compiled in 47ms
+[03:24:52.959] Server  LOG     ✓ Compiled in 29ms
+[03:24:53.022] Browser ERROR   uncaughtError: ReferenceError: features is not defined
+[03:25:43.009] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:25:43.029] Server  LOG     ✓ Compiled in 29ms
+[03:26:25.551] Server  LOG     ✓ Compiled in 27ms
+[03:26:25.610] Browser ERROR   uncaughtError: TypeError: specialties.filter is not a function
+[03:26:40.245] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:26:40.268] Server  LOG     ✓ Compiled in 22ms
+[03:26:40.369] Server  ERROR   ⨯ ReferenceError: specialties is not defined
+[03:26:40.618] Browser ERROR   uncaughtError: ReferenceError: specialties is not defined
+[03:29:07.391] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:29:07.407] Server  LOG     ✓ Compiled in 27ms
+[03:38:44.434] Server  LOG     ✓ Compiled in 23ms
+[03:38:55.032] Server  LOG     ✓ Compiled in 23ms
+[03:41:33.714] Server  LOG     open false
+[03:41:33.946] Browser LOG     open false
+[03:41:33.946] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[03:41:34.331] Browser LOG     open false
+[03:41:34.331] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[03:41:54.732] Browser LOG     open false
+[03:41:54.732] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[03:41:54.955] Browser LOG     open false
+[03:41:54.955] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[03:41:55.225] Browser LOG     open false
+[03:41:55.225] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[03:43:45.474] Browser LOG     open false
+[03:43:45.474] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:09.711] Browser LOG     open false
+[04:01:09.711] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:10.947] Browser LOG     open false
+[04:01:10.947] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:11.205] Browser LOG     open false
+[04:01:11.205] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:15.361] Browser LOG     open false
+[04:01:15.362] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:15.563] Browser LOG     open false
+[04:01:15.563] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:15.814] Browser LOG     open false
+[04:01:15.814] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:17.387] Browser LOG     open false
+[04:01:17.387] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:17.597] Browser LOG     open false
+[04:01:17.597] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:17.769] Browser LOG     open false
+[04:01:17.769] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:21.168] Browser LOG     open false
+[04:01:21.168] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:21.416] Browser LOG     open false
+[04:01:21.416] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:21.595] Browser LOG     open false
+[04:01:21.595] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:21.873] Browser LOG     open false
+[04:01:21.874] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:22.268] Browser LOG     open false
+[04:01:22.268] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:22.503] Browser LOG     open false
+[04:01:22.503] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:22.503] Browser LOG     open false
+[04:01:22.503] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:22.767] Browser LOG     open false
+[04:01:22.767] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:22.937] Browser LOG     open false
+[04:01:22.937] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:23.227] Browser LOG     open false
+[04:01:23.227] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:23.431] Browser LOG     open false
+[04:01:23.432] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:23.603] Browser LOG     open false
+[04:01:23.603] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:26.783] Browser LOG     open false
+[04:01:26.783] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:30.116] Browser LOG     open false
+[04:01:30.116] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:30.312] Browser LOG     open false
+[04:01:30.312] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:30.480] Browser LOG     open false
+[04:01:30.480] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:33.309] Browser LOG     open false
+[04:01:33.309] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:33.504] Browser LOG     open false
+[04:01:33.504] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:33.675] Browser LOG     open false
+[04:01:33.675] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:34.064] Browser LOG     open false
+[04:01:34.064] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:34.295] Browser LOG     open false
+[04:01:34.295] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:34.461] Browser LOG     open false
+[04:01:34.461] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:35.435] Browser LOG     open false
+[04:01:35.435] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:35.627] Browser LOG     open false
+[04:01:35.627] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:35.805] Browser LOG     open false
+[04:01:35.805] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:01:37.777] Browser LOG     open false
+[04:01:37.777] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:00.956] Browser LOG     open false
+[04:02:00.956] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:01.179] Browser LOG     open false
+[04:02:01.179] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:01.348] Browser LOG     open false
+[04:02:01.348] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:03.310] Browser LOG     open false
+[04:02:03.310] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:03.509] Browser LOG     open false
+[04:02:03.509] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:03.677] Browser LOG     open false
+[04:02:03.677] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:03.990] Browser LOG     open false
+[04:02:03.990] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:04.208] Browser LOG     open false
+[04:02:04.208] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:04.383] Browser LOG     open false
+[04:02:04.383] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:05.531] Browser LOG     open false
+[04:02:05.531] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:05.730] Browser LOG     open false
+[04:02:05.730] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:06.004] Browser LOG     open false
+[04:02:06.004] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:06.004] Browser LOG     open false
+[04:02:06.004] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:06.252] Browser LOG     open false
+[04:02:06.252] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:06.419] Browser LOG     open false
+[04:02:06.419] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:10.003] Browser LOG     open false
+[04:02:10.003] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:10.196] Browser LOG     open false
+[04:02:10.196] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:02:10.367] Browser LOG     open false
+[04:02:10.367] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:11:33.404] Browser LOG     open false
+[04:11:33.404] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:11:34.031] Browser LOG     open false
+[04:11:34.031] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:11:34.501] Browser LOG     open false
+[04:11:34.501] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:11:34.709] Browser LOG     open false
+[04:11:34.709] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:11:34.880] Browser LOG     open false
+[04:11:34.880] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:11:35.076] Browser LOG     open false
+[04:11:35.076] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:11:35.259] Browser LOG     open false
+[04:11:35.259] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:48.465] Browser LOG     open false
+[04:20:48.465] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:49.431] Browser LOG     open false
+[04:20:49.431] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:49.431] Browser LOG     open false
+[04:20:49.431] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:49.652] Browser LOG     open false
+[04:20:49.652] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:49.821] Browser LOG     open false
+[04:20:49.821] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:50.076] Browser LOG     open false
+[04:20:50.076] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:51.117] Browser LOG     open false
+[04:20:51.117] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:51.318] Browser LOG     open false
+[04:20:51.318] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:51.483] Browser LOG     open false
+[04:20:51.483] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:51.699] Browser LOG     open false
+[04:20:51.699] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:51.897] Browser LOG     open false
+[04:20:51.897] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:52.063] Browser LOG     open false
+[04:20:52.063] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:55.514] Browser LOG     open false
+[04:20:55.514] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:55.705] Browser LOG     open false
+[04:20:55.705] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:55.875] Browser LOG     open false
+[04:20:55.875] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:56.027] Browser LOG     open false
+[04:20:56.027] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:56.213] Browser LOG     open false
+[04:20:56.213] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:56.392] Browser LOG     open false
+[04:20:56.392] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:56.749] Browser LOG     open false
+[04:20:56.749] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:56.965] Browser LOG     open false
+[04:20:56.965] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:20:57.133] Browser LOG     open false
+[04:20:57.133] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:26:02.053] Server  LOG     ✓ Compiled in 32ms
+[04:26:10.301] Server  LOG     open false
+[04:26:10.403] Browser LOG     open false
+[04:26:10.403] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:26:11.391] Browser LOG     open false
+[04:26:11.391] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:26:17.447] Server  LOG     ✓ Compiled in 144ms
+[04:26:17.517] Server  LOG     open false
+[04:26:17.735] Browser LOG     open false
+[04:26:17.735] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:26:18.102] Browser LOG     open false
+[04:26:18.103] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:26:49.408] Server  LOG     ✓ Compiled in 70ms
+[04:32:09.512] Browser LOG     open false
+[04:32:09.512] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:10.270] Browser LOG     open false
+[04:32:10.270] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:10.666] Browser LOG     open false
+[04:32:10.666] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:13.180] Browser LOG     open false
+[04:32:13.180] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:13.484] Browser LOG     open false
+[04:32:13.484] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:13.850] Browser LOG     open false
+[04:32:13.850] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:14.485] Browser LOG     open false
+[04:32:14.485] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:14.787] Browser LOG     open false
+[04:32:14.787] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:15.056] Browser LOG     open false
+[04:32:15.056] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:15.669] Browser LOG     open false
+[04:32:15.669] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:15.943] Browser LOG     open false
+[04:32:15.943] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:32:16.193] Browser LOG     open false
+[04:32:16.193] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:45:36.213] Server  LOG     ✓ Compiled in 335ms
+[04:45:58.995] Server  LOG     open false
+[04:45:59.022] Server  LOG     open false
+[04:45:59.230] Browser LOG     open false
+[04:45:59.230] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:46:00.117] Browser LOG     open false
+[04:46:00.117] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:47:13.373] Server  LOG     open false
+[04:47:13.576] Browser LOG     open false
+[04:47:13.576] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false
+[04:47:14.371] Browser LOG     open false
+[04:47:14.371] Browser LOG     %c%s %s color: rgba(124, 124, 124, 0.75) open false

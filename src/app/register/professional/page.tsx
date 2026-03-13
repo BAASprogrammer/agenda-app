@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { setAuthCookies } from "@/app/actions";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -103,12 +104,14 @@ export default function ProfessionalRegistration() {
 
                 if (dbError) throw dbError;
 
-                // 3. Set cookies just like LoginModal to establish session
-                document.cookie = `first_name=${encodeURIComponent(formData.firstName.trim())}; path=/;`;
-                document.cookie = `last_name=${encodeURIComponent(formData.lastName.trim())}; path=/;`;
-                document.cookie = `email=${encodeURIComponent(emailTrimmed)}; path=/;`;
-                document.cookie = `user_id=${authData.user.id}; path=/;`;
-                document.cookie = `is_professional=true; path=/;`; // IMPORTANT: true here
+                // 3. Set cookies using Next.js Server Action
+                await setAuthCookies({
+                    firstName: formData.firstName.trim(),
+                    lastName: formData.lastName.trim(),
+                    email: emailTrimmed,
+                    userId: authData.user.id,
+                    isProfessional: "true"
+                });
 
                 // 4. Redirect
                 router.replace("/home/professional");
@@ -125,7 +128,7 @@ export default function ProfessionalRegistration() {
     return (
         <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800">
             {/* Left Column - Presentation (Flipped for Profs) */}
-            <div className="hidden lg:flex w-1/2 bg-blue-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tr-[50%] rounded-br-[50%] transition-all ease-in-out duration-300 hover:rounded-tr-[30%] hover:rounded-br-[30%]">
+            <div className="hidden lg:flex w-1/2 bg-blue-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tr-[50%] rounded-br-[50%] transition-all ease-in-out duration-300">
                 <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
                 <div className="absolute bottom-[-10%] right-[-10%] w-[35rem] h-[35rem] bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
 
@@ -134,7 +137,7 @@ export default function ProfessionalRegistration() {
                     <p className="text-blue-100 text-lg mb-12 font-medium leading-relaxed">Únete a la red de profesionales de la salud. Reduce inasistencias, gestiona tu agenda fácilmente y brinda una mejor experiencia a tus pacientes.</p>
 
                     <div className="space-y-6">
-                        <div className="flex items-center gap-4 bg-blue-700/30 backdrop-blur-md p-4 rounded-2xl border border-blue-500/30">
+                        <div className="flex items-center gap-4 bg-blue-700/30 backdrop-blur-md p-4 rounded-2xl border border-blue-500/30 hover:scale-110 transition-all duration-300">
                             <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
                                 <Stethoscope className="w-6 h-6 text-white" />
                             </div>
@@ -143,7 +146,7 @@ export default function ProfessionalRegistration() {
                                 <p className="text-blue-100/80 text-sm">Destaca tu experiencia y aumenta tu visibilidad online.</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 bg-blue-700/30 backdrop-blur-md p-4 rounded-2xl border border-blue-500/30">
+                        <div className="flex items-center gap-4 bg-blue-700/30 backdrop-blur-md p-4 rounded-2xl border border-blue-500/30 hover:scale-110 transition-all duration-300">
                             <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
                                 <Activity className="w-6 h-6 text-white" />
                             </div>
@@ -345,13 +348,15 @@ export default function ProfessionalRegistration() {
             </div>
 
             {/* Modal de Inicio de Sesión local para esta página */}
-            {showLoginModal && (
-                <LoginModal
-                    setIsLoggedIn={() => { window.location.reload(); }}
-                    open={showLoginModal}
-                    onClose={() => setShowLoginModal(false)}
-                />
-            )}
-        </div>
+            {
+                showLoginModal && (
+                    <LoginModal
+                        setIsLoggedIn={() => { window.location.reload(); }}
+                        open={showLoginModal}
+                        onClose={() => setShowLoginModal(false)}
+                    />
+                )
+            }
+        </div >
     );
 }

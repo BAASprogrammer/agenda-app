@@ -2,13 +2,11 @@
   "/(patient)/medicalhistory/page": "app/(patient)/medicalhistory/page.js",
   "/(patient)/myappointments/page": "app/(patient)/myappointments/page.js",
   "/(patient)/profile/page": "app/(patient)/profile/page.js",
-  "/(professional)/manageappointments/page": "app/(professional)/manageappointments/page.js",
-  "/(professional)/mypatients/page": "app/(professional)/mypatients/page.js",
-  "/(professional)/schedule/page": "app/(professional)/schedule/page.js",
-  "/(professional)/settings/page": "app/(professional)/settings/page.js",
   "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
   "/home/patient/page": "app/home/patient/page.js",
   "/home/professional/page": "app/home/professional/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/register/patient/page": "app/register/patient/page.js",
+  "/register/professional/page": "app/register/professional/page.js"
 }

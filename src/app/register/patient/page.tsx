@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { setAuthCookies } from "@/app/actions";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -66,12 +67,14 @@ export default function PatientRegistration() {
 
                 if (dbError) throw dbError;
 
-                // 3. Set cookies just like LoginModal to establish session
-                document.cookie = `first_name=${encodeURIComponent(formData.firstName.trim())}; path=/;`;
-                document.cookie = `last_name=${encodeURIComponent(formData.lastName.trim())}; path=/;`;
-                document.cookie = `email=${encodeURIComponent(emailTrimmed)}; path=/;`;
-                document.cookie = `user_id=${authData.user.id}; path=/;`;
-                document.cookie = `is_professional=false; path=/;`;
+                // 3. Set cookies using Next.js Server Action
+                await setAuthCookies({
+                    firstName: formData.firstName.trim(),
+                    lastName: formData.lastName.trim(),
+                    email: emailTrimmed,
+                    userId: authData.user.id,
+                    isProfessional: "false"
+                });
 
                 // 4. Redirect
                 router.replace("/home/patient");
@@ -100,7 +103,7 @@ export default function PatientRegistration() {
                     <h1 className="text-3xl font-extrabold text-slate-900 mb-2">Únete como Paciente</h1>
                     <p className="text-slate-500 font-medium mb-8">Crea tu cuenta gratis y gestiona tu salud de manera simple y segura.</p>
 
-                    <form onSubmit={handleRegister} className="space-y-5">
+                    <form onSubmit={handleRegister} className="space-y-5" noValidate>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
                                 <label className="block text-sm font-bold text-slate-700 mb-1.5">Nombre</label>
@@ -213,7 +216,7 @@ export default function PatientRegistration() {
             </div>
 
             {/* Right Column - Presentation */}
-            <div className="hidden lg:flex w-1/2 bg-teal-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tl-[50%] rounded-bl-[50%] transition-all ease-in-out duration-300 hover:rounded-tl-[30%] hover:rounded-bl-[30%]">
+            <div className="hidden lg:flex w-1/2 bg-teal-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tl-[50%] rounded-bl-[50%] transition-all ease-in-out duration-300">
                 <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
                 <div className="absolute bottom-[-10%] right-[-10%] w-[35rem] h-[35rem] bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
 
@@ -222,7 +225,7 @@ export default function PatientRegistration() {
                     <p className="text-teal-100 text-lg mb-12 font-medium leading-relaxed">Únete a miles de pacientes que ya agendan sus citas médicas de forma rápida, segura y sin esperas telefónicas.</p>
 
                     <div className="space-y-6">
-                        <div className="flex items-center gap-4 bg-teal-700/30 backdrop-blur-md p-4 rounded-2xl border border-teal-500/30">
+                        <div className="flex items-center gap-4 bg-teal-700/30 backdrop-blur-md p-4 rounded-2xl border border-teal-500/30 hover:scale-110 transition-all duration-300">
                             <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
                                 <CalendarClock className="w-6 h-6 text-white" />
                             </div>
@@ -231,7 +234,7 @@ export default function PatientRegistration() {
                                 <p className="text-teal-100/80 text-sm">Reserva tu hora médica cuando quieras, desde donde estés.</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 bg-teal-700/30 backdrop-blur-md p-4 rounded-2xl border border-teal-500/30">
+                        <div className="flex items-center gap-4 bg-teal-700/30 backdrop-blur-md p-4 rounded-2xl border border-teal-500/30 hover:scale-110 transition-all duration-300">
                             <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
                                 <ShieldCheck className="w-6 h-6 text-white" />
                             </div>
@@ -245,13 +248,15 @@ export default function PatientRegistration() {
             </div>
 
             {/* Modal de Inicio de Sesión local para esta página */}
-            {showLoginModal && (
-                <LoginModal
-                    setIsLoggedIn={() => { window.location.reload(); }}
-                    open={showLoginModal}
-                    onClose={() => setShowLoginModal(false)}
-                />
-            )}
-        </div>
+            {
+                showLoginModal && (
+                    <LoginModal
+                        setIsLoggedIn={() => { window.location.reload(); }}
+                        open={showLoginModal}
+                        onClose={() => setShowLoginModal(false)}
+                    />
+                )
+            }
+        </div >
     );
 }
