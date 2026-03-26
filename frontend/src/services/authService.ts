@@ -9,17 +9,19 @@ export async function loginUser(email: string, password: string): Promise<UserDa
     });
     if (authError) throw new Error("Email o contraseña incorrectos.");
     const user = sessionData?.session?.user;
+    console.log(sessionData.session?.access_token);
+
     if (!user) throw new Error("No se pudo obtener el usuario autenticado.");
-    const { data: userData } = await api.get(`/users/${user.id}`, {
+    const { data: userData } = await api.get(`/users/me`, {
         headers: {
             Authorization: `Bearer ${sessionData.session?.access_token}`,
         },
     });
     return {
-        firstName: userData.first_name || "",
-        lastName: userData.last_name || "",
+        firstName: userData.firstName || "",
+        lastName: userData.lastName || "",
         email: userData.email || "",
-        isProfessional: userData.is_professional?.toString() || "false",
+        isProfessional: userData.isProfessional?.toString() || "false",
         userId: user.id,
     };
 }
