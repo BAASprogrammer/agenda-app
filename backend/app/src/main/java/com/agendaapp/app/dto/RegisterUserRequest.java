@@ -7,6 +7,8 @@ public class RegisterUserRequest {
 	private String email;
 	private String phone;
 	private Boolean isProfessional;
+    private String subSpecialtyId;
+
 	
 	public RegisterUserRequest() {}
 
@@ -48,5 +50,13 @@ public class RegisterUserRequest {
 
 	public void setIsProfessional(Boolean isProfessional) {
 		this.isProfessional = isProfessional;
+	}
+
+	public String getSubSpecialtyId() {
+		return subSpecialtyId;
+	}
+
+	public void setSubSpecialtyId(String subSpecialtyId) {
+		this.subSpecialtyId = subSpecialtyId;
 	}
 }

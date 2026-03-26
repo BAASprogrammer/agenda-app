@@ -32,6 +32,10 @@ public class SecurityConfig {
 	        .csrf(csrf -> csrf.disable())
 	        .authorizeHttpRequests(auth -> auth
 	            .requestMatchers("/api/users/register").permitAll()
+	            .requestMatchers("/api/users/check-email").permitAll()
+	            .requestMatchers("/api/specialties").permitAll()
+	            .requestMatchers("/api/subspecialties").permitAll()
+	            .requestMatchers("/api/users/professionals").permitAll()
 	            .anyRequest().authenticated()
 	        )
 	        .oauth2ResourceServer(oauth -> oauth

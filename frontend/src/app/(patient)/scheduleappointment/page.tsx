@@ -1,6 +1,8 @@
 "use client";
 
+import { api } from "@/lib/api";
 import { supabase } from "@/lib/supabaseClient";
+import { useQuery, useMutation } from "@tanstack/react-query";
 import {
     Calendar,
     Stethoscope,
@@ -14,16 +16,13 @@ import {
     Clock
 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 interface Specialty { id: string; name: string; }
 interface SubSpecialty { id: string; name: string; specialty_id: string; }
 interface Professional { id: string; first_name: string; last_name: string; }
 
 export default function ScheduleAppointment() {
     const [isScheduleAppointmentOpen, setIsScheduleAppointmentOpen] = useState<boolean>(false);
-    const [specialties, setSpecialties] = useState<Specialty[]>([]);
-    const [subSpecialties, setSubSpecialties] = useState<SubSpecialty[]>([]);
-    const [professionals, setProfessionals] = useState<Professional[]>([]);
     const [selectedSpecialty, setSelectedSpecialty] = useState<string>("");
     const [selectedSubSpecialty, setSelectedSubSpecialty] = useState<string>("");
     const [message, setMessage] = useState<string>("");
@@ -41,80 +40,96 @@ export default function ScheduleAppointment() {
     const handleScheduleAppointment = () => {
         setIsScheduleAppointmentOpen(true);
     };
-    useEffect(() => {
-        const fetchSpecialties = async () => {
-            const { data, error } = await supabase.from('medical_specialties').select('*');
-            if (error) {
-                console.error('Error al obtener las especialidades:', error);
-            } else {
-                setSpecialties(data);
-            }
-        };
-        fetchSpecialties();
-    }, []);
-    const handleSpecialtyChange = async (specialty_id: string) => {
-        setSelectedSpecialty(specialty_id);
-        if (specialty_id) {
-            const { data, error } = await supabase.from('medical_subspecialties').select('*').eq('specialty_id', specialty_id);
-            if (error) {
-                console.error('Error al obtener las subespecialidades:', error);
-                setSubSpecialties([]);
-            } else {
-                setSubSpecialties(data);
-            }
+    // 1. Query specialties
+    const { data: specialties = [] } = useQuery({
+        queryKey: ['specialties'],
+        queryFn: async () => {
+            const response = await api.get('/specialties');
+            return response.data;
         }
-    };
-    const handleSubSpecialtyChange = async (subspecialty_id: string) => {
-        setSelectedSubSpecialty(subspecialty_id);
-        if (subspecialty_id) {
+    });
 
-            const { data, error } = await supabase.from('users').select('first_name, last_name, id').eq('is_professional', true).eq('subspecialty_id', subspecialty_id);
-            if (error) {
-                console.error('Error al obtener los profesionales:', error);
-                setProfessionals([]);
-            } else {
-                setProfessionals(data);
-            }
+    // 2. Query subspecialties
+    const { data: subSpecialties = [] } = useQuery({
+        queryKey: ['subSpecialties', selectedSpecialty],
+        queryFn: async () => {
+            const response = await api.get('/subspecialties', {
+                params: { specialtyId: selectedSpecialty }
+            });
+            return response.data;
+        },
+        enabled: !!selectedSpecialty
+    });
+
+    // 3. Query professionals
+    const { data: professionals = [] } = useQuery({
+        queryKey: ['professionals', selectedSubSpecialty],
+        queryFn: async () => {
+            const response = await api.get('/users/professionals', {
+                params: { subspecialtyId: selectedSubSpecialty }
+            });
+            return response.data;
+        },
+        enabled: !!selectedSubSpecialty
+    });
+
+    // 4. Mutación para crear la cita
+    const createAppointmentMutation = useMutation({
+        mutationFn: async (appointmentData: any) => {
+            const response = await api.post('/appointments', appointmentData);
+            return response.data;
+        },
+        onSuccess: () => {
+            setMessage('Cita creada exitosamente');
+            setIsScheduleAppointmentOpen(false);
+            resetForm();
+        },
+        onError: (error: any) => {
+            setMessage(error.response?.data?.message || 'Error al crear la cita');
         }
+    });
+
+    const handleSpecialtyChange = (specialty_id: string) => {
+        setSelectedSpecialty(specialty_id);
+        setSelectedSubSpecialty("");
+    };
+
+    const handleSubSpecialtyChange = (subspecialty_id: string) => {
+        setSelectedSubSpecialty(subspecialty_id);
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) {
             setMessage('Error: Debes iniciar sesión para crear una cita');
-            return false;
+            return;
         }
+
         if (!selectedSpecialty || !selectedSubSpecialty || !appointment.professional || !appointment.date || !appointment.time || !appointment.reason) {
             setMessage('Error: Debes completar todos los campos');
-            return false;
+            return;
         }
+
         const now = new Date();
+        const nowDate = now.toLocaleDateString("en-CA");
         const nowHours = now.getHours();
         const nowMinutes = now.getMinutes();
-        const nowDate = now.toLocaleDateString("en-CA");
-        if (appointment.date == nowDate && appointment.time < nowHours + ":" + nowMinutes) {
+
+        if (appointment.date === nowDate && appointment.time < `${nowHours}:${nowMinutes}`) {
             setMessage('Error: No es posible agendar citas con fecha y hora anteriores a la actual');
-            return false;
+            return;
         }
-        const appointmentData = {
-            patient_id: user.id,
-            subspecialty_id: selectedSubSpecialty,
-            professional_id: appointment.professional,
-            appointment_date: appointment.date + " " + appointment.time,
+
+        createAppointmentMutation.mutate({
+            patientId: user.id,
+            subSpecialtyId: selectedSubSpecialty,
+            professionalId: appointment.professional,
+            appointmentDate: `${appointment.date}T${appointment.time}`, // Formato ISO para Java LocalDateTime
             reason: appointment.reason,
             status: 'agendada'
-        };
-        const { error } = await supabase.from('medical_appointments').insert(appointmentData);
-        if (error) {
-            setMessage('Error al crear la cita');
-            return false;
-        } else {
-            setMessage('Cita creada exitosamente');
-            setIsScheduleAppointmentOpen(false);
-            resetForm();
-            return true;
-        }
+        });
     };
     const handleCloseModal = () => {
         setMessage('');
@@ -129,8 +144,6 @@ export default function ScheduleAppointment() {
         });
         setSelectedSpecialty('');
         setSelectedSubSpecialty('');
-        setSubSpecialties([]);
-        setProfessionals([]);
     };
     return (
         <div className="min-h-screen bg-slate-50 relative overflow-hidden font-sans text-slate-800">
@@ -266,7 +279,7 @@ export default function ScheduleAppointment() {
                                             onChange={(e) => handleSpecialtyChange(e.target.value)}
                                         >
                                             <option value="">Seleccionar Especialidad</option>
-                                            {specialties.map(specialty => (
+                                            {specialties.map((specialty: Specialty) => (
                                                 <option key={specialty.id} value={specialty.id}>
                                                     {specialty.name}
                                                 </option>
@@ -291,7 +304,7 @@ export default function ScheduleAppointment() {
                                             disabled={!selectedSpecialty}
                                         >
                                             <option value="">Seleccionar Sub-Especialidad</option>
-                                            {subSpecialties.map(subSpecialty => (
+                                            {subSpecialties.map((subSpecialty: SubSpecialty) => (
                                                 <option key={subSpecialty.id} value={subSpecialty.id}>
                                                     {subSpecialty.name}
                                                 </option>
@@ -316,7 +329,7 @@ export default function ScheduleAppointment() {
                                             disabled={!selectedSubSpecialty}
                                         >
                                             <option value="">Seleccionar Profesional</option>
-                                            {professionals.map(professional => (
+                                            {professionals.map((professional: Professional) => (
                                                 <option key={professional.id} value={professional.id}>
                                                     {professional.first_name} {professional.last_name}
                                                 </option>

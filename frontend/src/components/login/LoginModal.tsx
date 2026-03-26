@@ -2,8 +2,10 @@
 import { setAuthCookies } from '@/app/actions';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { X, Mail, Lock, ArrowRight, Activity, Stethoscope } from 'lucide-react';
-import { loginUser } from '@/services/authService';
+import { X, Mail, Lock, ArrowRight, Stethoscope } from 'lucide-react';
+import { loginUser, resetPasswordRequest } from '@/services/authService';
+import { checkEmailExists } from '@/services/registerService';
+import { useMutation } from '@tanstack/react-query';
 
 interface LoginModalProps {
     open: boolean;
@@ -13,10 +15,10 @@ interface LoginModalProps {
 
 export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
     const router = useRouter();
-    const [error, setError] = useState<string | null>(null);
-    const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isResetMode, setIsResetMode] = useState(false);
+    const [resetSent, setResetSent] = useState(false);
 
     // If modal is not open, render nothing
     if (!open) return null;
@@ -25,20 +27,17 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
     const handleClose = () => {
         onClose();
     }
-
-    // Handle login logic: authenticate with Supabase, fetch user's first name from 'users' table, set cookie, reload UI
-    const handleLogin = async (e?: React.FormEvent) => {
-        if (e) e.preventDefault();
-        setLoading(true);
-        setError(null);
-
-        const emailTrimmed = email.trim();
-        try {
-            const userData = await loginUser(emailTrimmed, password);
+    const { mutate: login, isPending: loading, error: mutationError } = useMutation({
+        mutationFn: async () => {
+            return await loginUser(email.trim(), password);
+        },
+        onSuccess: async (userData) => {
+            if (!userData) {
+                throw new Error("No se pudo obtener la información del usuario.");
+            }
             // Set the cookies using Next.js Server Action
             await setAuthCookies(userData);
             setIsLoggedIn(true);
-            setError(null);
             onClose();
 
             // Redirect based on user role
@@ -48,12 +47,39 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
                 router.push("/home/patient");
             }
             router.refresh();
-        } catch (error: any) {
-            setError(error.message || "Error al iniciar sesión. Verifique sus credenciales.");
-        } finally {
-            setLoading(false);
         }
+    });
+
+    const error = mutationError ? (mutationError as Error).message : null;
+
+    // Handle login logic: authenticate with Supabase, fetch user's first name from 'users' table, set cookie, reload UI
+    const handleLogin = async (e?: React.FormEvent) => {
+        if (e) e.preventDefault();
+        login();
     }
+
+    const { mutate: requestReset, isPending: resetting, error: resetError, isSuccess: resetRequestSuccess } = useMutation({
+        mutationFn: async () => {
+            if (!email) throw new Error("Por favor ingrese su correo.");
+            
+            // Primero verificamos si el email pertenece a un usuario
+            const exists = await checkEmailExists(email);
+            if (!exists) {
+                throw new Error("No existe una cuenta registrada con este correo.");
+            }
+
+            return await resetPasswordRequest(email.trim());
+        },
+        onSuccess: () => {
+            setResetSent(true);
+        }
+    });
+
+    const handleResetPassword = (e: React.FormEvent) => {
+        e.preventDefault();
+        requestReset();
+    }
+
 
     return (
         <div className="fixed inset-0 flex items-center justify-center z-[100] px-4">
@@ -79,64 +105,116 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
                     <p className="text-slate-500 font-medium text-[15px]">Accede a tu cuenta segura de AgendaApp.</p>
                 </div>
 
-                <form onSubmit={handleLogin} className="space-y-5">
-                    {/* Inputs */}
-                    <div>
-                        <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-1.5">Correo electrónico</label>
-                        <div className="relative group">
-                            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-500 transition-colors">
-                                <Mail className="w-5 h-5" />
+                {isResetMode ? (
+                    <form onSubmit={handleResetPassword} className="space-y-5">
+                        <div className="text-center">
+                            <p className="text-sm text-slate-500 mb-4">Ingresa tu correo y te enviaremos un enlace para recuperar tu cuenta.</p>
+                        </div>
+                        <div>
+                            <label htmlFor="reset-email" className="block text-sm font-bold text-slate-700 mb-1.5">Correo electrónico</label>
+                            <div className="relative group">
+                                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-500 transition-colors">
+                                    <Mail className="w-5 h-5" />
+                                </div>
+                                <input
+                                    type="email"
+                                    id="reset-email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="tu@correo.com"
+                                    className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-[15px] focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 font-medium text-slate-800"
+                                    required
+                                />
                             </div>
-                            <input
-                                type="email"
-                                id="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="tu@correo.com"
-                                className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-[15px] focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 font-medium text-slate-800"
-                                required
-                            />
                         </div>
-                    </div>
 
-                    <div>
-                        <div className="flex items-center justify-between mb-1.5">
-                            <label htmlFor="password" className="block text-sm font-bold text-slate-700">Contraseña</label>
-                            <a href="#" className="text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors">¿Olvidaste tu contraseña?</a>
-                        </div>
-                        <div className="relative group">
-                            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-500 transition-colors">
-                                <Lock className="w-5 h-5" />
+                        {resetSent && (
+                            <div className="p-3.5 bg-emerald-50 text-emerald-600 text-sm font-bold rounded-xl text-center border border-emerald-100 flex items-center justify-center gap-2">
+                                Enlace enviado correctamente. Revisa tu bandeja de entrada.
                             </div>
-                            <input
-                                type="password"
-                                id="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="••••••••"
-                                className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-[15px] focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 font-medium text-slate-800"
-                                required
-                            />
-                        </div>
-                    </div>
+                        )}
 
-                    {/* Error Message */}
-                    {error && (
-                        <div className="p-3.5 bg-rose-50 text-rose-600 text-sm font-bold rounded-xl animate-fade-in text-center border border-rose-100 flex items-center justify-center gap-2">
-                            {error}
-                        </div>
-                    )}
+                        {(error || (resetError as Error)?.message) && (
+                            <div className="p-3.5 bg-rose-50 text-rose-600 text-sm font-bold rounded-xl text-center border border-rose-100 flex items-center justify-center gap-2">
+                                {error || (resetError as Error)?.message}
+                            </div>
+                        )}
 
-                    {/* Submit Button */}
-                    <button
-                        type="submit"
-                        disabled={loading}
-                        className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-blue-200/50 hover:shadow-blue-300/50 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-70 disabled:pointer-events-none mt-2"
-                    >
-                        {loading ? "Iniciando..." : "Ingresar a mi cuenta"}
-                        {!loading && <ArrowRight className="w-5 h-5" />}
-                    </button>
-                </form>
+                        <button
+                            type="submit"
+                            disabled={resetting}
+                            className="w-full flex items-center justify-center gap-2 bg-linear-to-r from-teal-600 to-teal-500 text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-teal-200/50 hover:shadow-teal-300/50 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-70 disabled:pointer-events-none mt-2"
+                        >
+                            {resetting ? "Enviando..." : "Enviar enlace de recuperación"}
+                            {!resetting && <ArrowRight className="w-5 h-5" />}
+                        </button>
+
+                        <div className="text-center">
+                            <button type="button" onClick={() => { setIsResetMode(false); setResetSent(false); }} className="text-sm font-bold text-slate-500 hover:text-slate-700 transition-colors">
+                                Volver al inicio de sesión
+                            </button>
+                        </div>
+                    </form>
+                ) : (
+                    <form onSubmit={handleLogin} className="space-y-5">
+                        {/* Inputs */}
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-1.5">Correo electrónico</label>
+                            <div className="relative group">
+                                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-500 transition-colors">
+                                    <Mail className="w-5 h-5" />
+                                </div>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="tu@correo.com"
+                                    className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-[15px] focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 font-medium text-slate-800"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="flex items-center justify-between mb-1.5">
+                                <label htmlFor="password" className="block text-sm font-bold text-slate-700">Contraseña</label>
+                                <button type="button" onClick={() => setIsResetMode(true)} className="text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors">¿Olvidaste tu contraseña?</button>
+                            </div>
+                            <div className="relative group">
+                                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-500 transition-colors">
+                                    <Lock className="w-5 h-5" />
+                                </div>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder="••••••••"
+                                    className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-[15px] focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 font-medium text-slate-800"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        {/* Error Message */}
+                        {error && (
+                            <div className="p-3.5 bg-rose-50 text-rose-600 text-sm font-bold rounded-xl animate-fade-in text-center border border-rose-100 flex items-center justify-center gap-2">
+                                {error}
+                            </div>
+                        )}
+
+                        {/* Submit Button */}
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className="w-full flex items-center justify-center gap-2 bg-linear-to-r from-blue-600 to-blue-500 text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-blue-200/50 hover:shadow-blue-300/50 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-70 disabled:pointer-events-none mt-2"
+                        >
+                            {loading ? "Iniciando..." : "Ingresar a mi cuenta"}
+                            {!loading && <ArrowRight className="w-5 h-5" />}
+                        </button>
+                    </form>
+                )}
 
                 <div className="mt-8 pt-6 border-t border-slate-100 text-center text-sm font-medium text-slate-500">
                     <p className="mb-3">¿No tienes una cuenta aún?</p>

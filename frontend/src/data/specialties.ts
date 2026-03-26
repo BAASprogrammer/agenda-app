@@ -1,5 +1,4 @@
-import { Baby, BicepsFlexed, Brain, BrainCog, Eye, HeartPulse, Smile, Sparkles, Stethoscope, Venus } from "lucide-react";
-import { Activity } from "react";
+import { Baby, BicepsFlexed, Brain, BrainCog, Eye, HeartPulse, Smile, Sparkles, Stethoscope, Venus, Activity } from "lucide-react";
 import { Specialty } from "@/types/specialty";
 
 

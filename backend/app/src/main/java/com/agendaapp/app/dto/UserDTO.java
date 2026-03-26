@@ -5,15 +5,18 @@ public class UserDTO {
 	private String lastName;
 	private String email;
 	private Boolean isProfessional;
+	private String subSpecialtyId;
 	
 	public UserDTO(){}
 	
-	public UserDTO(String firstName, String lastName, String email, Boolean isProfessional)
+	public UserDTO(String firstName, String lastName, String email, Boolean isProfessional, String subSpecialtyId)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.isProfessional = isProfessional;
+		this.subSpecialtyId = subSpecialtyId;
+		
 	}
 
 	public String getFirstName() {
@@ -46,6 +49,14 @@ public class UserDTO {
 
 	public void setIsProfessional(Boolean isProfessional) {
 		this.isProfessional = isProfessional;
+	}
+
+	public String getSubSpecialtyId() {
+		return subSpecialtyId;
+	}
+
+	public void setSubSpecialtyId(String subSpecialtyId) {
+		this.subSpecialtyId = subSpecialtyId;
 	}
 	
 	

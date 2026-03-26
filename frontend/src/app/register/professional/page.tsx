@@ -9,13 +9,15 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 
 import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
+import { api } from "@/lib/api";
 import { ProfessionalFormData } from "@/types/professional-form-data";
 import { useUserStore } from "@/store/userStore";
+import { registerUser, checkEmailExists } from "@/services/registerService";
 
 export default function ProfessionalRegistration() {
     const router = useRouter();
     const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
-    const setUser = useUserStore((state) => state.setUser);
+    // Form data
     const [formData, setFormData] = useState<ProfessionalFormData>({
         firstName: "",
         lastName: "",
@@ -29,7 +31,35 @@ export default function ProfessionalRegistration() {
         subspecialtyId: ""
     });
     const [error, setError] = useState<string | null>(null);
-
+    // Mutation for registration
+    const { mutate: register, isPending } = useMutation({
+        mutationFn: (data: any) => registerUser({ ...data, isProfessional: true }),
+        onSuccess: async (userData: any) => {
+            await setAuthCookies(userData);
+            router.replace("/home/professional");
+            router.refresh();
+        },
+        onError: (err: any) => {
+            console.error("Error en registro:", err);
+            setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
+        }
+    })
+    // Check if email exists
+    const handleEmailBlur = async () => {
+        if (formData.email && formData.email.includes("@")) {
+            try {
+                const exists = await checkEmailExists(formData.email);
+                if (exists) {
+                    setError("Este correo ya se encuentra registrado. Intenta iniciar sesión.");
+                } else if (error === "Este correo ya se encuentra registrado. Intenta iniciar sesión.") {
+                    setError(null);
+                }
+            } catch (err) {
+                console.error("Error al verificar email:", err);
+            }
+        }
+    };
+    // Fetch specialties
     const { data: specialties = [] } = useQuery({
         queryKey: ['medical-specialties'],
         queryFn: async () => {
@@ -37,6 +67,7 @@ export default function ProfessionalRegistration() {
             return data || [];
         }
     });
+    // Fetch subspecialties
     const { data: subspecialties = [] } = useQuery({
         queryKey: ['medical-subspecialties', formData.specialtyId],
         enabled: !!formData.specialtyId,
@@ -45,65 +76,15 @@ export default function ProfessionalRegistration() {
             return data || [];
         }
     });
-
-    const { mutate: register, isPending } = useMutation({
-        mutationFn: async (formData: any) => {
-            const emailTrimmed = formData.email.trim();
-            const { data: authData, error: authError } = await supabase.auth.signUp({
-                email: emailTrimmed,
-                password: formData.password,
-            });
-
-            if (authError) throw authError;
-
-            const { error: dbError } = await supabase
-                .from('users')
-                .insert([
-                    {
-                        id: authData.user?.id,
-                        first_name: formData.firstName.trim(),
-                        last_name: formData.lastName.trim(),
-                        email: emailTrimmed,
-                        phone: formData.phone.trim(),
-                        is_professional: true, // Mark as professional
-                        subspecialty_id: formData.subspecialtyId
-                    }
-                ]);
-            if (dbError) throw dbError;
-            await setAuthCookies({
-                firstName: formData.firstName.trim(),
-                lastName: formData.lastName.trim(),
-                email: emailTrimmed,
-                userId: authData.user!.id,
-                isProfessional: "true"
-            });
-            return authData;
-        },
-        onSuccess: (authData) => {
-            setUser({
-                isLoggedIn: true,
-                firstName: formData.firstName.trim(),
-                lastName: formData.lastName.trim(),
-                email: formData.email.trim(),
-                userId: authData.user?.id,
-                isProfessional: "true"
-            });
-            router.replace("/home/professional");
-            router.refresh();
-        },
-        onError: (err) => {
-            console.error("Error en registro prof:", err);
-            setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
-        }
-    })
-
+    // Handle specialty change
     const handleSpecialtyChange = async (specialtyId: string) => {
         setFormData(prev => ({ ...prev, specialtyId, subspecialtyId: "" }));
     }
+    // Handle change
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
+    // Handle register
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
@@ -198,6 +179,7 @@ export default function ProfessionalRegistration() {
                                 <input
                                     type="email" name="email" required
                                     value={formData.email} onChange={handleChange}
+                                    onBlur={handleEmailBlur}
                                     className="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 font-medium"
                                     placeholder="contacto@clinicamaria.cl"
                                 />

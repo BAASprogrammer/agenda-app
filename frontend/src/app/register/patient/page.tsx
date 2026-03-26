@@ -6,7 +6,8 @@ import Link from "next/link";
 import { User, Mail, Lock, Phone, ArrowRight, CalendarClock, ShieldCheck, Stethoscope } from "lucide-react";
 import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
-import { registerUser } from "@/services/registerService";
+import { registerUser, checkEmailExists } from "@/services/registerService";
+import { useMutation } from "@tanstack/react-query";
 
 export default function PatientRegistration() {
     const router = useRouter();
@@ -21,8 +22,36 @@ export default function PatientRegistration() {
         password: "",
         confirmPassword: ""
     });
-    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+
+    // Mutation for registration
+    const { mutate: register, isPending } = useMutation({
+        mutationFn: (data: any) => registerUser({ ...data, isProfessional: false }),
+        onSuccess: async (userData) => {
+            await setAuthCookies(userData);
+            router.replace("/home/patient");
+            router.refresh();
+        },
+        onError: (err: any) => {
+            console.error("Error en registro:", err);
+            setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
+        }
+    });
+    // Check if email exists
+    const handleEmailBlur = async () => {
+        if (formData.email && formData.email.includes("@")) {
+            try {
+                const exists = await checkEmailExists(formData.email);
+                if (exists) {
+                    setError("Este correo ya se encuentra registrado. Intenta iniciar sesión.");
+                } else if (error === "Este correo ya se encuentra registrado. Intenta iniciar sesión.") {
+                    setError(null);
+                }
+            } catch (err) {
+                console.error("Error al verificar email:", err);
+            }
+        }
+    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,35 +61,13 @@ export default function PatientRegistration() {
         e.preventDefault();
         setError(null);
 
-        const error = validateRegister(formData);
-        if (error) {
-            setError(error);
+        const validationError = validateRegister(formData);
+        if (validationError) {
+            setError(validationError);
             return;
         }
 
-        setLoading(true);
-
-        try {
-            // Register using the service
-            const userData = await registerUser({
-                ...formData,
-                isProfessional: false,
-            });
-
-            // 2. Set cookies using Next.js Server Action
-            await setAuthCookies(userData);
-
-            // 3. Redirect
-            router.replace("/home/patient");
-            router.refresh();
-
-        } catch (err: any) {
-            console.error("Error en registro:", err);
-            setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
-        } finally {
-            setLoading(false);
-        }
-
+        register(formData);
     };
 
     return (
@@ -114,6 +121,7 @@ export default function PatientRegistration() {
                                 <input
                                     type="email" name="email" required
                                     value={formData.email} onChange={handleChange}
+                                    onBlur={handleEmailBlur}
                                     className="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all placeholder:text-slate-400 font-medium"
                                     placeholder="tu@correo.com"
                                 />
@@ -174,11 +182,11 @@ export default function PatientRegistration() {
 
                         <button
                             type="submit"
-                            disabled={loading}
+                            disabled={isPending}
                             className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-teal-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-teal-200 hover:shadow-teal-300 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 disabled:opacity-70 mt-6"
                         >
-                            {loading ? "Creando cuenta..." : "Comenzar Gratis"}
-                            {!loading && <ArrowRight className="w-5 h-5" />}
+                            {isPending ? "Creando cuenta..." : "Comenzar Gratis"}
+                            {!isPending && <ArrowRight className="w-5 h-5" />}
                         </button>
                     </form>
 
