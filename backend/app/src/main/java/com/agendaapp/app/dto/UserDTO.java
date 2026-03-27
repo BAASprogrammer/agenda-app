@@ -30,7 +30,6 @@ public class UserDTO {
 		
 	}
 
-	@JsonProperty("first_name")
 	public String getFirstName() {
 		return firstName;
 	}
@@ -39,7 +38,6 @@ public class UserDTO {
 		this.firstName = firstName;
 	}
 
-	@JsonProperty("last_name")
 	public String getLastName() {
 		return lastName;
 	}
@@ -56,7 +54,6 @@ public class UserDTO {
 		this.email = email;
 	}
 
-	@JsonProperty("is_professional")
 	public Boolean getIsProfessional() {
 		return isProfessional;
 	}
@@ -65,16 +62,11 @@ public class UserDTO {
 		this.isProfessional = isProfessional;
 	}
 
-	@JsonProperty("subspecialty_id")
 	public String getSubSpecialtyId() {
 		return subSpecialtyId;
 	}
 
 	public void setSubSpecialtyId(String subSpecialtyId) {
 		this.subSpecialtyId = subSpecialtyId;
-	}
-
-	public void setId(String id) {
-		// Placeholder for compatibility
 	}
 }

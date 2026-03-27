@@ -96,17 +96,17 @@ public class UserController {
 	}
 
 	@GetMapping("/profile")
-	public Map<String, Object> getProfile(@RequestParam String userId) {
-		String sql = "SELECT first_name, last_name, email, phone, address FROM public.users " +
-				"WHERE id = ?::uuid LIMIT 1";
-		var results = jdbc.queryForList(sql, userId);
-		return results.isEmpty() ? Map.of() : results.get(0);
+	public Map<String, Object> getProfile(@AuthenticationPrincipal Jwt jwt) {
+		String userId = jwt.getSubject();
+		String sql = "SELECT first_name, last_name, email, phone, address FROM public.users WHERE id = ?::uuid LIMIT 1";
+		return jdbc.queryForMap(sql, userId);
 	}
 
 	@PutMapping("/profile")
 	public UserResponseDTO updateProfile(
-			@RequestParam String userId,
+			@AuthenticationPrincipal Jwt jwt,
 			@RequestBody RegisterUserRequest body) {
+		String userId = jwt.getSubject();
 		String sql = "UPDATE public.users SET first_name = ?, last_name = ?, phone = ?, address = ? WHERE id = ?::uuid";
 		jdbc.update(sql,
 				body.getFirstName(),

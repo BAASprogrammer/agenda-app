@@ -9,27 +9,32 @@ export async function loginUser(email: string, password: string): Promise<UserDa
     });
     if (authError) throw new Error("Email o contraseña incorrectos.");
     const user = sessionData?.session?.user;
-    console.log(sessionData.session?.access_token);
-
     if (!user) throw new Error("No se pudo obtener el usuario autenticado.");
 
-    // Pasamos el token directamente para evitar timing issues con el interceptor
-    const accessToken = sessionData.session?.access_token;
-    const { data: userData } = await api.get(`/users/me`, {
-        headers: { Authorization: `Bearer ${accessToken}` }
-    });
-    
-    if (!userData) {
-        throw new Error("No se pudo obtener la información del perfil del usuario.");
+    // Try to fetch profile from backend with fresh token
+    try {
+        const { data: userData } = await api.get(`/users/me`, {
+            headers: { Authorization: `Bearer ${sessionData.session?.access_token}` }
+        });
+        
+        return {
+            firstName: userData.first_name || userData.firstName || user.user_metadata?.first_name || "",
+            lastName: userData.last_name || userData.lastName || user.user_metadata?.last_name || "",
+            email: userData.email || user.email || "",
+            isProfessional: (userData.is_professional ?? userData.isProfessional)?.toString() || user.user_metadata?.is_professional?.toString() || "false",
+            userId: user.id,
+        };
+    } catch (apiError) {
+        console.warn("Backend profile fetch failed, falling back to Supabase metadata:", apiError);
+        // Fallback to Supabase data if backend is unreachable
+        return {
+            firstName: user.user_metadata?.first_name || "",
+            lastName: user.user_metadata?.last_name || "",
+            email: user.email || "",
+            isProfessional: user.user_metadata?.is_professional?.toString() || "false",
+            userId: user.id,
+        };
     }
-
-    return {
-        firstName: userData.first_name || userData.firstName || "",
-        lastName: userData.last_name || userData.lastName || "",
-        email: userData.email || "",
-        isProfessional: (userData.is_professional ?? userData.isProfessional)?.toString() || "false",
-        userId: user.id,
-    };
 }
 
 export async function resetPasswordRequest(email: string) {

@@ -51,10 +51,10 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
                         href={redirection}
                         className="flex items-center gap-2.5 hover:scale-[1.02] transition-transform duration-300"
                     >
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center shadow-md shadow-blue-200/60">
+                        <div className="w-10 h-10 rounded-xl bg-linear-to-br from-blue-600 to-blue-500 flex items-center justify-center shadow-md shadow-blue-200/60">
                             <Stethoscope className="text-white w-5 h-5" aria-hidden="true" />
                         </div>
-                        <span className="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500">
+                        <span className="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-blue-500">
                             AgendaApp
                         </span>
                     </Link>
@@ -63,10 +63,8 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
                     <div className="hidden md:flex items-center gap-1">
                         {isLoggedIn && isProfessional === "true" ? (
                             <Link href="/home/professional" className={navLinkClass("/home/professional")}>Inicio</Link>
-                        ) : isLoggedIn && isProfessional === "false" ? (
-                            <Link href="/home/patient" className={navLinkClass("/home/patient")}>Inicio</Link>
                         ) : (
-                            <Link href="/" className={navLinkClass("/")}>Inicio</Link>
+                            <Link href={isLoggedIn ? "/home/patient" : "/"} className={navLinkClass(isLoggedIn ? "/home/patient" : "/")}>Inicio</Link>
                         )}
                         <Link href="/about" className={navLinkClass("/about")}>Acerca de</Link>
                         <Link href="/contact" className={navLinkClass("/contact")}>Contacto</Link>
@@ -82,7 +80,7 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
                                 <Link
                                     href="#"
                                     onClick={handleLogout}
-                                    className="flex items-center justify-center p-2 sm:px-4 sm:py-2 bg-white text-rose-500 hover:bg-rose-50 hover:text-rose-600 rounded-xl font-bold transition-all duration-200 text-sm border border-slate-200"
+                                    className="flex items-center justify-center p-2 bg-white text-rose-500 hover:bg-rose-50 hover:text-rose-600 rounded-xl font-bold transition-all duration-200 text-sm border border-slate-200"
                                     title="Cerrar Sesión"
                                 >
                                     <LogOut className="w-4 h-4 sm:mr-2" />
@@ -92,15 +90,9 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
                         ) : (
                             <div className="flex items-center gap-3">
                                 <Link
-                                    href="/register/patient"
-                                    className="hidden sm:inline-block bg-white text-blue-600 border border-blue-200 px-5 py-2.5 rounded-xl font-bold shadow-sm hover:border-blue-300 hover:text-blue-700 transition-all duration-300 text-sm"
-                                >
-                                    Regístrate
-                                </Link>
-                                <Link
                                     href="#"
                                     onClick={handleLogin}
-                                    className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-5 py-2.5 rounded-xl font-bold shadow-md shadow-blue-200 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-sm"
+                                    className="bg-linear-to-r from-blue-600 to-blue-500 text-white px-5 py-2.5 rounded-xl font-bold shadow-md shadow-blue-200 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-sm"
                                 >
                                     Iniciar Sesión
                                 </Link>
