@@ -10,11 +10,15 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+    // 1. Hooks & Stores
     const user = useUserStore();
+
+    // 2. State
     const [todayCount, setTodayCount] = useState(0);
     const [patientCount, setPatientCount] = useState(0);
     const [upcomingAppts, setUpcomingAppts] = useState<any[]>([]);
 
+    // 3. Effects
     useEffect(() => {
         if (!user.userId) return;
 
@@ -49,7 +53,11 @@ export default function Home() {
             setUpcomingAppts((upcoming ?? []).map((a: any) => {
                 const parts = a.appointment_date.replace(' ', 'T').split('T');
                 const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
-                return { ...a, displayTime: `${timePart[0]}:${timePart[1]}` };
+                return { 
+                    ...a, 
+                    id: String(a.id),
+                    displayTime: `${timePart[0]}:${timePart[1]}` 
+                };
             }));
         };
 
@@ -62,7 +70,7 @@ export default function Home() {
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-blue-50/70 to-transparent -z-10"></div>
+                <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-blue-50/70 to-transparent -z-10"></div>
                 <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-float pointer-events-none"></div>
                 <div className="absolute top-32 -left-24 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-float pointer-events-none" style={{ animationDelay: '2s' }}></div>
 
@@ -117,13 +125,13 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                         {/* Quick Actions Card */}
                         <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
-                            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-50 to-teal-50 rounded-bl-full -z-10 transition-transform group-hover:scale-110 duration-700 pointer-events-none"></div>
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-linear-to-br from-blue-50 to-teal-50 rounded-bl-full -z-10 transition-transform group-hover:scale-110 duration-700 pointer-events-none"></div>
                             <h2 className="text-2xl font-bold text-slate-800 mb-2">Gestiona tu agenda</h2>
                             <p className="text-slate-500 mb-8 max-w-sm font-medium leading-relaxed">
-                                Mantente organizado y revisa tus citas de forma rápida. ¡Gracias por ser parte de <strong className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">AgendaApp</strong>!
+                                Mantente organizado y revisa tus citas de forma rápida. ¡Gracias por ser parte de <strong className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-500">AgendaApp</strong>!
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Link href="/schedule" className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-4 rounded-xl font-bold shadow-md shadow-blue-200 hover:shadow-blue-300 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
+                                <Link href="/schedule" className="flex-1 flex items-center justify-center gap-2 bg-linear-to-r from-blue-600 to-blue-500 text-white px-6 py-4 rounded-xl font-bold shadow-md shadow-blue-200 hover:shadow-blue-300 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
                                     <Calendar className="w-5 h-5" />
                                     Ver Agenda
                                 </Link>

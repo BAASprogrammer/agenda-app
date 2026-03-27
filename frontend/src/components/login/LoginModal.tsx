@@ -40,13 +40,9 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
             setIsLoggedIn(true);
             onClose();
 
-            // Redirect based on user role
-            if (userData.isProfessional === "true") {
-                router.push("/home/professional");
-            } else if (userData.isProfessional === "false") {
-                router.push("/home/patient");
-            }
-            router.refresh();
+            // Full navigation so the server reads the new cookies correctly
+            const dashboard = userData.isProfessional === "true" ? "/home/professional" : "/home/patient";
+            window.location.replace(dashboard);
         }
     });
 

@@ -24,9 +24,6 @@ export default function ProSidebarPatient({ active }: ProSidebarPatientProps) {
             <aside className={`absolute md:block right-4 md:right-0 top-28 md:top-0 h-1/2 w-1/2 md:static md:h-full md:w-64 bg-white md:border-r md:border-slate-100 rounded-lg md:rounded-none border-2 border-slate-200 flex flex-col z-20 animate-slide-in-left ${open ? "translate-x-0 opacity-100" : "translate-x-full hidden md:translate-x-0 md:opacity-100"}`}>
                 {/* Header */}
                 <div className="p-6 border-b border-slate-100 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-600 to-teal-400 flex items-center justify-center shadow-md shadow-teal-200/60 hover:scale-105 transition-transform duration-300">
-                        <LayoutDashboard className="text-white w-5 h-5" aria-hidden="true" />
-                    </div>
                     <span className="text-[15px] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-700 to-teal-500 tracking-tight">
                         Menú Principal
                     </span>

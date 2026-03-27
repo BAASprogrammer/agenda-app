@@ -8,8 +8,12 @@ export const api = axios.create({
     },
 });
 
-// Interceptor to add Bearer token to requests
+// Interceptor to add Bearer token to requests (only if not already set)
 api.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
+    // Si ya hay un Authorization header explícito, no lo sobreescribimos
+    if (config.headers.Authorization) {
+        return config;
+    }
     try {
         const { data: { session } } = await supabase.auth.getSession();
         if (session?.access_token) {

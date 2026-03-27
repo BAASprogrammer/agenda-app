@@ -12,17 +12,22 @@ export async function loginUser(email: string, password: string): Promise<UserDa
     console.log(sessionData.session?.access_token);
 
     if (!user) throw new Error("No se pudo obtener el usuario autenticado.");
-    const { data: userData } = await api.get(`/users/me`);
+
+    // Pasamos el token directamente para evitar timing issues con el interceptor
+    const accessToken = sessionData.session?.access_token;
+    const { data: userData } = await api.get(`/users/me`, {
+        headers: { Authorization: `Bearer ${accessToken}` }
+    });
     
     if (!userData) {
         throw new Error("No se pudo obtener la información del perfil del usuario.");
     }
 
     return {
-        firstName: userData.firstName || "",
-        lastName: userData.lastName || "",
+        firstName: userData.first_name || userData.firstName || "",
+        lastName: userData.last_name || userData.lastName || "",
         email: userData.email || "",
-        isProfessional: userData.isProfessional?.toString() || "false",
+        isProfessional: (userData.is_professional ?? userData.isProfessional)?.toString() || "false",
         userId: user.id,
     };
 }

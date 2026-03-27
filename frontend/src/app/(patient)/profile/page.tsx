@@ -14,6 +14,8 @@ import {
 import { useState, useEffect } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { setAuthCookies } from "@/app/actions";
+import { api } from "@/lib/api";
+import { useProfile, useUpdateProfile } from "@/hooks/useProfile";
 
 interface PatientData {
     first_name: string;
@@ -23,11 +25,15 @@ interface PatientData {
     address: string;
 }
 export default function Profile() {
+    // 1. Hooks & Stores
     const userId = useUserStore(state => state.userId);
     const firstNameStore = useUserStore(state => state.firstName);
     const lastNameStore = useUserStore(state => state.lastName);
     const emailStore = useUserStore(state => state.email);
     const setUser = useUserStore(state => state.setUser);
+    const queryClient = useQueryClient();
+
+    // 2. State
     const [message, setMessage] = useState<string>("");
     const [formData, setFormData] = useState<PatientData>({
         first_name: "",
@@ -36,47 +42,17 @@ export default function Profile() {
         phone: "",
         address: ""
     });
-    //queryclient
-    const { data: patient } = useQuery({
-        queryKey: ["patient", userId],
-        queryFn: async () => {
-            if (!userId) return null;
-            const { data: patient, error } = await supabase
-                .from("users")
-                .select("phone, address")
-                .eq("id", userId)
-                .single();
-            if (error) {
-                console.error("Error obteniendo datos del paciente:", error);
-                return null;
-            }
-            return patient;
-        },
-        enabled: !!userId
-    });
-    const { mutate: update, isPending } = useMutation({
-        mutationFn: async (patientData: PatientData) => {
-            // Extract email to NOT try to update it in the 'users' table
-            // since it is usually managed by Supabase Auth or is read-only.
-            const { email, ...updateData } = patientData;
 
-            const { error } = await supabase
-                .from("users")
-                .update(updateData)
-                .eq("id", userId);
-
-            if (error) throw error; // CRITICO: Lanzar el error para que useMutation lo detecte
-            return patientData;
-        },
-        onSuccess: (updatedData) => {
-            // Set user in store
+    // 3. Queries
+    const { data: patient } = useProfile(userId!);
+    const { mutate: update, isPending } = useUpdateProfile(userId!, {
+        onSuccess: (updatedData: any) => {
             setUser({
                 userId: userId,
                 firstName: updatedData.first_name,
                 lastName: updatedData.last_name,
                 email: updatedData.email
             });
-            // Update cookies
             setAuthCookies({
                 firstName: updatedData.first_name,
                 lastName: updatedData.last_name,
@@ -85,36 +61,73 @@ export default function Profile() {
                 isProfessional: "false"
             });
             setMessage("Perfil actualizado correctamente");
+            queryClient.invalidateQueries({ queryKey: ["patient", userId] });
         },
         onError: (error: any) => {
             console.error("Error al actualizar:", error);
             setMessage(`Error al guardar: ${error.message || "Contacta a soporte"}`);
         }
     });
+    // const { mutate: update, isPending } = useMutation({
+    //     mutationFn: async (patientData: PatientData) => {
+    //         const { email, ...updateData } = patientData;
+    //         const { error } = await supabase
+    //             .from("users")
+    //             .update(updateData)
+    //             .eq("id", userId);
 
+    //         if (error) throw error;
+    //         return patientData;
+    //     },
+    //     onSuccess: (updatedData) => {
+    //         setUser({
+    //             userId: userId,
+    //             firstName: updatedData.first_name,
+    //             lastName: updatedData.last_name,
+    //             email: updatedData.email
+    //         });
+    //         setAuthCookies({
+    //             firstName: updatedData.first_name,
+    //             lastName: updatedData.last_name,
+    //             email: updatedData.email,
+    //             userId: userId,
+    //             isProfessional: "false"
+    //         });
+    //         setMessage("Perfil actualizado correctamente");
+    //         queryClient.invalidateQueries({ queryKey: ["patient", userId] });
+    //     },
+    //     onError: (error: any) => {
+    //         console.error("Error al actualizar:", error);
+    //         setMessage(`Error al guardar: ${error.message || "Contacta a soporte"}`);
+    //     }
+    // });
+
+    // 4. Effects
     useEffect(() => {
-        // Only fill the form if we have the ID and the patient has already loaded (patient is not undefined)
-        // And only if the name is still empty to not overwrite what the user is writing
-        if (userId && patient && !formData.first_name) {
+        // Rellenar el formulario con los datos del backend cuando estén disponibles
+        if (userId && patient) {
             setFormData({
-                first_name: firstNameStore || "",
-                last_name: lastNameStore || "",
-                email: emailStore || "",
+                first_name: patient.first_name || firstNameStore || "",
+                last_name: patient.last_name || lastNameStore || "",
+                email: patient.email || emailStore || "",
                 phone: patient.phone || "",
                 address: patient.address || ""
             });
         }
-    }, [userId, firstNameStore, lastNameStore, emailStore, patient, formData.first_name]);
+    }, [userId, patient]);
 
+    // 5. Handlers
     const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setMessage("");
-        if (formData.phone.trim().replace(/\s/g, '').length !== 12 || !formData.phone.trim().match(/^\+[0-9]+$/)) {
-            setMessage("Por favor, ingrese un número de teléfono válido");
+
+        const cleanPhone = formData.phone.trim().replace(/\s/g, '');
+        if (cleanPhone.length !== 12 || !cleanPhone.match(/^\+[0-9]+$/)) {
+            setMessage("Por favor, ingrese un número de teléfono válido (ej: +56912345678)");
             return;
         }
-        update(formData);
 
+        update(formData);
         setTimeout(() => setMessage(""), 5000);
     };
 
@@ -250,7 +263,7 @@ export default function Profile() {
                                         <button
                                             type="submit"
                                             disabled={isPending}
-                                            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-10 py-4 rounded-2xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 shadow-md shadow-blue-200 active:scale-95 disabled:opacity-50"
+                                            className="flex items-center gap-2 bg-linear-to-r from-blue-600 to-blue-500 text-white px-10 py-4 rounded-2xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 shadow-md shadow-blue-200 active:scale-95 disabled:opacity-50"
                                         >
                                             <Save className="w-5 h-5" />
                                             {isPending ? "Guardando..." : "Guardar Cambios"}

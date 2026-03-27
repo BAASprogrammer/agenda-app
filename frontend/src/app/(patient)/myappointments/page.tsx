@@ -6,15 +6,11 @@ import { supabase } from "@/lib/supabaseClient";
 import { getStatusColor } from "@/utils/getStatusColor";
 import DoctorProfileModal from "@/components/patient/DoctorProfileModal";
 import {
-    CalendarClock,
     NotepadText,
-    CircleUser,
     ChevronLeft,
     Clock,
-    Filter,
     Search,
     MoreVertical,
-    X,
     CalendarDays,
     Trash2,
     User,
@@ -23,42 +19,53 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useAppointmentsByPatient, useCancelAppointment, useUpdateAppointmentStatus } from "@/hooks/useAppointmentsQueries";
 
 export default function MyAppointments() {
     const user = useUserStore();
     const [appointments, setAppointments] = useState<any[]>([]);
     const [filter, setFilter] = useState("todas");
     const [selectedAppointment, setSelectedAppointment] = useState<any | null>(null);
-    const [openMenuId, setOpenMenuId] = useState<number | null>(null);
+    const [openMenuId, setOpenMenuId] = useState<string | null>(null);
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [message, setMessage] = useState<string>("");
-    const [appointmentToCancel, setAppointmentToCancel] = useState<number | null>(null);
+    const [appointmentToCancel, setAppointmentToCancel] = useState<string | null>(null);
     const [isDoctorProfileOpen, setIsDoctorProfileOpen] = useState(false);
     const [selectedDoctor, setSelectedDoctor] = useState<any>(null);
 
+    const updateStatusMutation = useUpdateAppointmentStatus();
+    const cancelMutation = useCancelAppointment();
+    const { data, error } = useAppointmentsByPatient(user.userId!);
+
+    const today = new Date().toLocaleDateString("en-CA");
+
+    // Effect to format and set appointments from query data
     useEffect(() => {
-        const fetchAppointments = async () => {
-            if (!user.userId) return;
+        if (!user.userId) return;
 
-            const { data, error } = await supabase
-                .from('medical_appointments')
-                .select(`id, appointment_date, status, professional_id, reason, professional:users!medical_appointments_professional_id_fkey (first_name, last_name)`)
-                .eq('patient_id', user.userId)
-                .order('appointment_date', { ascending: false });
+        if (error) {
+            console.error("Error obteniendo citas:", error);
+            return;
+        }
 
-            if (error) {
-                console.error("Error obteniendo citas:", error);
-                return;
-            }
+        if (data) {
+            const formattedData = data.map((appt: any) => {
+                // Reconstruct professional object for compatibility
+                const professional = {
+                    first_name: appt.professional_first_name,
+                    last_name: appt.professional_last_name
+                };
 
-            const formattedData = (data ?? []).map(appt => {
                 const parts = appt.appointment_date.replace(' ', 'T').split('T');
                 const datePart = parts[0];
                 const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
                 const [year, month, day] = datePart.split('-').map(Number);
                 const d = new Date(year, month - 1, day);
+
                 return {
                     ...appt,
+                    id: appt.id?.toString(),
+                    professional,
                     displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('cl-CL', { month: 'short' }).replace('.', ''),
                     displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
                     displayFullDate: isNaN(d.getTime()) ? 'Fecha inválida' : d.toLocaleDateString('cl-CL', { weekday: 'long', day: 'numeric', month: 'long' }),
@@ -66,35 +73,40 @@ export default function MyAppointments() {
                     displayDate: parts[0]
                 };
             });
-
             setAppointments(formattedData);
         }
-        fetchAppointments();
-    }, [user.userId]);
+    }, [user.userId, data, error]);
+
+    // Effect to auto-update past appointments
+    useEffect(() => {
+        appointments.forEach(appt => {
+            const appointmentDate = appt.appointment_date.split(' ')[0];
+            if (appointmentDate < today && appt.status === 'agendada') {
+                updateStatusMutation.mutate({ id: appt.id, status: 'pasada' });
+                setAppointments(prev => prev.map(a => a.id === appt.id ? { ...a, status: 'pasada' } : a));
+            }
+        });
+    }, [appointments, today, updateStatusMutation]);
 
     const searchProfessional = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value.toLowerCase());
     };
 
-    const handleCancelAppointment = (appointmentId: number) => {
+    const handleCancelAppointment = (appointmentId: string) => {
         setAppointmentToCancel(appointmentId);
         setMessage("¿Estás seguro de cancelar la cita?");
-        // Do not close the menu here to show the question inside it
     };
 
     const confirmCancel = async () => {
         if (!appointmentToCancel) return;
 
-        const { error } = await supabase
-            .from('medical_appointments')
-            .update({ status: 'cancelada' })
-            .eq('id', appointmentToCancel);
-
-        if (error) {
-            setMessage("Error: No se pudo cancelar la cita");
-        } else {
+        try {
+            await cancelMutation.mutateAsync({ id: appointmentToCancel });
             setAppointments(appointments.filter(appt => appt.id !== appointmentToCancel));
             setMessage("Cita cancelada con éxito");
+        } catch (err) {
+            console.error("Error al cancelar cita:", err);
+            setMessage("Error: No se pudo cancelar la cita");
         }
 
         setAppointmentToCancel(null);
@@ -102,20 +114,15 @@ export default function MyAppointments() {
         setTimeout(() => setMessage(""), 3000);
     };
 
-    const today = new Date().toLocaleDateString("en-CA");
-
     const displayAppointments = appointments.filter(appt => {
-        // 1. Search filter (doctor's first/last name)
         const matchesSearch =
             appt.professional?.first_name.toLowerCase().includes(searchTerm) ||
             appt.professional?.last_name.toLowerCase().includes(searchTerm);
 
         if (!matchesSearch) return false;
 
-        // 2. Tab filter (status/time)
         if (filter === 'todas') return appt.appointment_date.split(' ')[0];
-        if (filter === 'pasada') return appt.appointment_date.split(' ')[0] < today && appt.status === 'pasada';
-
+        if (filter === 'pasada') return appt.appointment_date.split(' ')[0] < today && (appt.status === 'pasada' || appt.status === 'agendada');
         return appt.status === filter;
     });
     return (
@@ -215,7 +222,7 @@ export default function MyAppointments() {
                                         </button>
                                         <div className="relative">
                                             <button
-                                                onClick={() => setOpenMenuId(openMenuId === appointment.id ? null : appointment.id)}
+                                                onClick={() => setOpenMenuId(openMenuId === appointment.id?.toString() ? null : appointment.id?.toString())}
                                                 className={`p-3 border rounded-2xl transition-all active:scale-90 ${openMenuId === appointment.id ? 'bg-teal-50 border-teal-200 text-teal-600' : 'bg-white border-slate-200 text-slate-400 hover:bg-slate-50 hover:text-slate-800'}`}
                                             >
                                                 <MoreVertical className="w-5 h-5" />
@@ -265,7 +272,7 @@ export default function MyAppointments() {
                                                                         <div>
                                                                             <div className="h-px bg-slate-100 my-1 mx-2"></div>
                                                                             <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-rose-600 hover:bg-rose-50 rounded-2xl transition-colors text-left"
-                                                                                onClick={() => handleCancelAppointment(appointment.id)}>
+                                                                                onClick={() => handleCancelAppointment(appointment.id?.toString())}>
                                                                                 <Trash2 className="w-4 h-4" /> Cancelar Cita
                                                                             </button>
                                                                         </div>

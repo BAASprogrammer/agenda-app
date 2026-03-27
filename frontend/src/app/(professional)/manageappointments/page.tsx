@@ -17,11 +17,11 @@ function getStatusColor(s: string) {
 }
 
 export default function ManageAppointments() {
-    // UI state — belongs here because it represents user interface decisions
+    // 1. UI State
     const [filter, setFilter] = useState("todas");
     const [search, setSearch] = useState("");
 
-    // One line replaces the entire useState + useEffect + fetch block
+    // 2. Data Hooks
     const { appointments, loading, error, updateStatus } = useAppointments(filter);
 
     // Search filter — presentation logic, stays in the component

@@ -8,10 +8,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+    // 1. Hooks & Stores
     const user = useUserStore();
+
+    // 2. State
     const [appointments, setAppointments] = useState<any[]>([]);
     const [selectedAppointment, setSelectedAppointment] = useState<any>(null);
 
+    // 3. Effects
     useEffect(() => {
         const fetchAppointments = async () => {
             if (!user.userId) return;
@@ -38,6 +42,7 @@ export default function Home() {
 
                 return {
                     ...appt,
+                    id: String(appt.id),
                     displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('cl-CL', { month: 'short' }).replace('.', ''),
                     displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
                     displayTime: `${timePart[0]}:${timePart[1]}`
@@ -47,7 +52,9 @@ export default function Home() {
             setAppointments(formattedData);
         }
         fetchAppointments();
-    }, [user.userId])
+    }, [user.userId]);
+
+    // 4. Derived Data
     const futureAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] >= new Date().toLocaleDateString("en-CA") && appt.status == "agendada");
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">

@@ -17,11 +17,15 @@ interface Patient {
 }
 
 export default function MyPatients() {
+    // 1. Hooks & Stores
     const user = useUserStore();
+
+    // 2. State
     const [patients, setPatients] = useState<Patient[]>([]);
     const [search, setSearch] = useState("");
     const [loading, setLoading] = useState(true);
 
+    // 3. Effects
     useEffect(() => {
         if (!user.userId) return;
         const fetchPatients = async () => {
@@ -37,7 +41,7 @@ export default function MyPatients() {
             const today = new Date().toISOString().split('T')[0];
 
             (data ?? []).forEach((a: any) => {
-                const pid = a.patient_id;
+                const pid = String(a.patient_id);
                 if (!pid) return;
                 if (!map.has(pid)) {
                     map.set(pid, {
@@ -62,10 +66,12 @@ export default function MyPatients() {
         fetchPatients();
     }, [user.userId]);
 
+    // 4. Derived Data
     const filtered = patients.filter(p =>
         `${p.first_name} ${p.last_name}`.toLowerCase().includes(search.toLowerCase())
     );
 
+    // 5. Helpers
     const fmt = (d?: string | null) => {
         if (!d) return null;
         const [yr, mo, dy] = d.split('-').map(Number);

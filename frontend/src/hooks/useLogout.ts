@@ -9,9 +9,8 @@ export const useLogout = () => {
         document.cookie = "first_name=; expires=Sat, 01 Jan 2000 00:00:00 UTC; path=/;";
         document.cookie = "user_id=; expires=Sat, 01 Jan 2000 00:00:00 UTC; path=/;";
         document.cookie = "is_professional=; expires=Sat, 01 Jan 2000 00:00:00 UTC; path=/;";
-        router.replace("/");
-        router.refresh();
-    }, [router]);
+        window.location.replace("/");
+    }, []);
 
     return handleLogout;
 }

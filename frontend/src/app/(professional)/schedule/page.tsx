@@ -29,25 +29,15 @@ interface ScheduleAppointment {
 }
 
 export default function Schedule() {
+    // 1. Hooks & Stores
     const user = useUserStore();
+
+    // 2. State
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [appointments, setAppointments] = useState<ScheduleAppointment[]>([]);
     const [weekOffset, setWeekOffset] = useState(0);
 
-    const getWeekDays = () => {
-        const today = new Date();
-        today.setDate(today.getDate() + weekOffset * 7);
-        const start = new Date(today);
-        start.setDate(today.getDate() - today.getDay());
-        return Array.from({ length: 7 }, (_, i) => {
-            const d = new Date(start);
-            d.setDate(start.getDate() + i);
-            return d;
-        });
-    };
-
-    const weekDays = getWeekDays();
-
+    // 3. Effects
     useEffect(() => {
         if (!user.userId) return;
         const dateStr = selectedDate.toISOString().split('T')[0];
@@ -65,6 +55,7 @@ export default function Schedule() {
                 const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
                 return {
                     ...a,
+                    id: String(a.id),
                     patient: a.patient as unknown as SchedulePatient | null,
                     displayTime: `${timePart[0]}:${timePart[1]}`
                 };
@@ -72,6 +63,21 @@ export default function Schedule() {
         };
         fetchDay();
     }, [user.userId, selectedDate]);
+
+    // 4. Handlers & Helpers
+    const getWeekDays = () => {
+        const today = new Date();
+        today.setDate(today.getDate() + weekOffset * 7);
+        const start = new Date(today);
+        start.setDate(today.getDate() - today.getDay());
+        return Array.from({ length: 7 }, (_, i) => {
+            const d = new Date(start);
+            d.setDate(start.getDate() + i);
+            return d;
+        });
+    };
+
+    const weekDays = getWeekDays();
 
     const isToday = (d: Date) => {
         const t = new Date();

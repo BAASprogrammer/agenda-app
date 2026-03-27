@@ -7,11 +7,14 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function ProfessionalSettings() {
+    // 1. Hooks & Stores
     const firstNameStore = useUserStore(state => state.firstName);
     const lastNameStore = useUserStore(state => state.lastName);
     const emailStore = useUserStore(state => state.email);
     const userId = useUserStore(state => state.userId);
     const setUser = useUserStore(state => state.setUser);
+
+    // 2. State
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
     const [formData, setFormData] = useState({
@@ -24,6 +27,7 @@ export default function ProfessionalSettings() {
         endTime: "18:00"
     });
 
+    // 3. Effects
     useEffect(() => {
         // Solo llenamos el formulario si tenemos datos en el store y el formulario está vacío
         if (userId && !formData.firstName && (firstNameStore || lastNameStore)) {
@@ -36,6 +40,7 @@ export default function ProfessionalSettings() {
         }
     }, [userId, firstNameStore, lastNameStore, emailStore, formData.firstName]);
 
+    // 4. Handlers
     const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);

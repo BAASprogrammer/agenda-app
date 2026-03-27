@@ -10,6 +10,7 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -86,10 +87,42 @@ public class UserController {
 			throw new RuntimeException("Error interno del servidor");
 		}
 	}
+
 	@GetMapping("/professionals")
 	public List<Map<String, Object>> getProfessionals(@RequestParam String subspecialtyId) {
 		String sql = "SELECT id, first_name, last_name FROM public.users " +
-					 "WHERE is_professional = true AND subspecialty_id = ?::uuid";
+				"WHERE is_professional = true AND subspecialty_id = ?::uuid";
 		return jdbc.queryForList(sql, subspecialtyId);
 	}
+
+	@GetMapping("/profile")
+	public Map<String, Object> getProfile(@RequestParam String userId) {
+		String sql = "SELECT first_name, last_name, email, phone, address FROM public.users " +
+				"WHERE id = ?::uuid LIMIT 1";
+		var results = jdbc.queryForList(sql, userId);
+		return results.isEmpty() ? Map.of() : results.get(0);
+	}
+
+	@PutMapping("/profile")
+	public UserResponseDTO updateProfile(
+			@RequestParam String userId,
+			@RequestBody RegisterUserRequest body) {
+		String sql = "UPDATE public.users SET first_name = ?, last_name = ?, phone = ?, address = ? WHERE id = ?::uuid";
+		jdbc.update(sql,
+				body.getFirstName(),
+				body.getLastName(),
+				body.getPhone(),
+				body.getAddress(),
+				userId);
+		
+		return new UserResponseDTO(
+				userId,
+				body.getFirstName(),
+				body.getLastName(),
+				body.getEmail(),
+				body.getPhone(),
+				body.getIsProfessional(),
+				body.getSubSpecialtyId());
+	}
+
 }

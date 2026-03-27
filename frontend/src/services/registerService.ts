@@ -36,12 +36,12 @@ export async function registerUser(data: RegisterData) {
         }
 
         await api.post("/users/register", {
-            firstName: data.firstName.trim(),
-            lastName: data.lastName.trim(),
+            first_name: data.firstName.trim(),
+            last_name: data.lastName.trim(),
             email: data.email.trim(),
             phone: data.phone.trim(),
-            isProfessional: data.isProfessional,
-            subSpecialtyId: data.subspecialtyId || null
+            is_professional: data.isProfessional,
+            subspecialty_id: data.subspecialtyId || null
         });
 
         return {

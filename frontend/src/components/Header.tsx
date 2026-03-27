@@ -32,8 +32,7 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
         e.preventDefault();
         await supabase.auth.signOut();
         await clearAuthCookies();
-        router.replace("/");
-        router.refresh();
+        window.location.replace("/");
     };
 
     const navLinkClass = (href: string) =>

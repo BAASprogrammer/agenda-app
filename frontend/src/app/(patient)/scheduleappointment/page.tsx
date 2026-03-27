@@ -1,8 +1,7 @@
 "use client";
 
-import { api } from "@/lib/api";
+import { useCreateAppointment, useProfessionals, useSpecialties, useSubSpecialties } from "@/hooks/useMedicalQueries";
 import { supabase } from "@/lib/supabaseClient";
-import { useQuery, useMutation } from "@tanstack/react-query";
 import {
     Calendar,
     Stethoscope,
@@ -22,6 +21,7 @@ interface SubSpecialty { id: string; name: string; specialty_id: string; }
 interface Professional { id: string; first_name: string; last_name: string; }
 
 export default function ScheduleAppointment() {
+    // 1. State
     const [isScheduleAppointmentOpen, setIsScheduleAppointmentOpen] = useState<boolean>(false);
     const [selectedSpecialty, setSelectedSpecialty] = useState<string>("");
     const [selectedSubSpecialty, setSelectedSubSpecialty] = useState<string>("");
@@ -37,48 +37,13 @@ export default function ScheduleAppointment() {
         professional: "",
         reason: ""
     });
-    const handleScheduleAppointment = () => {
-        setIsScheduleAppointmentOpen(true);
-    };
-    // 1. Query specialties
-    const { data: specialties = [] } = useQuery({
-        queryKey: ['specialties'],
-        queryFn: async () => {
-            const response = await api.get('/specialties');
-            return response.data;
-        }
-    });
 
-    // 2. Query subspecialties
-    const { data: subSpecialties = [] } = useQuery({
-        queryKey: ['subSpecialties', selectedSpecialty],
-        queryFn: async () => {
-            const response = await api.get('/subspecialties', {
-                params: { specialtyId: selectedSpecialty }
-            });
-            return response.data;
-        },
-        enabled: !!selectedSpecialty
-    });
-
-    // 3. Query professionals
-    const { data: professionals = [] } = useQuery({
-        queryKey: ['professionals', selectedSubSpecialty],
-        queryFn: async () => {
-            const response = await api.get('/users/professionals', {
-                params: { subspecialtyId: selectedSubSpecialty }
-            });
-            return response.data;
-        },
-        enabled: !!selectedSubSpecialty
-    });
-
-    // 4. Mutación para crear la cita
-    const createAppointmentMutation = useMutation({
-        mutationFn: async (appointmentData: any) => {
-            const response = await api.post('/appointments', appointmentData);
-            return response.data;
-        },
+    // 2. Query/Mutation Hooks
+    const { data: specialties = [] } = useSpecialties();
+    const { data: subSpecialties = [] } = useSubSpecialties(selectedSpecialty);
+    const { data: professionals = [] } = useProfessionals(selectedSubSpecialty);
+    
+    const createAppointmentMutation = useCreateAppointment({
         onSuccess: () => {
             setMessage('Cita creada exitosamente');
             setIsScheduleAppointmentOpen(false);
@@ -88,6 +53,22 @@ export default function ScheduleAppointment() {
             setMessage(error.response?.data?.message || 'Error al crear la cita');
         }
     });
+
+    const resetForm = () => {
+        setAppointment({
+            date: '',
+            time: '',
+            professional: '',
+            reason: ''
+        });
+        setSelectedSpecialty('');
+        setSelectedSubSpecialty('');
+    };
+
+    // 3. Handlers
+    const handleScheduleAppointment = () => {
+        setIsScheduleAppointmentOpen(true);
+    };
 
     const handleSpecialtyChange = (specialty_id: string) => {
         setSelectedSpecialty(specialty_id);
@@ -131,19 +112,9 @@ export default function ScheduleAppointment() {
             status: 'agendada'
         });
     };
+
     const handleCloseModal = () => {
         setMessage('');
-    };
-
-    const resetForm = () => {
-        setAppointment({
-            date: '',
-            time: '',
-            professional: '',
-            reason: ''
-        });
-        setSelectedSpecialty('');
-        setSelectedSubSpecialty('');
     };
     return (
         <div className="min-h-screen bg-slate-50 relative overflow-hidden font-sans text-slate-800">

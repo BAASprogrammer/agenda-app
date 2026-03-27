@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { User, Mail, Lock, Phone, ArrowRight, Activity, Stethoscope } from "lucide-react";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
@@ -15,9 +15,13 @@ import { useUserStore } from "@/store/userStore";
 import { registerUser, checkEmailExists } from "@/services/registerService";
 
 export default function ProfessionalRegistration() {
+    // 1. Hooks & Routers
     const router = useRouter();
+    const queryClient = useQueryClient(); // Added if needed, but not strictly necessary here
+
+    // 2. State
     const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
-    // Form data
+    const [error, setError] = useState<string | null>(null);
     const [formData, setFormData] = useState<ProfessionalFormData>({
         firstName: "",
         lastName: "",
@@ -30,21 +34,38 @@ export default function ProfessionalRegistration() {
         specialtyId: "",
         subspecialtyId: ""
     });
-    const [error, setError] = useState<string | null>(null);
-    // Mutation for registration
+
+    // 3. Queries & Mutations
+    const { data: specialties = [] } = useQuery({
+        queryKey: ['medical-specialties'],
+        queryFn: async () => {
+            const { data } = await supabase.from('medical_specialties').select('*');
+            return data || [];
+        }
+    });
+
+    const { data: subspecialties = [] } = useQuery({
+        queryKey: ['medical-subspecialties', formData.specialtyId],
+        enabled: !!formData.specialtyId,
+        queryFn: async () => {
+            const { data } = await supabase.from('medical_subspecialties').select('*').eq('specialty_id', formData.specialtyId);
+            return data || [];
+        }
+    });
+
     const { mutate: register, isPending } = useMutation({
         mutationFn: (data: any) => registerUser({ ...data, isProfessional: true }),
         onSuccess: async (userData: any) => {
             await setAuthCookies(userData);
-            router.replace("/home/professional");
-            router.refresh();
+            window.location.replace("/home/professional");
         },
         onError: (err: any) => {
             console.error("Error en registro:", err);
             setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
         }
-    })
-    // Check if email exists
+    });
+
+    // 4. Handlers
     const handleEmailBlur = async () => {
         if (formData.email && formData.email.includes("@")) {
             try {
@@ -59,42 +80,25 @@ export default function ProfessionalRegistration() {
             }
         }
     };
-    // Fetch specialties
-    const { data: specialties = [] } = useQuery({
-        queryKey: ['medical-specialties'],
-        queryFn: async () => {
-            const { data } = await supabase.from('medical_specialties').select('*');
-            return data || [];
-        }
-    });
-    // Fetch subspecialties
-    const { data: subspecialties = [] } = useQuery({
-        queryKey: ['medical-subspecialties', formData.specialtyId],
-        enabled: !!formData.specialtyId,
-        queryFn: async () => {
-            const { data } = await supabase.from('medical_subspecialties').select('*').eq('specialty_id', formData.specialtyId);
-            return data || [];
-        }
-    });
-    // Handle specialty change
+
     const handleSpecialtyChange = async (specialtyId: string) => {
         setFormData(prev => ({ ...prev, specialtyId, subspecialtyId: "" }));
-    }
-    // Handle change
+    };
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-    // Handle register
+
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
-        const error = validateRegister(formData, true);
-        if (error) {
-            setError(error);
+        const validationError = validateRegister(formData, true);
+        if (validationError) {
+            setError(validationError);
             return;
         }
         register(formData);
-    }
+    };
 
     return (
         <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800">
@@ -132,7 +136,7 @@ export default function ProfessionalRegistration() {
 
             {/* Right Column - Form */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 sm:px-16 md:px-24 py-12 lg:py-0 relative z-10">
-                <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-blue-50/50 to-white/50 -z-10"></div>
+                <div className="absolute top-0 right-0 w-full h-full bg-linear-to-bl from-blue-50/50 to-white/50 -z-10"></div>
 
                 <div className="max-w-md w-full mx-auto">
                     <Link href="/" className="inline-flex items-center gap-2 text-blue-600 font-bold mb-8 hover:text-blue-700 transition-colors group">
@@ -304,7 +308,7 @@ export default function ProfessionalRegistration() {
                         <button
                             type="submit"
                             disabled={isPending}
-                            className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 disabled:opacity-70 mt-6"
+                            className="w-full flex items-center justify-center gap-2 bg-linear-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 disabled:opacity-70 mt-6"
                         >
                             {isPending ? "Creando cuenta..." : "Comenzar Gratis"}
                             {!isPending && <ArrowRight className="w-5 h-5" />}

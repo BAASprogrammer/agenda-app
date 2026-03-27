@@ -10,10 +10,12 @@ import { registerUser, checkEmailExists } from "@/services/registerService";
 import { useMutation } from "@tanstack/react-query";
 
 export default function PatientRegistration() {
+    // 1. Hooks & Routers
     const router = useRouter();
 
+    // 2. State
     const [showLoginModal, setShowLoginModal] = useState(false);
-
+    const [error, setError] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -22,22 +24,21 @@ export default function PatientRegistration() {
         password: "",
         confirmPassword: ""
     });
-    const [error, setError] = useState<string | null>(null);
 
-    // Mutation for registration
+    // 3. Mutations
     const { mutate: register, isPending } = useMutation({
         mutationFn: (data: any) => registerUser({ ...data, isProfessional: false }),
         onSuccess: async (userData) => {
             await setAuthCookies(userData);
-            router.replace("/home/patient");
-            router.refresh();
+            window.location.replace("/home/patient");
         },
         onError: (err: any) => {
             console.error("Error en registro:", err);
             setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
         }
     });
-    // Check if email exists
+
+    // 4. Handlers
     const handleEmailBlur = async () => {
         if (formData.email && formData.email.includes("@")) {
             try {
@@ -74,7 +75,7 @@ export default function PatientRegistration() {
         <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800">
             {/* Left Column - Form */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 sm:px-16 md:px-24 py-12 lg:py-0 relative z-10">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-teal-50/50 to-white/50 -z-10"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-teal-50/50 to-white/50 -z-10"></div>
 
                 <div className="max-w-md w-full mx-auto">
                     <Link href="/" className="inline-flex items-center gap-2 text-teal-600 font-bold mb-8 hover:text-teal-700 transition-colors group">
@@ -183,7 +184,7 @@ export default function PatientRegistration() {
                         <button
                             type="submit"
                             disabled={isPending}
-                            className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-teal-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-teal-200 hover:shadow-teal-300 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 disabled:opacity-70 mt-6"
+                            className="w-full flex items-center justify-center gap-2 bg-linear-to-r from-teal-600 to-teal-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-teal-200 hover:shadow-teal-300 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 disabled:opacity-70 mt-6"
                         >
                             {isPending ? "Creando cuenta..." : "Comenzar Gratis"}
                             {!isPending && <ArrowRight className="w-5 h-5" />}
