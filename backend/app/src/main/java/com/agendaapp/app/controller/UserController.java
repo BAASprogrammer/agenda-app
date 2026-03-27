@@ -107,12 +107,13 @@ public class UserController {
 			@AuthenticationPrincipal Jwt jwt,
 			@RequestBody RegisterUserRequest body) {
 		String userId = jwt.getSubject();
-		String sql = "UPDATE public.users SET first_name = ?, last_name = ?, phone = ?, address = ? WHERE id = ?::uuid";
+		String sql = "UPDATE public.users SET first_name = ?, last_name = ?, phone = ?, address = ?, subspecialty_id = ? WHERE id = ?::uuid";
 		jdbc.update(sql,
 				body.getFirstName(),
 				body.getLastName(),
 				body.getPhone(),
 				body.getAddress(),
+				body.getSubSpecialtyId(),
 				userId);
 		
 		return new UserResponseDTO(

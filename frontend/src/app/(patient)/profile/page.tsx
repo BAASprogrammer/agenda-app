@@ -132,19 +132,19 @@ export default function Profile() {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
+        <div className="min-h-svh bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
             <ProSidebarPatient active="/profile" />
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col relative overflow-hidden">
+            <main className="flex-1 flex flex-col relative overflow-hidden h-svh">
                 <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-cyan-50/80 to-transparent -z-10"></div>
 
-                <header className="px-8 py-8 animate-fade-in">
+                <header className="px-8 py-8 animate-fade-in shrink-0">
                     <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight">Mi Perfil</h1>
                     <p className="text-slate-500 font-medium">Gestiona tu información personal y preferencias.</p>
                 </header>
 
-                <div className="px-8 pb-12 flex-1 overflow-y-auto">
+                <div className="px-8 pb-12 flex-1 overflow-y-auto scroll-touch">
                     <div className="max-w-4xl grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                         {/* Avatar & Summary Card */}
@@ -171,23 +171,12 @@ export default function Profile() {
                                 </div>
                             </div>
 
-                            <div className="bg-white rounded-4xl p-10 border border-white shadow-sm">
+                            <div className="bg-white rounded-3xl p-10 border border-white shadow-sm">
                                 <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2">
                                     <Bell className="w-5 h-5 text-amber-500" /> Notificaciones
                                 </h3>
-                                <div className="space-y-4">
-                                    <label className="flex items-center justify-between cursor-pointer group">
-                                        <span className="text-sm font-medium text-slate-600 group-hover:text-slate-800">Alertas por Email</span>
-                                        <div className="w-10 h-5 bg-teal-600 rounded-full relative">
-                                            <div className="absolute right-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
-                                        </div>
-                                    </label>
-                                    <label className="flex items-center justify-between cursor-pointer group">
-                                        <span className="text-sm font-medium text-slate-600 group-hover:text-slate-800">Recordatorios de Citas</span>
-                                        <div className="w-10 h-5 bg-teal-600 rounded-full relative">
-                                            <div className="absolute right-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
-                                        </div>
-                                    </label>
+                                <div className="space-y-4 text-sm font-medium text-slate-500">
+                                    Las configuraciones para alertas de SMS y correo electrónico estarán disponibles pronto.
                                 </div>
                             </div>
                         </div>

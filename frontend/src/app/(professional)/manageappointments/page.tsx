@@ -31,15 +31,15 @@ export default function ManageAppointments() {
     });
 
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
+        <div className="min-h-svh bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
             <ProSidebar active="/manageappointments" />
-            <main className="flex-1 flex flex-col relative overflow-hidden">
+            <main className="flex-1 flex flex-col relative overflow-hidden h-svh">
                 <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-indigo-50/80 to-transparent -z-10" />
 
-                <header className="px-8 py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in">
+                <header className="px-8 py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in shrink-0">
                     <div>
                         <Link href="/home/professional" className="text-indigo-600 flex items-center gap-1 text-sm font-bold mb-2 hover:gap-2 transition-all">
-                            <ChevronLeft className="w-4 h-4" aria-hidden="true" /> Dashboard
+                            <ChevronLeft className="w-4 h-4" aria-hidden="true" /> Inicio
                         </Link>
                         <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight">Gestionar Citas</h1>
                         <p className="text-slate-500 font-medium">Administra el estado de todas tus citas.</p>
@@ -64,7 +64,7 @@ export default function ManageAppointments() {
                     </div>
                 </header>
 
-                <div className="px-8 pb-12 flex-1 overflow-y-auto">
+                <div className="px-8 pb-12 flex-1 overflow-y-auto scroll-touch">
                     {/* Status filter tabs */}
                     <div className="flex gap-2 mb-8 bg-slate-100/50 p-1 rounded-2xl w-fit" role="tablist" aria-label="Filter by status">
                         {(["todas", "agendada", "completada", "cancelada"] as const).map(s => (
