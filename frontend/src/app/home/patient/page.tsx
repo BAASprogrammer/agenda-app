@@ -21,34 +21,34 @@ export default function Home() {
             if (!user.userId) return;
             try {
                 const response = await api.get('/appointments/appointmentsbyid', {
-                    params: { patientId: user.userId }
+                    params: { patientId: user.userId, order: "ASC" }
                 });
                 const data = response.data;
 
-            // Pre-procesar fechas para evitar lógica repetitiva en el render
-            const formattedData = (data ?? []).map((appt: any) => {
-                const isoStr = appt.appointment_date.replace(' ', 'T');
-                const parts = isoStr.split('T');
-                const datePart = parts[0];
-                const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
+                // Pre-procesar fechas para evitar lógica repetitiva en el render
+                const formattedData = (data ?? []).map((appt: any) => {
+                    const isoStr = appt.appointment_date.replace(' ', 'T');
+                    const parts = isoStr.split('T');
+                    const datePart = parts[0];
+                    const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
 
-                const [year, month, day] = datePart.split('-').map(Number);
-                const d = new Date(year, month - 1, day);
+                    const [year, month, day] = datePart.split('-').map(Number);
+                    const d = new Date(year, month - 1, day);
 
-                return {
-                    ...appt,
-                    id: String(appt.id),
-                    displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('es-CL', { month: 'short' }).replace('.', ''),
-                    displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
-                    displayTime: `${timePart[0]}:${timePart[1]}`,
-                    professional: {
-                        first_name: appt.professional_first_name,
-                        last_name: appt.professional_last_name
-                    }
-                };
-            });
+                    return {
+                        ...appt,
+                        id: String(appt.id),
+                        displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('es-CL', { month: 'short' }).replace('.', ''),
+                        displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
+                        displayTime: `${timePart[0]}:${timePart[1]}`,
+                        professional: {
+                            first_name: appt.professional_first_name,
+                            last_name: appt.professional_last_name
+                        }
+                    };
+                });
 
-            setAppointments(formattedData);
+                setAppointments(formattedData);
             } catch (error) {
                 console.error("Error obteniendo citas:", error);
             }

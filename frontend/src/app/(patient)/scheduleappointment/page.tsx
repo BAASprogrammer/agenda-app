@@ -41,7 +41,7 @@ export default function ScheduleAppointment() {
     const { data: specialties = [] } = useSpecialties();
     const { data: subSpecialties = [] } = useSubSpecialties(selectedSpecialty);
     const { data: professionals = [] } = useProfessionals(selectedSubSpecialty);
-    
+
     const createAppointmentMutation = useCreateAppointment({
         onSuccess: () => {
             setMessage('Cita creada exitosamente');
@@ -224,14 +224,9 @@ export default function ScheduleAppointment() {
                             >
                                 <XCircle className="w-6 h-6 text-white" />
                             </button>
-                            <div className="flex items-center gap-4">
-                                <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                                    <Stethoscope className="w-8 h-8 text-white" />
-                                </div>
-                                <div>
-                                    <h2 className="text-3xl font-bold tracking-tight">Agendar Cita</h2>
-                                    <p className="text-cyan-50 font-medium opacity-90">Completa los detalles para tu consulta</p>
-                                </div>
+                            <div className="text-center">
+                                <h2 className="text-3xl font-bold tracking-tight">Agendar Cita</h2>
+                                <p className="text-cyan-50 font-medium opacity-90">Completa los detalles para tu consulta</p>
                             </div>
                         </div>
 
@@ -359,7 +354,7 @@ export default function ScheduleAppointment() {
                             </div>
 
                             {/* Modal Footer Buttons */}
-                            <div className="flex flex-col sm:flex-row justify-end gap-4 mt-10">
+                            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
                                 <button
                                     type="button"
                                     className="px-8 py-4 bg-slate-100 text-slate-600 rounded-2xl font-bold hover:bg-slate-200 transition-colors cursor-pointer order-2 sm:order-1"

@@ -43,7 +43,6 @@ export default function Profile() {
                 userId: userId,
                 firstName: updatedData.first_name,
                 lastName: updatedData.last_name,
-                email: updatedData.email
             });
             setAuthCookies({
                 firstName: updatedData.first_name,
@@ -60,39 +59,6 @@ export default function Profile() {
             setMessage(`Error al guardar: ${error instanceof Error ? error.message : "Contacta a soporte"}`);
         }
     });
-    // const { mutate: update, isPending } = useMutation({
-    //     mutationFn: async (patientData: PatientData) => {
-    //         const { email, ...updateData } = patientData;
-    //         const { error } = await supabase
-    //             .from("users")
-    //             .update(updateData)
-    //             .eq("id", userId);
-
-    //         if (error) throw error;
-    //         return patientData;
-    //     },
-    //     onSuccess: (updatedData) => {
-    //         setUser({
-    //             userId: userId,
-    //             firstName: updatedData.first_name,
-    //             lastName: updatedData.last_name,
-    //             email: updatedData.email
-    //         });
-    //         setAuthCookies({
-    //             firstName: updatedData.first_name,
-    //             lastName: updatedData.last_name,
-    //             email: updatedData.email,
-    //             userId: userId,
-    //             isProfessional: "false"
-    //         });
-    //         setMessage("Perfil actualizado correctamente");
-    //         queryClient.invalidateQueries({ queryKey: ["patient", userId] });
-    //     },
-    //     onError: (error: any) => {
-    //         console.error("Error al actualizar:", error);
-    //         setMessage(`Error al guardar: ${error.message || "Contacta a soporte"}`);
-    //     }
-    // });
 
     // 4. Effects
     // eslint-disable-next-line

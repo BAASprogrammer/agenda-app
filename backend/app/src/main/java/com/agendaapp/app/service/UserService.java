@@ -1,11 +1,19 @@
 package com.agendaapp.app.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
 import com.agendaapp.app.dto.RegisterUserRequest;
+import com.agendaapp.app.dto.UpdateUserRequest;
 import com.agendaapp.app.dto.UserDTO;
 import com.agendaapp.app.dto.UserResponseDTO;
+import com.agendaapp.app.dto.UserUpdateResponseDTO;
+
+import jakarta.validation.Valid;
 
 import java.util.List;
 import java.util.Map;
@@ -72,13 +80,20 @@ public class UserService {
         return jdbc.queryForMap(sql, userId);
     }
 
-    public UserResponseDTO updateProfile(String userId, RegisterUserRequest body) {
-        String subSpecialtyIdStr = body.getSubSpecialtyId();
-        if (subSpecialtyIdStr != null && subSpecialtyIdStr.trim().isEmpty()) {
-            subSpecialtyIdStr = null;
+    public ResponseEntity<?> updateProfile(String userId, UpdateUserRequest body) {
+
+        if (body.getFirstName().isEmpty() ||
+                body.getLastName().isEmpty() ||
+                body.getPhone().isEmpty() ||
+                body.getAddress().isEmpty()) {
+
+            return ResponseEntity
+                    .badRequest()
+                    .body(Map.of("message", "No deben haber campos vacíos"));
         }
 
         String sql = "UPDATE public.users SET first_name = ?, last_name = ?, phone = ?, address = ? WHERE id = ?::uuid";
+
         jdbc.update(sql,
                 body.getFirstName(),
                 body.getLastName(),
@@ -86,13 +101,11 @@ public class UserService {
                 body.getAddress(),
                 userId);
 
-        return new UserResponseDTO(
+        return ResponseEntity.ok(new UserUpdateResponseDTO(
                 userId,
                 body.getFirstName(),
                 body.getLastName(),
-                body.getEmail(),
                 body.getPhone(),
-                body.getIsProfessional(),
-                body.getSubSpecialtyId());
+                body.getAddress()));
     }
 }

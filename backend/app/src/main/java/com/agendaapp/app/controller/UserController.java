@@ -15,9 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
 import com.agendaapp.app.dto.RegisterUserRequest;
+import com.agendaapp.app.dto.UpdateUserRequest;
 import com.agendaapp.app.dto.UserDTO;
 import com.agendaapp.app.dto.UserResponseDTO;
+import com.agendaapp.app.dto.UserUpdateResponseDTO;
 import com.agendaapp.app.service.UserService;
 import jakarta.validation.Valid;
 
@@ -72,9 +76,9 @@ public class UserController extends BaseController {
 	}
 
 	@PutMapping("/profile")
-	public UserResponseDTO updateProfile(
+	public ResponseEntity<?> updateProfile(
 			@AuthenticationPrincipal Jwt jwt,
-			@Valid @RequestBody RegisterUserRequest body) {
+			@Valid @RequestBody UpdateUserRequest body) {
 		String userId = requireUserId(jwt);
 		return userService.updateProfile(userId, body);
 	}

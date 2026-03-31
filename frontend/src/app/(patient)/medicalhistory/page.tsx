@@ -76,10 +76,10 @@ export default function MedicalHistory() {
             if (!user.userId) return;
             try {
                 const response = await api.get('/appointments/appointmentsbyid', {
-                    params: { patientId: user.userId }
+                    params: { patientId: user.userId, order: "DESC" }
                 });
                 const data = response.data || [];
-                
+
                 const completed = data
                     .filter((a: Record<string, unknown>) => a.status === 'completada')
                     .map((a: Record<string, unknown>) => ({
@@ -89,7 +89,7 @@ export default function MedicalHistory() {
                             last_name: a.professional_last_name
                         }
                     }));
-                
+
                 setHistory(completed);
             } catch (error) {
                 console.error("Error obteniendo historial:", error);

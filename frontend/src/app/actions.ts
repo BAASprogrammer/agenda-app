@@ -9,7 +9,7 @@ import { cookies } from "next/headers";
 export async function setAuthCookies(data: {
     firstName: string;
     lastName: string;
-    email: string;
+    email: string | null;
     userId: string;
     isProfessional: string;
 }) {
@@ -18,7 +18,9 @@ export async function setAuthCookies(data: {
 
     cookieStore.set("first_name", data.firstName, { maxAge, path: "/" });
     cookieStore.set("last_name", data.lastName, { maxAge, path: "/" });
-    cookieStore.set("email", data.email, { maxAge, path: "/" });
+    if (data.email) {
+        cookieStore.set("email", data.email, { maxAge, path: "/" });
+    }
     cookieStore.set("user_id", data.userId, { maxAge, path: "/" });
     cookieStore.set("is_professional", data.isProfessional, { maxAge, path: "/" });
 }

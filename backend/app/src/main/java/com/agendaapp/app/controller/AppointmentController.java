@@ -32,7 +32,7 @@ public class AppointmentController extends BaseController {
     public Map<String, Object> createAppointment(@Valid @RequestBody AppointmentRequest body) {
         return appointmentService.createAppointment(body);
     }
-    
+
     @PutMapping
     public void setStatus(@RequestBody Map<String, String> payload) {
         String id = payload.get("id");
@@ -46,10 +46,11 @@ public class AppointmentController extends BaseController {
         String newDate = payload.get("appointment_date");
         appointmentService.rescheduleAppointment(id, newDate);
     }
-    
+
     @GetMapping("/appointmentsbyid")
-    public List<Map<String, Object>> getAppointmentsByPatient(@RequestParam String patientId) {
-        return appointmentService.getAppointmentsByPatient(patientId);
+    public List<Map<String, Object>> getAppointmentsByPatient(@RequestParam String patientId,
+            @RequestParam String order) {
+        return appointmentService.getAppointmentsByPatient(patientId, order);
     }
 
     @GetMapping("/professional/dates")

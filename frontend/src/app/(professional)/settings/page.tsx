@@ -55,9 +55,9 @@ export default function ProfessionalSettings() {
             setMessage("Perfil actualizado correctamente! ✨");
             setTimeout(() => setMessage(""), 3000);
         },
-        onError: (error: any) => {
-            console.error("Update failed:", error);
-            setMessage("Error al actualizar el perfil. Intenta nuevamente.");
+        onError: (error: unknown) => {
+            console.error("Error al actualizar:", error);
+            setMessage(`Error al guardar: ${error instanceof Error ? error.message : "Contacta a soporte"}`);
         }
     });
 

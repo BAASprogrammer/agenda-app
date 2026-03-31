@@ -12,14 +12,15 @@ export function useUpdateAppointmentStatus() {
 }
 
 // Get appointments by patient hook
-export function useAppointmentsByPatient(patientId: string) {
+export function useAppointmentsByPatient(patientId: string, order: string = "ASC") {
     return useQuery({
-        queryKey: ['appointments', patientId],
+        queryKey: ['appointments', patientId, order],
         enabled: !!patientId,
         queryFn: async () => {
             const response = await api.get('/appointments/appointmentsbyid', {
                 params: {
-                    patientId: patientId
+                    patientId: patientId,
+                    order: order
                 }
             });
             return response.data;

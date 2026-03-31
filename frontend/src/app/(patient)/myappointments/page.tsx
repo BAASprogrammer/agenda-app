@@ -34,7 +34,7 @@ export default function MyAppointments() {
 
     const updateStatusMutation = useUpdateAppointmentStatus();
     const cancelMutation = useCancelAppointment();
-    const { data, error } = useAppointmentsByPatient(user.userId!);
+    const { data, error } = useAppointmentsByPatient(user.userId!, "DESC");
 
     const today = new Date().toLocaleDateString("en-CA");
 
