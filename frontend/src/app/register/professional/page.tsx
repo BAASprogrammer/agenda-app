@@ -1,18 +1,21 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { setAuthCookies } from "@/app/actions";
-import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { User, Mail, Lock, Phone, ArrowRight, Activity, Stethoscope } from "lucide-react";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
-import { api } from "@/lib/api";
 import { ProfessionalFormData } from "@/types/professional-form-data";
-import { useUserStore } from "@/store/userStore";
 import { registerUser, checkEmailExists } from "@/services/registerService";
+import { useSpecialties, useSubSpecialties } from "@/hooks/useMedicalQueries";
+
+interface MedicalSpecialty {
+    id: string;
+    name: string;
+}
 
 export default function ProfessionalRegistration() {
     // 1. Hooks & Routers
@@ -36,27 +39,21 @@ export default function ProfessionalRegistration() {
     });
 
     // 3. Queries & Mutations
-    const { data: specialties = [] } = useQuery({
-        queryKey: ['medical-specialties'],
-        queryFn: async () => {
-            const { data } = await supabase.from('medical_specialties').select('*');
-            return data || [];
-        }
-    });
+    const { data: specialties = [] } = useSpecialties();
 
-    const { data: subspecialties = [] } = useQuery({
-        queryKey: ['medical-subspecialties', formData.specialtyId],
-        enabled: !!formData.specialtyId,
-        queryFn: async () => {
-            const { data } = await supabase.from('medical_subspecialties').select('*').eq('specialty_id', formData.specialtyId);
-            return data || [];
-        }
-    });
+    // Convert empty string to null to avoid fetching if not set
+    const { data: subspecialties = [] } = useSubSpecialties(formData.specialtyId);
 
     const { mutate: register, isPending } = useMutation({
-        mutationFn: (data: any) => registerUser({ ...data, isProfessional: true }),
+        mutationFn: (data: ProfessionalFormData) => registerUser({
+            ...data,
+            isProfessional: true,
+            subspecialtyId: data.subspecialtyId // Ensures this reaches the service
+        }),
         onSuccess: async (userData: any) => {
+            // Persist session in cookies and storage
             await setAuthCookies(userData);
+            // Full redirect to ensure fresh balance of context
             window.location.replace("/home/professional");
         },
         onError: (err: any) => {
@@ -215,7 +212,7 @@ export default function ProfessionalRegistration() {
                                     className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium"
                                 >
                                     <option value="">Seleccionar...</option>
-                                    {specialties.map(s => (
+                                    {specialties.map((s: MedicalSpecialty) => (
                                         <option key={s.id} value={s.id}>{s.name}</option>
                                     ))}
                                 </select>
@@ -230,7 +227,7 @@ export default function ProfessionalRegistration() {
                                     className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium disabled:opacity-50"
                                 >
                                     <option value="">Seleccionar...</option>
-                                    {subspecialties.map((s: any) => (
+                                    {subspecialties.map((s: MedicalSpecialty) => (
                                         <option key={s.id} value={s.id}>{s.name}</option>
                                     ))}
                                 </select>

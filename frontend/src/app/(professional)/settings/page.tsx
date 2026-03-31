@@ -189,20 +189,6 @@ export default function ProfessionalSettings() {
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h3 className="text-lg font-bold text-slate-800 mb-6">Detalles Profesionales</h3>
-                                        <div className="space-y-6">
-                                            <div className="space-y-2">
-                                                <label className="text-sm font-bold text-slate-700 ml-1">Identificación de Especialidad (ID)</label>
-                                                <input type="text" placeholder="Ingrese su código o ID de subespecialidad"
-                                                    value={formData.subSpecialtyId}
-                                                    onChange={e => setFormData({ ...formData, subSpecialtyId: e.target.value })}
-                                                    className="w-full px-5 py-3.5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 outline-none transition-all font-medium" />
-                                                <p className="text-xs text-slate-400 ml-1">Actualmente la identificación se maneja por código ID.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div className="pt-2 flex items-center justify-between">
                                         <p className={`text-sm font-bold transition-all ${message.includes("correctamente") ? 'text-emerald-600' : 'text-rose-500'} ${message ? 'opacity-100' : 'opacity-0'}`}>
                                             {message}

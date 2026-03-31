@@ -55,7 +55,7 @@ export default function MyPatients() {
                 }
                 const p = map.get(pid)!;
                 p.total++;
-                const d = a.appointment_date.split(' ')[0];
+                const d = a.appointment_date.substring(0, 10);
                 if (d <= today && d > (p.lastDate ?? '')) p.lastDate = d;
                 if (d >= today && (!p.nextDate || d < p.nextDate) && a.status === 'agendada') p.nextDate = d;
             });
@@ -74,8 +74,8 @@ export default function MyPatients() {
     // 5. Helpers
     const fmt = (d?: string | null) => {
         if (!d) return null;
-        const [yr, mo, dy] = d.split('-').map(Number);
-        return new Date(yr, mo - 1, dy).toLocaleDateString('cl-CL', { day: '2-digit', month: 'short', year: 'numeric' });
+        const [yr, mo, dy] = d.substring(0, 10).split('-').map(Number);
+        return new Date(yr, mo - 1, dy).toLocaleDateString('es-CL', { day: '2-digit', month: 'short', year: 'numeric' });
     };
 
     return (

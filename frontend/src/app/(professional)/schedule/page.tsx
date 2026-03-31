@@ -36,16 +36,53 @@ export default function Schedule() {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [appointments, setAppointments] = useState<ScheduleAppointment[]>([]);
     const [weekOffset, setWeekOffset] = useState(0);
+    const [busyDays, setBusyDays] = useState<Set<string>>(new Set());
 
     // 3. Effects
+    const getLocalYYYYMMDD = (d: Date) => {
+        const offset = d.getTimezoneOffset();
+        return new Date(d.getTime() - offset * 60 * 1000).toISOString().split('T')[0];
+    };
+
     useEffect(() => {
         if (!user.userId) return;
-        const dateStr = selectedDate.toISOString().split('T')[0];
+        const fetchWeekBusyDays = async () => {
+            const today = new Date();
+            today.setDate(today.getDate() + weekOffset * 7);
+            const start = new Date(today);
+            start.setDate(today.getDate() - today.getDay());
+            const end = new Date(start);
+            end.setDate(start.getDate() + 6);
+
+            const startStr = getLocalYYYYMMDD(start);
+            const endStr = getLocalYYYYMMDD(end);
+
+            const { data } = await supabase
+                .from('medical_appointments')
+                .select('appointment_date')
+                .eq('professional_id', user.userId)
+                .eq('status', 'agendada')
+                .gte('appointment_date', startStr + ' 00:00')
+                .lte('appointment_date', endStr + ' 23:59');
+
+            const days = new Set<string>();
+            (data || []).forEach(a => {
+                days.add(a.appointment_date.substring(0, 10));
+            });
+            setBusyDays(days);
+        };
+        fetchWeekBusyDays();
+    }, [user.userId, weekOffset]);
+
+    useEffect(() => {
+        if (!user.userId) return;
+        const dateStr = getLocalYYYYMMDD(selectedDate);
         const fetchDay = async () => {
             const { data } = await supabase
                 .from('medical_appointments')
                 .select(`id, appointment_date, status, reason, patient:users!medical_appointments_patient_id_fkey (first_name, last_name)`)
                 .eq('professional_id', user.userId)
+                .eq('status', 'agendada')
                 .gte('appointment_date', dateStr + ' 00:00')
                 .lte('appointment_date', dateStr + ' 23:59')
                 .order('appointment_date', { ascending: true });
@@ -121,13 +158,25 @@ export default function Schedule() {
                             </div>
                         </div>
                         <div className="grid grid-cols-7 gap-2">
-                            {weekDays.map((d, i) => (
-                                <button key={i} onClick={() => setSelectedDate(new Date(d))}
-                                    className={`flex flex-col items-center p-3 rounded-2xl transition-all ${isSelected(d) ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : isToday(d) ? 'bg-indigo-50 text-indigo-600 font-bold' : 'hover:bg-slate-50 text-slate-600'}`}>
-                                    <span className="text-[11px] font-bold uppercase mb-1">{DAYS[d.getDay()]}</span>
-                                    <span className="text-xl font-black">{d.getDate()}</span>
-                                </button>
-                            ))}
+                            {weekDays.map((d, i) => {
+                                const active = isSelected(d);
+                                const today = isToday(d);
+                                const busy = busyDays.has(getLocalYYYYMMDD(d));
+                                return (
+                                    <button key={i} onClick={() => setSelectedDate(new Date(d))}
+                                        className={`flex flex-col items-center p-3 rounded-2xl transition-all relative ${
+                                            active ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' 
+                                            : today ? 'bg-indigo-50 text-indigo-600 font-bold ring-2 ring-indigo-200' 
+                                            : busy ? 'bg-emerald-50 text-emerald-700 font-bold hover:bg-emerald-100' 
+                                            : 'hover:bg-slate-50 text-slate-600'}`}>
+                                        <span className="text-[11px] font-bold uppercase mb-1 opacity-80">{DAYS[d.getDay()]}</span>
+                                        <span className="text-xl font-black">{d.getDate()}</span>
+                                        {busy && (
+                                            <span className={`absolute top-2 right-2 w-2 h-2 rounded-full shadow-sm ${active ? 'bg-white' : 'bg-emerald-500'}`}></span>
+                                        )}
+                                    </button>
+                                );
+                            })}
                         </div>
                     </div>
 

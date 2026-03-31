@@ -10,7 +10,7 @@ export interface RegisterData {
     password: string;
     subspecialtyId?: string | null;
 }
-
+//Check email exists
 export async function checkEmailExists(email: string) {
     const response = await api.get(`/users/check-email?email=${encodeURIComponent(email.trim())}`);
     return response.data.exists;
@@ -18,7 +18,7 @@ export async function checkEmailExists(email: string) {
 
 export async function registerUser(data: RegisterData) {
     try {
-        // 1. Verificar si el email ya existe antes de continuar con Supabase
+        // 1. Check email exists
         const checkRes = await api.get(`/users/check-email?email=${encodeURIComponent(data.email.trim())}`);
         if (checkRes.data.exists) {
             throw new Error("Este correo ya se encuentra registrado. Intenta iniciar sesión.");
