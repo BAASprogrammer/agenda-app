@@ -1,6 +1,6 @@
 "use client";
 import { useUserStore } from "@/store/userStore";
-import { supabase } from "@/lib/supabaseClient";
+import { api } from "@/lib/api";
 // ✅ MEJORA 1: componente compartido
 import ProSidebar from "@/components/professional/ProSidebar";
 import { Users, Search, UserCircle, Clock, ChevronLeft, CalendarDays } from "lucide-react";
@@ -30,38 +30,40 @@ export default function MyPatients() {
         if (!user.userId) return;
         const fetchPatients = async () => {
             setLoading(true);
-            const { data } = await supabase
-                .from('medical_appointments')
-                .select(`appointment_date, status, patient_id, patient:users!medical_appointments_patient_id_fkey (id, first_name, last_name)`)
-                .eq('professional_id', user.userId)
-                .order('appointment_date', { ascending: false });
+            try {
+                const response = await api.get('/appointments/professional/all');
+                const data = response.data;
 
-            // Agrupar por paciente
-            const map = new Map<string, Patient>();
-            const today = new Date().toISOString().split('T')[0];
+                // Agrupar por paciente
+                const map = new Map<string, Patient>();
+                const today = new Date().toISOString().split('T')[0];
 
-            (data ?? []).forEach((a: any) => {
-                const pid = String(a.patient_id);
-                if (!pid) return;
-                if (!map.has(pid)) {
-                    map.set(pid, {
-                        id: pid,
-                        first_name: a.patient?.first_name ?? '?',
-                        last_name: a.patient?.last_name ?? '',
-                        total: 0,
-                        lastDate: '',
-                        nextDate: null
-                    });
-                }
-                const p = map.get(pid)!;
-                p.total++;
-                const d = a.appointment_date.substring(0, 10);
-                if (d <= today && d > (p.lastDate ?? '')) p.lastDate = d;
-                if (d >= today && (!p.nextDate || d < p.nextDate) && a.status === 'agendada') p.nextDate = d;
-            });
+                (data ?? []).forEach((a: any) => {
+                    const pid = String(a.patient_id);
+                    if (!pid) return;
+                    if (!map.has(pid)) {
+                        map.set(pid, {
+                            id: pid,
+                            first_name: a.first_name ?? '?',
+                            last_name: a.last_name ?? '',
+                            total: 0,
+                            lastDate: '',
+                            nextDate: null
+                        });
+                    }
+                    const p = map.get(pid)!;
+                    p.total++;
+                    const d = a.appointment_date.substring(0, 10);
+                    if (d <= today && d > (p.lastDate ?? '')) p.lastDate = d;
+                    if (d >= today && (!p.nextDate || d < p.nextDate) && a.status === 'agendada') p.nextDate = d;
+                });
 
-            setPatients(Array.from(map.values()).sort((a, b) => b.total - a.total));
-            setLoading(false);
+                setPatients(Array.from(map.values()).sort((a, b) => b.total - a.total));
+            } catch (error) {
+                console.error("Error fetching patients:", error);
+            } finally {
+                setLoading(false);
+            }
         };
         fetchPatients();
     }, [user.userId]);

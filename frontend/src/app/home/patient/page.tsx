@@ -2,7 +2,7 @@
 import AppointmentDetails from "@/components/patient/AppointmentDetails";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUserStore } from "@/store/userStore";
-import { supabase } from "@/lib/supabaseClient";
+import { api } from "@/lib/api";
 import { CalendarClock, NotepadText, CircleUser, ChevronRight, Clock } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -19,19 +19,14 @@ export default function Home() {
     useEffect(() => {
         const fetchAppointments = async () => {
             if (!user.userId) return;
-            const { data, error } = await supabase
-                .from('medical_appointments')
-                .select(`id, appointment_date, status, reason, professional_id, professional:users!medical_appointments_professional_id_fkey (first_name, last_name)`)
-                .eq('patient_id', user.userId)
-                .order('appointment_date', { ascending: true });
-
-            if (error) {
-                console.error("Error obteniendo citas:", error);
-                return;
-            }
+            try {
+                const response = await api.get('/appointments/appointmentsbyid', {
+                    params: { patientId: user.userId }
+                });
+                const data = response.data;
 
             // Pre-procesar fechas para evitar lógica repetitiva en el render
-            const formattedData = (data ?? []).map(appt => {
+            const formattedData = (data ?? []).map((appt: any) => {
                 const isoStr = appt.appointment_date.replace(' ', 'T');
                 const parts = isoStr.split('T');
                 const datePart = parts[0];
@@ -43,13 +38,20 @@ export default function Home() {
                 return {
                     ...appt,
                     id: String(appt.id),
-                    displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('cl-CL', { month: 'short' }).replace('.', ''),
+                    displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('es-CL', { month: 'short' }).replace('.', ''),
                     displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
-                    displayTime: `${timePart[0]}:${timePart[1]}`
+                    displayTime: `${timePart[0]}:${timePart[1]}`,
+                    professional: {
+                        first_name: appt.professional_first_name,
+                        last_name: appt.professional_last_name
+                    }
                 };
             });
 
             setAppointments(formattedData);
+            } catch (error) {
+                console.error("Error obteniendo citas:", error);
+            }
         }
         fetchAppointments();
     }, [user.userId]);

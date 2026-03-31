@@ -1,7 +1,7 @@
 "use client";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUserStore } from "@/store/userStore";
-import { supabase } from "@/lib/supabaseClient";
+import { api } from "@/lib/api";
 import {
     NotepadText,
     CalendarClock,
@@ -75,19 +75,26 @@ export default function MedicalHistory() {
     useEffect(() => {
         const fetchHistory = async () => {
             if (!user.userId) return;
-            // Simulamos datos ya que la tabla medical_appointments podría no tener diagnósticos detallados aún
-            const { data, error } = await supabase
-                .from('medical_appointments')
-                .select(`id, appointment_date, status, reason, professional:users!medical_appointments_professional_id_fkey (first_name, last_name)`)
-                .eq('patient_id', user.userId)
-                .eq('status', 'completada')
-                .order('appointment_date', { ascending: false });
-
-            if (error) {
+            try {
+                const response = await api.get('/appointments/appointmentsbyid', {
+                    params: { patientId: user.userId }
+                });
+                const data = response.data || [];
+                
+                const completed = data
+                    .filter((a: any) => a.status === 'completada')
+                    .map((a: any) => ({
+                        ...a,
+                        professional: {
+                            first_name: a.professional_first_name,
+                            last_name: a.professional_last_name
+                        }
+                    }));
+                
+                setHistory(completed);
+            } catch (error) {
                 console.error("Error obteniendo historial:", error);
-                return;
             }
-            setHistory(data ?? []);
         }
         fetchHistory();
     }, [user.userId]);
@@ -98,7 +105,7 @@ export default function MedicalHistory() {
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-blue-50/60 to-transparent -z-10"></div>
+                <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-blue-50/60 to-transparent -z-10"></div>
 
                 <header className="px-8 py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in">
                     <div>

@@ -1,6 +1,7 @@
 "use client";
 import { useUserStore } from "@/store/userStore";
 import { supabase } from "@/lib/supabaseClient";
+import { api } from "@/lib/api";
 // ✅ MEJORA 1: componente compartido, ya no repetimos código
 import ProSidebar from "@/components/professional/ProSidebar";
 import {
@@ -57,19 +58,19 @@ export default function Schedule() {
             const startStr = getLocalYYYYMMDD(start);
             const endStr = getLocalYYYYMMDD(end);
 
-            const { data } = await supabase
-                .from('medical_appointments')
-                .select('appointment_date')
-                .eq('professional_id', user.userId)
-                .eq('status', 'agendada')
-                .gte('appointment_date', startStr + ' 00:00')
-                .lte('appointment_date', endStr + ' 23:59');
-
-            const days = new Set<string>();
-            (data || []).forEach(a => {
-                days.add(a.appointment_date.substring(0, 10));
-            });
-            setBusyDays(days);
+            try {
+                const response = await api.get(`/appointments/professional/dates`, {
+                    params: { startDate: startStr, endDate: endStr }
+                });
+                const data = response.data;
+                const days = new Set<string>();
+                (data || []).forEach((a: any) => {
+                    days.add(a.appointment_date.substring(0, 10));
+                });
+                setBusyDays(days);
+            } catch (err) {
+                console.error('Error fetching busy days', err);
+            }
         };
         fetchWeekBusyDays();
     }, [user.userId, weekOffset]);
@@ -78,25 +79,30 @@ export default function Schedule() {
         if (!user.userId) return;
         const dateStr = getLocalYYYYMMDD(selectedDate);
         const fetchDay = async () => {
-            const { data } = await supabase
-                .from('medical_appointments')
-                .select(`id, appointment_date, status, reason, patient:users!medical_appointments_patient_id_fkey (first_name, last_name)`)
-                .eq('professional_id', user.userId)
-                .eq('status', 'agendada')
-                .gte('appointment_date', dateStr + ' 00:00')
-                .lte('appointment_date', dateStr + ' 23:59')
-                .order('appointment_date', { ascending: true });
+            try {
+                const response = await api.get(`/appointments/professional/day`, {
+                    params: { date: dateStr }
+                });
+                const data = response.data;
 
-            setAppointments((data ?? []).map((a): ScheduleAppointment => {
-                const parts = a.appointment_date.replace(' ', 'T').split('T');
-                const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
-                return {
-                    ...a,
-                    id: String(a.id),
-                    patient: a.patient as unknown as SchedulePatient | null,
-                    displayTime: `${timePart[0]}:${timePart[1]}`
-                };
-            }));
+                setAppointments((data ?? []).map((a: any): ScheduleAppointment => {
+                    const parts = a.appointment_date.replace(' ', 'T').split('T');
+                    const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
+                    return {
+                        id: String(a.id),
+                        appointment_date: a.appointment_date,
+                        status: a.status,
+                        reason: a.reason,
+                        patient: {
+                            first_name: a.first_name,
+                            last_name: a.last_name
+                        },
+                        displayTime: `${timePart[0]}:${timePart[1]}`
+                    };
+                }));
+            } catch (err) {
+                console.error('Error fetching day appointments', err);
+            }
         };
         fetchDay();
     }, [user.userId, selectedDate]);

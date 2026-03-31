@@ -1,6 +1,6 @@
 import { Calendar, Clock, X, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import { useState } from "react";
-import { supabase } from "@/lib/supabaseClient";
+import { api } from "@/lib/api";
 
 interface RescheduleModalProps {
     appointment: any;
@@ -33,22 +33,19 @@ export default function RescheduleModal({ appointment, onClose, onSuccess }: Res
             return;
         }
 
-        const { error } = await supabase
-            .from('medical_appointments')
-            .update({
-                appointment_date: `${newDate} ${newTime}`
-            })
-            .eq('id', appointment.id);
-
-        if (error) {
-            console.error("Error reagendando la cita:", error);
-            setMessage("Error: No se pudo reagendar la cita.");
-        } else {
+        try {
+            await api.put('/appointments/reschedule', {
+                id: appointment.id,
+                appointment_date: `${newDate} ${newTime}:00`
+            });
             setMessage("Cita reagendada exitosamente!");
             setTimeout(() => {
                 onSuccess(newDate, newTime);
                 onClose();
             }, 2000);
+        } catch (error) {
+            console.error("Error reagendando la cita:", error);
+            setMessage("Error: No se pudo reagendar la cita.");
         }
         setLoading(false);
     };

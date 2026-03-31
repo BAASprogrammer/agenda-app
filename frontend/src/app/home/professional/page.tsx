@@ -1,7 +1,7 @@
 "use client";
 import ProSidebar from "@/components/professional/ProSidebar";
 import { useUserStore } from "@/store/userStore";
-import { supabase } from "@/lib/supabaseClient";
+import { api } from "@/lib/api";
 import {
     Calendar, Users, ClipboardList,
     Clock, ChevronRight, Stethoscope
@@ -26,39 +26,33 @@ export default function Home() {
             const today = new Date();
             const todayStr = today.toISOString().split('T')[0];
 
-            const { count: todayCnt } = await supabase
-                .from('medical_appointments')
-                .select('*', { count: 'exact', head: true })
-                .eq('professional_id', user.userId)
-                .gte('appointment_date', todayStr + ' 00:00')
-                .lte('appointment_date', todayStr + ' 23:59');
-            setTodayCount(todayCnt ?? 0);
+            try {
+                const response = await api.get('/appointments/professional/dashboard', {
+                    params: { date: todayStr }
+                });
 
-            const { data: patients } = await supabase
-                .from('medical_appointments')
-                .select('patient_id')
-                .eq('professional_id', user.userId);
-            const unique = new Set((patients ?? []).map((p: any) => p.patient_id));
-            setPatientCount(unique.size);
+                const data = response.data;
+                setTodayCount(data.todayCount);
+                setPatientCount(data.patientCount);
 
-            const { data: upcoming } = await supabase
-                .from('medical_appointments')
-                .select(`id, appointment_date, status, reason, patient:users!medical_appointments_patient_id_fkey (first_name, last_name)`)
-                .eq('professional_id', user.userId)
-                .gte('appointment_date', todayStr + ' 00:00')
-                .eq('status', 'agendada')
-                .order('appointment_date', { ascending: true })
-                .limit(4);
-
-            setUpcomingAppts((upcoming ?? []).map((a: any) => {
-                const parts = a.appointment_date.replace(' ', 'T').split('T');
-                const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
-                return { 
-                    ...a, 
-                    id: String(a.id),
-                    displayTime: `${timePart[0]}:${timePart[1]}` 
-                };
-            }));
+                setUpcomingAppts((data.upcomingAppts ?? []).map((a: any) => {
+                    const parts = a.appointment_date.replace(' ', 'T').split('T');
+                    const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
+                    return {
+                        id: String(a.id),
+                        appointment_date: a.appointment_date,
+                        status: a.status,
+                        reason: a.reason,
+                        patient: {
+                            first_name: a.first_name,
+                            last_name: a.last_name
+                        },
+                        displayTime: `${timePart[0]}:${timePart[1]}`
+                    };
+                }));
+            } catch (err) {
+                console.error("Error fetching dashboard stats:", err);
+            }
         };
 
         fetchStats();
@@ -145,17 +139,17 @@ export default function Home() {
                         {/* Upcoming Appointments */}
                         <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
                             <div className="flex justify-between items-center mb-6">
-                                <h2 className="text-lg font-bold text-slate-800">Próximas Citas de Hoy</h2>
-                                <Link href="/schedule" className="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center group">
+                                <h2 className="text-lg font-bold text-slate-800">Próximas Citas</h2>
+                                <Link href="/manageappointments" className="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center group">
                                     Ver todas <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
                             <div className="space-y-3">
                                 {upcomingAppts.length > 0 ? upcomingAppts.map((appt) => (
                                     <div key={appt.id} className="group flex items-center p-3 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 cursor-pointer">
-                                        <div className="w-16 text-center">
-                                            <span className="block text-sm font-black text-slate-700">{appt.displayTime}</span>
-                                            <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">hrs</span>
+                                        <div className="w-20 text-center">
+                                            <span className="block text-sm font-black text-slate-700">{appt.appointment_date.substring(0, 10).split('-').reverse().join('/')}</span>
+                                            <span className="block text-[14px] font-bold text-slate-400 uppercase tracking-wider">{appt.appointment_date.substring(11, 16)}</span>
                                         </div>
                                         <div className="w-1 h-10 bg-blue-100 rounded-full mx-4 group-hover:bg-blue-300 transition-colors"></div>
                                         <div className="flex-1 flex justify-between items-center">

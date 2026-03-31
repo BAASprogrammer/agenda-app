@@ -11,7 +11,7 @@
 // ===================================================================
 
 import { useUserStore } from "@/store/userStore";
-import { supabase } from "@/lib/supabaseClient";
+import { api } from "@/lib/api";
 import { useEffect, useState, useCallback } from "react";
 
 // ✅ Interfaces live here because they are part of the data layer.
@@ -51,45 +51,39 @@ export function useAppointments(filter: string) {
         setLoading(true);
         setError(null);
 
-        let query = supabase
-            .from("medical_appointments")
-            .select(
-                `id, appointment_date, status, reason,
-                 patient:users!medical_appointments_patient_id_fkey (first_name, last_name)`
-            )
-            .eq("professional_id", user.userId)
-            .order("appointment_date", { ascending: false });
+        try {
+            const { data } = await api.get('/appointments/professional/all');
 
-        if (filter !== "todas") query = query.eq("status", filter);
+            let filtered = data ?? [];
+            if (filter !== "todas") {
+                filtered = filtered.filter((a: any) => a.status === filter);
+            }
 
-        const { data, error: fetchError } = await query;
+            const formatted: Appointment[] = filtered.map((a: any) => {
+                const parts = a.appointment_date.replace(" ", "T").split("T");
+                const datePart = parts[0];
+                const timePart = parts[1] ? parts[1].split(":") : ["00", "00"];
+                const [yr, mo, dy] = datePart.split("-").map(Number);
+                const d = new Date(yr, mo - 1, dy);
+                return {
+                    ...a,
+                    patient: {
+                        first_name: a.first_name,
+                        last_name: a.last_name
+                    },
+                    displayDate: isNaN(d.getTime())
+                        ? datePart
+                        : d.toLocaleDateString("cl-CL", { day: "2-digit", month: "short", year: "numeric" }),
+                    displayTime: `${timePart[0]}:${timePart[1]}`,
+                };
+            });
 
-        if (fetchError) {
-            setError("Could not load appointments. Please try again.");
+            setAppointments(formatted);
+        } catch (error) {
+            setError("No hay citas agendadas.");
+        } finally {
             setLoading(false);
-            return;
         }
-
-        const formatted: Appointment[] = (data ?? []).map((a) => {
-            const parts = a.appointment_date.replace(" ", "T").split("T");
-            const datePart = parts[0];
-            const timePart = parts[1] ? parts[1].split(":") : ["00", "00"];
-            const [yr, mo, dy] = datePart.split("-").map(Number);
-            const d = new Date(yr, mo - 1, dy);
-            return {
-                ...a,
-                // Supabase types the join as an array, but !fkey always returns an object.
-                // Double cast (unknown → Patient) is the safe way to force it in TypeScript.
-                patient: a.patient as unknown as AppointmentPatient | null,
-                displayDate: isNaN(d.getTime())
-                    ? datePart
-                    : d.toLocaleDateString("cl-CL", { day: "2-digit", month: "short", year: "numeric" }),
-                displayTime: `${timePart[0]}:${timePart[1]}`,
-            };
-        });
-
-        setAppointments(formatted);
-        setLoading(false);
     }, [user.userId, filter]); // ← Only re-created when userId or filter change
 
     // STEP 4: The hook calls fetchAppointments automatically when dependencies change.
@@ -101,17 +95,13 @@ export function useAppointments(filter: string) {
     // STEP 5: This function mutates data and then refreshes the list.
     // It lives in the hook because it's data logic, not render logic.
     const updateStatus = async (id: string, newStatus: "completada" | "cancelada") => {
-        const { error: updateError } = await supabase
-            .from("medical_appointments")
-            .update({ status: newStatus })
-            .eq("id", id);
-
-        if (updateError) {
+        try {
+            await api.put('/appointments', { id, status: newStatus });
+            // Refresh the list so the UI reflects the change immediately
+            fetchAppointments();
+        } catch (updateError) {
             setError("Could not update status. Please try again.");
-            return;
         }
-        // Refresh the list so the UI reflects the change immediately
-        fetchAppointments();
     };
 
     // STEP 6: The hook RETURNS only what the component needs.
