@@ -1,9 +1,5 @@
 import { X, Award, MapPin, Phone, Mail, Clock, ShieldCheck, Star } from "lucide-react";
-
-interface DoctorProfileModalProps {
-    professional: any;
-    onClose: () => void;
-}
+import { DoctorProfileModalProps } from "@/types/modal";
 
 export default function DoctorProfileModal({ professional, onClose }: DoctorProfileModalProps) {
     if (!professional) return null;

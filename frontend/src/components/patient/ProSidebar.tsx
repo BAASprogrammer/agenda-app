@@ -1,9 +1,6 @@
 import { CalendarClock, NotepadText, CircleUser, HeartPulse } from "lucide-react";
 import Sidebar from "@/components/shared/Sidebar";
-
-interface ProSidebarPatientProps {
-    active: "/home/patient" | "/medicalhistory" | "/myappointments" | "/profile";
-}
+import { ProSidebarPatientProps } from "@/types/sidebar";
 
 const NAV_ITEMS = [
     { href: "/home/patient", icon: HeartPulse, label: "Mi Resumen" },

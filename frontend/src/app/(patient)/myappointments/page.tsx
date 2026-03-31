@@ -19,29 +19,7 @@ import {
 import Link from "next/link";
 import { useEffect, useState, useMemo } from "react";
 import { useAppointmentsByPatient, useCancelAppointment, useUpdateAppointmentStatus } from "@/hooks/useAppointmentsQueries";
-
-interface AppointmentData {
-    id: string;
-    appointment_date: string;
-    professional_first_name: string;
-    professional_last_name: string;
-    status: string;
-    reason?: string;
-    // Add other properties as needed
-}
-
-interface FormattedAppointment extends AppointmentData {
-    professional: {
-        first_name: string;
-        last_name: string;
-    };
-    displayMonth: string;
-    displayDay: number;
-    displayFullDate: string;
-    displayTime: string;
-    displayDate: string;
-    reason?: string;
-}
+import { AppointmentData, FormattedAppointment } from "@/types/appointment";
 
 export default function MyAppointments() {
     const user = useUserStore();

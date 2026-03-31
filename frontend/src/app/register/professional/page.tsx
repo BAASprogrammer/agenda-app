@@ -11,11 +11,7 @@ import { validateRegister } from "@/utils/validateRegister";
 import { ProfessionalFormData } from "@/types/professional-form-data";
 import { registerUser, checkEmailExists } from "@/services/registerService";
 import { useSpecialties, useSubSpecialties } from "@/hooks/useMedicalQueries";
-
-interface MedicalSpecialty {
-    id: string;
-    name: string;
-}
+import { MedicalSpecialty } from "@/types/medical";
 
 export default function ProfessionalRegistration() {
     // 1. Hooks & Routers
@@ -98,9 +94,9 @@ export default function ProfessionalRegistration() {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800">
+        <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800 overflow-hidden animate-register-enter">
             {/* Left Column - Presentation (Flipped for Profs) */}
-            <div className="hidden lg:flex w-1/2 bg-blue-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tr-[50%] rounded-br-[50%] transition-all ease-in-out duration-300">
+            <div className="hidden lg:flex w-1/2 bg-blue-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tr-[50%] rounded-br-[50%] transition-all ease-in-out duration-300 animate-round-reveal-right">
                 <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
                 <div className="absolute bottom-[-10%] right-[-10%] w-[35rem] h-[35rem] bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
 

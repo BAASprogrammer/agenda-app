@@ -1,6 +1,7 @@
 "use client";
 // ✅ Import the hook that replaces all useState + useEffect + fetch logic
-import { useAppointments, type Appointment } from "@/hooks/useAppointments";
+import { useAppointments } from "@/hooks/useAppointments";
+import { ManagedAppointment } from "@/types/appointment";
 import ProSidebar from "@/components/professional/ProSidebar";
 import {
     ClipboardList, Search, Filter,
@@ -25,7 +26,7 @@ export default function ManageAppointments() {
     const { appointments, loading, error, updateStatus } = useAppointments(filter);
 
     // Search filter — presentation logic, stays in the component
-    const filtered = appointments.filter((a: Appointment) => {
+    const filtered = appointments.filter((a: ManagedAppointment) => {
         const name = `${a.patient?.first_name ?? ""} ${a.patient?.last_name ?? ""}`.toLowerCase();
         return name.includes(search.toLowerCase());
     });

@@ -6,12 +6,7 @@ import { X, Mail, Lock, ArrowRight, Stethoscope } from 'lucide-react';
 import { loginUser, resetPasswordRequest } from '@/services/authService';
 import { checkEmailExists } from '@/services/registerService';
 import { useMutation } from '@tanstack/react-query';
-
-interface LoginModalProps {
-    open: boolean;
-    onClose: () => void;
-    setIsLoggedIn: (loggedIn: boolean) => void;
-}
+import { LoginModalProps } from "@/types/auth";
 
 export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
     const router = useRouter();

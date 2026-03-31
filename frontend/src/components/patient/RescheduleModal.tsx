@@ -1,12 +1,7 @@
 import { Calendar, Clock, X, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import { useState } from "react";
 import { api } from "@/lib/api";
-
-interface RescheduleModalProps {
-    appointment: any;
-    onClose: () => void;
-    onSuccess: (newDate: string, newTime: string) => void;
-}
+import { RescheduleModalProps } from "@/types/modal";
 
 export default function RescheduleModal({ appointment, onClose, onSuccess }: RescheduleModalProps) {
     const [newDate, setNewDate] = useState(appointment.displayDate || "");

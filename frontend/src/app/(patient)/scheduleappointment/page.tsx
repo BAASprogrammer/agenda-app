@@ -16,9 +16,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-interface Specialty { id: string; name: string; }
-interface SubSpecialty { id: string; name: string; specialty_id: string; }
-interface Professional { id: string; first_name: string; last_name: string; }
+import { Professional } from "@/types/professional";
+import { SpecialtyOption, SubSpecialtyOption } from "@/types/specialty";
 
 export default function ScheduleAppointment() {
     // 1. State
@@ -250,7 +249,7 @@ export default function ScheduleAppointment() {
                                             onChange={(e) => handleSpecialtyChange(e.target.value)}
                                         >
                                             <option value="">Seleccionar Especialidad</option>
-                                            {specialties.map((specialty: Specialty) => (
+                                            {specialties.map((specialty: SpecialtyOption) => (
                                                 <option key={specialty.id} value={specialty.id}>
                                                     {specialty.name}
                                                 </option>
@@ -275,7 +274,7 @@ export default function ScheduleAppointment() {
                                             disabled={!selectedSpecialty}
                                         >
                                             <option value="">Seleccionar Sub-Especialidad</option>
-                                            {subSpecialties.map((subSpecialty: SubSpecialty) => (
+                                            {subSpecialties.map((subSpecialty: SubSpecialtyOption) => (
                                                 <option key={subSpecialty.id} value={subSpecialty.id}>
                                                     {subSpecialty.name}
                                                 </option>

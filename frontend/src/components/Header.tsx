@@ -8,12 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { LoginModal } from "./login/LoginModal";
 import { LogOut, Stethoscope, User } from "lucide-react";
 import Link from "next/link";
-
-interface HeaderProps {
-    firstName: string;
-    isLoggedIn: boolean;
-    isProfessional: string;
-}
+import { HeaderProps } from "@/types/auth";
 
 export default function Header({ firstName, isLoggedIn, isProfessional }: HeaderProps) {
     const [showLoginModal, setShowLoginModal] = useState(false);

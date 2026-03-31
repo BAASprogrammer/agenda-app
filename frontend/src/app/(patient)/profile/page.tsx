@@ -14,14 +14,7 @@ import { useState, useEffect } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { setAuthCookies } from "@/app/actions";
 import { useProfile, useUpdateProfile } from "@/hooks/useProfile";
-
-interface PatientData {
-    first_name: string;
-    last_name: string;
-    email: string;
-    phone: string;
-    address: string;
-}
+import { PatientData } from "@/types/patient";
 export default function Profile() {
     // 1. Hooks & Stores
     const userId = useUserStore(state => state.userId);

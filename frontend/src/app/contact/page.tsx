@@ -97,13 +97,6 @@ export default function Contact() {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Additional Help Card */}
-                        <div className="bg-linear-to-br from-blue-600 to-teal-500 p-8 rounded-[40px] text-white shadow-xl shadow-blue-200/50">
-                            <h3 className="text-xl font-bold mb-3">¿Eres profesional de la salud?</h3>
-                            <p className="text-blue-50 font-medium mb-6 leading-relaxed text-sm">Contamos con planes especializados para clínicas y centros médicos. Agenda una demo personalizada.</p>
-                            <button className="bg-white text-blue-600 px-6 py-3 rounded-2xl font-bold text-sm hover:bg-blue-50 transition-colors shadow-lg">Solicitar Demo</button>
-                        </div>
                     </div>
 
                     {/* Right Column: The Form */}

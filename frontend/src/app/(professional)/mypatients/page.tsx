@@ -6,22 +6,14 @@ import ProSidebar from "@/components/professional/ProSidebar";
 import { Users, Search, UserCircle, Clock, ChevronLeft, CalendarDays } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-interface Patient {
-    id: string;
-    first_name: string;
-    last_name: string;
-    total: number;
-    lastDate: string;
-    nextDate: string | null;
-}
+import { ProfessionalPatientSummary } from "@/types/patient";
 
 export default function MyPatients() {
     // 1. Hooks & Stores
     const user = useUserStore();
 
     // 2. State
-    const [patients, setPatients] = useState<Patient[]>([]);
+    const [patients, setPatients] = useState<ProfessionalPatientSummary[]>([]);
     const [search, setSearch] = useState("");
     const [loading, setLoading] = useState(true);
 
@@ -35,7 +27,7 @@ export default function MyPatients() {
                 const data = response.data;
 
                 // Agrupar por paciente
-                const map = new Map<string, Patient>();
+                const map = new Map<string, ProfessionalPatientSummary>();
                 const today = new Date().toISOString().split('T')[0];
 
                 (data ?? []).forEach((a: any) => {

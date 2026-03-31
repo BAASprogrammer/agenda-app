@@ -1,15 +1,6 @@
 import { api } from "@/lib/api";
 import { supabase } from "@/lib/supabaseClient";
-
-export interface RegisterData {
-    firstName: string;
-    lastName: string;
-    isProfessional: boolean;
-    phone: string
-    email: string;
-    password: string;
-    subspecialtyId?: string | null;
-}
+import { RegisterData } from "@/types/auth";
 //Check email exists
 export async function checkEmailExists(email: string) {
     const response = await api.get(`/users/check-email?email=${encodeURIComponent(email.trim())}`);

@@ -11,6 +11,8 @@ import java.util.Map;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/appointments")
@@ -18,6 +20,13 @@ public class AppointmentController extends BaseController {
 
     @Autowired
     private AppointmentService appointmentService;
+
+    private String requireUserId(Jwt jwt) {
+        if (jwt == null || jwt.getSubject() == null || jwt.getSubject().isBlank()) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token de autenticación inválido o ausente");
+        }
+        return jwt.getSubject();
+    }
 
     @PostMapping
     public Map<String, Object> createAppointment(@Valid @RequestBody AppointmentRequest body) {
@@ -48,7 +57,7 @@ public class AppointmentController extends BaseController {
             @AuthenticationPrincipal Jwt jwt,
             @RequestParam String startDate,
             @RequestParam String endDate) {
-        String professionalId = jwt.getSubject();
+        String professionalId = requireUserId(jwt);
         return appointmentService.getProfessionalAppointmentsDates(professionalId, startDate, endDate);
     }
 
@@ -56,14 +65,14 @@ public class AppointmentController extends BaseController {
     public List<Map<String, Object>> getProfessionalAppointmentsDay(
             @AuthenticationPrincipal Jwt jwt,
             @RequestParam String date) {
-        String professionalId = jwt.getSubject();
+        String professionalId = requireUserId(jwt);
         return appointmentService.getProfessionalAppointmentsDay(professionalId, date);
     }
 
     @GetMapping("/professional/all")
     public List<Map<String, Object>> getAllProfessionalAppointments(
             @AuthenticationPrincipal Jwt jwt) {
-        String professionalId = jwt.getSubject();
+        String professionalId = requireUserId(jwt);
         return appointmentService.getAllProfessionalAppointments(professionalId);
     }
 
@@ -71,7 +80,7 @@ public class AppointmentController extends BaseController {
     public Map<String, Object> getProfessionalDashboardStats(
             @AuthenticationPrincipal Jwt jwt,
             @RequestParam String date) {
-        String professionalId = jwt.getSubject();
+        String professionalId = requireUserId(jwt);
         return appointmentService.getProfessionalDashboardStats(professionalId, date);
     }
 }

@@ -14,17 +14,7 @@ import {
 } from "lucide-react";
 import jsPDF from "jspdf";
 import { useEffect, useState } from "react";
-
-interface MedicalRecord {
-    id: string;
-    appointment_date: string;
-    professional: {
-        first_name: string;
-        last_name: string;
-    };
-    reason?: string;
-    // Add other properties as needed
-}
+import { MedicalRecord } from "@/types/medical";
 
 export default function MedicalHistory() {
     const user = useUserStore();

@@ -10,24 +10,10 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ProfessionalScheduleAppointment } from "@/types/appointment";
 
 const DAYS = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 const MONTHS = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-
-// ✅ MEJORA 2: Interfaces en lugar de any[]
-interface SchedulePatient {
-    first_name: string;
-    last_name: string;
-}
-
-interface ScheduleAppointment {
-    id: string;
-    appointment_date: string;
-    status: 'agendada' | 'completada' | 'cancelada';
-    reason: string | null;
-    patient: SchedulePatient | null;
-    displayTime: string;
-}
 
 export default function Schedule() {
     // 1. Hooks & Stores
@@ -35,7 +21,7 @@ export default function Schedule() {
 
     // 2. State
     const [selectedDate, setSelectedDate] = useState(new Date());
-    const [appointments, setAppointments] = useState<ScheduleAppointment[]>([]);
+    const [appointments, setAppointments] = useState<ProfessionalScheduleAppointment[]>([]);
     const [weekOffset, setWeekOffset] = useState(0);
     const [busyDays, setBusyDays] = useState<Set<string>>(new Set());
 
@@ -85,7 +71,7 @@ export default function Schedule() {
                 });
                 const data = response.data;
 
-                setAppointments((data ?? []).map((a: any): ScheduleAppointment => {
+                setAppointments((data ?? []).map((a: any): ProfessionalScheduleAppointment => {
                     const parts = a.appointment_date.replace(' ', 'T').split('T');
                     const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
                     return {

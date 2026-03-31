@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
 import com.agendaapp.app.dto.RegisterUserRequest;
 import com.agendaapp.app.dto.UserDTO;
 import com.agendaapp.app.dto.UserResponseDTO;
@@ -26,9 +27,16 @@ public class UserController extends BaseController {
 	@Autowired
 	private UserService userService;
 
+	private String requireUserId(Jwt jwt) {
+		if (jwt == null || jwt.getSubject() == null || jwt.getSubject().isBlank()) {
+			throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token de autenticación inválido o ausente");
+		}
+		return jwt.getSubject();
+	}
+
 	@GetMapping("/me")
 	public UserDTO getMyUser(@AuthenticationPrincipal Jwt jwt) {
-		String userId = jwt.getSubject();
+		String userId = requireUserId(jwt);
 		return userService.getUserById(userId);
 	}
 
@@ -42,7 +50,7 @@ public class UserController extends BaseController {
 			@Valid @RequestBody RegisterUserRequest body,
 			@AuthenticationPrincipal Jwt jwt) {
 		try {
-			String userId = jwt.getSubject();
+			String userId = requireUserId(jwt);
 			return userService.registerUser(body, userId);
 		} catch (ResponseStatusException e) {
 			throw e;
@@ -59,7 +67,7 @@ public class UserController extends BaseController {
 
 	@GetMapping("/profile")
 	public Map<String, Object> getProfile(@AuthenticationPrincipal Jwt jwt) {
-		String userId = jwt.getSubject();
+		String userId = requireUserId(jwt);
 		return userService.getProfile(userId);
 	}
 
@@ -67,7 +75,7 @@ public class UserController extends BaseController {
 	public UserResponseDTO updateProfile(
 			@AuthenticationPrincipal Jwt jwt,
 			@Valid @RequestBody RegisterUserRequest body) {
-		String userId = jwt.getSubject();
+		String userId = requireUserId(jwt);
 		return userService.updateProfile(userId, body);
 	}
 

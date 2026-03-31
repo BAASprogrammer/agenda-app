@@ -1,15 +1,5 @@
 import { create } from 'zustand';
-
-export interface UserState {
-    isLoggedIn: boolean;
-    firstName: string;
-    lastName: string;
-    email: string;
-    userId: string;
-    isProfessional: string;
-    setUser: (userData: Partial<UserState>) => void;
-    clearUser: () => void;
-}
+import { UserState } from "@/types/user-state";
 
 export const useUserStore = create<UserState>((set) => ({
     isLoggedIn: false,

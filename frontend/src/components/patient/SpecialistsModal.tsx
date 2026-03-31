@@ -3,11 +3,7 @@ import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { X, User, ChevronRight, Stethoscope, Star, Search, MapPin } from "lucide-react";
 import DoctorProfileModal from "./DoctorProfileModal";
-
-interface SpecialistsModalProps {
-    specialtyName: string;
-    onClose: () => void;
-}
+import { SpecialistsModalProps } from "@/types/modal";
 
 export default function SpecialistsModal({ specialtyName, onClose }: SpecialistsModalProps) {
     const [professionals, setProfessionals] = useState<any[]>([]);

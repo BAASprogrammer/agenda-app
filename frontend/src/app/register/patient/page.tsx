@@ -72,7 +72,7 @@ export default function PatientRegistration() {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800">
+        <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800 overflow-hidden animate-register-enter">
             {/* Left Column - Form */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 sm:px-16 md:px-24 py-12 lg:py-0 relative z-10">
                 <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-teal-50/50 to-white/50 -z-10"></div>
@@ -200,7 +200,7 @@ export default function PatientRegistration() {
             </div>
 
             {/* Right Column - Presentation */}
-            <div className="hidden lg:flex w-1/2 bg-teal-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tl-[50%] rounded-bl-[50%] transition-all ease-in-out duration-300">
+            <div className="hidden lg:flex w-1/2 bg-teal-600 flex-col items-center justify-center relative overflow-hidden px-12 rounded-tl-[50%] rounded-bl-[50%] transition-all ease-in-out duration-300 animate-round-reveal-left">
                 <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
                 <div className="absolute bottom-[-10%] right-[-10%] w-[35rem] h-[35rem] bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
 

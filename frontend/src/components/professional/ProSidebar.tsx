@@ -1,9 +1,6 @@
 import { BarChart2, Calendar, ClipboardList, Users, Settings, LayoutDashboard } from "lucide-react";
 import Sidebar from "@/components/shared/Sidebar";
-
-interface ProSidebarProps {
-    active: "/home/professional" | "/schedule" | "/manageappointments" | "/mypatients" | "/settings";
-}
+import { ProSidebarProps } from "@/types/sidebar";
 
 const NAV_ITEMS = [
     { href: "/home/professional", icon: BarChart2, label: "Dashboard" },
@@ -20,11 +17,8 @@ export default function ProSidebar({ active }: ProSidebarProps) {
             active={active}
             header={
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center shadow-md shadow-blue-200/60 hover:scale-105 transition-transform duration-300">
-                        <LayoutDashboard className="text-white w-5 h-5" aria-hidden="true" />
-                    </div>
                     <span className="text-[15px] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500 tracking-tight">
-                        Menú Profesional
+                        Menú Principal
                     </span>
                 </div>
             }

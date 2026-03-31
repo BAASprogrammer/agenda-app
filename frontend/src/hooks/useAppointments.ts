@@ -13,30 +13,14 @@
 import { useUserStore } from "@/store/userStore";
 import { api } from "@/lib/api";
 import { useEffect, useState, useCallback } from "react";
-
-// ✅ Interfaces live here because they are part of the data layer.
-// Exported so the page component can use the types too.
-export interface AppointmentPatient {
-    first_name: string;
-    last_name: string;
-}
-
-export interface Appointment {
-    id: string;
-    appointment_date: string;
-    status: "agendada" | "completada" | "cancelada";
-    reason: string | null;
-    patient: AppointmentPatient | null;
-    displayDate: string;
-    displayTime: string;
-}
+import { ManagedAppointment } from "@/types/appointment";
 
 // STEP 1: The hook receives parameters just like any regular function.
 // 'filter' comes from the component because it's controlled by the user via the UI.
 export function useAppointments(filter: string) {
     // STEP 2: State lives in the hook, not in the component.
     // When state changes, React automatically re-renders the component.
-    const [appointments, setAppointments] = useState<Appointment[]>([]);
+    const [appointments, setAppointments] = useState<ManagedAppointment[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -59,7 +43,7 @@ export function useAppointments(filter: string) {
                 filtered = filtered.filter((a: any) => a.status === filter);
             }
 
-            const formatted: Appointment[] = filtered.map((a: any) => {
+            const formatted: ManagedAppointment[] = filtered.map((a: any) => {
                 const parts = a.appointment_date.replace(" ", "T").split("T");
                 const datePart = parts[0];
                 const timePart = parts[1] ? parts[1].split(":") : ["00", "00"];

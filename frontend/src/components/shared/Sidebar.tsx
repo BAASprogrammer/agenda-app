@@ -1,25 +1,8 @@
 "use client";
-import { Menu, LucideIcon } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-
-interface NavItem {
-    href: string;
-    icon: LucideIcon;
-    label: string;
-}
-
-interface SidebarProps {
-    navItems: readonly NavItem[];
-    active: string;
-    header: React.ReactNode;
-    buttonColor: string;
-    activeBgColor: string;
-    activeTextColor: string;
-    hoverTextColor: string;
-    iconActiveColor: string;
-    ariaLabel: string;
-}
+import { SidebarProps } from "@/types/sidebar";
 
 export default function Sidebar({
     navItems,
