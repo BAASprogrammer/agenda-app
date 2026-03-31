@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/test")
-public class TestController {
+public class TestController extends BaseController {
 	@GetMapping
 	public String test() {
 		return "Backend funcionando";

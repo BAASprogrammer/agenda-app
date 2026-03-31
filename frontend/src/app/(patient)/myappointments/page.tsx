@@ -2,7 +2,6 @@
 import AppointmentDetails from "@/components/patient/AppointmentDetails";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUserStore } from "@/store/userStore";
-import { supabase } from "@/lib/supabaseClient";
 import { getStatusColor } from "@/utils/getStatusColor";
 import DoctorProfileModal from "@/components/patient/DoctorProfileModal";
 import {
@@ -18,20 +17,42 @@ import {
     AlertCircle
 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useAppointmentsByPatient, useCancelAppointment, useUpdateAppointmentStatus } from "@/hooks/useAppointmentsQueries";
+
+interface AppointmentData {
+    id: string;
+    appointment_date: string;
+    professional_first_name: string;
+    professional_last_name: string;
+    status: string;
+    reason?: string;
+    // Add other properties as needed
+}
+
+interface FormattedAppointment extends AppointmentData {
+    professional: {
+        first_name: string;
+        last_name: string;
+    };
+    displayMonth: string;
+    displayDay: number;
+    displayFullDate: string;
+    displayTime: string;
+    displayDate: string;
+    reason?: string;
+}
 
 export default function MyAppointments() {
     const user = useUserStore();
-    const [appointments, setAppointments] = useState<any[]>([]);
     const [filter, setFilter] = useState("todas");
-    const [selectedAppointment, setSelectedAppointment] = useState<any | null>(null);
+    const [selectedAppointment, setSelectedAppointment] = useState<FormattedAppointment | null>(null);
     const [openMenuId, setOpenMenuId] = useState<string | null>(null);
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [message, setMessage] = useState<string>("");
     const [appointmentToCancel, setAppointmentToCancel] = useState<string | null>(null);
     const [isDoctorProfileOpen, setIsDoctorProfileOpen] = useState(false);
-    const [selectedDoctor, setSelectedDoctor] = useState<any>(null);
+    const [selectedDoctor, setSelectedDoctor] = useState<Record<string, unknown> | null>(null);
 
     const updateStatusMutation = useUpdateAppointmentStatus();
     const cancelMutation = useCancelAppointment();
@@ -39,54 +60,46 @@ export default function MyAppointments() {
 
     const today = new Date().toLocaleDateString("en-CA");
 
-    // Effect to format and set appointments from query data
-    useEffect(() => {
-        if (!user.userId) return;
+    const appointments: FormattedAppointment[] = useMemo(() => {
+        if (!user.userId || error || !data) return [];
 
-        if (error) {
-            console.error("Error obteniendo citas:", error);
-            return;
-        }
+        return data.map((appt: AppointmentData) => {
+            // Reconstruct professional object for compatibility
+            const professional = {
+                first_name: appt.professional_first_name,
+                last_name: appt.professional_last_name
+            };
 
-        if (data) {
-            const formattedData = data.map((appt: any) => {
-                // Reconstruct professional object for compatibility
-                const professional = {
-                    first_name: appt.professional_first_name,
-                    last_name: appt.professional_last_name
-                };
+            const parts = appt.appointment_date.replace(' ', 'T').split('T');
+            const datePart = parts[0];
+            const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
+            const [year, month, day] = datePart.split('-').map(Number);
+            const d = new Date(year, month - 1, day);
 
-                const parts = appt.appointment_date.replace(' ', 'T').split('T');
-                const datePart = parts[0];
-                const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
-                const [year, month, day] = datePart.split('-').map(Number);
-                const d = new Date(year, month - 1, day);
-
-                return {
-                    ...appt,
-                    id: appt.id?.toString(),
-                    professional,
-                    displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('cl-CL', { month: 'short' }).replace('.', ''),
-                    displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
-                    displayFullDate: isNaN(d.getTime()) ? 'Fecha inválida' : d.toLocaleDateString('cl-CL', { weekday: 'long', day: 'numeric', month: 'long' }),
-                    displayTime: `${timePart[0]}:${timePart[1]}`,
-                    displayDate: parts[0]
-                };
-            });
-            setAppointments(formattedData);
-        }
+            return {
+                ...appt,
+                id: appt.id?.toString(),
+                professional,
+                displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('cl-CL', { month: 'short' }).replace('.', ''),
+                displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
+                displayFullDate: isNaN(d.getTime()) ? 'Fecha inválida' : d.toLocaleDateString('cl-CL', { weekday: 'long', day: 'numeric', month: 'long' }),
+                displayTime: `${timePart[0]}:${timePart[1]}`,
+                displayDate: parts[0],
+                reason: appt.reason
+            };
+        });
     }, [user.userId, data, error]);
 
     // Effect to auto-update past appointments
     useEffect(() => {
+        const today = new Date().toLocaleDateString("en-CA");
         appointments.forEach(appt => {
             const appointmentDate = appt.appointment_date.split(' ')[0];
             if (appointmentDate < today && appt.status === 'agendada') {
                 updateStatusMutation.mutate({ id: appt.id, status: 'pasada' });
-                setAppointments(prev => prev.map(a => a.id === appt.id ? { ...a, status: 'pasada' } : a));
             }
         });
-    }, [appointments, today, updateStatusMutation]);
+    }, [appointments, updateStatusMutation]);
 
     const searchProfessional = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value.toLowerCase());
@@ -102,7 +115,6 @@ export default function MyAppointments() {
 
         try {
             await cancelMutation.mutateAsync({ id: appointmentToCancel });
-            setAppointments(appointments.filter(appt => appt.id !== appointmentToCancel));
             setMessage("Cita cancelada con éxito");
         } catch (err) {
             console.error("Error al cancelar cita:", err);

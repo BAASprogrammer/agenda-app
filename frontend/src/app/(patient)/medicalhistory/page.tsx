@@ -4,7 +4,6 @@ import { useUserStore } from "@/store/userStore";
 import { api } from "@/lib/api";
 import {
     NotepadText,
-    CalendarClock,
     Download,
     ExternalLink,
     Search,
@@ -13,15 +12,25 @@ import {
     ClipboardList,
     CircleUser
 } from "lucide-react";
-import Link from "next/link";
 import jsPDF from "jspdf";
 import { useEffect, useState } from "react";
 
+interface MedicalRecord {
+    id: string;
+    appointment_date: string;
+    professional: {
+        first_name: string;
+        last_name: string;
+    };
+    reason?: string;
+    // Add other properties as needed
+}
+
 export default function MedicalHistory() {
     const user = useUserStore();
-    const [history, setHistory] = useState<any[]>([]);
+    const [history, setHistory] = useState<MedicalRecord[]>([]);
 
-    const generatePDF = (record: any) => {
+    const generatePDF = (record: MedicalRecord) => {
         const doc = new jsPDF();
 
         // Header
@@ -82,8 +91,8 @@ export default function MedicalHistory() {
                 const data = response.data || [];
                 
                 const completed = data
-                    .filter((a: any) => a.status === 'completada')
-                    .map((a: any) => ({
+                    .filter((a: Record<string, unknown>) => a.status === 'completada')
+                    .map((a: Record<string, unknown>) => ({
                         ...a,
                         professional: {
                             first_name: a.professional_first_name,

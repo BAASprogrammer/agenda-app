@@ -9,8 +9,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*")
-public class SpecialtyController {
+public class SpecialtyController extends BaseController {
 
     @Autowired
     private JdbcTemplate jdbc;

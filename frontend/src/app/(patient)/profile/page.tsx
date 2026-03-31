@@ -1,7 +1,6 @@
 "use client";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUserStore } from "@/store/userStore";
-import { supabase } from "@/lib/supabaseClient";
 import {
     CircleUser,
     Mail,
@@ -12,9 +11,8 @@ import {
     Save
 } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { setAuthCookies } from "@/app/actions";
-import { api } from "@/lib/api";
 import { useProfile, useUpdateProfile } from "@/hooks/useProfile";
 
 interface PatientData {
@@ -35,6 +33,7 @@ export default function Profile() {
 
     // 2. State
     const [message, setMessage] = useState<string>("");
+    const [isInitialized, setIsInitialized] = useState(false);
     const [formData, setFormData] = useState<PatientData>({
         first_name: "",
         last_name: "",
@@ -46,7 +45,7 @@ export default function Profile() {
     // 3. Queries
     const { data: patient } = useProfile(userId!);
     const { mutate: update, isPending } = useUpdateProfile(userId!, {
-        onSuccess: (updatedData: any) => {
+        onSuccess: (updatedData: { first_name: string; last_name: string; email: string }) => {
             setUser({
                 userId: userId,
                 firstName: updatedData.first_name,
@@ -63,9 +62,9 @@ export default function Profile() {
             setMessage("Perfil actualizado correctamente");
             queryClient.invalidateQueries({ queryKey: ["patient", userId] });
         },
-        onError: (error: any) => {
+        onError: (error: unknown) => {
             console.error("Error al actualizar:", error);
-            setMessage(`Error al guardar: ${error.message || "Contacta a soporte"}`);
+            setMessage(`Error al guardar: ${error instanceof Error ? error.message : "Contacta a soporte"}`);
         }
     });
     // const { mutate: update, isPending } = useMutation({
@@ -103,9 +102,10 @@ export default function Profile() {
     // });
 
     // 4. Effects
+    // eslint-disable-next-line
     useEffect(() => {
         // Rellenar el formulario con los datos del backend cuando estén disponibles
-        if (userId && patient) {
+        if (userId && patient && !isInitialized) {
             setFormData({
                 first_name: patient.first_name || firstNameStore || "",
                 last_name: patient.last_name || lastNameStore || "",
@@ -113,8 +113,9 @@ export default function Profile() {
                 phone: patient.phone || "",
                 address: patient.address || ""
             });
+            setIsInitialized(true);
         }
-    }, [userId, patient]);
+    }, [userId, patient, isInitialized, firstNameStore, lastNameStore, emailStore]);
 
     // 5. Handlers
     const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {

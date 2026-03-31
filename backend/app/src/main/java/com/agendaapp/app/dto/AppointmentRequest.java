@@ -1,12 +1,25 @@
 package com.agendaapp.app.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class AppointmentRequest {
+
+    @NotBlank(message = "El ID del paciente es obligatorio")
     private String patientId;
+
+    @NotBlank(message = "El ID de la subespecialidad es obligatorio")
     private String subSpecialtyId;
+
+    @NotBlank(message = "El ID del profesional es obligatorio")
     private String professionalId;
+
+    @NotBlank(message = "La fecha de la cita es obligatoria")
     private String appointmentDate; // We will parse this to LocalDateTime if needed, or keep as string
+
     private String reason;
+
+    @NotNull(message = "El estado es obligatorio")
     private String status;
 
     public AppointmentRequest() {}
