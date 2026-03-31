@@ -2,7 +2,7 @@
 import { setAuthCookies } from '@/app/actions';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { X, Mail, Lock, ArrowRight, Stethoscope } from 'lucide-react';
+import { X, Mail, Lock, ArrowRight, CalendarCheck } from 'lucide-react';
 import { loginUser, resetPasswordRequest } from '@/services/authService';
 import { checkEmailExists } from '@/services/registerService';
 import { useMutation } from '@tanstack/react-query';
@@ -52,7 +52,7 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
     const { mutate: requestReset, isPending: resetting, error: resetError, isSuccess: resetRequestSuccess } = useMutation({
         mutationFn: async () => {
             if (!email) throw new Error("Por favor ingrese su correo.");
-            
+
             // Primero verificamos si el email pertenece a un usuario
             const exists = await checkEmailExists(email);
             if (!exists) {
@@ -90,7 +90,7 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
                 {/* Header */}
                 <div className="text-center mb-8 mt-2">
                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 mb-5 shadow-inner">
-                        <Stethoscope className="w-7 h-7" />
+                        <CalendarCheck className="w-7 h-7" />
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Iniciar Sesión</h2>
                     <p className="text-slate-500 font-medium text-[15px]">Accede a tu cuenta segura de AgendaApp.</p>

@@ -6,14 +6,13 @@ import { supabase } from "@/lib/supabaseClient";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { LoginModal } from "./login/LoginModal";
-import { LogOut, Stethoscope, User } from "lucide-react";
+import { CalendarCheck, LogOut, User } from "lucide-react";
 import Link from "next/link";
 import { HeaderProps } from "@/types/auth";
 
 export default function Header({ firstName, isLoggedIn, isProfessional }: HeaderProps) {
     const [showLoginModal, setShowLoginModal] = useState(false);
     const pathname = usePathname();
-    const router = useRouter();
     const redirection =
         isProfessional === "true"
             ? "/home/professional"
@@ -47,7 +46,7 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
                         className="flex items-center gap-2.5 hover:scale-[1.02] transition-transform duration-300"
                     >
                         <div className="w-10 h-10 rounded-xl bg-linear-to-br from-blue-600 to-blue-500 flex items-center justify-center shadow-md shadow-blue-200/60">
-                            <Stethoscope className="text-white w-5 h-5" aria-hidden="true" />
+                            <CalendarCheck className="text-white w-7 h-7" aria-hidden="true" />
                         </div>
                         <span className="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-blue-500">
                             AgendaApp

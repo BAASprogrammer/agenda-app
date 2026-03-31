@@ -3,7 +3,7 @@ import { useState } from "react";
 import { setAuthCookies } from "@/app/actions";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { User, Mail, Lock, Phone, ArrowRight, Activity, Stethoscope } from "lucide-react";
+import { User, Mail, Lock, Phone, ArrowRight, Activity, Stethoscope, CalendarCheck } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { LoginModal } from "@/components/login/LoginModal";
@@ -85,7 +85,7 @@ export default function ProfessionalRegistration() {
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
-        const validationError = validateRegister(formData, true);
+        const validationError = await validateRegister(formData, true);
         if (validationError) {
             setError(validationError);
             return;
@@ -133,7 +133,7 @@ export default function ProfessionalRegistration() {
 
                 <div className="max-w-md w-full mx-auto">
                     <Link href="/" className="inline-flex items-center gap-2 text-blue-600 font-bold mb-8 hover:text-blue-700 transition-colors group">
-                        <Stethoscope className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
+                        <CalendarCheck className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
                         AgendaApp
                     </Link>
 
@@ -252,7 +252,7 @@ export default function ProfessionalRegistration() {
                                         <Lock className="w-5 h-5" />
                                     </div>
                                     <input
-                                        type="text" name="professionalKey" required
+                                        type="password" name="professionalKey" required
                                         value={formData.professionalKey} onChange={handleChange}
                                         className="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 font-medium"
                                         placeholder="Secret Key"

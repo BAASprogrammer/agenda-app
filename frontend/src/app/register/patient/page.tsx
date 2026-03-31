@@ -3,7 +3,7 @@ import { useState } from "react";
 import { setAuthCookies } from "@/app/actions";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { User, Mail, Lock, Phone, ArrowRight, CalendarClock, ShieldCheck, Stethoscope } from "lucide-react";
+import { User, Mail, Lock, Phone, ArrowRight, CalendarClock, ShieldCheck, CalendarCheck } from "lucide-react";
 import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
 import { registerUser, checkEmailExists } from "@/services/registerService";
@@ -62,7 +62,7 @@ export default function PatientRegistration() {
         e.preventDefault();
         setError(null);
 
-        const validationError = validateRegister(formData);
+        const validationError = await validateRegister(formData);
         if (validationError) {
             setError(validationError);
             return;
@@ -79,7 +79,7 @@ export default function PatientRegistration() {
 
                 <div className="max-w-md w-full mx-auto">
                     <Link href="/" className="inline-flex items-center gap-2 text-teal-600 font-bold mb-8 hover:text-teal-700 transition-colors group">
-                        <Stethoscope className="w-6 h-6 text-teal-500 group-hover:scale-110 transition-transform" />
+                        <CalendarCheck className="w-6 h-6 text-teal-500 group-hover:scale-110 transition-transform" />
                         AgendaApp
                     </Link>
 
