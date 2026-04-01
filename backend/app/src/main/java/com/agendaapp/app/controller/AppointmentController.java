@@ -17,6 +17,8 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.dao.DataAccessException;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/appointments")
@@ -60,9 +62,34 @@ public class AppointmentController extends BaseController {
     }
 
     @GetMapping("/appointmentsbyid")
-    public List<Map<String, Object>> getAppointmentsByPatient(@RequestParam String patientId,
+    public ResponseEntity<Object> getAppointmentsByPatient(
+            @AuthenticationPrincipal Jwt jwt,
+            @RequestParam(required = false) String patientId,
             @RequestParam String order) {
-        return appointmentService.getAppointmentsByPatient(patientId, order);
+        String requesterId = requireUserId(jwt);
+
+        if (patientId == null || patientId.isBlank()) {
+            patientId = requesterId;
+        }
+
+        if (!patientId.equals(requesterId)) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN,
+                    "No estás autorizado para acceder al historial de otro paciente");
+        }
+
+        try {
+            UUID.fromString(patientId);
+        } catch (IllegalArgumentException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "patientId tiene un formato inválido", e);
+        }
+
+        try {
+            return ResponseEntity.ok(appointmentService.getAppointmentsByPatient(patientId, order));
+        } catch (DataAccessException e) {
+            logger.error("Error obteniendo historial médico para patientId={}", patientId, e);
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+                    "Error interno al obtener historial médico", e);
+        }
     }
 
     @GetMapping("/professional/dates")

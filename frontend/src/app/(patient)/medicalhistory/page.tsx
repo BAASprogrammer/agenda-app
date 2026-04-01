@@ -20,6 +20,10 @@ export default function MedicalHistory() {
     const user = useUserStore();
     const [history, setHistory] = useState<MedicalRecord[]>([]);
 
+    const isValidUuid = (value?: string) => {
+        return typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value);
+    };
+
     const generatePDF = (record: MedicalRecord) => {
         const doc = new jsPDF();
 
@@ -73,7 +77,11 @@ export default function MedicalHistory() {
 
     useEffect(() => {
         const fetchHistory = async () => {
-            if (!user.userId) return;
+            if (!user.userId || !isValidUuid(user.userId)) {
+                console.warn("Omitiendo fetch de historial: patientId inválido o no definido", user.userId);
+                return;
+            }
+
             try {
                 const response = await api.get('/appointments/appointmentsbyid', {
                     params: { patientId: user.userId, order: "DESC" }
@@ -92,7 +100,12 @@ export default function MedicalHistory() {
 
                 setHistory(completed);
             } catch (error) {
-                console.error("Error obteniendo historial:", error);
+                if (error && typeof error === 'object' && 'response' in error) {
+                    const axiosError = error as any;
+                    console.error("Error obteniendo historial:", axiosError.response?.status, axiosError.response?.data || axiosError.message);
+                } else {
+                    console.error("Error obteniendo historial:", error);
+                }
             }
         }
         fetchHistory();
@@ -190,11 +203,18 @@ export default function MedicalHistory() {
                                                 title="Descargar receta">
                                                 <Download className="w-4 h-4" /> Receta.pdf
                                             </button>
-                                            <button className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-700 px-6 py-3.5 rounded-2xl font-bold hover:border-cyan-200 hover:text-cyan-600 transition-all text-sm cursor-pointer"
-                                                title="Ver resultados de laboratorio">
-                                                <ExternalLink className="w-4 h-4" /> Resultados de Laboratorio
-                                            </button>
-                                        </div>
+                                            <button
+                                            type="button"
+                                            disabled
+                                            className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-slate-100 border border-slate-200 text-slate-400 px-6 py-3.5 rounded-2xl font-bold text-sm cursor-not-allowed"
+                                            title="Funcionalidad aún no disponible"
+                                        >
+                                            <ExternalLink className="w-4 h-4" /> Resultados de Laboratorio
+                                        </button>
+                                        <p className="text-[11px] text-slate-500 mt-1 max-w-[250px] text-center md:text-left">
+                                            Funcionalidad no disponible todavía. Pronto podrás ver tus resultados de laboratorio aquí.
+                                        </p>
+                                    </div>
                                     </div>
                                 </div>
                             ))

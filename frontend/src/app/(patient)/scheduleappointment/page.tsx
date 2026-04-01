@@ -26,6 +26,7 @@ export default function ScheduleAppointment() {
     const [selectedSpecialty, setSelectedSpecialty] = useState<string>("");
     const [selectedSubSpecialty, setSelectedSubSpecialty] = useState<string>("");
     const [message, setMessage] = useState<string>("");
+    const [isError, setIsError] = useState<boolean>(false);
     const [appointment, setAppointment] = useState<{
         date: string;
         time: string;
@@ -43,30 +44,34 @@ export default function ScheduleAppointment() {
     const { data: subSpecialties = [] } = useSubSpecialties(selectedSpecialty);
     const { data: professionals = [] } = useProfessionals(selectedSubSpecialty);
 
+    const sanitizeMessage = (rawMessage: string) => rawMessage.replace(/^\s*error:\s*/i, '');
+
     const getApiErrorMessage = (error: unknown): string => {
         if (error && typeof error === 'object' && 'response' in error) {
             const axiosError = error as AxiosError<{ message?: string; error?: string }>;
             const responseData = axiosError.response?.data;
             if (responseData) {
-                return responseData.message || responseData.error || JSON.stringify(responseData);
+                return sanitizeMessage(responseData.message || responseData.error || JSON.stringify(responseData));
             }
         }
 
         if (error instanceof Error) {
-            return error.message;
+            return sanitizeMessage(error.message);
         }
 
-        return 'Error al crear la cita';
+        return 'No se pudo crear la cita';
     };
 
     const createAppointmentMutation = useCreateAppointment({
         onSuccess: () => {
             setMessage('Cita creada exitosamente');
+            setIsError(false);
             setIsScheduleAppointmentOpen(false);
             resetForm();
         },
         onError: (error: unknown) => {
             setMessage(getApiErrorMessage(error));
+            setIsError(true);
         }
     });
 
@@ -100,12 +105,14 @@ export default function ScheduleAppointment() {
 
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) {
-            setMessage('Error: Debes iniciar sesión para crear una cita');
+            setMessage('Debes iniciar sesión para crear una cita');
+            setIsError(true);
             return;
         }
 
         if (!selectedSpecialty || !selectedSubSpecialty || !appointment.professional || !appointment.date || !appointment.time || !appointment.reason) {
-            setMessage('Error: Debes completar todos los campos');
+            setMessage('Debes completar todos los campos');
+            setIsError(true);
             return;
         }
 
@@ -115,7 +122,8 @@ export default function ScheduleAppointment() {
         const nowMinutes = now.getMinutes();
 
         if (appointment.date === nowDate && appointment.time < `${nowHours}:${nowMinutes}`) {
-            setMessage('Error: No es posible agendar citas con fecha y hora anteriores a la actual');
+            setMessage('No es posible agendar citas con fecha y hora anteriores a la actual');
+            setIsError(true);
             return;
         }
 
@@ -131,6 +139,7 @@ export default function ScheduleAppointment() {
 
     const handleCloseModal = () => {
         setMessage('');
+        setIsError(false);
     };
     return (
         <div className="min-h-screen bg-slate-50 relative overflow-hidden font-sans text-slate-800">
@@ -205,15 +214,15 @@ export default function ScheduleAppointment() {
                 <div className="fixed inset-0 flex items-center justify-center z-101 animate-fade-in">
                     <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"></div>
                     <div className="relative bg-white rounded-[2.5rem] p-10 shadow-2xl border border-white max-w-sm w-full mx-4 transform animate-scale-in text-center">
-                        <div className={`w-20 h-20 mx-auto mb-6 rounded-3xl flex items-center justify-center ${message.includes('Error') ? 'bg-red-50 text-red-500' : 'bg-emerald-50 text-emerald-500'}`}>
-                            {message.includes('Error') ? (
+                        <div className={`w-20 h-20 mx-auto mb-6 rounded-3xl flex items-center justify-center ${isError ? 'bg-red-50 text-red-500' : 'bg-emerald-50 text-emerald-500'}`}>
+                            {isError ? (
                                 <XCircle className="w-10 h-10" />
                             ) : (
                                 <CheckCircle2 className="w-10 h-10" />
                             )}
                         </div>
                         <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                            {message.includes('Error') ? '¡Ups! Algo salió mal' : '¡Todo listo!'}
+                            {isError ? '¡Ups! Algo salió mal' : '¡Todo listo!'}
                         </h3>
                         <p className="text-slate-500 font-medium mb-8 leading-relaxed">
                             {message}

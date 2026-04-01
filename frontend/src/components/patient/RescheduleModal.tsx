@@ -1,5 +1,5 @@
 import { Calendar, Clock, X, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { api } from "@/lib/api";
 import { RescheduleModalProps } from "@/types/modal";
 
@@ -8,8 +8,11 @@ export default function RescheduleModal({ appointment, onClose, onSuccess }: Res
     const [newTime, setNewTime] = useState(appointment.displayTime || "");
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
+    const [isError, setIsError] = useState(false);
 
-    const handleReschedule = async (e: React.FormEvent) => {
+    const sanitizeMessage = (rawMessage: string) => rawMessage.replace(/^\s*error:\s*/i, '');
+
+    const handleReschedule = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
         setMessage("");
@@ -18,12 +21,14 @@ export default function RescheduleModal({ appointment, onClose, onSuccess }: Res
         const nowMinutes = now.getMinutes();
         const nowDate = now.toLocaleDateString("en-CA");
         if (newDate == nowDate && newTime < nowHours + ":" + nowMinutes) {
-            setMessage('Error: No es posible agendar citas con fecha y hora anteriores a la actual');
+            setMessage('No es posible agendar citas con fecha y hora anteriores a la actual');
+            setIsError(true);
             setLoading(false);
             return;
         }
         if (!newDate || !newTime) {
-            setMessage("Error: Por favor, selecciona una fecha y hora.");
+            setMessage("Por favor, selecciona una fecha y hora.");
+            setIsError(true);
             setLoading(false);
             return;
         }
@@ -40,7 +45,8 @@ export default function RescheduleModal({ appointment, onClose, onSuccess }: Res
             }, 2000);
         } catch (error) {
             console.error("Error reagendando la cita:", error);
-            setMessage("Error: No se pudo reagendar la cita.");
+            setMessage("No se pudo reagendar la cita.");
+            setIsError(true);
         }
         setLoading(false);
     };
@@ -71,8 +77,8 @@ export default function RescheduleModal({ appointment, onClose, onSuccess }: Res
                 {/* Form */}
                 <form onSubmit={handleReschedule} className="p-8 space-y-6">
                     {message && (
-                        <div className={`p-4 rounded-2xl flex items-center gap-3 animate-fade-in ${message.includes('Error') ? 'bg-rose-50 text-rose-600 border border-rose-100' : 'bg-emerald-50 text-emerald-600 border border-emerald-100'}`}>
-                            {message.includes('Error') ? <XCircle className="w-5 h-5" /> : <CheckCircle2 className="w-5 h-5" />}
+                        <div className={`p-4 rounded-2xl flex items-center gap-3 animate-fade-in ${isError ? 'bg-rose-50 text-rose-600 border border-rose-100' : 'bg-emerald-50 text-emerald-600 border border-emerald-100'}`}>
+                            {isError ? <XCircle className="w-5 h-5" /> : <CheckCircle2 className="w-5 h-5" />}
                             <span className="text-sm font-bold">{message}</span>
                         </div>
                     )}

@@ -96,7 +96,7 @@ export default function MyAppointments() {
             setMessage("Cita cancelada con éxito");
         } catch (err) {
             console.error("Error al cancelar cita:", err);
-            setMessage("Error: No se pudo cancelar la cita");
+            setMessage("No se pudo cancelar la cita");
         }
 
         setAppointmentToCancel(null);
@@ -296,8 +296,7 @@ export default function MyAppointments() {
                             <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-100 animate-fade-in-up">
                                 <div className="bg-white/90 backdrop-blur-2xl border border-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] rounded-[2.5rem] p-6 flex flex-col gap-4 min-w-[350px]">
                                     <div className="flex items-center gap-4">
-                                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${message.toLowerCase().includes('error') ? 'bg-rose-50 text-rose-500' : 'bg-teal-50 text-teal-600'}
-                                            }`}>
+                                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${message.toLowerCase().includes('error') ? 'bg-rose-50 text-rose-500' : 'bg-teal-50 text-teal-600'}`}>
                                             <CheckCircle2 className="w-6 h-6" />
                                         </div>
                                         <div className="flex-1">

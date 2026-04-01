@@ -16,6 +16,24 @@ public class AppointmentService {
     private JdbcTemplate jdbc;
 
     public Map<String, Object> createAppointment(AppointmentRequest body) {
+        String timeConflictSql = "SELECT COUNT(*) FROM public.medical_appointments " +
+                "WHERE patient_id = ?::uuid AND appointment_date = ?::timestamp AND status = 'agendada'";
+        Integer timeConflictCount = jdbc.queryForObject(timeConflictSql, Integer.class,
+                body.getPatientId(), body.getAppointmentDate());
+
+        if (timeConflictCount != null && timeConflictCount > 0) {
+            throw new AppointmentAlreadyExistsException("Error: Ya tienes una cita programada en la misma fecha y hora");
+        }
+
+        String subspecialtyConflictSql = "SELECT COUNT(*) FROM public.medical_appointments " +
+                "WHERE patient_id = ?::uuid AND subspecialty_id = ?::uuid AND status = 'agendada'";
+        Integer subspecialtyConflictCount = jdbc.queryForObject(subspecialtyConflictSql, Integer.class,
+                body.getPatientId(), body.getSubSpecialtyId());
+
+        if (subspecialtyConflictCount != null && subspecialtyConflictCount > 0) {
+            throw new AppointmentAlreadyExistsException("Error: Ya tienes una cita con la misma especialidad y subespecialidad");
+        }
+
         String existsSql = "SELECT COUNT(*) FROM public.medical_appointments " +
                 "WHERE patient_id = ?::uuid AND professional_id = ?::uuid";
         Integer existingCount = jdbc.queryForObject(existsSql, Integer.class,
