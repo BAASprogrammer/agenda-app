@@ -17,7 +17,7 @@ public class SecurityConfig {
 	@Bean 
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration config = new CorsConfiguration();
-		config.setAllowedOrigins(List.of("https://agenda-app-2i8k.onrender.com"));		
+		config.setAllowedOrigins(List.of("https://agenda-app-kappa.vercel.app/"));		
 		config.setAllowedMethods(List.of("*"));
 		config.setAllowedHeaders(List.of("*"));
 		config.setAllowCredentials(true);
