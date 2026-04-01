@@ -1,0 +1,8 @@
+target
+*.log
+*.tmp
+.git
+.gitignore
+.metadata
+node_modules
+frontend
