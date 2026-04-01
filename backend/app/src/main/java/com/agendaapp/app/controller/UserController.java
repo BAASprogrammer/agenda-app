@@ -21,13 +21,16 @@ import com.agendaapp.app.dto.RegisterUserRequest;
 import com.agendaapp.app.dto.UpdateUserRequest;
 import com.agendaapp.app.dto.UserDTO;
 import com.agendaapp.app.dto.UserResponseDTO;
-import com.agendaapp.app.dto.UserUpdateResponseDTO;
 import com.agendaapp.app.service.UserService;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController extends BaseController {
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
 	@Autowired
 	private UserService userService;
 
@@ -59,8 +62,8 @@ public class UserController extends BaseController {
 		} catch (ResponseStatusException e) {
 			throw e;
 		} catch (Exception e) {
-			e.printStackTrace();
-			throw new RuntimeException("Error interno del servidor");
+			logger.error("Error interno al registrar usuario", e);
+			throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error interno del servidor", e);
 		}
 	}
 
@@ -71,16 +74,30 @@ public class UserController extends BaseController {
 
 	@GetMapping("/profile")
 	public Map<String, Object> getProfile(@AuthenticationPrincipal Jwt jwt) {
-		String userId = requireUserId(jwt);
-		return userService.getProfile(userId);
+		try {
+			String userId = requireUserId(jwt);
+			return userService.getProfile(userId);
+		} catch (ResponseStatusException e) {
+			throw e;
+		} catch (Exception e) {
+			logger.error("Error interno al obtener el perfil", e);
+			throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error interno del servidor", e);
+		}
 	}
 
 	@PutMapping("/profile")
 	public ResponseEntity<?> updateProfile(
 			@AuthenticationPrincipal Jwt jwt,
 			@Valid @RequestBody UpdateUserRequest body) {
-		String userId = requireUserId(jwt);
-		return userService.updateProfile(userId, body);
+		try {
+			String userId = requireUserId(jwt);
+			return userService.updateProfile(userId, body);
+		} catch (ResponseStatusException e) {
+			throw e;
+		} catch (Exception e) {
+			logger.error("Error interno al actualizar perfil", e);
+			throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error interno del servidor", e);
+		}
 	}
 
 }

@@ -15,13 +15,12 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
     const [isResetMode, setIsResetMode] = useState(false);
     const [resetSent, setResetSent] = useState(false);
 
-    // If modal is not open, render nothing
-    if (!open) return null;
-
     // Close the modal
     const handleClose = () => {
         onClose();
     }
+
+    // Hooks must be called unconditionally (Rule of Hooks)
     const { mutate: login, isPending: loading, error: mutationError } = useMutation({
         mutationFn: async () => {
             return await loginUser(email.trim(), password);
@@ -43,17 +42,10 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
 
     const error = mutationError ? (mutationError as Error).message : null;
 
-    // Handle login logic: authenticate with Supabase, fetch user's first name from 'users' table, set cookie, reload UI
-    const handleLogin = async (e?: React.FormEvent) => {
-        if (e) e.preventDefault();
-        login();
-    }
-
     const { mutate: requestReset, isPending: resetting, error: resetError, isSuccess: resetRequestSuccess } = useMutation({
         mutationFn: async () => {
             if (!email) throw new Error("Por favor ingrese su correo.");
 
-            // Primero verificamos si el email pertenece a un usuario
             const exists = await checkEmailExists(email);
             if (!exists) {
                 throw new Error("No existe una cuenta registrada con este correo.");
@@ -65,6 +57,15 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
             setResetSent(true);
         }
     });
+
+    // If modal is not open, render nothing
+    if (!open) return null;
+
+    // Handle login logic: authenticate with Supabase, fetch user's first name from 'users' table, set cookie, reload UI
+    const handleLogin = async (e?: React.FormEvent) => {
+        if (e) e.preventDefault();
+        login();
+    }
 
     const handleResetPassword = (e: React.FormEvent) => {
         e.preventDefault();

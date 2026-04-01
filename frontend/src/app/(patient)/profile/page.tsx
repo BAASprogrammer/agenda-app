@@ -61,7 +61,7 @@ export default function Profile() {
     });
 
     // 4. Effects
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     useEffect(() => {
         // Rellenar el formulario con los datos del backend cuando estén disponibles
         if (userId && patient && !isInitialized) {
@@ -156,7 +156,7 @@ export default function Profile() {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-sm font-bold text-slate-700 ml-1">Apellido</label>
+                                            <label className="text-sm font-bold text-slate-700 ml-1">Apellido(s)</label>
                                             <input
                                                 type="text"
                                                 value={formData.last_name}

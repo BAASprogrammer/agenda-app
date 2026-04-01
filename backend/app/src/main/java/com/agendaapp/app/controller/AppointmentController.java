@@ -9,6 +9,8 @@ import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.http.HttpStatus;
@@ -17,6 +19,8 @@ import org.springframework.web.server.ResponseStatusException;
 @RestController
 @RequestMapping("/api/appointments")
 public class AppointmentController extends BaseController {
+
+    private static final Logger logger = LoggerFactory.getLogger(AppointmentController.class);
 
     @Autowired
     private AppointmentService appointmentService;
@@ -73,8 +77,16 @@ public class AppointmentController extends BaseController {
     @GetMapping("/professional/all")
     public List<Map<String, Object>> getAllProfessionalAppointments(
             @AuthenticationPrincipal Jwt jwt) {
-        String professionalId = requireUserId(jwt);
-        return appointmentService.getAllProfessionalAppointments(professionalId);
+        try {
+            String professionalId = requireUserId(jwt);
+            return appointmentService.getAllProfessionalAppointments(professionalId);
+        } catch (ResponseStatusException e) {
+            throw e;
+        } catch (Exception e) {
+            logger.error("Error retrieving professional appointments", e);
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+                    "Error interno al obtener las citas del profesional", e);
+        }
     }
 
     @GetMapping("/professional/dashboard")

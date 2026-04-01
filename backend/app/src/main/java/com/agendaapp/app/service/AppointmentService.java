@@ -1,6 +1,7 @@
 package com.agendaapp.app.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import com.agendaapp.app.dto.AppointmentRequest;
@@ -94,7 +95,11 @@ public class AppointmentService {
                 "WHERE a.professional_id = ?::uuid " +
                 "ORDER BY a.appointment_date DESC";
 
-        return jdbc.queryForList(sql, professionalId);
+        try {
+            return jdbc.queryForList(sql, professionalId);
+        } catch (DataAccessException ex) {
+            throw new IllegalStateException("Error querying professional appointments", ex);
+        }
     }
 
     public Map<String, Object> getProfessionalDashboardStats(String professionalId, String date) {

@@ -42,14 +42,27 @@ export default function ScheduleAppointment() {
     const { data: subSpecialties = [] } = useSubSpecialties(selectedSpecialty);
     const { data: professionals = [] } = useProfessionals(selectedSubSpecialty);
 
+    interface AppointmentError {
+        response?: {
+            data?: {
+                message?: string;
+            };
+        };
+    }
+
     const createAppointmentMutation = useCreateAppointment({
         onSuccess: () => {
             setMessage('Cita creada exitosamente');
             setIsScheduleAppointmentOpen(false);
             resetForm();
         },
-        onError: (error: any) => {
-            setMessage(error.response?.data?.message || 'Error al crear la cita');
+        onError: (error: AppointmentError | Error) => {
+            const message = 'response' in error && error.response?.data?.message
+                ? error.response.data.message
+                : error instanceof Error
+                    ? error.message
+                    : 'Error al crear la cita';
+            setMessage(message);
         }
     });
 

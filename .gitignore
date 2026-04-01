@@ -36,3 +36,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE / Editor
+backend/.metadata/
+
+# Maven build artifacts
+backend/app/target/

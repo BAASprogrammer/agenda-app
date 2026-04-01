@@ -62,6 +62,7 @@ export default function ProfessionalSettings() {
     });
 
     // 3. Effects - Hydrate form from profile data
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     useEffect(() => {
         if (profileData) {
             setFormData({
@@ -161,7 +162,7 @@ export default function ProfessionalSettings() {
                                                     className="w-full px-5 py-3.5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 outline-none transition-all font-medium" />
                                             </div>
                                             <div className="space-y-2">
-                                                <label className="text-sm font-bold text-slate-700 ml-1">Apellido</label>
+                                                <label className="text-sm font-bold text-slate-700 ml-1">Apellido(s)</label>
                                                 <input type="text" value={formData.lastName}
                                                     onChange={e => setFormData({ ...formData, lastName: e.target.value })}
                                                     className="w-full px-5 py-3.5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 outline-none transition-all font-medium" />

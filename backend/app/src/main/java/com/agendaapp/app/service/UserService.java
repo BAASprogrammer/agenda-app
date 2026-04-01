@@ -1,6 +1,7 @@
 package com.agendaapp.app.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -12,8 +13,6 @@ import com.agendaapp.app.dto.UpdateUserRequest;
 import com.agendaapp.app.dto.UserDTO;
 import com.agendaapp.app.dto.UserResponseDTO;
 import com.agendaapp.app.dto.UserUpdateResponseDTO;
-
-import jakarta.validation.Valid;
 
 import java.util.List;
 import java.util.Map;
@@ -35,7 +34,7 @@ public class UserService {
                         rs.getString("subspecialty_id")),
                 userId);
         if (result.isEmpty()) {
-            throw new RuntimeException("Usuario no encontrado");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado");
         }
         return result.get(0);
     }
@@ -77,15 +76,19 @@ public class UserService {
 
     public Map<String, Object> getProfile(String userId) {
         String sql = "SELECT first_name, last_name, email, phone, address FROM public.users WHERE id = ?::uuid LIMIT 1";
-        return jdbc.queryForMap(sql, userId);
+        try {
+            return jdbc.queryForMap(sql, userId);
+        } catch (EmptyResultDataAccessException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado", e);
+        }
     }
 
     public ResponseEntity<?> updateProfile(String userId, UpdateUserRequest body) {
 
-        if (body.getFirstName().isEmpty() ||
-                body.getLastName().isEmpty() ||
-                body.getPhone().isEmpty() ||
-                body.getAddress().isEmpty()) {
+        if (body.getFirstName() == null || body.getFirstName().isBlank() ||
+                body.getLastName() == null || body.getLastName().isBlank() ||
+                body.getPhone() == null || body.getPhone().isBlank() ||
+                body.getAddress() == null || body.getAddress().isBlank()) {
 
             return ResponseEntity
                     .badRequest()
