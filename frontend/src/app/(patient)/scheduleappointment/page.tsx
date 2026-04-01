@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { AxiosError } from "axios";
 import { Professional } from "@/types/professional";
 import { SpecialtyOption, SubSpecialtyOption } from "@/types/specialty";
 
@@ -42,13 +43,21 @@ export default function ScheduleAppointment() {
     const { data: subSpecialties = [] } = useSubSpecialties(selectedSpecialty);
     const { data: professionals = [] } = useProfessionals(selectedSubSpecialty);
 
-    interface AppointmentError {
-        response?: {
-            data?: {
-                message?: string;
-            };
-        };
-    }
+    const getApiErrorMessage = (error: unknown): string => {
+        if (error && typeof error === 'object' && 'response' in error) {
+            const axiosError = error as AxiosError<{ message?: string; error?: string }>;
+            const responseData = axiosError.response?.data;
+            if (responseData) {
+                return responseData.message || responseData.error || JSON.stringify(responseData);
+            }
+        }
+
+        if (error instanceof Error) {
+            return error.message;
+        }
+
+        return 'Error al crear la cita';
+    };
 
     const createAppointmentMutation = useCreateAppointment({
         onSuccess: () => {
@@ -56,13 +65,8 @@ export default function ScheduleAppointment() {
             setIsScheduleAppointmentOpen(false);
             resetForm();
         },
-        onError: (error: AppointmentError | Error) => {
-            const message = 'response' in error && error.response?.data?.message
-                ? error.response.data.message
-                : error instanceof Error
-                    ? error.message
-                    : 'Error al crear la cita';
-            setMessage(message);
+        onError: (error: unknown) => {
+            setMessage(getApiErrorMessage(error));
         }
     });
 

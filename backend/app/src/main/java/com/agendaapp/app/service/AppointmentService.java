@@ -16,6 +16,15 @@ public class AppointmentService {
     private JdbcTemplate jdbc;
 
     public Map<String, Object> createAppointment(AppointmentRequest body) {
+        String existsSql = "SELECT COUNT(*) FROM public.medical_appointments " +
+                "WHERE patient_id = ?::uuid AND professional_id = ?::uuid";
+        Integer existingCount = jdbc.queryForObject(existsSql, Integer.class,
+                body.getPatientId(), body.getProfessionalId());
+
+        if (existingCount != null && existingCount > 0) {
+            throw new AppointmentAlreadyExistsException("Error: El paciente ya tiene una cita con este profesional");
+        }
+
         String sql = "INSERT INTO public.medical_appointments " +
                 "(patient_id, subspecialty_id, professional_id, appointment_date, reason, status) " +
                 "VALUES (?::uuid, ?::uuid, ?::uuid, ?::timestamp, ?, ?)";

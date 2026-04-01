@@ -3,6 +3,7 @@ package com.agendaapp.app.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.agendaapp.app.dto.AppointmentRequest;
+import com.agendaapp.app.service.AppointmentAlreadyExistsException;
 import com.agendaapp.app.service.AppointmentService;
 import jakarta.validation.Valid;
 
@@ -14,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
@@ -33,8 +35,14 @@ public class AppointmentController extends BaseController {
     }
 
     @PostMapping
-    public Map<String, Object> createAppointment(@Valid @RequestBody AppointmentRequest body) {
-        return appointmentService.createAppointment(body);
+    public ResponseEntity<Map<String, Object>> createAppointment(@Valid @RequestBody AppointmentRequest body) {
+        try {
+            Map<String, Object> result = appointmentService.createAppointment(body);
+            return ResponseEntity.ok(result);
+        } catch (AppointmentAlreadyExistsException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body(Map.of("message", e.getMessage()));
+        }
     }
 
     @PutMapping
