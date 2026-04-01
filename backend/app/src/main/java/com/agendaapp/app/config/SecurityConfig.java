@@ -14,7 +14,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-	@Bean
+	@Bean 
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration config = new CorsConfiguration();
 		config.setAllowedOrigins(List.of("https://agenda-app-2i8k.onrender.com"));		
