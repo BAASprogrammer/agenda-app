@@ -136,9 +136,9 @@ export default function MedicalHistory() {
                     </div>
                 </header>
 
-                <div className="px-8 pb-12 flex-1 overflow-y-auto">
+                <div className="px-4 md:px-8 pb-12 flex-1 overflow-y-auto">
                     {/* Stats Summary */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10">
                         <div className="bg-white p-6 rounded-4xl border border-white shadow-sm flex items-center gap-4">
                             <div className="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center">
                                 <Stethoscope className="w-6 h-6" />
@@ -173,7 +173,7 @@ export default function MedicalHistory() {
                             history.map((record, index) => (
                                 <div
                                     key={record.id}
-                                    className="bg-white rounded-[2.5rem] p-8 border border-white shadow-sm hover:shadow-md transition-all group animate-fade-in-up"
+                                    className="bg-white rounded-[2.5rem] p-5 md:p-8 border border-white shadow-sm hover:shadow-md transition-all group animate-fade-in-up"
                                     style={{ animationDelay: `${index * 0.1}s` }}
                                 >
                                     <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
@@ -196,7 +196,7 @@ export default function MedicalHistory() {
                                             </p>
                                         </div>
 
-                                        <div className="flex flex-row md:flex-col gap-3">
+                                        <div className="flex flex-col gap-3 shrink-0">
                                             <button
                                                 onClick={() => generatePDF(record)}
                                                 className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-slate-50 text-slate-700 px-6 py-3.5 rounded-2xl font-bold hover:bg-slate-100 transition-all text-sm cursor-pointer"

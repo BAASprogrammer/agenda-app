@@ -16,8 +16,8 @@ export default function ProSidebar({ active }: ProSidebarProps) {
             navItems={NAV_ITEMS}
             active={active}
             header={
-                <div className="flex items-center gap-3">
-                    <span className="text-[15px] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500 tracking-tight">
+                <div className="px-4 py-1.5 bg-blue-50/50 border border-blue-100/50 rounded-xl shadow-xs inline-flex backdrop-blur-sm self-start">
+                    <span className="text-[14px] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500 tracking-tight">
                         Menú Principal
                     </span>
                 </div>

@@ -190,12 +190,12 @@ export default function ProfessionalSettings() {
                                         </div>
                                     </div>
 
-                                    <div className="pt-2 flex items-center justify-between">
-                                        <p className={`text-sm font-bold transition-all ${message.includes("correctamente") ? 'text-emerald-600' : 'text-rose-500'} ${message ? 'opacity-100' : 'opacity-0'}`}>
+                                    <div className="pt-6 flex flex-col items-center gap-4 w-full">
+                                        <p className={`text-sm font-bold transition-all text-center w-full ${message.includes("correctamente") ? 'text-emerald-600' : 'text-rose-500'} ${message ? 'opacity-100' : 'opacity-0'}`}>
                                             {message}
                                         </p>
                                         <button type="submit" disabled={isUpdating}
-                                            className="flex items-center gap-2 bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg active:scale-95 disabled:opacity-50">
+                                            className="flex items-center justify-center gap-2 bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg active:scale-95 disabled:opacity-50 w-full">
                                             <Save className="w-5 h-5" />
                                             {isUpdating ? "Guardando..." : "Guardar Perfil"}
                                         </button>

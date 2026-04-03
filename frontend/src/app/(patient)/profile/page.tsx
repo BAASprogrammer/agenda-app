@@ -204,7 +204,7 @@ export default function Profile() {
                                         </div>
                                     </div>
 
-                                    <div className="pt-6 flex items-center justify-between sm:flex-row flex-col">
+                                    <div className="pt-6 flex items-center justify-between flex-col">
                                         <p className={`text-sm font-bold transition-all lg:w-1/2 w-full mb-4 sm:mb-0 ${message &&
                                             (message.toLowerCase().includes("error") ? 'text-red-500 opacity-100' : 'text-emerald-500 opacity-100')}`}>
                                             {message}
@@ -212,9 +212,9 @@ export default function Profile() {
                                         <button
                                             type="submit"
                                             disabled={isPending}
-                                            className="flex items-center gap-2 bg-linear-to-r from-blue-600 to-blue-500 text-white px-10 py-4 rounded-2xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 shadow-md shadow-blue-200 active:scale-95 disabled:opacity-50"
+                                            className="flex items-center justify-center gap-2 bg-linear-to-r from-blue-600 to-blue-500 text-white px-10 py-4 rounded-2xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 shadow-md shadow-blue-200 active:scale-95 disabled:opacity-50 w-full"
                                         >
-                                            <Save className="w-5 h-5" />
+                                            <Save className="w-6 h-6" />
                                             {isPending ? "Guardando..." : "Guardar Cambios"}
                                         </button>
                                     </div>

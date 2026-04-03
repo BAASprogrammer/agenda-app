@@ -15,7 +15,7 @@ export default function Home() {
   );
   const featureList = features;
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-800 overflow-hidden relative">
+    <div className="min-h-svh bg-white font-sans text-slate-800 overflow-hidden relative">
       {/* Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-gradient-to-br from-slate-50 via-blue-50/40 to-teal-50/30">
         <div className="absolute top-[-8%] left-[-6%] w-[32rem] h-[32rem] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-float"></div>
@@ -107,7 +107,7 @@ export default function Home() {
             {filteredSpecialties.map((spec, i) => (
               <div
                 key={i}
-                className="bg-white border border-slate-100 p-6 sm:p-8 md:p-10 rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-2 group relative flex flex-col items-center justify-center text-center aspect-square shadow-sm w-full max-w-[400px] mx-auto"
+                className="bg-white border border-slate-100 p-6 sm:p-8 md:p-10 rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-2 group relative flex flex-col items-center justify-center text-center aspect-square shadow-sm w-full max-w-[400px] mx-auto min-h-[200px]"
               >
                 {spec.popular && (
                   <div className="absolute top-6 sm:top-8 bg-amber-100 text-amber-700 text-[8px] md:text-[9px] font-black px-2 md:px-3 py-0.5 rounded-full uppercase tracking-wider z-10">

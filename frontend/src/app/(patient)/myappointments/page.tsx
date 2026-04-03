@@ -142,14 +142,14 @@ export default function MyAppointments() {
                     </div>
                 </header>
 
-                <div className="px-8 pb-12 flex-1 overflow-y-auto">
+                <div className="px-4 md:px-8 pb-12 flex-1 overflow-y-auto">
                     {/* Filters Tabs */}
-                    <div className="flex gap-2 mb-8 bg-slate-100/50 p-1 rounded-2xl w-fit">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-8 bg-slate-100/50 p-1 rounded-3xl w-full md:w-fit">
                         {['todas', 'agendada', 'completada', 'cancelada', 'pasada'].map((status) => (
                             <button
                                 key={status}
                                 onClick={() => setFilter(status)}
-                                className={`px-6 py-2.5 rounded-xl text-sm font-bold capitalize transition-all ${filter === status
+                                className={`px-6 py-2.5 rounded-xl text-sm font-bold capitalize transition-all shrink-0 ${filter === status
                                     ? 'bg-white text-teal-600 shadow-sm'
                                     : 'text-slate-500 hover:text-slate-700'
                                     }`}
@@ -165,7 +165,7 @@ export default function MyAppointments() {
 
                                 <div
                                     key={appointment.id}
-                                    className={`bg-white/80 backdrop-blur-md rounded-4xl p-6 border border-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col md:flex-row md:items-center gap-6 group animate-fade-in-up
+                                    className={`bg-white/80 backdrop-blur-md rounded-4xl p-4 md:p-6 border border-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col md:flex-row md:items-center gap-6 group animate-fade-in-up
                             ${openMenuId === appointment.id ? 'relative z-50' : 'relative z-10'}`}
                                     style={{ animationDelay: `${index * 0.1}s` }}
                                 >
@@ -278,7 +278,7 @@ export default function MyAppointments() {
                                 </div>
                             ))
                         ) : (
-                            <div className="bg-white/60 backdrop-blur-sm rounded-[3rem] p-20 border border-dashed border-slate-200 text-center animate-fade-in">
+                            <div className="bg-white/60 backdrop-blur-sm rounded-[3rem] p-10 md:p-20 border border-dashed border-slate-200 text-center animate-fade-in">
                                 <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 text-slate-300">
                                     <CalendarDays className="w-10 h-10" />
                                 </div>

@@ -68,27 +68,27 @@ export default function SpecialistsModal({ specialtyName, onClose }: Specialists
 
     return (
         <>
-            <div className="fixed inset-0 z-100 flex items-center justify-center p-4">
+            <div className="fixed inset-0 z-110 flex items-center justify-center p-2 md:p-4">
                 <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-md animate-fade-in" onClick={onClose}></div>
 
-                <div className="relative bg-white w-full max-w-2xl rounded-[2.5rem] shadow-2xl overflow-hidden animate-scale-in border border-white flex flex-col max-h-[90vh]">
+                <div className="relative bg-white w-full max-w-2xl rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-hidden animate-scale-in border border-white flex flex-col max-h-full md:max-h-[90svh]">
 
                     {/* Header */}
-                    <div className="p-8 bg-linear-to-r from-blue-600 to-indigo-600 text-white flex justify-between items-center shrink-0">
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                                <Stethoscope className="w-7 h-7" />
+                    <div className="p-6 md:p-8 bg-linear-to-r from-blue-600 to-indigo-600 text-white flex justify-between items-center shrink-0">
+                        <div className="flex items-center gap-3 md:gap-4">
+                            <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-xl md:rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                                <Stethoscope className="w-6 h-6 md:w-7 md:h-7" />
                             </div>
                             <div>
-                                <h2 className="text-2xl font-bold tracking-tight">Especialistas en {specialtyName}</h2>
-                                <p className="text-blue-100 text-sm font-medium">{professionals.length} profesionales disponibles</p>
+                                <h2 className="text-xl md:text-2xl font-bold tracking-tight leading-tight">Especialistas en {specialtyName}</h2>
+                                <p className="text-blue-100 text-[11px] md:text-sm font-medium">{professionals.length} profesionales disponibles</p>
                             </div>
                         </div>
                         <button
                             onClick={onClose}
                             className="p-2 bg-white/10 hover:bg-white/20 rounded-xl transition-colors cursor-pointer"
                         >
-                            <X className="w-6 h-6" />
+                            <X className="w-5 h-5 md:w-6 md:h-6" />
                         </button>
                     </div>
 

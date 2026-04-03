@@ -16,23 +16,23 @@ export default function DoctorProfileModal({ professional, onClose }: DoctorProf
     };
 
     return (
-        <div className="fixed inset-0 z-110 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[999] flex items-center justify-center p-2 md:p-4">
             <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-md animate-fade-in" onClick={onClose}></div>
-            <div className="relative bg-white w-full max-w-2xl rounded-[3rem] shadow-2xl overflow-hidden animate-scale-in border border-white">
+            <div className="relative bg-white w-full max-w-2xl rounded-[2rem] md:rounded-[3rem] shadow-2xl overflow-y-auto animate-scale-in border border-white max-h-full md:max-h-[90svh]">
 
                 {/* Header with gradient and cover */}
-                <div className="h-40 bg-linear-to-br from-indigo-500 via-purple-500 to-pink-500 relative">
+                <div className="h-28 md:h-40 bg-linear-to-br from-indigo-500 via-purple-500 to-pink-500 relative shrink-0">
                     <button
                         onClick={onClose}
-                        className="absolute top-6 right-6 p-2 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 rounded-full text-white transition-all z-10"
+                        className="absolute top-4 right-4 md:top-6 md:right-6 p-2 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 rounded-full text-white transition-all z-10"
                     >
-                        <X className="w-5 h-5" />
+                        <X className="w-4 h-4 md:w-5 md:h-5" />
                     </button>
 
-                    <div className="absolute -bottom-12 left-10">
-                        <div className="w-32 h-32 bg-white rounded-4xl p-1.5 shadow-2xl">
-                            <div className="w-full h-full bg-slate-100 rounded-[1.8rem] flex items-center justify-center text-slate-300">
-                                <span className="text-4xl font-bold text-slate-400">
+                    <div className="absolute -bottom-10 md:-bottom-12 left-6 md:left-10">
+                        <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-3xl md:rounded-4xl p-1.5 shadow-2xl">
+                            <div className="w-full h-full bg-slate-100 rounded-[1.4rem] md:rounded-[1.8rem] flex items-center justify-center text-slate-300">
+                                <span className="text-2xl md:text-4xl font-bold text-slate-400">
                                     {professional.first_name?.[0]}{professional.last_name?.[0]}
                                 </span>
                             </div>
@@ -40,22 +40,22 @@ export default function DoctorProfileModal({ professional, onClose }: DoctorProf
                     </div>
                 </div>
 
-                <div className="pt-16 pb-10 px-10">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                <div className="pt-12 md:pt-16 pb-8 md:pb-10 px-6 md:px-10">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-6 md:mb-8">
                         <div>
                             <div className="flex items-center gap-2 mb-2">
-                                <span className="bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-1">
-                                    <ShieldCheck className="w-3 h-3" /> Verificado
+                                <span className="bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-widest flex items-center gap-1">
+                                    <ShieldCheck className="w-2.5 h-2.5 md:w-3 md:h-3" /> Verificado
                                 </span>
-                                <div className="flex items-center gap-1 text-amber-500 bg-amber-50 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
-                                    <Star className="w-3 h-3 fill-amber-500" /> {mockData.rating}
+                                <div className="flex items-center gap-1 text-amber-500 bg-amber-50 px-3 py-1 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-widest">
+                                    <Star className="w-2.5 h-2.5 md:w-3 md:h-3 fill-amber-500" /> {mockData.rating}
                                 </div>
                             </div>
-                            <h2 className="text-4xl font-black text-slate-800 tracking-tight">
+                            <h2 className="text-3xl md:text-4xl font-black text-slate-800 tracking-tight">
                                 Dr. {professional.first_name} {professional.last_name}
                             </h2>
-                            <p className="text-slate-500 font-bold text-lg mt-1 flex items-center gap-2">
-                                Especialista Médico <span className="w-1.5 h-1.5 bg-slate-200 rounded-full"></span> {mockData.experience} de Exp.
+                            <p className="text-slate-500 font-bold text-base md:text-lg mt-1 flex items-center gap-2">
+                                Especialista Médico <span className="w-1 md:w-1.5 h-1 md:h-1.5 bg-slate-200 rounded-full"></span> {mockData.experience} de Exp.
                             </p>
                         </div>
                     </div>

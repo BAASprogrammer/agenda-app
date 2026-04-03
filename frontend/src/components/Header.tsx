@@ -54,7 +54,7 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
                     </Link>
 
                     {/* Nav links */}
-                    <div className="hidden md:flex items-center gap-1">
+                    <div className="hidden md:flex items-center gap-0.5 lg:gap-1">
                         {isLoggedIn && isProfessional === "true" ? (
                             <Link href="/home/professional" className={navLinkClass("/home/professional")}>Inicio</Link>
                         ) : (
@@ -65,20 +65,21 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
                     </div>
 
                     {/* User actions */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 lg:gap-3">
                         {isLoggedIn && firstName ? (
-                            <div className="flex items-center gap-3">
-                                <span className="hidden sm:inline-flex items-center gap-2 bg-slate-50 text-slate-700 px-4 py-2 rounded-xl font-bold shadow-sm border border-slate-100 text-sm">
-                                    <User className="w-4 h-4 text-blue-500" /> Hola, {firstName}
+                            <div className="hidden md:flex items-center gap-2 lg:gap-3">
+                                <span className="inline-flex items-center gap-2 bg-slate-50 text-slate-700 px-3 lg:px-4 py-2 rounded-xl font-bold shadow-sm border border-slate-100 text-sm">
+                                    <User className="w-4 h-4 text-blue-500" />
+                                    <span className="hidden lg:inline">Hola, </span>{firstName}
                                 </span>
                                 <Link
                                     href="#"
                                     onClick={handleLogout}
-                                    className="flex items-center justify-center p-2 bg-white text-rose-500 hover:bg-rose-50 hover:text-rose-600 rounded-xl font-bold transition-all duration-200 text-sm border border-slate-200"
+                                    className="flex items-center justify-center p-2 md:px-4 md:py-2 bg-white text-rose-500 hover:bg-rose-50 hover:text-rose-600 rounded-xl font-bold transition-all duration-200 text-sm border border-slate-200"
                                     title="Cerrar Sesión"
                                 >
-                                    <LogOut className="w-4 h-4 sm:mr-2" />
-                                    <span className="hidden sm:inline">Salir</span>
+                                    <LogOut className="w-4 h-4 mr-2" />
+                                    <span>Salir</span>
                                 </Link>
                             </div>
                         ) : (

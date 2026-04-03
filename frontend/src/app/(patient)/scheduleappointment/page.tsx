@@ -142,7 +142,7 @@ export default function ScheduleAppointment() {
         setIsError(false);
     };
     return (
-        <div className="min-h-screen bg-slate-50 relative overflow-hidden font-sans text-slate-800">
+        <div className="min-h-svh bg-slate-50 relative overflow-hidden font-sans text-slate-800">
             {/* Background Decorations for Premium Look */}
             <div className="absolute top-0 left-0 w-full h-96 bg-linear-to-b from-cyan-50/80 to-transparent -z-10"></div>
             <div className="absolute top-[10%] right-[-5%] w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float pointer-events-none"></div>
@@ -238,159 +238,162 @@ export default function ScheduleAppointment() {
             )}
             {/* Modal de Citas */}
             {isScheduleAppointmentOpen && (
-                <div className="fixed inset-0 flex items-center justify-center z-100 animate-fade-in p-4">
+                <div className="fixed inset-0 z-110 flex items-center justify-center p-2 md:p-4">
                     <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-md" onClick={() => setIsScheduleAppointmentOpen(false)}></div>
-                    <div className="relative bg-white rounded-[2.5rem] shadow-2xl border border-white max-w-2xl w-full overflow-hidden transform animate-scale-in">
+                    <div className="relative bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border border-white max-w-2xl w-full overflow-hidden transform animate-scale-in max-h-full md:max-h-[90svh] flex flex-col mx-auto">
 
-                        {/* Modal Header */}
-                        <div className="bg-linear-to-r from-cyan-600 to-blue-600 p-8 text-white relative">
+                        {/* Modal Header - Fixed */}
+                        <div className="bg-linear-to-r from-cyan-600 to-blue-600 p-6 md:p-8 text-white relative shrink-0">
                             <button
                                 onClick={() => setIsScheduleAppointmentOpen(false)}
-                                className="absolute top-6 right-6 p-2 bg-white/20 hover:bg-white/30 rounded-full transition-colors cursor-pointer"
+                                className="absolute top-4 right-4 md:top-6 md:right-6 p-2 bg-white/20 hover:bg-white/30 rounded-full transition-colors cursor-pointer"
                             >
-                                <XCircle className="w-6 h-6 text-white" />
+                                <XCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />
                             </button>
                             <div className="text-center">
-                                <h2 className="text-3xl font-bold tracking-tight">Agendar Cita</h2>
-                                <p className="text-cyan-50 font-medium opacity-90">Completa los detalles para tu consulta</p>
+                                <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Agendar Cita</h2>
+                                <p className="text-cyan-50 text-xs md:text-sm font-medium opacity-90">Completa los detalles para tu consulta</p>
                             </div>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="p-8 md:p-10">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {/* Specialty */}
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
-                                        <Briefcase className="w-4 h-4 text-cyan-500" /> Especialidad
-                                    </label>
-                                    <div className="relative group">
-                                        <select
-                                            className="w-full pl-4 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl appearance-none focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer"
-                                            value={selectedSpecialty}
-                                            onChange={(e) => handleSpecialtyChange(e.target.value)}
-                                        >
-                                            <option value="">Seleccionar Especialidad</option>
-                                            {specialties.map((specialty: SpecialtyOption) => (
-                                                <option key={specialty.id} value={specialty.id}>
-                                                    {specialty.name}
-                                                </option>
-                                            ))}
-                                        </select>
-                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400 group-hover:text-cyan-500 transition-colors">
-                                            <ChevronLeft className="w-5 h-5 -rotate-90" />
+                        <form onSubmit={handleSubmit} className="flex-1 flex flex-col overflow-hidden">
+                            {/* Scrollable Form Content */}
+                            <div className="p-6 md:p-10 overflow-y-auto flex-1">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+                                    {/* Specialty */}
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
+                                            <Briefcase className="w-4 h-4 text-cyan-500" /> Especialidad
+                                        </label>
+                                        <div className="relative group">
+                                            <select
+                                                className="w-full pl-4 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl appearance-none focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer"
+                                                value={selectedSpecialty}
+                                                onChange={(e) => handleSpecialtyChange(e.target.value)}
+                                            >
+                                                <option value="">Seleccionar Especialidad</option>
+                                                {specialties.map((specialty: SpecialtyOption) => (
+                                                    <option key={specialty.id} value={specialty.id}>
+                                                        {specialty.name}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400 group-hover:text-cyan-500 transition-colors">
+                                                <ChevronLeft className="w-5 h-5 -rotate-90" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* Sub-Specialty */}
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
-                                        <Stethoscope className="w-4 h-4 text-cyan-500" /> Sub-Especialidad
-                                    </label>
-                                    <div className="relative group">
-                                        <select
-                                            className={`w-full pl-4 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl appearance-none focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer ${!selectedSpecialty ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                            value={selectedSubSpecialty}
-                                            onChange={(e) => handleSubSpecialtyChange(e.target.value)}
-                                            disabled={!selectedSpecialty}
-                                        >
-                                            <option value="">Seleccionar Sub-Especialidad</option>
-                                            {subSpecialties.map((subSpecialty: SubSpecialtyOption) => (
-                                                <option key={subSpecialty.id} value={subSpecialty.id}>
-                                                    {subSpecialty.name}
-                                                </option>
-                                            ))}
-                                        </select>
-                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400 group-hover:text-cyan-500 transition-colors">
-                                            <ChevronLeft className="w-5 h-5 -rotate-90" />
+                                    {/* Sub-Specialty */}
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
+                                            <Stethoscope className="w-4 h-4 text-cyan-500" /> Sub-Especialidad
+                                        </label>
+                                        <div className="relative group">
+                                            <select
+                                                className={`w-full pl-4 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl appearance-none focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer ${!selectedSpecialty ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                value={selectedSubSpecialty}
+                                                onChange={(e) => handleSubSpecialtyChange(e.target.value)}
+                                                disabled={!selectedSpecialty}
+                                            >
+                                                <option value="">Seleccionar Sub-Especialidad</option>
+                                                {subSpecialties.map((subSpecialty: SubSpecialtyOption) => (
+                                                    <option key={subSpecialty.id} value={subSpecialty.id}>
+                                                        {subSpecialty.name}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400 group-hover:text-cyan-500 transition-colors">
+                                                <ChevronLeft className="w-5 h-5 -rotate-90" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* Professional */}
-                                <div className="space-y-2 md:col-span-2">
-                                    <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
-                                        <CircleUser className="w-4 h-4 text-cyan-500" /> Profesional
-                                    </label>
-                                    <div className="relative group">
-                                        <select
-                                            className={`w-full pl-4 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl appearance-none focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer ${!selectedSubSpecialty ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                            value={appointment.professional}
-                                            onChange={(e) => setAppointment({ ...appointment, professional: e.target.value })}
-                                            disabled={!selectedSubSpecialty}
-                                        >
-                                            <option value="">Seleccionar Profesional</option>
-                                            {professionals.map((professional: Professional) => (
-                                                <option key={professional.id} value={professional.id}>
-                                                    {professional.first_name} {professional.last_name}
-                                                </option>
-                                            ))}
-                                        </select>
-                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400 group-hover:text-cyan-500 transition-colors">
-                                            <ChevronLeft className="w-5 h-5 -rotate-90" />
+                                    {/* Professional */}
+                                    <div className="space-y-2 md:col-span-2">
+                                        <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
+                                            <CircleUser className="w-4 h-4 text-cyan-500" /> Profesional
+                                        </label>
+                                        <div className="relative group">
+                                            <select
+                                                className={`w-full pl-4 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl appearance-none focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer ${!selectedSubSpecialty ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                value={appointment.professional}
+                                                onChange={(e) => setAppointment({ ...appointment, professional: e.target.value })}
+                                                disabled={!selectedSubSpecialty}
+                                            >
+                                                <option value="">Seleccionar Profesional</option>
+                                                {professionals.map((professional: Professional) => (
+                                                    <option key={professional.id} value={professional.id}>
+                                                        {professional.first_name} {professional.last_name}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400 group-hover:text-cyan-500 transition-colors">
+                                                <ChevronLeft className="w-5 h-5 -rotate-90" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* Reason */}
-                                <div className="space-y-2 md:col-span-2">
-                                    <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
-                                        <ClipboardList className="w-4 h-4 text-cyan-500" /> Motivo de la Consulta
-                                    </label>
-                                    <textarea
-                                        className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 min-h-[100px] resize-none"
-                                        placeholder="Cuéntanos brevemente el motivo de tu visita..."
-                                        value={appointment.reason}
-                                        onChange={(e) => setAppointment({ ...appointment, reason: e.target.value })}
-                                    />
-                                </div>
+                                    {/* Reason */}
+                                    <div className="space-y-2 md:col-span-2">
+                                        <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
+                                            <ClipboardList className="w-4 h-4 text-cyan-500" /> Motivo de la Consulta
+                                        </label>
+                                        <textarea
+                                            className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-blue-500 outline-hidden transition-all font-medium text-slate-700 min-h-[100px] resize-none"
+                                            placeholder="Cuéntanos brevemente el motivo..."
+                                            value={appointment.reason}
+                                            onChange={(e) => setAppointment({ ...appointment, reason: e.target.value })}
+                                        />
+                                    </div>
 
-                                {/* Date */}
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
-                                        <Calendar className="w-4 h-4 text-cyan-500" /> Fecha
-                                    </label>
-                                    <input
-                                        type="date" min={new Date().toISOString().split('T')[0]}
-                                        className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer"
-                                        value={appointment.date}
-                                        onChange={(e) => setAppointment({ ...appointment, date: e.target.value })}
-                                    />
-                                </div>
+                                    {/* Date */}
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
+                                            <Calendar className="w-4 h-4 text-cyan-500" /> Fecha
+                                        </label>
+                                        <input
+                                            type="date" min={new Date().toISOString().split('T')[0]}
+                                            className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer"
+                                            value={appointment.date}
+                                            onChange={(e) => setAppointment({ ...appointment, date: e.target.value })}
+                                        />
+                                    </div>
 
-                                {/* Time */}
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
-                                        <Clock className="w-4 h-4 text-cyan-500" /> Hora
-                                    </label>
-                                    <select name="time" id="time" className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer" value={appointment.time.substring(0, 5)} onChange={(e) => setAppointment({ ...appointment, time: e.target.value })}>
-                                        <option value="">Seleccionar Hora</option>
-                                        <option value="08:00">08:00</option>
-                                        <option value="09:00">09:00</option>
-                                        <option value="10:00">10:00</option>
-                                        <option value="11:00">11:00</option>
-                                        <option value="12:00">12:00</option>
-                                        <option value="13:00">13:00</option>
-                                        <option value="14:00">14:00</option>
-                                        <option value="15:00">15:00</option>
-                                        <option value="16:00">16:00</option>
-                                        <option value="17:00">17:00</option>
-                                    </select>
+                                    {/* Time */}
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-bold text-slate-700 ml-1 flex items-center gap-2">
+                                            <Clock className="w-4 h-4 text-cyan-500" /> Hora
+                                        </label>
+                                        <select className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 outline-hidden transition-all font-medium text-slate-700 cursor-pointer" value={appointment.time.substring(0, 5)} onChange={(e) => setAppointment({ ...appointment, time: e.target.value })}>
+                                            <option value="">Seleccionar Hora</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Modal Footer Buttons */}
-                            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+                            {/* Modal Footer Buttons - Fixed */}
+                            <div className="p-6 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row justify-center gap-3 md:gap-4 shrink-0">
                                 <button
                                     type="button"
-                                    className="px-8 py-4 bg-slate-100 text-slate-600 rounded-2xl font-bold hover:bg-slate-200 transition-colors cursor-pointer order-2 sm:order-1"
+                                    className="px-6 py-3.5 bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-50 transition-colors cursor-pointer order-2 sm:order-1 text-sm md:text-base"
                                     onClick={() => setIsScheduleAppointmentOpen(false)}
                                 >
                                     Cancelar
                                 </button>
                                 <button
                                     type="submit"
-                                    className="px-10 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-200 active:scale-95 cursor-pointer order-1 sm:order-2 flex items-center justify-center gap-2 min-w-[160px]"
+                                    className="px-8 py-3.5 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg active:scale-95 cursor-pointer order-1 sm:order-2 flex items-center justify-center gap-2 min-w-[140px] text-sm md:text-base"
                                 >
                                     Agendar Cita <ArrowRight className="w-5 h-5" />
                                 </button>

@@ -65,16 +65,16 @@ export default function ManageAppointments() {
                     </div>
                 </header>
 
-                <div className="px-8 pb-12 flex-1 overflow-y-auto scroll-touch">
+                <div className="px-4 md:px-8 pb-12 flex-1 overflow-y-auto scroll-touch">
                     {/* Status filter tabs */}
-                    <div className="flex gap-2 mb-8 bg-slate-100/50 p-1 rounded-2xl w-fit" role="tablist" aria-label="Filter by status">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-8 bg-slate-100/50 p-1 rounded-3xl w-full md:w-fit" role="tablist" aria-label="Filter by status">
                         {(["todas", "agendada", "completada", "cancelada"] as const).map(s => (
                             <button
                                 key={s}
                                 role="tab"
                                 aria-selected={filter === s}
                                 onClick={() => setFilter(s)}
-                                className={`px-5 py-2.5 rounded-xl text-sm font-bold capitalize transition-all ${filter === s ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500 hover:text-slate-700"
+                                className={`px-5 py-2.5 rounded-xl text-sm font-bold capitalize transition-all shrink-0 ${filter === s ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500 hover:text-slate-700"
                                     }`}>
                                 {s}
                             </button>
@@ -97,7 +97,7 @@ export default function ManageAppointments() {
                             {filtered.length > 0 ? filtered.map((appt, i) => (
                                 <article
                                     key={appt.id}
-                                    className="bg-white rounded-3xl p-6 border border-white shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center gap-4 group animate-fade-in-up"
+                                    className="bg-white rounded-3xl p-4 md:p-6 border border-white shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center gap-4 group animate-fade-in-up"
                                     style={{ animationDelay: `${i * 0.06}s` }}>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-3 mb-2">
@@ -132,7 +132,7 @@ export default function ManageAppointments() {
                                     )}
                                 </article>
                             )) : (
-                                <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-16 border border-dashed border-slate-200 text-center">
+                                <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-10 md:p-16 border border-dashed border-slate-200 text-center">
                                     <ClipboardList className="w-12 h-12 text-slate-300 mx-auto mb-4" aria-hidden="true" />
                                     <h3 className="text-xl font-bold text-slate-800">Sin citas encontradas</h3>
                                     <p className="text-slate-500 mt-1">No hay citas que coincidan con el filtro seleccionado.</p>

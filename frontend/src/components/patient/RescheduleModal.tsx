@@ -52,24 +52,24 @@ export default function RescheduleModal({ appointment, onClose, onSuccess }: Res
     };
 
     return (
-        <div className="fixed inset-0 z-100 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[999] flex items-center justify-center p-2 md:p-4">
             <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-md animate-fade-in" onClick={onClose}></div>
-            <div className="relative bg-white w-full max-w-lg rounded-[2.5rem] shadow-2xl overflow-hidden animate-scale-in border border-white">
+            <div className="relative bg-white w-full max-w-lg rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-y-auto animate-scale-in border border-white max-h-full md:max-h-[90svh]">
                 {/* Header */}
-                <div className="bg-linear-to-br from-cyan-600 to-blue-700 p-8 text-white relative">
+                <div className="bg-linear-to-br from-cyan-600 to-blue-700 p-5 md:p-6 text-white relative shrink-0">
                     <button
                         onClick={onClose}
-                        className="absolute top-6 right-6 p-2 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full text-white transition-colors"
+                        className="absolute top-4 right-4 md:top-5 md:right-5 p-2 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full text-white transition-colors"
                     >
-                        <X className="w-5 h-5" />
+                        <X className="w-4 h-4 md:w-5 md:h-5" />
                     </button>
-                    <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm shadow-inner">
-                            <Calendar className="w-8 h-8 text-white" />
+                    <div className="flex items-center gap-3 md:gap-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-xl md:rounded-2xl flex items-center justify-center backdrop-blur-sm shadow-inner">
+                            <Calendar className="w-5 h-5 md:w-6 md:h-6 text-white" />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-black tracking-tight">Reagendar Cita</h2>
-                            <p className="text-cyan-50/80 font-medium text-sm">Selecciona una nueva fecha y hora para tu visita</p>
+                            <h2 className="text-lg md:text-xl font-black tracking-tight">Reagendar Cita</h2>
+                            <p className="text-cyan-50/80 font-medium text-[10px] md:text-xs">Selecciona una nueva fecha y hora</p>
                         </div>
                     </div>
                 </div>
