@@ -1,6 +1,6 @@
 # AgendaApp 🏥 - Frontend
 
-Sistema de gestión de citas médicas desarrollado con **Next.js 16**, **Zustand** y **Tailwind CSS 4**.
+Sistema moderno de gestión de citas médicas desarrollado con el ecosistema de **React 19** y **Next.js 16**. Proporciona interfaces optimizadas tanto para profesionales de la salud como para pacientes, integrándose de forma fluida con un backend robusto en Spring Boot.
 
 ## 🚀 Inicio Rápido
 
@@ -8,52 +8,65 @@ Sistema de gestión de citas médicas desarrollado con **Next.js 16**, **Zustand
     ```bash
     npm install
     ```
-2.  **Ejecutar en desarrollo:**
+2.  **Configurar variables de entorno:**
+    Crea un archivo `.env.local` con las claves necesarias (Supabase y API URL).
+3.  **Ejecutar en desarrollo:**
     ```bash
     npm run dev
     ```
 
 ---
 
-## 🛠 Tecnologías Core
+## 🛠 Stack Tecnológico
 
 -   **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
--   **React:** 19.x
--   **Estado Global:** [Zustand](https://github.com/pmndrs/zustand) (Sustituyendo UserContext)
--   **Data Fetching:** [TanStack Query v5](https://tanstack.com/query/latest)
+-   **React:** [19.x](https://react.dev/)
+-   **Gestión de Estado:** [Zustand](https://github.com/pmndrs/zustand) (Centralizado para autenticación y preferencias)
+-   **Data Fetching:** [TanStack Query v5](https://tanstack.com/query/latest) & **Axios**
+-   **Generación de Documentos:** [jsPDF](https://github.com/parallax/jsPDF) (Para reportes e historial médico)
 -   **Estilos:** [Tailwind CSS 4](https://tailwindcss.com/)
+-   **Autenticación:** Supabase Auth + JWT personalizado.
 -   **Iconos:** Lucide React
 
 ---
 
-## 📂 Estructura del Proyecto (Route Groups)
+## 📂 Arquitectura del Directorio `src`
 
-Este proyecto utiliza **Route Groups** de Next.js para organizar las rutas por perfil de usuario de forma lógica sin afectar la URL pública.
+El proyecto utiliza **Route Groups** para separar nítidamente las experiencias de usuario sin ensuciar las URLs.
 
--   **`src/app/(patient)/`**: Rutas para pacientes (Ej: `/profile`, `/myappointments`).
--   **`src/app/(professional)/`**: Rutas para profesionales (Ej: `/schedule`, `/settings`).
-
-### Beneficios de esta estructura:
-1.  **Organización Logística**: Código modular por perfil.
-2.  **URLs Limpias**: `(patient)/profile/page.tsx` se mapea a `/profile`.
-3.  **Layouts Específicos**: Aplicación de middleware y diseños únicos por grupo de rutas.
-
----
-
-## 🔑 Funcionalidades Clave
-
-### Portal Profesional
--   Agenda visual semanal con gestión de estados.
--   Registro de pacientes y gestión de especialidades/subespecialidades.
--   Configuración de perfil profesional vinculada al backend.
-
-### Portal Paciente
--   Buscador dinámico de profesionales y servicios.
--   Agendamiento de citas con validación en tiempo real.
--   Historial clínico y gestión de datos personales.
+-   **`app/(patient)/`**: Portal privado del paciente (`/profile`, `/myappointments`, `/scheduleappointment`, `/medicalhistory`).
+-   **`app/(professional)/`**: Portal privado del profesional (`/schedule`, `/manageappointments`, `/mypatients`, `/settings`).
+-   **`app/register/`**: Flujos de registro diferenciados por tipo de perfil.
+-   **`components/`**:
+    -   `shared/`: UI genérica (Botones, Inputs, Modales).
+    -   `professional/` & `patient/`: Componentes específicos de dominio.
+-   **`services/`**: Capa de comunicación con el backend Spring Boot (Axios).
+-   **`hooks/`**: Lógica reactiva reutilizable y queries de TanStack Query (`useAppointments`, `useProfile`).
+-   **`store/`**: Definiciones de tiendas Zustand (Global state).
 
 ---
 
-## 🏗 Integración con Backend
-El frontend se comunica con un backend **Spring Boot** mediante una capa de servicios centralizada en `src/services/` y hooks personalizados en `src/hooks/`. La autenticación se maneja vía JWT persistido de forma segura.
+## 🔑 Funcionalidades Implementadas
+
+### Portal del Profesional
+-   **Agenda Semanal Interactiva**: Visualización y gestión de horarios.
+-   **Gestión de Citas**: Administración proactiva de consultas pendientes y completadas.
+-   **Directorio de Pacientes**: Acceso rápido a la lista de pacientes registrados.
+-   **Configuración Avanzada**: Personalización de especialidades y datos profesionales.
+
+### Portal del Paciente
+-   **Buscador de Profesionales**: Reserva de citas basada en especialidades.
+-   **Mis Citas**: Seguimiento y estado de las citas programadas.
+-   **Historial Médico**: Registro histórico de consultas y diagnósticos.
+-   **Gestión del Perfil**: Actualización de datos personales y médicos.
+
+### Sistema Core
+-   **Dashboard Dinámico**: Vistas personalizadas según el rol al iniciar sesión.
+-   **Autenticación Robusta**: Flujo completo de login, registro dual y recuperación de contraseña.
+-   **Middleware de Protección**: Rutas protegidas según el estado de la sesión.
+
+---
+
+## 🏗 Integración Backend
+El frontend actúa como el cliente principal para la API **Spring Boot**. La comunicación se realiza vía `src/services/` utilizando tokens JWT para asegurar cada transacción.
 
