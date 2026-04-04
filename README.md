@@ -1,100 +1,97 @@
-# AgendaApp
-Sistema de gestión de citas médicas desarrollado con React, Next.js y Spring Boot.
+# AgendaApp 🏥 - Full Stack
+
+**AgendaApp** es una solución integral de gestión médica diseñada con una arquitectura de vanguardia que separa nítidamente las responsabilidades. El sistema permite la gestión eficiente de citas, historiales y perfiles para profesionales de la salud y pacientes.
+
+---
 
 ## Desarrollador
 Desarrollado con ❤️ por **BAASprogrammer**
 
-## Estructura del Proyecto
+---
+
+## 🏗 Arquitectura del Sistema
+
+El proyecto está organizado en un monorepositorio con dos componentes principales:
 
 ```text
 agenda-app/
 ├── frontend/               # Aplicación Next.js (Frontend)
-│   ├── src/
-│   │   ├── app/           # Rutas y páginas (App Router)
-│   │   ├── components/    # Componentes de UI (Patient, Professional, Shared)
-│   │   ├── hooks/         # Custom Hooks (TanStack Query, API)
-│   │   ├── store/         # Gestión de Estado (Zustand)
-│   │   ├── services/      # Llamadas a la API y Supabase
-│   │   ├── types/         # Definiciones de TypeScript
-│   │   └── utils/         # Funciones de ayuda y constantes
-│   └── public/            # Assets estáticos
+│   ├── src/app/           # Rutas (Route Groups: patient, professional)
+│   ├── src/components/    # Componentes UI (Modularizados por dominio)
+│   ├── src/hooks/         # Lógica reactiva (TanStack Query)
+│   ├── src/services/      # Comunicación API con Axios
+│   └── src/store/         # Estado global con Zustand
 │
 ├── backend/                # Aplicación Spring Boot (Backend)
-│   ├── src/main/java/     # Lógica corporativa (Controllers, Services, Models)
-│   └── src/main/resources/ # Configuración y scripts SQL
-│
-└── README.md              # Documentación principal
+│   └── app/               # Núcleo de la API REST
+│       ├── controllers/   # Endpoints (User, Appointment, Specialty)
+│       ├── services/      # Lógica de negocio avanzada
+│       ├── repository/    # Persistencia con JPA
+│       └── config/        # Seguridad (JWT/OAuth2) y CORS
+└── README.md              # Documentación Principal
 ```
 
-# AgendaApp (Full Stack)
+---
 
-Aplicación de agenda de citas médicas con arquitectura moderna: **Next.js 16** en el frontend y **Spring Boot 4** en el backend.
-
-## 🚀 Estado del Proyecto
-
-El proyecto se encuentra en una fase activa de migración de una arquitectura serverless (Supabase client-side) a una arquitectura robusta con un backend centralizado en Spring Boot.
-
-## 🛠 Arquitectura y Tecnologías
-
-- **Frontend (`frontend/`)**: 
-  - **Next.js 16 (App Router)** + **React 19**.
-  - **Zustand**: Gestión de estado global (sustituyendo React Context).
-  - **TanStack Query (React Query)**: Gestión de peticiones asíncronas y caché.
-  - **Tailwind CSS 4**: Estilos modernos y utilitarios.
-  - **Lucide React**: Set de iconos.
-- **Backend (`backend/app/`)**:
-  - **Spring Boot 4** (Java 21).
-  - **Spring Data JPA** + **PostgreSQL**.
-  - **Spring Security** (OAuth2 Resource Server / JWT).
-  - **Lombok**: Reducción de código boilerplate.
-
-## 📂 Estructura del Repositorio
-
-- `frontend/`: UI del cliente organizada por Route Groups (`(patient)`, `(professional)`).
-- `backend/app/`: Microservicio para la lógica de negocio y persistencia.
-
-## ⚙️ Requisitos
-
-- Node.js 20+
-- Java 21
-- Maven 3.9+
-- PostgreSQL
-
-## 🛠 Instalación y ejecución
-
-### Backend
-
-1. Configurar la base de datos PostgreSQL.
-2. Ejecutar:
-   ```bash
-   cd backend/app
-   ./mvnw spring-boot:run
-   ```
+## 🛠 Stack Tecnológico
 
 ### Frontend
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router) & **React 19**
+- **Estado:** [Zustand](https://github.com/pmndrs/zustand)
+- **Data Fetching:** [TanStack Query v5](https://tanstack.com/query/latest) & **Axios**
+- **Estilos:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Documentación:** [jsPDF](https://github.com/parallax/jsPDF)
 
-1. Instalar dependencias:
-   ```bash
-   cd frontend
-   npm install
-   ```
-2. Ejecutar en desarrollo:
-   ```bash
-   npm run dev
-   ```
+### Backend
+- **Framework:** [Spring Boot 4.0.3](https://spring.io/projects/spring-boot) (Java 21)
+- **Seguridad:** Spring Security (OAuth2 / Resource Server / JWT)
+- **Persistencia:** Spring Data JPA + **PostgreSQL**
+- **Utilidades:** Lombok, Maven, dotenv
 
-## ✅ Mejoras Recientes
+---
 
-1. **Migración de Capa de Datos**: Finalizada la migración de consultas críticas (citas, pacientes) de Supabase Direct a la API de Spring Boot.
-2. **Gestión de Estado**: Implementación de **Zustand** para un manejo de sesión y estado global más eficiente.
-3. **Validaciones de Seguridad**: Implementación de endpoints de validación de usuario y flujos de recuperación de contraseña.
-4. **Tipado Estricto**: Refuerzo de interfaces TypeScript en hooks de TanStack Query y componentes de perfil.
-5. **Centralización de Hooks**: Creación de una capa de servicios y hooks reutilizables para el consumo de la API.
+## 🚀 Estado del Proyecto y Migración
 
-## 📌 Recomendaciones Siguientes
+Actualmente, el proyecto se encuentra en una fase avanzada de migración de lógica *serverless* a un backend centralizado.
 
-- Implementar la gestión completa de subespecialidades para profesionales.
-- Finalizar la migración de los últimos componentes de Supabase Auth a la gestión de sesiones por el backend.
-- Añadir tests de integración en el backend con `MockMvc`.
-- Configurar un pipeline de CI/CD para automatizar el linting y las pruebas.
+- **✅ Completado:**
+  - Migración de flujos críticos de citas y pacientes a Spring Boot.
+  - Implementación de seguridad basada en JWT.
+  - Gestión de estado global migrada de Context API a Zustand.
+  - Validación estricta de tipos de datos entre el backend y frontend.
+- **🚧 En progreso:**
+  - Finalización de la gestión granular de subespecialidades médicas.
+  - Desacoplamiento total de Supabase Auth en favor de una gestión de sesiones propia del backend.
+  - Implementación de persistencia avanzada para historiales médicos.
+
+---
+
+## ⚙️ Instalación y ejecución
+
+### Prerrequisitos
+- Node.js v20+
+- JDK 21+
+- PostgreSQL activo
+
+### 1. Clonar y Configurar Backend
+```bash
+cd backend/app
+# Asegúrate de configurar tu archivo .env con las credenciales de DB
+./mvnw spring-boot:run
+```
+
+### 2. Configurar Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## ✅ Mejoras Críticas Recientes
+1. **Validación Dual:** Esquemas de validación integrados tanto en el frontend (client-side) como en el backend (Spring Validation).
+2. **Optimización de Carga:** Uso extensivo de caché con TanStack Query para reducir la latencia de la API.
+3. **Seguridad Robusta:** Implementación de CORS policies y protección de rutas mediante middleware de Next.js y Spring Security.
+4. **Clean Architecture:** Refactorización de servicios en el frontend para centralizar la comunicación externa.
 
