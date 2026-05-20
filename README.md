@@ -59,10 +59,6 @@ Actualmente, el proyecto se encuentra en una fase avanzada de migración de lóg
   - Implementación de seguridad basada en JWT.
   - Gestión de estado global migrada de Context API a Zustand.
   - Validación estricta de tipos de datos entre el backend y frontend.
-- **🚧 En progreso:**
-  - Finalización de la gestión granular de subespecialidades médicas.
-  - Desacoplamiento total de Supabase Auth en favor de una gestión de sesiones propia del backend.
-  - Implementación de persistencia avanzada para historiales médicos.
 
 ---
 
