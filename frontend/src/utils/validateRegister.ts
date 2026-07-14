@@ -1,13 +1,7 @@
 import { checkEmailExists } from "@/services/registerService";
 
 export const validateRegister = async (formData: any, isProfessional: boolean = false) => {
-    const { firstName, lastName, email, phone, password, confirmPassword, professionalKey, licenseNumber } = formData;
-    const normalize = (text: string) =>
-        text
-            .toLowerCase()
-            .normalize("NFD")                // separate letters and tildes
-            .replace(/[\u0300-\u036f]/g, "") // delete tildes
-            .replace(/\s+/g, "");            // delete spaces
+    const { firstName, lastName, email, phone, password, confirmPassword, licenseNumber } = formData;
     if (!firstName || !lastName || !email || !phone || !password || !confirmPassword) {
         return "Todos los campos básicos son obligatorios";
     }
@@ -18,17 +12,8 @@ export const validateRegister = async (formData: any, isProfessional: boolean = 
         if (exists) {
             return "El correo electrónico ya existe, intenta iniciar sesión";
         }
-        if (!professionalKey || !licenseNumber || !formData.specialtyId || !formData.subspecialtyId) {
-            return "La clave, el número de registro, la especialidad y subespecialidad son obligatorios";
-        }
-        const currentYear = new Date().getFullYear();
-
-        const expectedKey =
-            normalize(firstName) +
-            normalize(lastName) +
-            currentYear;
-        if (professionalKey !== expectedKey) {
-            return "La clave de acceso profesional es incorrecta";
+        if (!licenseNumber || !formData.specialtyId || !formData.subspecialtyId) {
+            return "El número de registro, la especialidad y subespecialidad son obligatorios";
         }
     }
 

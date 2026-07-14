@@ -18,7 +18,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState, useMemo } from "react";
-import { useAppointmentsByPatient, useCancelAppointment, useUpdateAppointmentStatus } from "@/hooks/useAppointmentsQueries";
+import { useAppointmentsByPatient, useCancelAppointment } from "@/hooks/useAppointmentsQueries";
+import { useUpdateAppointmentStatus } from "@/hooks/useMedicalQueries";
 import { AppointmentData, FormattedAppointment } from "@/types/appointment";
 
 export default function MyAppointments() {

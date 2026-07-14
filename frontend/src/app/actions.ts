@@ -16,13 +16,15 @@ export async function setAuthCookies(data: {
     const cookieStore = await cookies();
     const maxAge = 60 * 60 * 24 * 7; // 1 week in seconds
 
-    cookieStore.set("first_name", data.firstName, { maxAge, path: "/" });
-    cookieStore.set("last_name", data.lastName, { maxAge, path: "/" });
+    const cookieOpts = { maxAge, path: "/", httpOnly: true, secure: true, sameSite: "lax" as const };
+
+    cookieStore.set("first_name", data.firstName, cookieOpts);
+    cookieStore.set("last_name", data.lastName, cookieOpts);
     if (data.email) {
-        cookieStore.set("email", data.email, { maxAge, path: "/" });
+        cookieStore.set("email", data.email, cookieOpts);
     }
-    cookieStore.set("user_id", data.userId, { maxAge, path: "/" });
-    cookieStore.set("is_professional", data.isProfessional, { maxAge, path: "/" });
+    cookieStore.set("user_id", data.userId, cookieOpts);
+    cookieStore.set("is_professional", data.isProfessional, cookieOpts);
 }
 
 /**

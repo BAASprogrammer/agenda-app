@@ -1,16 +1,6 @@
 import { api } from "@/lib/api";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
-// Update appointment status hook
-export function useUpdateAppointmentStatus() {
-    return useMutation({
-        mutationFn: async ({ id, status }: { id: string; status: string }) => {
-            const response = await api.put('/appointments', { id, status });
-            return response.data;
-        }
-    });
-}
-
 // Get appointments by patient hook
 export function useAppointmentsByPatient(patientId: string, order: string = "ASC") {
     return useQuery({
