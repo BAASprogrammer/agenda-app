@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { setAuthCookies } from "@/app/actions";
 import { useProfile, useUpdateProfile } from "@/hooks/useProfile";
-import { PatientData } from "@/types/patient";
+import { PatientData, ProfileUpdateResponse } from "@/types/patient";
 export default function Profile() {
     // 1. Hooks & Stores
     const userId = useUserStore(state => state.userId);
@@ -38,16 +38,20 @@ export default function Profile() {
     // 3. Queries
     const { data: patient } = useProfile(userId!);
     const { mutate: update, isPending } = useUpdateProfile(userId!, {
-        onSuccess: (updatedData: { first_name: string; last_name: string; email: string }) => {
+        onSuccess: (updatedData: ProfileUpdateResponse) => {
+            const firstName = String(updatedData.first_name ?? updatedData.firstName ?? firstNameStore ?? "");
+            const lastName = String(updatedData.last_name ?? updatedData.lastName ?? lastNameStore ?? "");
+            const email = String(updatedData.email ?? emailStore ?? "");
+
             setUser({
                 userId: userId,
-                firstName: updatedData.first_name,
-                lastName: updatedData.last_name,
+                firstName,
+                lastName,
             });
             setAuthCookies({
-                firstName: updatedData.first_name,
-                lastName: updatedData.last_name,
-                email: updatedData.email,
+                firstName,
+                lastName,
+                email,
                 userId: userId,
                 isProfessional: false
             });

@@ -27,7 +27,7 @@ export interface AppointmentReschedulePayload {
 }
 
 export interface AppointmentRequestItem {
-    id: string | number;
+    id: string;
     appointment_date: string;
     status: AppointmentStatus;
     reason?: string | null;

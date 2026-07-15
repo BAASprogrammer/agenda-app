@@ -6,18 +6,21 @@ export const validateRegister = async (
     formData: RegisterFormState | ProfessionalFormData,
     isProfessional: boolean = false
 ) => {
-    const { firstName, lastName, email, phone, password, confirmPassword, licenseNumber } = formData;
+    const { firstName, lastName, email, phone, password, confirmPassword } = formData;
+
     if (!firstName || !lastName || !email || !phone || !password || !confirmPassword) {
         return "Todos los campos básicos son obligatorios";
     }
 
     if (isProfessional) {
-
+        const professionalFormData = formData as ProfessionalFormData;
         const exists = await checkEmailExists(email);
+
         if (exists) {
             return "El correo electrónico ya existe, intenta iniciar sesión";
         }
-        if (!licenseNumber || !formData.specialtyId || !formData.subspecialtyId) {
+
+        if (!professionalFormData.licenseNumber || !professionalFormData.specialtyId || !professionalFormData.subspecialtyId) {
             return "El número de registro, la especialidad y subespecialidad son obligatorios";
         }
     }

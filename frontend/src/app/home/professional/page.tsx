@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ProfessionalScheduleAppointment } from "@/types/appointment";
+import { AppointmentRequestItem, ProfessionalScheduleAppointment } from "@/types/appointment";
 
 export default function Home() {
     // 1. Hooks & Stores

@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { useProfile, useUpdateProfile } from "@/hooks/useProfile";
 import { supabase } from "@/lib/supabaseClient";
 import { setAuthCookies } from "@/app/actions";
+import { ProfileUpdateResponse } from "@/types/patient";
 
 export default function ProfessionalSettings() {
     // 1. Hooks & Stores
@@ -25,7 +26,7 @@ export default function ProfessionalSettings() {
     });
 
     const { mutate: updateProfile, isPending: isUpdating } = useUpdateProfile(userId, {
-        onSuccess: async (data: Record<string, unknown>) => {
+        onSuccess: async (data: ProfileUpdateResponse) => {
             // Update Zustand store
             setUser({
                 firstName: String(data.first_name ?? data.firstName ?? ""),

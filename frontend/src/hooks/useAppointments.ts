@@ -51,6 +51,8 @@ export function useAppointments(filter: string) {
                 const d = new Date(yr, mo - 1, dy);
                 return {
                     ...a,
+                    id: String(a.id),
+                    reason: a.reason ?? null,
                     patient: {
                         first_name: a.first_name ?? '',
                         last_name: a.last_name ?? ''
@@ -59,7 +61,7 @@ export function useAppointments(filter: string) {
                         ? datePart
                         : d.toLocaleDateString("cl-CL", { day: "2-digit", month: "short", year: "numeric" }),
                     displayTime: `${timePart[0]}:${timePart[1]}`,
-                };
+                } satisfies ManagedAppointment;
             });
 
             setAppointments(formatted);

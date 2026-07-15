@@ -1,5 +1,6 @@
 import { useMutation, useQuery, type UseMutationOptions } from "@tanstack/react-query";
 import { api } from "@/lib/api";
+import { ProfileUpdatePayload, ProfileUpdateResponse } from "@/types/patient";
 
 export function useProfile(userId: string) {
     return useQuery({
@@ -14,12 +15,12 @@ export function useProfile(userId: string) {
 
 export function useUpdateProfile(
     userId: string,
-    options?: Omit<UseMutationOptions<Record<string, unknown>, Error, Record<string, unknown>>, "mutationFn">
+    options?: Omit<UseMutationOptions<ProfileUpdateResponse, Error, ProfileUpdatePayload>, "mutationFn">
 ) {
     return useMutation({
-        mutationFn: async (updatedData: Record<string, unknown>) => {
+        mutationFn: async (updatedData: ProfileUpdatePayload) => {
             try {
-                const { data } = await api.put('/users/profile', updatedData, {
+                const { data } = await api.put<ProfileUpdateResponse>('/users/profile', updatedData, {
                     params: { userId }
                 });
                 return data;

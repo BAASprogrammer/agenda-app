@@ -6,6 +6,29 @@ export interface PatientData {
     address: string;
 }
 
+export interface ProfileUpdatePayload {
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    phone?: string;
+    address?: string;
+    subSpecialtyId?: string;
+    isProfessional?: boolean;
+    first_name?: string;
+    last_name?: string;
+}
+
+export interface ProfileUpdateResponse {
+    first_name?: string;
+    last_name?: string;
+    email?: string;
+    phone?: string;
+    address?: string;
+    firstName?: string;
+    lastName?: string;
+    [key: string]: unknown;
+}
+
 export interface Patient {
     id: string;
     first_name: string;
