@@ -1,10 +1,17 @@
 import { Calendar, FileText, MapPin, User, X, Info } from "lucide-react";
-import { getStatusColor } from "@/utils/getStatusColor";
 import { useState } from "react";
 import RescheduleModal from "./RescheduleModal";
 import DoctorProfileModal from "./DoctorProfileModal";
+import { FormattedAppointment } from "@/types/appointment";
+import { getStatusColor } from "@/utils/getStatusColor";
 
-export default function AppointmentDetails({ appointment, setSelectedAppointment }: { appointment: any, setSelectedAppointment: (appointment: any) => void }) {
+export default function AppointmentDetails({
+    appointment,
+    setSelectedAppointment,
+}: {
+    appointment: FormattedAppointment;
+    setSelectedAppointment: (appointment: FormattedAppointment | null) => void;
+}) {
     const [isRescheduleModalOpen, setIsRescheduleModalOpen] = useState(false);
     const [isDoctorProfileOpen, setIsDoctorProfileOpen] = useState(false);
 

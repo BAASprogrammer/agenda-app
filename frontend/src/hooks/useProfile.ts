@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, type UseMutationOptions } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 
 export function useProfile(userId: string) {
@@ -12,18 +12,22 @@ export function useProfile(userId: string) {
     });
 }
 
-export function useUpdateProfile(userId: string, options: any) {
+export function useUpdateProfile(
+    userId: string,
+    options?: Omit<UseMutationOptions<Record<string, unknown>, Error, Record<string, unknown>>, "mutationFn">
+) {
     return useMutation({
-        mutationFn: async (updatedData: any) => {
+        mutationFn: async (updatedData: Record<string, unknown>) => {
             try {
                 const { data } = await api.put('/users/profile', updatedData, {
                     params: { userId }
                 });
                 return data;
-            } catch (error: any) {
-                throw new Error(
-                    error.response?.data?.message || "Error al actualizar perfil"
-                );
+            } catch (error: unknown) {
+                const message = error instanceof Error
+                    ? error.message
+                    : "Error al actualizar perfil";
+                throw new Error(message);
             }
         },
         ...options

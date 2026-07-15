@@ -25,21 +25,21 @@ export default function ProfessionalSettings() {
     });
 
     const { mutate: updateProfile, isPending: isUpdating } = useUpdateProfile(userId, {
-        onSuccess: async (data: any) => {
+        onSuccess: async (data: Record<string, unknown>) => {
             // Update Zustand store
             setUser({
-                firstName: data.first_name || data.firstName,
-                lastName: data.last_name || data.lastName,
-                email: data.email,
+                firstName: String(data.first_name ?? data.firstName ?? ""),
+                lastName: String(data.last_name ?? data.lastName ?? ""),
+                email: String(data.email ?? ""),
                 userId: userId,
                 isProfessional: true
             });
 
             // Update Auth Cookies for server-side persistence
             await setAuthCookies({
-                firstName: data.first_name || data.firstName,
-                lastName: data.last_name || data.lastName,
-                email: data.email,
+                firstName: String(data.first_name ?? data.firstName ?? ""),
+                lastName: String(data.last_name ?? data.lastName ?? ""),
+                email: String(data.email ?? ""),
                 isProfessional: true,
                 userId: userId
             });
@@ -47,8 +47,8 @@ export default function ProfessionalSettings() {
             // Sync with Supabase Auth Metadata as backup
             await supabase.auth.updateUser({
                 data: {
-                    first_name: data.first_name || data.firstName,
-                    last_name: data.last_name || data.lastName
+                    first_name: String(data.first_name ?? data.firstName ?? ""),
+                    last_name: String(data.last_name ?? data.lastName ?? "")
                 }
             });
 

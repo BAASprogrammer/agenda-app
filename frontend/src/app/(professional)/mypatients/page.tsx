@@ -7,6 +7,7 @@ import { Users, Search, UserCircle, Clock, ChevronLeft, CalendarDays } from "luc
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProfessionalPatientSummary } from "@/types/patient";
+import { AppointmentRequestItem } from "@/types/appointment";
 
 export default function MyPatients() {
     // 1. Hooks & Stores
@@ -30,8 +31,8 @@ export default function MyPatients() {
                 const map = new Map<string, ProfessionalPatientSummary>();
                 const today = new Date().toISOString().split('T')[0];
 
-                (data ?? []).forEach((a: any) => {
-                    const pid = String(a.patient_id);
+                (data ?? []).forEach((a: AppointmentRequestItem) => {
+                    const pid = String(a.patient_id ?? a.id);
                     if (!pid) return;
                     if (!map.has(pid)) {
                         map.set(pid, {

@@ -1,5 +1,6 @@
-import { useQuery, useMutation } from "@tanstack/react-query";
+import { useQuery, useMutation, type UseMutationOptions } from "@tanstack/react-query";
 import { api } from "@/lib/api";
+import { AppointmentCreatePayload } from "@/types/appointment";
 
 // 1. Query specialties
 export function useSpecialties() {
@@ -43,9 +44,11 @@ export function useProfessionals(subspecialtyId: string) {
 }
 
 // 4. Create appointment
-export function useCreateAppointment(options?: any) {
+export function useCreateAppointment(
+    options?: Omit<UseMutationOptions<unknown, Error, AppointmentCreatePayload>, "mutationFn">
+) {
     return useMutation({
-        mutationFn: async (appointmentData: any) => {
+        mutationFn: async (appointmentData: AppointmentCreatePayload) => {
             const response = await api.post('/appointments', appointmentData);
             return response.data;
         },

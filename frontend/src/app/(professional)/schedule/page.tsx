@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ProfessionalScheduleAppointment } from "@/types/appointment";
+import { AppointmentRequestItem, ProfessionalScheduleAppointment } from "@/types/appointment";
 
 const DAYS = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 const MONTHS = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
@@ -49,7 +49,7 @@ export default function Schedule() {
                 });
                 const data = response.data;
                 const days = new Set<string>();
-                (data || []).forEach((a: any) => {
+                (data || []).forEach((a: AppointmentRequestItem) => {
                     days.add(a.appointment_date.substring(0, 10));
                 });
                 setBusyDays(days);
@@ -70,17 +70,17 @@ export default function Schedule() {
                 });
                 const data = response.data;
 
-                setAppointments((data ?? []).map((a: any): ProfessionalScheduleAppointment => {
+                setAppointments((data ?? []).map((a: AppointmentRequestItem): ProfessionalScheduleAppointment => {
                     const parts = a.appointment_date.replace(' ', 'T').split('T');
                     const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
                     return {
                         id: String(a.id),
                         appointment_date: a.appointment_date,
                         status: a.status,
-                        reason: a.reason,
+                        reason: a.reason ?? null,
                         patient: {
-                            first_name: a.first_name,
-                            last_name: a.last_name
+                            first_name: a.first_name ?? '',
+                            last_name: a.last_name ?? ''
                         },
                         displayTime: `${timePart[0]}:${timePart[1]}`
                     };

@@ -7,12 +7,13 @@ import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
 import { registerUser, checkEmailExists } from "@/services/registerService";
 import { useMutation } from "@tanstack/react-query";
+import { RegisterFormState, RegisteredUserResult } from "@/types/auth";
 
 export default function PatientRegistration() {
     // 1. State
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<RegisterFormState>({
         firstName: "",
         lastName: "",
         email: "",
@@ -23,12 +24,12 @@ export default function PatientRegistration() {
 
     // 3. Mutations
     const { mutate: register, isPending } = useMutation({
-        mutationFn: (data: any) => registerUser({ ...data, isProfessional: false }),
-        onSuccess: async (userData) => {
+        mutationFn: (data: RegisterFormState) => registerUser({ ...data, isProfessional: false }),
+        onSuccess: async (userData: RegisteredUserResult) => {
             await setAuthCookies(userData);
             window.location.replace("/home/patient");
         },
-        onError: (err: any) => {
+        onError: (err: Error) => {
             console.error("Error en registro:", err);
             setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
         }

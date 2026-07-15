@@ -13,7 +13,7 @@
 import { useUserStore } from "@/store/userStore";
 import { api } from "@/lib/api";
 import { useEffect, useState, useCallback } from "react";
-import { ManagedAppointment } from "@/types/appointment";
+import { AppointmentRequestItem, ManagedAppointment } from "@/types/appointment";
 
 // STEP 1: The hook receives parameters just like any regular function.
 // 'filter' comes from the component because it's controlled by the user via the UI.
@@ -38,12 +38,12 @@ export function useAppointments(filter: string) {
         try {
             const { data } = await api.get('/appointments/professional/all');
 
-            let filtered = data ?? [];
+            let filtered = (data ?? []) as AppointmentRequestItem[];
             if (filter !== "todas") {
-                filtered = filtered.filter((a: any) => a.status === filter);
+                filtered = filtered.filter((a) => a.status === filter);
             }
 
-            const formatted: ManagedAppointment[] = filtered.map((a: any) => {
+            const formatted: ManagedAppointment[] = filtered.map((a) => {
                 const parts = a.appointment_date.replace(" ", "T").split("T");
                 const datePart = parts[0];
                 const timePart = parts[1] ? parts[1].split(":") : ["00", "00"];
@@ -52,8 +52,8 @@ export function useAppointments(filter: string) {
                 return {
                     ...a,
                     patient: {
-                        first_name: a.first_name,
-                        last_name: a.last_name
+                        first_name: a.first_name ?? '',
+                        last_name: a.last_name ?? ''
                     },
                     displayDate: isNaN(d.getTime())
                         ? datePart
@@ -63,7 +63,7 @@ export function useAppointments(filter: string) {
             });
 
             setAppointments(formatted);
-        } catch (error) {
+        } catch {
             setError("No hay citas agendadas.");
         } finally {
             setLoading(false);
@@ -83,7 +83,7 @@ export function useAppointments(filter: string) {
             await api.put('/appointments', { id, status: newStatus });
             // Refresh the list so the UI reflects the change immediately
             fetchAppointments();
-        } catch (updateError) {
+        } catch {
             setError("Could not update status. Please try again.");
         }
     };

@@ -2,62 +2,50 @@
 import AppointmentDetails from "@/components/patient/AppointmentDetails";
 import ProSidebarPatient from "@/components/patient/ProSidebar";
 import { useUserStore } from "@/store/userStore";
-import { api } from "@/lib/api";
 import { CalendarClock, NotepadText, CircleUser, ChevronRight, Clock } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
+import { useAppointmentsByPatient } from "@/hooks/useAppointmentsQueries";
+import { AppointmentData, FormattedAppointment } from "@/types/appointment";
 
 export default function Home() {
-    // 1. Hooks & Stores
     const user = useUserStore();
+    const { data, error } = useAppointmentsByPatient(user.userId!, "ASC");
 
-    // 2. State
-    const [appointments, setAppointments] = useState<any[]>([]);
-    const [selectedAppointment, setSelectedAppointment] = useState<any>(null);
+    const [selectedAppointment, setSelectedAppointment] = useState<FormattedAppointment | null>(null);
 
-    // 3. Effects
-    useEffect(() => {
-        const fetchAppointments = async () => {
-            if (!user.userId) return;
-            try {
-                const response = await api.get('/appointments/appointmentsbyid', {
-                    params: { patientId: user.userId, order: "ASC" }
-                });
-                const data = response.data;
+    const today = new Date().toLocaleDateString("en-CA");
 
-                // Pre-procesar fechas para evitar lógica repetitiva en el render
-                const formattedData = (data ?? []).map((appt: any) => {
-                    const isoStr = appt.appointment_date.replace(' ', 'T');
-                    const parts = isoStr.split('T');
-                    const datePart = parts[0];
-                    const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
+    const appointments = useMemo<FormattedAppointment[]>(() => {
+        if (!user.userId || error || !data) return [];
 
-                    const [year, month, day] = datePart.split('-').map(Number);
-                    const d = new Date(year, month - 1, day);
+        return data.map((appt: AppointmentData) => {
+            const isoStr = appt.appointment_date.replace(' ', 'T');
+            const parts = isoStr.split('T');
+            const datePart = parts[0];
+            const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
 
-                    return {
-                        ...appt,
-                        id: String(appt.id),
-                        displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('es-CL', { month: 'short' }).replace('.', ''),
-                        displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
-                        displayTime: `${timePart[0]}:${timePart[1]}`,
-                        professional: {
-                            first_name: appt.professional_first_name,
-                            last_name: appt.professional_last_name
-                        }
-                    };
-                });
+            const [year, month, day] = datePart.split('-').map(Number);
+            const d = new Date(year, month - 1, day);
 
-                setAppointments(formattedData);
-            } catch (error) {
-                console.error("Error obteniendo citas:", error);
-            }
-        }
-        fetchAppointments();
-    }, [user.userId]);
+            return {
+                ...appt,
+                id: String(appt.id),
+                displayMonth: isNaN(d.getTime()) ? '---' : d.toLocaleString('es-CL', { month: 'short' }).replace('.', ''),
+                displayDay: isNaN(d.getTime()) ? '--' : d.getDate(),
+                displayFullDate: isNaN(d.getTime()) ? 'Fecha inválida' : d.toLocaleDateString('cl-CL', { weekday: 'long', day: 'numeric', month: 'long' }),
+                displayTime: `${timePart[0]}:${timePart[1]}`,
+                displayDate: datePart,
+                professional: {
+                    first_name: appt.professional_first_name,
+                    last_name: appt.professional_last_name
+                },
+                reason: appt.reason ?? null,
+            };
+        });
+    }, [user.userId, data, error]);
 
-    // 4. Derived Data
-    const futureAppointments = appointments.filter(appt => appt.appointment_date.split('T')[0] >= new Date().toLocaleDateString("en-CA") && appt.status == "agendada");
+    const futureAppointments = appointments.filter((appt) => appt.appointment_date.split('T')[0] >= today && appt.status === "agendada");
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">
             <ProSidebarPatient active="/home/patient" />
@@ -212,7 +200,10 @@ export default function Home() {
             </main>
             {/* Appointment Details Modal */}
             {selectedAppointment && (
-                <AppointmentDetails appointment={selectedAppointment} setSelectedAppointment={setSelectedAppointment} />
+                <AppointmentDetails
+                    appointment={selectedAppointment}
+                    setSelectedAppointment={setSelectedAppointment}
+                />
             )}
         </div>
     );

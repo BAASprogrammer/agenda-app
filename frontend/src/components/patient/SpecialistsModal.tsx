@@ -4,11 +4,12 @@ import { supabase } from "@/lib/supabaseClient";
 import { X, User, ChevronRight, Stethoscope, Star, Search, MapPin } from "lucide-react";
 import DoctorProfileModal from "./DoctorProfileModal";
 import { SpecialistsModalProps } from "@/types/modal";
+import { ProfessionalListItem } from "@/types/professional";
 
 export default function SpecialistsModal({ specialtyName, onClose }: SpecialistsModalProps) {
-    const [professionals, setProfessionals] = useState<any[]>([]);
+    const [professionals, setProfessionals] = useState<ProfessionalListItem[]>([]);
     const [loading, setLoading] = useState(true);
-    const [selectedDoctor, setSelectedDoctor] = useState<any>(null);
+    const [selectedDoctor, setSelectedDoctor] = useState<ProfessionalListItem | null>(null);
 
     useEffect(() => {
         const fetchProfessionals = async () => {

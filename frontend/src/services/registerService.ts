@@ -42,18 +42,32 @@ export async function registerUser(data: RegisterData) {
             email: data.email.trim(),
             isProfessional: data.isProfessional,
         };
-    } catch (error: any) {
-        if (error.response) {
-            console.error("Status error servidor:", error.response.status);
-            console.error("Respuesta error servidor:", error.response.data);
-            const serverMessage = error.response.data.message || error.response.data.error || "Error en el servidor";
-            throw new Error(serverMessage);
-        } else if (error.request) {
-            console.error("No se recibió respuesta del servidor:", error.request);
+    } catch (error: unknown) {
+        if (error && typeof error === "object" && "response" in error) {
+            const axiosError = error as {
+                response?: {
+                    status?: number;
+                    data?: { message?: string; error?: string };
+                };
+            };
+            if (axiosError.response) {
+                console.error("Status error servidor:", axiosError.response.status);
+                console.error("Respuesta error servidor:", axiosError.response.data);
+                const serverMessage = axiosError.response.data?.message || axiosError.response.data?.error || "Error en el servidor";
+                throw new Error(serverMessage);
+            }
+        }
+
+        if (error && typeof error === "object" && "request" in error) {
+            console.error("No se recibió respuesta del servidor:", error);
             throw new Error("No se pudo conectar con el servidor. Verifica tu conexión.");
-        } else {
+        }
+
+        if (error instanceof Error) {
             throw new Error(error.message || "Error inesperado");
         }
+
+        throw new Error("Error inesperado");
     }
 
 

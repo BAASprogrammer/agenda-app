@@ -99,9 +99,15 @@ export default function MedicalHistory() {
                     }));
 
                 setHistory(completed);
-            } catch (error) {
+            } catch (error: unknown) {
                 if (error && typeof error === 'object' && 'response' in error) {
-                    const axiosError = error as any;
+                    const axiosError = error as {
+                        response?: {
+                            status?: number;
+                            data?: unknown;
+                        };
+                        message?: string;
+                    };
                     console.error("Error obteniendo historial:", axiosError.response?.status, axiosError.response?.data || axiosError.message);
                 } else {
                     console.error("Error obteniendo historial:", error);

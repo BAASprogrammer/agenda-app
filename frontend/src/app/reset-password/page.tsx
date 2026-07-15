@@ -39,8 +39,8 @@ export default function ResetPasswordPage() {
             setTimeout(() => {
                 router.push("/"); // Redirect to home after 3 seconds
             }, 3000);
-        } catch (err: any) {
-            setError(err.message || "Error al actualizar la contraseña.");
+        } catch (err: unknown) {
+            setError(err instanceof Error ? err.message : "Error al actualizar la contraseña.");
         } finally {
             setLoading(false);
         }

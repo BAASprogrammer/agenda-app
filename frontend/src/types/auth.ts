@@ -19,3 +19,20 @@ export interface RegisterData {
     password: string;
     subspecialtyId?: string | null;
 }
+
+export interface RegisterFormState {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    password: string;
+    confirmPassword: string;
+}
+
+export interface RegisteredUserResult {
+    userId: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    isProfessional: boolean;
+}

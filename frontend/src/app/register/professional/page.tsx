@@ -11,6 +11,7 @@ import { ProfessionalFormData } from "@/types/professional-form-data";
 import { registerUser, checkEmailExists } from "@/services/registerService";
 import { useSpecialties, useSubSpecialties } from "@/hooks/useMedicalQueries";
 import { MedicalSpecialty } from "@/types/medical";
+import { RegisteredUserResult } from "@/types/auth";
 
 export default function ProfessionalRegistration() {
     // 1. State
@@ -41,13 +42,13 @@ export default function ProfessionalRegistration() {
             isProfessional: true,
             subspecialtyId: data.subspecialtyId // Ensures this reaches the service
         }),
-        onSuccess: async (userData: any) => {
+        onSuccess: async (userData: RegisteredUserResult) => {
             // Persist session in cookies and storage
             await setAuthCookies(userData);
             // Full redirect to ensure fresh balance of context
             window.location.replace("/home/professional");
         },
-        onError: (err: any) => {
+        onError: (err: Error) => {
             console.error("Error en registro:", err);
             setError(err.message || "Ocurrió un error al crear la cuenta. Intenta nuevamente.");
         }

@@ -1,7 +1,9 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface Specialty {
     name: string;
     desc: string;
-    icon: any;
+    icon: LucideIcon;
     color: string;
     bg: string;
     bghover: string;

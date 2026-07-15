@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ProfessionalScheduleAppointment } from "@/types/appointment";
 
 export default function Home() {
     // 1. Hooks & Stores
@@ -16,7 +17,7 @@ export default function Home() {
     // 2. State
     const [todayCount, setTodayCount] = useState(0);
     const [patientCount, setPatientCount] = useState(0);
-    const [upcomingAppts, setUpcomingAppts] = useState<any[]>([]);
+    const [upcomingAppts, setUpcomingAppts] = useState<ProfessionalScheduleAppointment[]>([]);
 
     // 3. Effects
     useEffect(() => {
@@ -35,17 +36,17 @@ export default function Home() {
                 setTodayCount(data.todayCount);
                 setPatientCount(data.patientCount);
 
-                setUpcomingAppts((data.upcomingAppts ?? []).map((a: any) => {
+                setUpcomingAppts((data.upcomingAppts ?? []).map((a: AppointmentRequestItem) => {
                     const parts = a.appointment_date.replace(' ', 'T').split('T');
                     const timePart = parts[1] ? parts[1].split(':') : ['00', '00'];
                     return {
                         id: String(a.id),
                         appointment_date: a.appointment_date,
                         status: a.status,
-                        reason: a.reason,
+                        reason: a.reason ?? null,
                         patient: {
-                            first_name: a.first_name,
-                            last_name: a.last_name
+                            first_name: a.first_name ?? '',
+                            last_name: a.last_name ?? ''
                         },
                         displayTime: `${timePart[0]}:${timePart[1]}`
                     };

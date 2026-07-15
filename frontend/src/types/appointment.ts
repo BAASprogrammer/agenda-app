@@ -7,6 +7,37 @@ export interface AppointmentPatient {
     reason?: string;
 }
 
+export interface AppointmentCreatePayload {
+    patientId: string;
+    subSpecialtyId: string;
+    professionalId: string;
+    appointmentDate: string;
+    reason: string;
+    status: string;
+}
+
+export interface AppointmentUpdatePayload {
+    id: string;
+    status: string;
+}
+
+export interface AppointmentReschedulePayload {
+    id: string;
+    appointment_date: string;
+}
+
+export interface AppointmentRequestItem {
+    id: string | number;
+    appointment_date: string;
+    status: AppointmentStatus;
+    reason?: string | null;
+    patient_id?: string;
+    first_name?: string;
+    last_name?: string;
+    professional_first_name?: string;
+    professional_last_name?: string;
+}
+
 export interface Appointment {
     id: string;
     patient_id: string;
@@ -39,7 +70,7 @@ export interface FormattedAppointment extends AppointmentData {
     displayDate: string;
 }
 
-export type AppointmentStatus = "agendada" | "completada" | "cancelada";
+export type AppointmentStatus = "agendada" | "completada" | "cancelada" | "pasada";
 
 export interface ManagedAppointmentPatient {
     first_name: string;

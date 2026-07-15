@@ -1,6 +1,11 @@
 import { checkEmailExists } from "@/services/registerService";
+import { RegisterFormState } from "@/types/auth";
+import { ProfessionalFormData } from "@/types/professional-form-data";
 
-export const validateRegister = async (formData: any, isProfessional: boolean = false) => {
+export const validateRegister = async (
+    formData: RegisterFormState | ProfessionalFormData,
+    isProfessional: boolean = false
+) => {
     const { firstName, lastName, email, phone, password, confirmPassword, licenseNumber } = formData;
     if (!firstName || !lastName || !email || !phone || !password || !confirmPassword) {
         return "Todos los campos básicos son obligatorios";
