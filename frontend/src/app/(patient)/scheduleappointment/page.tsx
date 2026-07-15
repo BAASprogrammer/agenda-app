@@ -210,7 +210,7 @@ export default function ScheduleAppointment() {
                 </p>
             </div>
             {message && (
-                <div className="fixed inset-0 flex items-center justify-center z-101 animate-fade-in">
+                <div className="fixed inset-0 flex items-center justify-center z-[120] animate-fade-in">
                     <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"></div>
                     <div className="relative bg-white rounded-[2.5rem] p-10 shadow-2xl border border-white max-w-sm w-full mx-4 transform animate-scale-in text-center">
                         <div className={`w-20 h-20 mx-auto mb-6 rounded-3xl flex items-center justify-center ${isError ? 'bg-red-50 text-red-500' : 'bg-emerald-50 text-emerald-500'}`}>
