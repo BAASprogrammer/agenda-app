@@ -1,10 +1,10 @@
 package com.agendaapp.app.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import com.agendaapp.app.dto.AppointmentRequest;
+import com.agendaapp.app.exception.AppointmentAlreadyExistsException;
 
 import java.util.List;
 import java.util.Map;
@@ -12,42 +12,103 @@ import java.util.Map;
 @Service
 public class AppointmentService {
 
-    @Autowired
-    private JdbcTemplate jdbc;
+    private static final String CHECK_TIME_CONFLICT =
+            "SELECT COUNT(*) FROM public.medical_appointments " +
+            "WHERE patient_id = ?::uuid AND appointment_date = ?::timestamp AND status = 'agendada'";
+
+    private static final String CHECK_SUBSPECIALTY_CONFLICT =
+            "SELECT COUNT(*) FROM public.medical_appointments " +
+            "WHERE patient_id = ?::uuid AND subspecialty_id = ?::uuid AND status = 'agendada'";
+
+    private static final String CHECK_PROFESSIONAL_CONFLICT =
+            "SELECT COUNT(*) FROM public.medical_appointments " +
+            "WHERE patient_id = ?::uuid AND professional_id = ?::uuid";
+
+    private static final String INSERT_APPOINTMENT =
+            "INSERT INTO public.medical_appointments " +
+            "(patient_id, subspecialty_id, professional_id, appointment_date, reason, status) " +
+            "VALUES (?::uuid, ?::uuid, ?::uuid, ?::timestamp, ?, ?)";
+
+    private static final String UPDATE_STATUS =
+            "UPDATE public.medical_appointments SET status = ? WHERE id = ?::uuid";
+
+    private static final String UPDATE_DATE =
+            "UPDATE public.medical_appointments SET appointment_date = ?::timestamp WHERE id = ?::uuid";
+
+    private static final String GET_BY_PROFESSIONAL =
+            "SELECT ma.id, ma.appointment_date, ma.status, ma.reason, " +
+            "u.first_name, u.last_name " +
+            "FROM public.medical_appointments ma " +
+            "JOIN public.users u ON ma.patient_id = u.id " +
+            "WHERE ma.professional_id = ?::uuid " +
+            "ORDER BY ma.appointment_date";
+
+    private static final String GET_PROFESSIONAL_DATES =
+            "SELECT appointment_date FROM public.medical_appointments " +
+            "WHERE professional_id = ?::uuid AND status = 'agendada' " +
+            "AND appointment_date >= ?::timestamp AND appointment_date <= ?::timestamp";
+
+    private static final String GET_PROFESSIONAL_DAY =
+            "SELECT a.id, a.appointment_date, a.status, a.reason, " +
+            "u.first_name, u.last_name " +
+            "FROM public.medical_appointments a " +
+            "LEFT JOIN public.users u ON a.patient_id = u.id " +
+            "WHERE a.professional_id = ?::uuid AND a.status = 'agendada' " +
+            "AND a.appointment_date >= ?::timestamp AND a.appointment_date <= ?::timestamp " +
+            "ORDER BY a.appointment_date ASC";
+
+    private static final String GET_ALL_PROFESSIONAL =
+            "SELECT a.id, a.reason, a.appointment_date, a.status, a.patient_id, " +
+            "u.id as patient_user_id, u.first_name, u.last_name " +
+            "FROM public.medical_appointments a " +
+            "LEFT JOIN public.users u ON a.patient_id = u.id " +
+            "WHERE a.professional_id = ?::uuid " +
+            "ORDER BY a.appointment_date DESC";
+
+    private static final String GET_TODAY_COUNT =
+            "SELECT COUNT(*) FROM public.medical_appointments " +
+            "WHERE professional_id = ?::uuid AND appointment_date >= ?::timestamp AND appointment_date <= ?::timestamp";
+
+    private static final String GET_PATIENT_COUNT =
+            "SELECT COUNT(DISTINCT patient_id) FROM public.medical_appointments " +
+            "WHERE professional_id = ?::uuid";
+
+    private static final String GET_UPCOMING =
+            "SELECT a.id, a.appointment_date, a.status, a.reason, u.first_name, u.last_name " +
+            "FROM public.medical_appointments a " +
+            "LEFT JOIN public.users u ON a.patient_id = u.id " +
+            "WHERE a.professional_id = ?::uuid AND a.status = 'agendada' AND a.appointment_date >= ?::timestamp " +
+            "ORDER BY a.appointment_date ASC LIMIT 4";
+
+    private final JdbcTemplate jdbc;
+
+    public AppointmentService(JdbcTemplate jdbc) {
+        this.jdbc = jdbc;
+    }
 
     public Map<String, Object> createAppointment(AppointmentRequest body) {
-        String timeConflictSql = "SELECT COUNT(*) FROM public.medical_appointments " +
-                "WHERE patient_id = ?::uuid AND appointment_date = ?::timestamp AND status = 'agendada'";
-        Integer timeConflictCount = jdbc.queryForObject(timeConflictSql, Integer.class,
+        Integer timeConflictCount = jdbc.queryForObject(CHECK_TIME_CONFLICT, Integer.class,
                 body.getPatientId(), body.getAppointmentDate());
 
         if (timeConflictCount != null && timeConflictCount > 0) {
             throw new AppointmentAlreadyExistsException("Error: Ya tienes una cita programada en la misma fecha y hora");
         }
 
-        String subspecialtyConflictSql = "SELECT COUNT(*) FROM public.medical_appointments " +
-                "WHERE patient_id = ?::uuid AND subspecialty_id = ?::uuid AND status = 'agendada'";
-        Integer subspecialtyConflictCount = jdbc.queryForObject(subspecialtyConflictSql, Integer.class,
+        Integer subspecialtyConflictCount = jdbc.queryForObject(CHECK_SUBSPECIALTY_CONFLICT, Integer.class,
                 body.getPatientId(), body.getSubSpecialtyId());
 
         if (subspecialtyConflictCount != null && subspecialtyConflictCount > 0) {
             throw new AppointmentAlreadyExistsException("Error: Ya tienes una cita con la misma especialidad y subespecialidad");
         }
 
-        String existsSql = "SELECT COUNT(*) FROM public.medical_appointments " +
-                "WHERE patient_id = ?::uuid AND professional_id = ?::uuid";
-        Integer existingCount = jdbc.queryForObject(existsSql, Integer.class,
+        Integer existingCount = jdbc.queryForObject(CHECK_PROFESSIONAL_CONFLICT, Integer.class,
                 body.getPatientId(), body.getProfessionalId());
 
         if (existingCount != null && existingCount > 0) {
             throw new AppointmentAlreadyExistsException("Error: El paciente ya tiene una cita con este profesional");
         }
 
-        String sql = "INSERT INTO public.medical_appointments " +
-                "(patient_id, subspecialty_id, professional_id, appointment_date, reason, status) " +
-                "VALUES (?::uuid, ?::uuid, ?::uuid, ?::timestamp, ?, ?)";
-
-        jdbc.update(sql,
+        jdbc.update(INSERT_APPOINTMENT,
                 body.getPatientId(),
                 body.getSubSpecialtyId(),
                 body.getProfessionalId(),
@@ -59,94 +120,54 @@ public class AppointmentService {
     }
 
     public void setAppointmentStatus(String id, String status) {
-        jdbc.update("UPDATE public.medical_appointments SET status = ? WHERE id = ?::uuid", status, id);
+        jdbc.update(UPDATE_STATUS, status, id);
     }
 
     public void rescheduleAppointment(String id, String newDate) {
-        jdbc.update("UPDATE public.medical_appointments SET appointment_date = ?::timestamp WHERE id = ?::uuid",
-                newDate, id);
+        jdbc.update(UPDATE_DATE, newDate, id);
     }
 
     public List<Map<String, Object>> getAppointmentsByProfessional(String professionalId) {
-        String sql = "SELECT ma.id, ma.appointment_date, ma.status, ma.reason, " +
-                "u.first_name, u.last_name " +
-                "FROM public.medical_appointments ma " +
-                "JOIN public.users u ON ma.patient_id = u.id " +
-                "WHERE ma.professional_id = ?::uuid " +
-                "ORDER BY ma.appointment_date";
-        return jdbc.queryForList(sql, professionalId);
+        return jdbc.queryForList(GET_BY_PROFESSIONAL, professionalId);
     }
 
     public List<Map<String, Object>> getAppointmentsByPatient(String patientId, String order) {
-        // 🔥 validar order
-        String safeOrder = "ASC";
-        if ("DESC".equalsIgnoreCase(order)) {
-            safeOrder = "DESC";
-        }
+        String safeOrder = "DESC".equalsIgnoreCase(order) ? "DESC" : "ASC";
         String sql = "SELECT a.id, a.appointment_date, a.status, a.professional_id, a.reason, " +
                 "u.first_name as professional_first_name, u.last_name as professional_last_name " +
                 "FROM public.medical_appointments a " +
                 "JOIN public.users u ON a.professional_id = u.id " +
                 "WHERE a.patient_id = ?::uuid " +
                 "ORDER BY a.appointment_date " + safeOrder;
-
         return jdbc.queryForList(sql, patientId);
     }
 
-    public List<Map<String, Object>> getProfessionalAppointmentsDates(String professionalId, String startDate,
-            String endDate) {
-        String sql = "SELECT appointment_date FROM public.medical_appointments " +
-                "WHERE professional_id = ?::uuid AND status = 'agendada' " +
-                "AND appointment_date >= ?::timestamp AND appointment_date <= ?::timestamp";
-
-        return jdbc.queryForList(sql, professionalId, startDate + " 00:00:00", endDate + " 23:59:59");
+    public List<Map<String, Object>> getProfessionalAppointmentsDates(String professionalId, String startDate, String endDate) {
+        return jdbc.queryForList(GET_PROFESSIONAL_DATES,
+                professionalId, startDate + " 00:00:00", endDate + " 23:59:59");
     }
 
     public List<Map<String, Object>> getProfessionalAppointmentsDay(String professionalId, String date) {
-        String sql = "SELECT a.id, a.appointment_date, a.status, a.reason, " +
-                "u.first_name, u.last_name " +
-                "FROM public.medical_appointments a " +
-                "LEFT JOIN public.users u ON a.patient_id = u.id " +
-                "WHERE a.professional_id = ?::uuid AND a.status = 'agendada' " +
-                "AND a.appointment_date >= ?::timestamp AND a.appointment_date <= ?::timestamp " +
-                "ORDER BY a.appointment_date ASC";
-
-        return jdbc.queryForList(sql, professionalId, date + " 00:00:00", date + " 23:59:59");
+        return jdbc.queryForList(GET_PROFESSIONAL_DAY,
+                professionalId, date + " 00:00:00", date + " 23:59:59");
     }
 
     public List<Map<String, Object>> getAllProfessionalAppointments(String professionalId) {
-        String sql = "SELECT a.id, a.reason, a.appointment_date, a.status, a.patient_id, " +
-                "u.id as patient_user_id, u.first_name, u.last_name " +
-                "FROM public.medical_appointments a " +
-                "LEFT JOIN public.users u ON a.patient_id = u.id " +
-                "WHERE a.professional_id = ?::uuid " +
-                "ORDER BY a.appointment_date DESC";
-
         try {
-            return jdbc.queryForList(sql, professionalId);
+            return jdbc.queryForList(GET_ALL_PROFESSIONAL, professionalId);
         } catch (DataAccessException ex) {
             throw new IllegalStateException("Error querying professional appointments", ex);
         }
     }
 
     public Map<String, Object> getProfessionalDashboardStats(String professionalId, String date) {
-        Integer todayCount = jdbc.queryForObject(
-                "SELECT COUNT(*) FROM public.medical_appointments " +
-                        "WHERE professional_id = ?::uuid AND appointment_date >= ?::timestamp AND appointment_date <= ?::timestamp",
+        Integer todayCount = jdbc.queryForObject(GET_TODAY_COUNT,
                 Integer.class, professionalId, date + " 00:00:00", date + " 23:59:59");
 
-        Integer patientCount = jdbc.queryForObject(
-                "SELECT COUNT(DISTINCT patient_id) FROM public.medical_appointments " +
-                        "WHERE professional_id = ?::uuid",
+        Integer patientCount = jdbc.queryForObject(GET_PATIENT_COUNT,
                 Integer.class, professionalId);
 
-        List<Map<String, Object>> upcoming = jdbc.queryForList(
-                "SELECT a.id, a.appointment_date, a.status, a.reason, u.first_name, u.last_name " +
-                        "FROM public.medical_appointments a " +
-                        "LEFT JOIN public.users u ON a.patient_id = u.id " +
-                        "WHERE a.professional_id = ?::uuid AND a.status = 'agendada' AND a.appointment_date >= ?::timestamp "
-                        +
-                        "ORDER BY a.appointment_date ASC LIMIT 4",
+        List<Map<String, Object>> upcoming = jdbc.queryForList(GET_UPCOMING,
                 professionalId, date + " 00:00:00");
 
         return Map.of(

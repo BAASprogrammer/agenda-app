@@ -7,7 +7,7 @@ export const useUserStore = create<UserState>((set) => ({
     lastName: "",
     email: "",
     userId: "",
-    isProfessional: "false",
+    isProfessional: false,
     setUser: (userData) => set((state) => ({ ...state, ...userData })),
     clearUser: () => set({
         isLoggedIn: false,
@@ -15,6 +15,6 @@ export const useUserStore = create<UserState>((set) => ({
         lastName: "",
         email: "",
         userId: "",
-        isProfessional: "false"
+        isProfessional: false
     })
 }));

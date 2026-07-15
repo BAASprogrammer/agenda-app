@@ -1,9 +1,8 @@
 package com.agendaapp.app.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.agendaapp.app.dto.AppointmentRequest;
-import com.agendaapp.app.service.AppointmentAlreadyExistsException;
+import com.agendaapp.app.exception.AppointmentAlreadyExistsException;
 import com.agendaapp.app.service.AppointmentService;
 import jakarta.validation.Valid;
 
@@ -26,14 +25,10 @@ public class AppointmentController extends BaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(AppointmentController.class);
 
-    @Autowired
-    private AppointmentService appointmentService;
+    private final AppointmentService appointmentService;
 
-    private String requireUserId(Jwt jwt) {
-        if (jwt == null || jwt.getSubject() == null || jwt.getSubject().isBlank()) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token de autenticación inválido o ausente");
-        }
-        return jwt.getSubject();
+    public AppointmentController(AppointmentService appointmentService) {
+        this.appointmentService = appointmentService;
     }
 
     @PostMapping

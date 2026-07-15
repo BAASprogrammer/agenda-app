@@ -2,71 +2,30 @@ package com.agendaapp.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserDTO {
-	@JsonProperty("first_name")
-	@JsonAlias("firstName")
-	private String firstName;
-	@JsonProperty("last_name")
-	@JsonAlias("lastName")
-	private String lastName;
-	private String email;
-	@JsonProperty("is_professional")
-	@JsonAlias("isProfessional")
-	private Boolean isProfessional;
-	@JsonProperty("subspecialty_id")
-	@JsonAlias("subSpecialtyId")
-	private String subSpecialtyId;
-	
-	public UserDTO(){}
-	
-	public UserDTO(String firstName, String lastName, String email, Boolean isProfessional, String subSpecialtyId)
-	{
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.isProfessional = isProfessional;
-		this.subSpecialtyId = subSpecialtyId;
-		
-	}
 
-	public String getFirstName() {
-		return firstName;
-	}
+    @JsonProperty("first_name")
+    @JsonAlias("firstName")
+    private String firstName;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    @JsonProperty("last_name")
+    @JsonAlias("lastName")
+    private String lastName;
 
-	public String getLastName() {
-		return lastName;
-	}
+    private String email;
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    @JsonProperty("is_professional")
+    @JsonAlias("isProfessional")
+    private Boolean isProfessional;
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Boolean getIsProfessional() {
-		return isProfessional;
-	}
-
-	public void setIsProfessional(Boolean isProfessional) {
-		this.isProfessional = isProfessional;
-	}
-
-	public String getSubSpecialtyId() {
-		return subSpecialtyId;
-	}
-
-	public void setSubSpecialtyId(String subSpecialtyId) {
-		this.subSpecialtyId = subSpecialtyId;
-	}
+    @JsonProperty("subspecialty_id")
+    @JsonAlias("subSpecialtyId")
+    private String subSpecialtyId;
 }

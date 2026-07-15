@@ -1,4 +1,4 @@
-package com.agendaapp.app.service;
+package com.agendaapp.app.exception;
 
 public class AppointmentAlreadyExistsException extends RuntimeException {
 

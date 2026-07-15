@@ -4,7 +4,7 @@ export interface UserState {
     lastName: string;
     email: string;
     userId: string;
-    isProfessional: string;
+    isProfessional: boolean;
     setUser: (userData: Partial<UserState>) => void;
     clearUser: () => void;
 }

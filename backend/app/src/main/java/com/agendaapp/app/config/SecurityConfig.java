@@ -17,7 +17,7 @@ public class SecurityConfig {
 	@Bean 
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration config = new CorsConfiguration();
-		config.setAllowedOrigins(List.of("https://agenda-app-kappa.vercel.app/"));		
+		config.setAllowedOrigins(List.of(System.getenv().getOrDefault("ALLOWED_ORIGIN", "http://localhost:3000")));
 		config.setAllowedMethods(List.of("*"));
 		config.setAllowedHeaders(List.of("*"));
 		config.setAllowCredentials(true);

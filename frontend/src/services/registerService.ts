@@ -40,7 +40,7 @@ export async function registerUser(data: RegisterData) {
             firstName: data.firstName.trim(),
             lastName: data.lastName.trim(),
             email: data.email.trim(),
-            isProfessional: data.isProfessional.toString(),
+            isProfessional: data.isProfessional,
         };
     } catch (error: any) {
         if (error.response) {
