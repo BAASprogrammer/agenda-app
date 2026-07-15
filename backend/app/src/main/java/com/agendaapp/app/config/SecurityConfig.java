@@ -14,10 +14,10 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-	@Bean 
+	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration config = new CorsConfiguration();
-		config.setAllowedOrigins(List.of(System.getenv().getOrDefault("ALLOWED_ORIGIN", "http://localhost:3000")));
+		config.setAllowedOrigins(List.of("https://agenda-app-kappa.vercel.app/"));
 		config.setAllowedMethods(List.of("*"));
 		config.setAllowedHeaders(List.of("*"));
 		config.setAllowCredentials(true);
@@ -37,8 +37,7 @@ public class SecurityConfig {
 						.requestMatchers("/api/users/professionals").permitAll()
 						.requestMatchers("/api/test").permitAll()
 						.requestMatchers("/api/users/me", "/api/users/profile").authenticated()
-						.anyRequest().authenticated()
-				)
+						.anyRequest().authenticated())
 				.oauth2ResourceServer(oauth -> oauth.jwt(Customizer.withDefaults()));
 
 		return http.build();

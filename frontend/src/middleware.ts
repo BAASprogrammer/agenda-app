@@ -16,8 +16,8 @@ export function middleware(req: NextRequest) {
 
     // 2. Si YA hay sesión e intenta ir a la landing (/), redirigir a su Home respectiva
     if (userId && pathname === "/") {
-        const isProfessional = req.cookies.get("is_professional")?.value === "true";
-        const dashboard = isProfessional ? "/home/professional" : "/home/patient";
+        const isProfessional = req.cookies.get("is_professional")?.value;
+        const dashboard = isProfessional === "true" ? "/home/professional" : "/home/patient";
         return NextResponse.redirect(new URL(dashboard, req.url));
     }
 

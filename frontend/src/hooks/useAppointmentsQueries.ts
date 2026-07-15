@@ -17,16 +17,12 @@ export function useAppointmentsByPatient(patientId: string, order: string = "ASC
         }
     });
 }
-
 // Cancel appointment hook
 export function useCancelAppointment() {
     return useMutation({
         mutationFn: async ({ id }: { id: string }) => {
             const response = await api.put('/appointments', { id, status: 'cancelada' });
             return response.data;
-        },
-        onError: (error) => {
-            console.error("Error al cancelar la cita:", error);
         }
     });
 }
