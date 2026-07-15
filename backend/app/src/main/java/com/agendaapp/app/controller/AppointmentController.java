@@ -1,6 +1,7 @@
 package com.agendaapp.app.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -26,8 +27,13 @@ import org.springframework.web.server.ResponseStatusException;
 @RequestMapping("/api/appointments")
 public class AppointmentController extends BaseController {
 
-    @Autowired
-    private AppointmentService appointmentService;
+    private static final Logger logger = LoggerFactory.getLogger(AppointmentController.class);
+
+    private final AppointmentService appointmentService;
+
+    public AppointmentController(AppointmentService appointmentService) {
+        this.appointmentService = appointmentService;
+    }
 
     @PostMapping
     public Map<String, Object> createAppointment(@Valid @RequestBody AppointmentRequest body) {
@@ -53,6 +59,8 @@ public class AppointmentController extends BaseController {
             @AuthenticationPrincipal Jwt jwt,
             @RequestParam(required = false) String patientId,
             @RequestParam String order) {
+        logger.info("Request appointmentsByPatient: patientId={}, order={}, hasJwt={}", patientId, order, jwt != null);
+
         String requesterId = requireUserId(jwt);
 
         if (patientId == null || patientId.isBlank()) {
@@ -60,6 +68,7 @@ public class AppointmentController extends BaseController {
         }
 
         if (!patientId.equals(requesterId)) {
+            logger.warn("Forbidden patient access attempt: requesterId={}, patientId={}", requesterId, patientId);
             throw new ResponseStatusException(HttpStatus.FORBIDDEN,
                     "No estás autorizado para acceder al historial de otro paciente");
         }

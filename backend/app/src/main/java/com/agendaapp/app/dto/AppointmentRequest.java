@@ -3,10 +3,8 @@ package com.agendaapp.app.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppointmentRequest {
@@ -27,4 +25,52 @@ public class AppointmentRequest {
 
     @NotNull(message = "El estado es obligatorio")
     private String status;
+
+    public String getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
+    public String getSubSpecialtyId() {
+        return subSpecialtyId;
+    }
+
+    public void setSubSpecialtyId(String subSpecialtyId) {
+        this.subSpecialtyId = subSpecialtyId;
+    }
+
+    public String getProfessionalId() {
+        return professionalId;
+    }
+
+    public void setProfessionalId(String professionalId) {
+        this.professionalId = professionalId;
+    }
+
+    public String getAppointmentDate() {
+        return appointmentDate;
+    }
+
+    public void setAppointmentDate(String appointmentDate) {
+        this.appointmentDate = appointmentDate;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

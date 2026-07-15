@@ -1,6 +1,5 @@
 package com.agendaapp.app.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,8 +18,11 @@ import java.util.Map;
 @Service
 public class UserService {
 
-        @Autowired
-        private JdbcTemplate jdbc;
+        private final JdbcTemplate jdbc;
+
+        public UserService(JdbcTemplate jdbc) {
+                this.jdbc = jdbc;
+        }
 
         public UserDTO getUserById(String userId) {
                 var result = jdbc.query(

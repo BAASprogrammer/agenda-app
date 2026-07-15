@@ -43,6 +43,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<Map<String, String>> handleResponseStatus(ResponseStatusException e) {
+        logger.warn("ResponseStatusException: status={}, reason={}", e.getStatusCode(), e.getReason(), e);
         return ResponseEntity.status(e.getStatusCode())
                 .body(Map.of("message", e.getReason()));
     }

@@ -8,13 +8,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RegisterUserRequest {
 
@@ -48,4 +42,74 @@ public class RegisterUserRequest {
 
     @Size(max = 200, message = "La dirección no puede tener más de 200 caracteres")
     private String address;
+
+    public RegisterUserRequest() {
+    }
+
+    public RegisterUserRequest(String firstName, String lastName, String email, String phone,
+            Boolean isProfessional, String subSpecialtyId, String address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.isProfessional = isProfessional;
+        this.subSpecialtyId = subSpecialtyId;
+        this.address = address;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Boolean getIsProfessional() {
+        return isProfessional;
+    }
+
+    public void setIsProfessional(Boolean isProfessional) {
+        this.isProfessional = isProfessional;
+    }
+
+    public String getSubSpecialtyId() {
+        return subSpecialtyId;
+    }
+
+    public void setSubSpecialtyId(String subSpecialtyId) {
+        this.subSpecialtyId = subSpecialtyId;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }

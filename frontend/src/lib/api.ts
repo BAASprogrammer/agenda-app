@@ -8,30 +8,30 @@ export const api = axios.create({
     },
 });
 
-// Interceptor to inject Supabase Bearer token in API requests
 api.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
-    // If request already has an explicit token (e.g. login), don't touch it
-    if (config.headers.Authorization) {
+    if (config.headers?.Authorization) {
         return config;
     }
 
     try {
         const { data: { session } } = await supabase.auth.getSession();
-        if (session?.access_token) {
-            config.headers.Authorization = `Bearer ${session.access_token}`;
+        const token = session?.access_token;
+
+        if (token) {
+            config.headers = config.headers ?? {};
+            config.headers.Authorization = `Bearer ${token}`;
         }
     } catch (e) {
         console.error("Error in Supabase session interceptor:", e);
     }
-    
+
     return config;
 });
 
-// Interceptor to recover from expired access tokens once.
 api.interceptors.response.use(
     (response) => response,
     async (error) => {
-        const originalRequest = error.config as InternalAxiosRequestConfig & { _retry?: boolean };
+        const originalRequest = error.config as (InternalAxiosRequestConfig & { _retry?: boolean });
 
         if (error.response?.status !== 401 || !originalRequest || originalRequest._retry) {
             return Promise.reject(error);
@@ -52,6 +52,7 @@ api.interceptors.response.use(
 
             return api(originalRequest);
         } catch (refreshError) {
+            console.error("Error refreshing Supabase session:", refreshError);
             return Promise.reject(refreshError);
         }
     }

@@ -1,7 +1,5 @@
 package com.agendaapp.app.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import com.agendaapp.app.dto.AppointmentRequest;
@@ -12,8 +10,11 @@ import java.util.Map;
 @Service
 public class AppointmentService {
 
-        @Autowired
-        private JdbcTemplate jdbc;
+        private final JdbcTemplate jdbc;
+
+        public AppointmentService(JdbcTemplate jdbc) {
+                this.jdbc = jdbc;
+        }
 
         public Map<String, Object> createAppointment(AppointmentRequest body) {
                 String timeConflictSql = "SELECT COUNT(*) FROM public.medical_appointments " +

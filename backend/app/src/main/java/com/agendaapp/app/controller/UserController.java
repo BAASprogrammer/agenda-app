@@ -3,7 +3,6 @@ package com.agendaapp.app.controller;
 import java.util.Map;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,8 +26,11 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/users")
 public class UserController extends BaseController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/me")
     public UserDTO getMyUser(@AuthenticationPrincipal Jwt jwt) {
