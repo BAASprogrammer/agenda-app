@@ -1,93 +1,148 @@
-# AgendaApp 🏥 - Full Stack
+# AgendaApp
 
-**AgendaApp** es una solución integral de gestión médica diseñada con una arquitectura de vanguardia que separa nítidamente las responsabilidades. El sistema permite la gestión eficiente de citas, historiales y perfiles para profesionales de la salud y pacientes.
+Autor: BAASprogrammer
 
----
+AgendaApp es una plataforma full-stack para gestionar citas médicas, perfiles de pacientes y profesionales, y resúmenes de atención en un monorepo con Next.js y Spring Boot.
 
-## Desarrollador
-Desarrollado con ❤️ por **BAASprogrammer**
-
----
-
-## 🏗 Arquitectura del Sistema
-
-El proyecto está organizado en un monorepositorio con dos componentes principales:
+## Arquitectura
 
 ```text
 agenda-app/
-├── frontend/               # Aplicación Next.js (Frontend)
-│   ├── src/app/           # Rutas (Route Groups: patient, professional)
-│   ├── src/components/    # Componentes UI (Modularizados por dominio)
-│   ├── src/hooks/         # Lógica reactiva (TanStack Query)
-│   ├── src/services/      # Comunicación API con Axios
-│   └── src/store/         # Estado global con Zustand
-│
-├── backend/                # Aplicación Spring Boot (Backend)
-│   └── app/               # Núcleo de la API REST
-│       ├── controllers/   # Endpoints (User, Appointment, Specialty)
-│       ├── services/      # Lógica de negocio avanzada
-│       ├── repository/    # Persistencia con JPA
-│       └── config/        # Seguridad (JWT/OAuth2) y CORS
-└── README.md              # Documentación Principal
+├── frontend/        # Next.js 16 + React 19 + TypeScript
+│   ├── src/app/     # App Router y route groups
+│   ├── src/components/
+│   ├── src/hooks/
+│   ├── src/lib/
+│   ├── src/services/
+│   └── src/store/
+├── backend/
+│   └── app/         # Spring Boot 4.0.3 + Java 21
+│       └── src/main/java/
+└── README.md
 ```
 
----
-
-## 🛠 Stack Tecnológico
+## Stack
 
 ### Frontend
-- **Framework:** [Next.js 16](https://nextjs.org/) (App Router) & **React 19**
-- **Estado:** [Zustand](https://github.com/pmndrs/zustand)
-- **Data Fetching:** [TanStack Query v5](https://tanstack.com/query/latest) & **Axios**
-- **Estilos:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **Documentación:** [jsPDF](https://github.com/parallax/jsPDF)
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- TanStack Query
+- Axios
+- Zustand
+- Supabase JS
+- jsPDF
 
 ### Backend
-- **Framework:** [Spring Boot 4.0.3](https://spring.io/projects/spring-boot) (Java 21)
-- **Seguridad:** Spring Security (OAuth2 / Resource Server / JWT)
-- **Persistencia:** Spring Data JPA + **PostgreSQL**
-- **Utilidades:** Lombok, Maven, dotenv
+- Spring Boot 4.0.3
+- Java 21
+- Maven Wrapper
+- Spring Web
+- Spring Security OAuth2 Resource Server
+- Spring Validation
+- JdbcTemplate + PostgreSQL
+- Spring Dotenv
 
----
+## Requisitos previos
 
-## 🚀 Estado del Proyecto y Migración
-
-Actualmente, el proyecto se encuentra en una fase avanzada de migración de lógica *serverless* a un backend centralizado.
-
-- **✅ Completado:**
-  - Migración de flujos críticos de citas y pacientes a Spring Boot.
-  - Implementación de seguridad basada en JWT.
-  - Gestión de estado global migrada de Context API a Zustand.
-  - Validación estricta de tipos de datos entre el backend y frontend.
-
----
-
-## ⚙️ Instalación y ejecución
-
-### Prerrequisitos
-- Node.js v20+
+- Node.js 20+
+- npm
 - JDK 21+
-- PostgreSQL activo
+- PostgreSQL corriendo localmente
+- Variables de entorno configuradas para frontend y backend
 
-### 1. Clonar y Configurar Backend
+## Variables de entorno
+
+### Backend
+El backend lee las credenciales de base de datos desde variables de entorno con `spring-dotenv`.
+
+Ejemplo en `backend/app/.env` o exportadas antes de arrancar:
+
+```bash
+DB_URL=jdbc:postgresql://localhost:5432/agendaapp
+DB_USER=postgres
+DB_PASSWORD=tu_password
+PORT=8080
+```
+
+### Frontend
+El frontend usa Supabase y la URL base del backend mediante variables públicas.
+
+Ejemplo en `frontend/.env.local`:
+
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:8080
+NEXT_PUBLIC_SUPABASE_URL=tu_supabase_url
+NEXT_PUBLIC_SUPABASE_KEY=tu_supabase_anon_key
+```
+
+## Ejecutar en local
+
+### 1) Backend
+
 ```bash
 cd backend/app
-# Asegúrate de configurar tu archivo .env con las credenciales de DB
 ./mvnw spring-boot:run
 ```
 
-### 2. Configurar Frontend
+Si tu shell no inyecta el `.env`, exporta las variables antes de iniciar:
+
+```bash
+export DB_URL=jdbc:postgresql://localhost:5432/agendaapp
+export DB_USER=postgres
+export DB_PASSWORD=tu_password
+cd backend/app
+./mvnw spring-boot:run
+```
+
+### 2) Frontend
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
----
+La app de interfaz quedará disponible en:
 
-## ✅ Mejoras Críticas Recientes
-1. **Validación Dual:** Esquemas de validación integrados tanto en el frontend (client-side) como en el backend (Spring Validation).
-2. **Optimización de Carga:** Uso extensivo de caché con TanStack Query para reducir la latencia de la API.
-3. **Seguridad Robusta:** Implementación de CORS policies y protección de rutas mediante middleware de Next.js y Spring Security.
-4. **Clean Architecture:** Refactorización de servicios en el frontend para centralizar la comunicación externa.
+```text
+http://localhost:3000
+```
+
+El backend queda en:
+
+```text
+http://localhost:8080
+```
+
+## Estado del proyecto
+
+El proyecto está funcionando con una arquitectura de frontend React/Next y backend Spring Boot desacoplado, con autenticación por Supabase en el cliente y validación/autoridad en el backend.
+
+Incluye:
+- flujo de registro y login
+- gestión de citas para paciente y profesional
+- paneles y resumenes de agenda
+- renovación automática de token en el cliente
+- configuración de CORS para desarrollo local
+- tipado más consistente en el frontend y limpieza de contratos de datos
+
+## Comandos útiles
+
+```bash
+cd frontend
+npm run lint
+npm run build
+```
+
+```bash
+cd backend/app
+./mvnw test
+./mvnw spring-boot:run
+```
+
+## Nota de desarrollo
+
+Si el backend no arranca correctamente en local, revisa que las variables `DB_URL`, `DB_USER` y `DB_PASSWORD` estén disponibles en el mismo proceso donde se ejecuta `spring-boot:run`. La configuración actual del proyecto depende de esas variables para inicializar la conexión a PostgreSQL.
 
