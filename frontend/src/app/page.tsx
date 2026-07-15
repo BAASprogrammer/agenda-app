@@ -13,7 +13,6 @@ export default function Home() {
   const filteredSpecialties = specialties.filter(s =>
     s.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  const featureList = features;
   return (
     <div className="min-h-svh bg-white font-sans text-slate-800 overflow-hidden relative">
       {/* Background */}

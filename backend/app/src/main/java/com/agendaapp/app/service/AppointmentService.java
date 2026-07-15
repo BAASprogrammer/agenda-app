@@ -117,20 +117,16 @@ public class AppointmentService {
                 return jdbc.queryForList(sql, professionalId, date + " 00:00:00", date + " 23:59:59");
         }
 
-        public List<Map<String, Object>> getAllProfessionalAppointments(String professionalId) {
-                String sql = "SELECT a.id, a.reason, a.appointment_date, a.status, a.patient_id, " +
-                                "u.id as patient_user_id, u.first_name, u.last_name " +
-                                "FROM public.medical_appointments a " +
-                                "LEFT JOIN public.users u ON a.patient_id = u.id " +
-                                "WHERE a.professional_id = ?::uuid " +
-                                "ORDER BY a.appointment_date DESC";
+	public List<Map<String, Object>> getAllProfessionalAppointments(String professionalId) {
+				String sql = "SELECT a.id, a.reason, a.appointment_date, a.status, a.patient_id, " +
+								"u.id as patient_user_id, u.first_name, u.last_name " +
+								"FROM public.medical_appointments a " +
+								"LEFT JOIN public.users u ON a.patient_id = u.id " +
+								"WHERE a.professional_id = ?::uuid " +
+								"ORDER BY a.appointment_date DESC";
 
-                try {
-                        return jdbc.queryForList(sql, professionalId);
-                } catch (DataAccessException ex) {
-                        throw new IllegalStateException("Error querying professional appointments", ex);
-                }
-        }
+				return jdbc.queryForList(sql, professionalId);
+		}
 
         public Map<String, Object> getProfessionalDashboardStats(String professionalId, String date) {
                 Integer todayCount = jdbc.queryForObject(

@@ -112,7 +112,7 @@ export default function MyAppointments() {
 
         if (!matchesSearch) return false;
 
-        if (filter === 'todas') return appt.appointment_date.split(' ')[0];
+        if (filter === 'todas') return true;
         if (filter === 'pasada') return appt.appointment_date.split(' ')[0] < today && (appt.status === 'pasada' || appt.status === 'agendada');
         return appt.status === filter;
     });

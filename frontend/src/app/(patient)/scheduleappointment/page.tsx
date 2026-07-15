@@ -118,10 +118,9 @@ export default function ScheduleAppointment() {
 
         const now = new Date();
         const nowDate = now.toLocaleDateString("en-CA");
-        const nowHours = now.getHours();
-        const nowMinutes = now.getMinutes();
+        const nowTime = now.toLocaleTimeString("en-CA", { hour: "2-digit", minute: "2-digit", hour12: false });
 
-        if (appointment.date === nowDate && appointment.time < `${nowHours}:${nowMinutes}`) {
+        if (appointment.date === nowDate && appointment.time < nowTime) {
             setMessage('No es posible agendar citas con fecha y hora anteriores a la actual');
             setIsError(true);
             return;

@@ -2,6 +2,7 @@
 // ✅ Import the hook that replaces all useState + useEffect + fetch logic
 import { useAppointments } from "@/hooks/useAppointments";
 import { ManagedAppointment } from "@/types/appointment";
+import { getStatusColor } from "@/utils/getStatusColor";
 import ProSidebar from "@/components/professional/ProSidebar";
 import {
     ClipboardList, Search, Filter,
@@ -9,13 +10,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-
-// Pure helper function (no state, no effects → doesn't need to be a hook)
-function getStatusColor(s: string) {
-    if (s === "agendada") return "bg-indigo-100 text-indigo-700";
-    if (s === "completada") return "bg-emerald-100 text-emerald-700";
-    return "bg-rose-100 text-rose-700";
-}
 
 export default function ManageAppointments() {
     // 1. UI State

@@ -61,7 +61,6 @@ export default function Profile() {
     });
 
     // 4. Effects
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     useEffect(() => {
         // Rellenar el formulario con los datos del backend cuando estén disponibles
         if (userId && patient && !isInitialized) {

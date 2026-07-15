@@ -3,7 +3,6 @@ package com.agendaapp.app.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -83,32 +82,30 @@ public class UserService {
                 }
         }
 
-        public ResponseEntity<?> updateProfile(String userId, UpdateUserRequest body) {
+	public UserUpdateResponseDTO updateProfile(String userId, UpdateUserRequest body) {
 
-                if (body.getFirstName() == null || body.getFirstName().isBlank() ||
-                                body.getLastName() == null || body.getLastName().isBlank() ||
-                                body.getPhone() == null || body.getPhone().isBlank() ||
-                                body.getAddress() == null || body.getAddress().isBlank()) {
+		if (body.getFirstName() == null || body.getFirstName().isBlank() ||
+				body.getLastName() == null || body.getLastName().isBlank() ||
+				body.getPhone() == null || body.getPhone().isBlank() ||
+				body.getAddress() == null || body.getAddress().isBlank()) {
 
-                        return ResponseEntity
-                                        .badRequest()
-                                        .body(Map.of("message", "No deben haber campos vacíos"));
-                }
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No deben haber campos vacíos");
+		}
 
-                String sql = "UPDATE public.users SET first_name = ?, last_name = ?, phone = ?, address = ? WHERE id = ?::uuid";
+		String sql = "UPDATE public.users SET first_name = ?, last_name = ?, phone = ?, address = ? WHERE id = ?::uuid";
 
-                jdbc.update(sql,
-                                body.getFirstName(),
-                                body.getLastName(),
-                                body.getPhone(),
-                                body.getAddress(),
-                                userId);
+		jdbc.update(sql,
+				body.getFirstName(),
+				body.getLastName(),
+				body.getPhone(),
+				body.getAddress(),
+				userId);
 
-                return ResponseEntity.ok(new UserUpdateResponseDTO(
-                                userId,
-                                body.getFirstName(),
-                                body.getLastName(),
-                                body.getPhone(),
-                                body.getAddress()));
-        }
+		return new UserUpdateResponseDTO(
+				userId,
+				body.getFirstName(),
+				body.getLastName(),
+				body.getPhone(),
+				body.getAddress());
+	}
 }

@@ -1,8 +1,7 @@
 "use client";
 import { useUserStore } from "@/store/userStore";
-import { supabase } from "@/lib/supabaseClient";
 import { api } from "@/lib/api";
-// ✅ MEJORA 1: componente compartido, ya no repetimos código
+import { getStatusColor } from "@/utils/getStatusColor";
 import ProSidebar from "@/components/professional/ProSidebar";
 import {
     Calendar, Clock, ChevronLeft, ChevronRight,
@@ -115,7 +114,7 @@ export default function Schedule() {
 
     const isSelected = (d: Date) => d.toDateString() === selectedDate.toDateString();
 
-    const getStatusColor = (s: string) => s === 'agendada' ? 'bg-indigo-100 text-indigo-700' : s === 'completada' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700';
+
 
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans text-slate-800">

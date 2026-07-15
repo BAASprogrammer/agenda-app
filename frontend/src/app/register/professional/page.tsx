@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
 import { setAuthCookies } from "@/app/actions";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { User, Mail, Lock, Phone, ArrowRight, Activity, Stethoscope, CalendarCheck } from "lucide-react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 
 import { LoginModal } from "@/components/login/LoginModal";
 import { validateRegister } from "@/utils/validateRegister";
@@ -14,11 +13,7 @@ import { useSpecialties, useSubSpecialties } from "@/hooks/useMedicalQueries";
 import { MedicalSpecialty } from "@/types/medical";
 
 export default function ProfessionalRegistration() {
-    // 1. Hooks & Routers
-    const router = useRouter();
-    const queryClient = useQueryClient(); // Added if needed, but not strictly necessary here
-
-    // 2. State
+    // 1. State
     const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
     const [formData, setFormData] = useState<ProfessionalFormData>({

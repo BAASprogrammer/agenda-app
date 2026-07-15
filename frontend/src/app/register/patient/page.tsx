@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { setAuthCookies } from "@/app/actions";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { User, Mail, Lock, Phone, ArrowRight, CalendarClock, ShieldCheck, CalendarCheck } from "lucide-react";
 import { LoginModal } from "@/components/login/LoginModal";
@@ -10,10 +9,7 @@ import { registerUser, checkEmailExists } from "@/services/registerService";
 import { useMutation } from "@tanstack/react-query";
 
 export default function PatientRegistration() {
-    // 1. Hooks & Routers
-    const router = useRouter();
-
-    // 2. State
+    // 1. State
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [formData, setFormData] = useState({

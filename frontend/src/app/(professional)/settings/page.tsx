@@ -62,7 +62,6 @@ export default function ProfessionalSettings() {
     });
 
     // 3. Effects - Hydrate form from profile data
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     useEffect(() => {
         if (profileData) {
             setFormData({

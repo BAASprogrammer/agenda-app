@@ -1,10 +1,9 @@
-// Header component: Displays navigation bar and user session info. Handles login modal and logout logic.
 "use client";
 
 import { clearAuthCookies } from "@/app/actions";
 import { supabase } from "@/lib/supabaseClient";
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { LoginModal } from "./login/LoginModal";
 import { CalendarCheck, LogOut, User } from "lucide-react";
 import Link from "next/link";

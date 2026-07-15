@@ -1,27 +1,30 @@
 package com.agendaapp.app.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.agendaapp.app.service.SpecialtyService;
 
 @RestController
 @RequestMapping("/api")
 public class SpecialtyController extends BaseController {
 
     @Autowired
-    private JdbcTemplate jdbc;
+    private SpecialtyService specialtyService;
 
     @GetMapping("/specialties")
     public List<Map<String, Object>> getSpecialties() {
-        return jdbc.queryForList("SELECT id, name FROM public.medical_specialties");
+        return specialtyService.getSpecialties();
     }
 
     @GetMapping("/subspecialties")
     public List<Map<String, Object>> getSubSpecialties(@RequestParam String specialtyId) {
-        String sql = "SELECT id, name FROM public.medical_subspecialties WHERE specialty_id = ?::uuid";
-        return jdbc.queryForList(sql, specialtyId);
+        return specialtyService.getSubSpecialties(specialtyId);
     }
 }

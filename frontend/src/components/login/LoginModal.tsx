@@ -1,7 +1,6 @@
 "use client";
 import { setAuthCookies } from '@/app/actions';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { X, Mail, Lock, ArrowRight, CalendarCheck } from 'lucide-react';
 import { loginUser, resetPasswordRequest } from '@/services/authService';
 import { checkEmailExists } from '@/services/registerService';
@@ -9,16 +8,10 @@ import { useMutation } from '@tanstack/react-query';
 import { LoginModalProps } from "@/types/auth";
 
 export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
-    const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isResetMode, setIsResetMode] = useState(false);
     const [resetSent, setResetSent] = useState(false);
-
-    // Close the modal
-    const handleClose = () => {
-        onClose();
-    }
 
     // Hooks must be called unconditionally (Rule of Hooks)
     const { mutate: login, isPending: loading, error: mutationError } = useMutation({
@@ -58,10 +51,7 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
         }
     });
 
-    // If modal is not open, render nothing
     if (!open) return null;
-
-    // Handle login logic: authenticate with Supabase, fetch user's first name from 'users' table, set cookie, reload UI
     const handleLogin = async (e?: React.FormEvent) => {
         if (e) e.preventDefault();
         login();
@@ -75,13 +65,13 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center z-[100] px-4">
-            <div className="absolute inset-0 backdrop-blur-sm bg-slate-900/40 transition-opacity" onClick={handleClose}></div>
+            <div className="absolute inset-0 backdrop-blur-sm bg-slate-900/40 transition-opacity" onClick={onClose}></div>
 
             {/* Modal Container */}
             <div className="relative bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] rounded-3xl w-full max-w-md p-8 sm:p-10 z-50 animate-scale-in">
                 {/* Close Button */}
                 <button
-                    onClick={handleClose}
+                        onClick={onClose}
                     className="absolute top-5 right-5 text-slate-400 hover:text-slate-600 hover:bg-slate-100 p-2 rounded-full transition-all"
                     title="Cerrar"
                 >
@@ -211,11 +201,11 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
                 <div className="mt-8 pt-6 border-t border-slate-100 text-center text-sm font-medium text-slate-500">
                     <p className="mb-3">¿No tienes una cuenta aún?</p>
                     <div className="flex items-center justify-center gap-3">
-                        <button onClick={() => { onClose(); router.push('/register/patient'); }} className="text-teal-600 font-bold hover:text-teal-700 hover:bg-teal-50 px-3 py-1.5 rounded-lg transition-colors">
+                        <button onClick={() => { onClose(); window.location.replace('/register/patient'); }} className="text-teal-600 font-bold hover:text-teal-700 hover:bg-teal-50 px-3 py-1.5 rounded-lg transition-colors">
                             Crear cuenta Paciente
                         </button>
                         <span className="text-slate-200">|</span>
-                        <button onClick={() => { onClose(); router.push('/register/professional'); }} className="text-blue-600 font-bold hover:text-blue-700 hover:bg-blue-50 px-3 py-1.5 rounded-lg transition-colors">
+                        <button onClick={() => { onClose(); window.location.replace('/register/professional'); }} className="text-blue-600 font-bold hover:text-blue-700 hover:bg-blue-50 px-3 py-1.5 rounded-lg transition-colors">
                             Soy Profesional
                         </button>
                     </div>

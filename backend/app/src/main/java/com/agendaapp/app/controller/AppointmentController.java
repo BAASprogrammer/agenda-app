@@ -1,50 +1,37 @@
 package com.agendaapp.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.agendaapp.app.dto.AppointmentRequest;
-import com.agendaapp.app.service.AppointmentAlreadyExistsException;
 import com.agendaapp.app.service.AppointmentService;
 import jakarta.validation.Valid;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.server.ResponseStatusException;
-import org.springframework.dao.DataAccessException;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/appointments")
 public class AppointmentController extends BaseController {
 
-    private static final Logger logger = LoggerFactory.getLogger(AppointmentController.class);
-
     @Autowired
     private AppointmentService appointmentService;
 
-    private String requireUserId(Jwt jwt) {
-        if (jwt == null || jwt.getSubject() == null || jwt.getSubject().isBlank()) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token de autenticación inválido o ausente");
-        }
-        return jwt.getSubject();
-    }
-
     @PostMapping
-    public ResponseEntity<Map<String, Object>> createAppointment(@Valid @RequestBody AppointmentRequest body) {
-        try {
-            Map<String, Object> result = appointmentService.createAppointment(body);
-            return ResponseEntity.ok(result);
-        } catch (AppointmentAlreadyExistsException e) {
-            return ResponseEntity.status(HttpStatus.CONFLICT)
-                    .body(Map.of("message", e.getMessage()));
-        }
+    public Map<String, Object> createAppointment(@Valid @RequestBody AppointmentRequest body) {
+        return appointmentService.createAppointment(body);
     }
 
     @PutMapping
@@ -62,7 +49,7 @@ public class AppointmentController extends BaseController {
     }
 
     @GetMapping("/appointmentsbyid")
-    public ResponseEntity<Object> getAppointmentsByPatient(
+    public List<Map<String, Object>> getAppointmentsByPatient(
             @AuthenticationPrincipal Jwt jwt,
             @RequestParam(required = false) String patientId,
             @RequestParam String order) {
@@ -83,13 +70,7 @@ public class AppointmentController extends BaseController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "patientId tiene un formato inválido", e);
         }
 
-        try {
-            return ResponseEntity.ok(appointmentService.getAppointmentsByPatient(patientId, order));
-        } catch (DataAccessException e) {
-            logger.error("Error obteniendo historial médico para patientId={}", patientId, e);
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-                    "Error interno al obtener historial médico", e);
-        }
+        return appointmentService.getAppointmentsByPatient(patientId, order);
     }
 
     @GetMapping("/professional/dates")
@@ -112,14 +93,8 @@ public class AppointmentController extends BaseController {
     @GetMapping("/professional/all")
     public List<Map<String, Object>> getAllProfessionalAppointments(
             @AuthenticationPrincipal Jwt jwt) {
-        try {
-            String professionalId = requireUserId(jwt);
-            return appointmentService.getAllProfessionalAppointments(professionalId);
-        } catch (Exception e) {
-            logger.error("Error retrieving professional appointments", e);
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-                    "Error interno al obtener las citas del profesional", e);
-        }
+        String professionalId = requireUserId(jwt);
+        return appointmentService.getAllProfessionalAppointments(professionalId);
     }
 
     @GetMapping("/professional/dashboard")

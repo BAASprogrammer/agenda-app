@@ -4,7 +4,7 @@ import { useUserStore } from "@/store/userStore";
 import { api } from "@/lib/api";
 import {
     Calendar, Users, ClipboardList,
-    Clock, ChevronRight, Stethoscope
+    Clock, ChevronRight
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";

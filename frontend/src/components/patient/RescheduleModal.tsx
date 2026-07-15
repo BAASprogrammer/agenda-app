@@ -17,10 +17,8 @@ export default function RescheduleModal({ appointment, onClose, onSuccess }: Res
         setLoading(true);
         setMessage("");
         const now = new Date();
-        const nowHours = now.getHours();
-        const nowMinutes = now.getMinutes();
         const nowDate = now.toLocaleDateString("en-CA");
-        if (newDate == nowDate && newTime < nowHours + ":" + nowMinutes) {
+        if (newDate == nowDate && newTime <= now.toLocaleTimeString("en-CA", { hour: "2-digit", minute: "2-digit", hour12: false })) {
             setMessage('No es posible agendar citas con fecha y hora anteriores a la actual');
             setIsError(true);
             setLoading(false);
