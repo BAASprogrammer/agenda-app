@@ -35,7 +35,7 @@ export function LoginModal({ open, onClose, setIsLoggedIn }: LoginModalProps) {
             onClose();
 
             // Full navigation so the server reads the new cookies correctly
-            const dashboard = userData.isProfessional === "true" ? "/home/professional" : "/home/patient";
+            const dashboard = userData.isProfessional ? "/home/professional" : "/home/patient";
             window.location.replace(dashboard);
         }
     });

@@ -11,7 +11,7 @@ export async function setAuthCookies(data: {
     lastName: string;
     email: string | null;
     userId: string;
-    isProfessional: string;
+    isProfessional: boolean;
 }) {
     const cookieStore = await cookies();
     const maxAge = 60 * 60 * 24 * 7; // 1 week in seconds
@@ -24,7 +24,7 @@ export async function setAuthCookies(data: {
         cookieStore.set("email", data.email, cookieOpts);
     }
     cookieStore.set("user_id", data.userId, cookieOpts);
-    cookieStore.set("is_professional", data.isProfessional, cookieOpts);
+    cookieStore.set("is_professional", data.isProfessional.toString(), cookieOpts);
 }
 
 /**

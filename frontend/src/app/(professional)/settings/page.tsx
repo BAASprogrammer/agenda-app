@@ -32,7 +32,7 @@ export default function ProfessionalSettings() {
                 lastName: data.last_name || data.lastName,
                 email: data.email,
                 userId: userId,
-                isProfessional: "true"
+                isProfessional: true
             });
 
             // Update Auth Cookies for server-side persistence

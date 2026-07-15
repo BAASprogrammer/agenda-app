@@ -16,12 +16,12 @@ export async function loginUser(email: string, password: string): Promise<UserDa
         const { data: userData } = await api.get(`/users/me`, {
             headers: { Authorization: `Bearer ${sessionData.session?.access_token}` }
         });
-        
+
         return {
             firstName: userData.first_name || userData.firstName || user.user_metadata?.first_name || "",
             lastName: userData.last_name || userData.lastName || user.user_metadata?.last_name || "",
             email: userData.email || user.email || "",
-            isProfessional: (userData.is_professional ?? userData.isProfessional)?.toString() || user.user_metadata?.is_professional?.toString() || "false",
+            isProfessional: userData.is_professional ?? userData.isProfessional ?? user.user_metadata?.is_professional ?? false,
             userId: user.id,
         };
     } catch (apiError) {
@@ -31,7 +31,7 @@ export async function loginUser(email: string, password: string): Promise<UserDa
             firstName: user.user_metadata?.first_name || "",
             lastName: user.user_metadata?.last_name || "",
             email: user.email || "",
-            isProfessional: user.user_metadata?.is_professional?.toString() || "false",
+            isProfessional: user.user_metadata?.is_professional ?? false,
             userId: user.id,
         };
     }

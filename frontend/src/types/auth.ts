@@ -1,7 +1,7 @@
 export interface HeaderProps {
     firstName: string;
     isLoggedIn: boolean;
-    isProfessional: string;
+    isProfessional: boolean;
 }
 
 export interface LoginModalProps {

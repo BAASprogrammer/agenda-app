@@ -14,9 +14,9 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
     const [showLoginModal, setShowLoginModal] = useState(false);
     const pathname = usePathname();
     const redirection =
-        isProfessional === "true"
+        isProfessional === true
             ? "/home/professional"
-            : isProfessional === "false"
+            : isProfessional === false
                 ? "/home/patient"
                 : "/";
 
@@ -55,7 +55,7 @@ export default function Header({ firstName, isLoggedIn, isProfessional }: Header
 
                     {/* Nav links */}
                     <div className="hidden md:flex items-center gap-0.5 lg:gap-1">
-                        {isLoggedIn && isProfessional === "true" ? (
+                        {isLoggedIn && isProfessional ? (
                             <Link href="/home/professional" className={navLinkClass("/home/professional")}>Inicio</Link>
                         ) : (
                             <Link href={isLoggedIn ? "/home/patient" : "/"} className={navLinkClass(isLoggedIn ? "/home/patient" : "/")}>Inicio</Link>
