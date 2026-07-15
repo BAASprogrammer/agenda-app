@@ -1,9 +1,11 @@
 import { Calendar, Clock, X, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import { FormEvent, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 import { RescheduleModalProps } from "@/types/modal";
 
 export default function RescheduleModal({ appointment, onClose, onSuccess }: RescheduleModalProps) {
+    const queryClient = useQueryClient();
     const [newDate, setNewDate] = useState(appointment.displayDate || "");
     const [newTime, setNewTime] = useState(appointment.displayTime || "");
     const [loading, setLoading] = useState(false);
@@ -36,6 +38,8 @@ export default function RescheduleModal({ appointment, onClose, onSuccess }: Res
                 id: appointment.id,
                 appointment_date: `${newDate} ${newTime}:00`
             });
+
+            await queryClient.invalidateQueries({ queryKey: ['appointments'] });
             setMessage("Cita reagendada exitosamente!");
             setTimeout(() => {
                 onSuccess(newDate, newTime);
