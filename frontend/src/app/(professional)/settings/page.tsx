@@ -40,7 +40,7 @@ export default function ProfessionalSettings() {
                 firstName: data.first_name || data.firstName,
                 lastName: data.last_name || data.lastName,
                 email: data.email,
-                isProfessional: "true",
+                isProfessional: true,
                 userId: userId
             });
 

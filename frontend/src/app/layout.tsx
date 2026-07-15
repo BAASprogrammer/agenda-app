@@ -15,7 +15,7 @@ export default async function RootLayout({
   const firstName = cookieStore.get("first_name")?.value || "";
   const lastName = cookieStore.get("last_name")?.value || "";
   const email = cookieStore.get("email")?.value || "";
-  const isProfessional = cookieStore.get("is_professional")?.value || "";
+  const isProfessional = cookieStore.get("is_professional")?.value === "true";
   const userId = cookieStore.get("user_id")?.value || "";
   const isLoggedIn = !!firstName;
 

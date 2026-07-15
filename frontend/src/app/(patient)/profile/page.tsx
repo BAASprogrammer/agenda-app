@@ -49,7 +49,7 @@ export default function Profile() {
                 lastName: updatedData.last_name,
                 email: updatedData.email,
                 userId: userId,
-                isProfessional: "false"
+                isProfessional: false
             });
             setMessage("Perfil actualizado correctamente");
             queryClient.invalidateQueries({ queryKey: ["patient", userId] });
